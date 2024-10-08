@@ -206,26 +206,11 @@ async def chat(
     plus_clients = clients["plus_clients"]
     client_idx = claude_chat_request.client_idx
     model = claude_chat_request.model
-    # if model not in [model.value for model in ClaudeModels]:
-    #     # return JSONResponse(
-    #     #     status_code=400,
-    #     #     content={"message": f"Model: not found.\n" f"未找到模型:"},
-    #     # )
-    #     return StreamingResponse(
-    #         build_sse_data(message="Model: not found.\n" f"未找到模型:"),
-    #         media_type="text/event-stream",
-    #     )
     conversation_id = claude_chat_request.conversation_id
 
     client_type = claude_chat_request.client_type
     client_type = "plus" if client_type == "plus" else "basic"
     if (not manager.is_plus_user(api_key)) and (client_type == "plus"):
-        # return JSONResponse(
-        #     status_code=403,
-        #     content={
-        #         "message": f"您的 API key 不是 Plus 用户，请升级您的套餐以访问此账户。"
-        #     },
-        # )
         return StreamingResponse(
             build_sse_data(
                 message="您的登录秘钥不是Plus 用户，请升级您的套餐以访问此账户。"
@@ -234,12 +219,6 @@ async def chat(
         )
 
     if (client_type == "basic") and ClaudeModels.model_is_plus(model):
-        # return JSONResponse(
-        #     status_code=403,
-        #     content={
-        #         "message": f"客户端是基础用户，但模型是 Plus 模型，请切换到 Plus 客户端。"
-        #     },
-        # )
         return StreamingResponse(
             build_sse_data(
                 message="客户端是基础用户，但模型是 Plus 模型，请切换到 Plus 客户端。"
@@ -284,7 +263,6 @@ async def chat(
     files = claude_chat_request.files
     if files is None:
         files = []
-
     # 处理message的部分， 如果需要搜索的话:
     logger.debug(f"Need web search: {claude_chat_request.need_web_search}")
     hrefs = []
@@ -317,9 +295,6 @@ async def chat(
         return StreamingResponse(
             streaming_res,
             media_type="text/event-stream",
-            # headers={
-            #     "conversation_id": conversation_id
-            # },  # 这里通过header返回conversation_id
         )
     else:
 

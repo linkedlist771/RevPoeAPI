@@ -3,6 +3,8 @@
 
 import json, os, uuid
 import re
+from http.cookies import SimpleCookie
+from poe_api_wrapper import AsyncPoeApi
 
 # from curl_cffi import requests
 import httpx
@@ -111,31 +113,30 @@ async def upload_attachment_for_fastapi(file: UploadFile):
 
 
 class Client:
-    def fix_sessionKey(self, cookie):
-        if "sessionKey=" not in cookie:
-            cookie = "sessionKey=" + cookie
+    def format_cookie(self, cookie):
+        # 去掉最后的; 用rstrip
+        cookie = cookie.rstrip(";")
         return cookie
 
     def __init__(self, cookie, cookie_key=None):
-        self.cookie = self.fix_sessionKey(cookie)
+        self.cookie = self.format_cookie(cookie)
         self.cookie_key = cookie_key
         # self.organization_id = self.get_organization_id()
 
-    async def retrieve_reverse_official_route(self, unique_name):
-        payload = {
-            "session_key": self.retrieve_session_key(),
-            "unique_name": unique_name,
-            "expires_in": CLAUDE_OFFICIAL_EXPIRE_TIME,
-        }
-        async with httpx.AsyncClient() as client:
-            login_url = (
-                CLAUDE_OFFICIAL_REVERSE_BASE_URL + "/manage-api/auth/oauth_token"
-            )
-            response = await client.post(login_url, json=payload)
-            if response.status_code == 200:
-                return response.json()
-            else:
-                return None
+
+    def __set_credentials__(self):
+        # 创建一个SimpleCookie对象
+        cookie = SimpleCookie()
+        # 加载cookie字符串
+        cookie.load(self.cookie)
+        # 获取指定的两个键值对
+        p_b = cookie.get('p-b')
+        # p-lat
+        p_lat = cookie.get('p-lat')
+        self.p_b = p_b.value
+        self.p_lat = p_lat.value
+        if not self.p_b or not self.p_lat:
+            raise ValueError("Invalid cookie")
 
     async def __set_organization_id__(self):
         self.organization_id = await self.__async_get_organization_id()
@@ -306,14 +307,6 @@ class Client:
         if client_type != "plus":
             __payload.pop("model")
 
-        # class ConversationHistoryRequestInput(BaseModel):
-        #     client_idx: int
-        #     conversation_type: CookieKeyType
-        #     api_key: str
-        #     conversation_id: Optional[str] = None
-        #     # model: Optional[ClaudeModels] = None
-        #     model: Optional[str] = None
-
         conversation_history_request = ConversationHistoryRequestInput(
             client_idx=client_idx,
             conversation_type=client_type,
@@ -330,16 +323,6 @@ class Client:
                 break
         if former_messages:
             former_messages = [{"role": message.role.value, "content": message.content} for message in former_messages]
-        # logger.debug(f"former_messages: {former_messages}")
-
-        # payload = json.dumps(__payload)
-        # payload = __payload
-
-        # headers = self.build_stream_headers()
-        # max_retry = 5
-        # current_retry = 0
-        # response_text = ""
-        # client_manager = ClientsStatusManager()
         if len(prompt) <= 0:
             yield NO_EMPTY_PROMPT_MESSAGE
             return
@@ -349,12 +332,28 @@ class Client:
         logger.info(f"formatted_messages: {messages}")
         former_messages.extend(messages)
         messages = former_messages
+        messages_str = "\n".join([f"{message['role']}: {message['content']}" for message in messages])
         response_text = ""
-        async for text in poe_bot_streaming_message(
-            formatted_messages=messages, bot_name=model
-        ):
+        tokens = {
+            'p-b': self.p_b,
+            'p-lat': self.p_lat,
+        }
+        # tokens = {
+        #     'p-b': "lCrD4cd42LIFPIRzWHyV8Q%3D%3D",
+        #     'p-lat': "jqOOkzRTw57O%2FEG4umguDzwu54GWEFUah05oLBxMGw%3D%3D",
+        # }
+        #
+        # async def main():
+        #     client = await AsyncPoeApi(tokens=tokens).create()
+        #     message = "Explain quantum computing in simple terms"
+        #     async for chunk in client.send_message(bot="gpt3_5", message=message):
+        #         print(chunk["response"], end='', flush=True)
+        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+        async for text in poe_bot_client.send_message(bot=model, message=messages_str):
             yield text
             response_text += text
+
+
 
         if call_back:
             await call_back(response_text)
