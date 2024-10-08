@@ -38,6 +38,7 @@ from rev_claude.status_code.status_code_enum import (
     HTTP_481_IMAGE_UPLOAD_FAILED,
     HTTP_482_DOCUMENT_UPLOAD_FAILED,
 )
+from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
 from rev_claude.utils.httpx_utils import async_stream
 from rev_claude.utils.sse_utils import build_sse_data
@@ -124,16 +125,18 @@ class Client:
 
 
     def __set_credentials__(self):
-        # 创建一个SimpleCookie对象
-        cookie = SimpleCookie()
-        # 加载cookie字符串
-        cookie.load(self.cookie)
-        # 获取指定的两个键值对
-        p_b = cookie.get('p-b')
-        # p-lat
-        p_lat = cookie.get('p-lat')
-        self.p_b = p_b.value
-        self.p_lat = p_lat.value
+        # # 创建一个SimpleCookie对象
+        # cookie = SimpleCookie()
+        # # 加载cookie字符串
+        # cookie.load(self.cookie)
+        # # 获取指定的两个键值对
+        # p_b = cookie.get('p-b')
+        # # p-lat
+        # p_lat = cookie.get('p-lat')
+        p_b = extract_cookie_value(self.cookie, "p-b")
+        p_lat = extract_cookie_value(self.cookie, "p-lat")
+        self.p_b = p_b
+        self.p_lat = p_lat
         if not self.p_b or not self.p_lat:
             raise ValueError("Invalid cookie")
 
