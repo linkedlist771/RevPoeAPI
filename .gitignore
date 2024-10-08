@@ -1,0 +1,7 @@
+checking
+logs
+.idea
+*.pyc
+key_configs.json
+resources
+*.DS_Store

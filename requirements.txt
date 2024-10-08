@@ -1,0 +1,14 @@
+python-docx
+pdfminer.six
+httpx_sse
+fake_useragent
+fire
+httpx
+uvicorn
+fastapi
+loguru
+redis
+duckduckgo_search
+tqdm
+redis[hiredis]
+fastapi_poe 
