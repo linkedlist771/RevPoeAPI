@@ -350,6 +350,7 @@ class Client:
         #     message = "Explain quantum computing in simple terms"
         #     async for chunk in client.send_message(bot="gpt3_5", message=message):
         #         print(chunk["response"], end='', flush=True)
+        logger.debug(f"tokens: \n{tokens}")
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         async for text in poe_bot_client.send_message(bot=model, message=messages_str):
             yield text
