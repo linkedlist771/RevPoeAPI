@@ -29,7 +29,7 @@ async def push_message(
     messages: List[Message],
 ):
     """Push a message to conversation history."""
-    conversation_history_manager.push_message(request, messages)
+    await conversation_history_manager.push_message(request, messages)
     return {"message": "Message pushed successfully"}
 
 

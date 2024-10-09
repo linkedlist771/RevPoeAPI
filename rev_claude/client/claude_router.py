@@ -132,7 +132,7 @@ async def push_assistant_message_callback(
         hrefs_str = "".join(hrefs)
         messages[-1].content += hrefs_str
 
-    conversation_history_manager.push_message(request, messages)
+    await conversation_history_manager.push_message(request, messages)
 
 
 @router.post("/obtain_reverse_official_login_router")
