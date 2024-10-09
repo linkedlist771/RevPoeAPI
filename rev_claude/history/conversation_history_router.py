@@ -1,5 +1,8 @@
 from fastapi import APIRouter
 from typing import List
+from loguru import  logger
+from scipy.stats import logistic_gen
+
 from rev_claude.history.conversation_history_manager import (
     ConversationHistoryManager,
     ConversationHistoryRequestInput,
@@ -30,8 +33,13 @@ async def get_conversation_histories(
     request: ConversationHistoryRequestInput,
 ) -> List[ConversationHistory]:
     """Get conversation histories."""
-    histories = conversation_history_manager.get_conversation_histories(request)
-    return histories
+    try:
+        histories = conversation_history_manager.get_conversation_histories(request)
+        return histories
+
+    except Exception as e:
+        from traceback import format_exc
+        logger.error(format_exc())
 
 
 @router.post("/delete_all_conversations")
