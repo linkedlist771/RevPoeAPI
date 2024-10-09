@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import redis
 from redis.asyncio import Redis
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Any
 from pydantic import BaseModel, Field
 
 from rev_claude.configs import REDIS_HOST, REDIS_PORT
@@ -35,7 +35,7 @@ class ConversationHistoryRequestInput(BaseModel):
     conversation_type: CookieKeyType
     api_key: str
     conversation_id: Optional[str] = None
-    # model: Optional[ClaudeModels] = None
+    model: Any = None
 
 
 class ConversationHistoryManager:
