@@ -1,6 +1,12 @@
+import json
+import traceback
+
 from fastapi import APIRouter
 from typing import List
 from loguru import  logger
+from fastapi import Request
+from fastapi.exceptions import RequestValidationError, HTTPException
+from pydantic import ValidationError
 
 from rev_claude.history.conversation_history_manager import (
     ConversationHistoryManager,
@@ -27,19 +33,54 @@ async def push_message(
     return {"message": "Message pushed successfully"}
 
 
+# @router.post("/get_conversation_histories")
+# async def get_conversation_histories(
+#     request: ConversationHistoryRequestInput,
+# ) -> List[ConversationHistory]:
+#     """Get conversation histories."""
+#     try:
+#         histories = await conversation_history_manager.get_conversation_histories(request)
+#         return histories
+#
+#     except Exception as e:
+#         from traceback import format_exc
+#         logger.error(format_exc())
+
 @router.post("/get_conversation_histories")
-async def get_conversation_histories(
-    request: ConversationHistoryRequestInput,
-) -> List[ConversationHistory]:
+async def get_conversation_histories(request: Request) -> List[ConversationHistory]:
     """Get conversation histories."""
     try:
-        histories = await conversation_history_manager.get_conversation_histories(request)
+        # 手动解析请求数据
+        raw_data = await request.json()
+        # 尝试创建 ConversationHistoryRequestInput 实例
+        input_data = ConversationHistoryRequestInput(**raw_data)
+
+        # 如果验证通过，继续处理请求
+        histories = await conversation_history_manager.get_conversation_histories(input_data)
         return histories
 
-    except Exception as e:
-        from traceback import format_exc
-        logger.error(format_exc())
+    except ValidationError as ve:
+        # 捕获 Pydantic 验证错误
+        logger.error(f"Validation error: {ve}")
+        error_messages = [f"{error['loc'][0]}: {error['msg']}" for error in ve.errors()]
+        raise HTTPException(status_code=422, detail={"errors": error_messages})
 
+    except RequestValidationError as rve:
+        # 捕获 FastAPI 请求验证错误
+        logger.error(f"Request validation error: {rve}")
+        error_messages = [f"{error['loc'][-1]}: {error['msg']}" for error in rve.errors()]
+        raise HTTPException(status_code=422, detail={"errors": error_messages})
+
+    except json.JSONDecodeError as jde:
+        # 捕获 JSON 解析错误
+        logger.error(f"JSON decode error: {jde}")
+        raise HTTPException(status_code=400, detail="Invalid JSON in request body")
+
+    except Exception as e:
+        # 捕获其他所有异常
+        logger.error(f"Unexpected error: {str(e)}")
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 @router.post("/delete_all_conversations")
 async def delete_all_conversations(
