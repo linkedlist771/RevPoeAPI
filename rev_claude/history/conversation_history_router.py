@@ -1,7 +1,6 @@
 from fastapi import APIRouter
 from typing import List
 from loguru import  logger
-from scipy.stats import logistic_gen
 
 from rev_claude.history.conversation_history_manager import (
     ConversationHistoryManager,
