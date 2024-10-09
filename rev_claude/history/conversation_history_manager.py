@@ -27,7 +27,7 @@ class Message(BaseModel):
 class ConversationHistory(BaseModel):
     conversation_id: str
     messages: List[Message]
-    model: ClaudeModels
+    model: str
 
 
 class ConversationHistoryRequestInput(BaseModel):
