@@ -297,18 +297,6 @@ class Client:
         from rev_claude.history.conversation_history_manager import ConversationHistoryRequestInput, \
             conversation_history_manager
 
-        # url = f"https://claude.ai/api/organizations/{self.organization_id}/chat_conversations/{conversation_id}/completion"
-        __payload = {
-            "attachments": attachments,  # attachments is a list
-            "files": [] if files is None else files,
-            "model": model,  # TODO: 当账号类型为普通账号的时候，这里不需要传入model
-            "timezone": "Europe/London",
-            "prompt": f"{prompt}",
-            "rendering_mode": "raw",
-        }
-        if client_type != "plus":
-            __payload.pop("model")
-
         conversation_history_request = ConversationHistoryRequestInput(
             client_idx=client_idx,
             conversation_type=client_type,
@@ -318,7 +306,6 @@ class Client:
         )
         all_histories = conversation_history_manager.get_conversation_histories(conversation_history_request)
         former_messages = []
-        # logger.debug(f"all_histories: {all_histories}")
         for history in all_histories:
             if history.conversation_id == conversation_id:
                 former_messages = history.messages
@@ -340,160 +327,19 @@ class Client:
             'p-b': self.p_b,
             'p-lat': self.p_lat,
         }
-        # tokens = {
-        #     'p-b': "lCrD4cd42LIFPIRzWHyV8Q%3D%3D",
-        #     'p-lat': "jqOOkzRTw57O%2FEG4umguDzwu54GWEFUah05oLBxMGw%3D%3D",
-        # }
-        #
-        # async def main():
-        #     client = await AsyncPoeApi(tokens=tokens).create()
-        #     message = "Explain quantum computing in simple terms"
-        #     async for chunk in client.send_message(bot="gpt3_5", message=message):
-        #         print(chunk["response"], end='', flush=True)
-        logger.debug(f"tokens: \n{tokens}")
-        logger.debug(f"messages_str: \n{messages_str}")
-        logger.debug(f"model: \n{model}")
+        # logger.debug(f"tokens: \n{tokens}")
+        # logger.debug(f"messages_str: \n{messages_str}")
+        # logger.debug(f"model: \n{model}")
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         async for chunk in poe_bot_client.send_message(bot=model, message=messages_str):
             text = chunk["response"]
             yield text
             response_text += text
 
-
-
         if call_back:
             await call_back(response_text)
             logger.info(f"Response text:\n {response_text}")
-        # while current_retry < max_retry:
-        #     try:
-        #         works_fine = False
-        #         async with httpx.AsyncClient(
-        #             timeout=STREAM_TIMEOUT, proxies=PROXIES if USE_PROXY else None
-        #         ) as client:
-        #             # logger.debug(f"url:\n {url}")
-        #             # logger.debug(f"headers:\n {headers}")
-        #             decoder = SSEDecoder()
 
-        #             async with client.stream(
-        #                 method="POST",
-        #                 url=url,
-        #                 headers=headers,
-        #                 json=payload,
-        #                 timeout=10,
-        #             ) as response:
-        #                 async for text in response.aiter_lines():
-        #                     # logger.debug(f"raw text: {text}")
-        #                     # async with client.stream(method="POST", url=url, headers=headers, json=data) as response:
-        #                     if works_fine == False:
-        #                         logger.info(
-        #                             f"Streaming message works fine and get the first text:\n {text}"
-        #                         )
-        #                         works_fine = True
-        #                     # logger.info(f"raw text: {text}")
-        #                     # convert a byte string to a string
-        #                     # logger.info(f"raw text: {text}")
-        #                     # logger.debug(f"raw text: {text}")
-        #                     if ("Invalid model" in text) or (
-        #                         "Organization has no active Self-Serve Stripe" in text
-        #                     ):
-        #                         logger.error(f"Invalid model : {text}")
-
-        #                         client_manager = ClientsStatusManager()
-        #                         client_manager.set_client_error(client_type, client_idx)
-        #                         logger.error(f"设置账号状态为error")
-        #                         yield PLUS_EXPIRE
-        #                         await asyncio.sleep(0)  # 模拟异步操作, 让出权限
-        #                         break
-        #                     elif "permission_error" in text:
-        #                         logger.error(f"permission_error : {text}")
-        #                         raise Exception(text)
-        #                         # ClientsStatusManager
-        #                     if "exceeded_limit" in text:
-        #                         # 对于plus用户只opus model才设置
-        #                         if client_type == "plus":
-        #                             # if ClaudeModels.model_is_plus(model): 这个地方就不需要check了
-        #                             dict_res = json.loads(text)
-        #                             error_message = dict_res["error"]
-        #                             resetAt = int(
-        #                                 json.loads(error_message["message"])["resetsAt"]
-        #                             )
-        #                             refresh_time = resetAt
-        #                             start_time = int(refresh_time) - 8 * 3600
-        #                             client_manager = ClientsStatusManager()
-        #                             client_manager.set_client_limited(
-        #                                 client_type, client_idx, start_time, model
-        #                             )
-        #                         else:
-        #                             dict_res = json.loads(text)
-        #                             error_message = dict_res["error"]
-        #                             resetAt = int(
-        #                                 json.loads(error_message["message"])["resetsAt"]
-        #                             )
-        #                             refresh_time = resetAt
-        #                             start_time = int(refresh_time) - 8 * 3600
-        #                             client_manager = ClientsStatusManager()
-        #                             client_manager.set_client_limited(
-        #                                 client_type, client_idx, start_time, model
-        #                             )
-        #                         logger.error(f"exceeded_limit : {text}")
-        #                         yield EXCEED_LIMIT_MESSAGE
-        #                         await asyncio.sleep(0)  # 模拟异步操作, 让出权限
-        #                         break
-
-        #                     if "prompt is too long" in text:
-        #                         yield PROMPT_TOO_LONG_MESSAGE
-        #                         await asyncio.sleep(0)  # 模拟异步操作, 让出权限
-
-        #                     if "concurrent connections has" in text:
-        #                         logger.error(
-        #                             f"concurrent connections has exceeded the limit"
-        #                         )
-        #                         raise Exception(
-        #                             "concurrent connections has exceeded the limit"
-        #                         )
-        #                     if "Rate exceeded" in text:
-        #                         logger.error(f"Rate exceeded: {text}")
-        #                         raise Exception("Rate exceeded")
-
-        #                     # response_parse_text = await self.parse_text(
-        #                     #     text, client_type, client_idx, model
-        #                     # )
-        #                     line = text.rstrip("\n")
-        #                     sse = decoder.decode(line)
-        #                     response_parse_text = ""
-        #                     if sse is not None:
-        #                         data = json.loads(sse.data)
-        #                         if "completion" in list(data.keys()):
-        #                             message = data["completion"]
-        #                             response_parse_text = message
-
-        #                     # logger.info(f"parsed text: {response_parse_text}")
-        #                     if response_parse_text:
-        #                         client_manager.set_client_status(
-        #                             client_type, client_idx, "active"
-        #                         )
-        #                         resp_text = "".join(response_parse_text)
-        #                         response_text += resp_text
-        #                         yield resp_text
-        #                         await asyncio.sleep(0)  # 模拟异步操作, 让出权限
-
-        #         logger.info(f"Response text:\n {response_text}")
-                # if call_back:
-                #     await call_back(response_text)
-        #         break
-        #     except Exception as e:
-        #         import traceback
-
-        #         current_retry += 1
-        #         logger.error(
-        #             f"Failed to stream message. Retry {current_retry}/{max_retry}. Error: {traceback.format_exc()}"
-        #         )
-        #         if current_retry == max_retry:
-        #             logger.error(f"Failed to stream message after {max_retry} retries.")
-        #             yield "error: " + str(e)
-        #         else:
-        #             logger.info("Retrying in 3 second...")
-        #             await asyncio.sleep(3)
 
     # Deletes the conversation
     def delete_conversation(self, conversation_id):
