@@ -35,7 +35,7 @@ class ConversationHistoryRequestInput(BaseModel):
     conversation_type: CookieKeyType
     api_key: str
     conversation_id: Optional[str] = None
-    model: Optional[ClaudeModels] = None
+    # model: Optional[ClaudeModels] = None
 
 
 class ConversationHistoryManager:
