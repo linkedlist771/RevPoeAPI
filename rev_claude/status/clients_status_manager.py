@@ -128,18 +128,6 @@ class ClientsStatusManager:
                 message += f"{__mode}:可用。\n"
         return message
 
-    # def get_dict_value(self, key):
-    #     value = self.redis.get(key)
-    #     if value is None:
-    #         return {}
-    #     try:
-    #         res = json.loads(value)
-    #         if not isinstance(res, dict):
-    #             return {}
-    #         else:
-    #             return res
-    #     except (json.JSONDecodeError, TypeError):
-    #         return {}
 
     async def get_dict_value_async(self, key):
         value = await self.decoded_get(key)
