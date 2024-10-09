@@ -35,7 +35,7 @@ def register_docs_auth(app: FastAPI):
     async def get_openapi_json():
         return get_openapi(title="FastAPI", version="0.1.0", routes=app.routes)
 
-    app.add_middleware(ApidocBasicAuthMiddleware)
+    # app.add_middleware(ApidocBasicAuthMiddleware)
     return app
 
 
