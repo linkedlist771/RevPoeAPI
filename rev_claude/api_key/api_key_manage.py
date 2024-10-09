@@ -5,7 +5,7 @@ import redis
 import uuid
 from enum import Enum
 from loguru import logger
-from rev_claude.utility import get_current_time
+# from rev_claude.utility import get_current_time
 from rev_claude.configs import (
     BASIC_KEY_MAX_USAGE,
     PLUS_KEY_MAX_USAGE,
@@ -15,6 +15,8 @@ from rev_claude.configs import (
     REDIS_PORT,
     ACCOUNT_DELETE_LIMIT,
 )
+from utility import get_current_time
+
 
 # from redis.asyncio import StrictRedis
 
