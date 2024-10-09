@@ -33,7 +33,7 @@ async def get_conversation_histories(
 ) -> List[ConversationHistory]:
     """Get conversation histories."""
     try:
-        histories = conversation_history_manager.get_conversation_histories(request)
+        histories = await conversation_history_manager.get_conversation_histories(request)
         return histories
 
     except Exception as e:

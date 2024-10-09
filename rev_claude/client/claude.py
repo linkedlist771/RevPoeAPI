@@ -304,7 +304,7 @@ class Client:
             conversation_id=conversation_id,
             model=model,
         )
-        all_histories = conversation_history_manager.get_conversation_histories(conversation_history_request)
+        all_histories = await conversation_history_manager.get_conversation_histories(conversation_history_request)
         former_messages = []
         for history in all_histories:
             if history.conversation_id == conversation_id:
