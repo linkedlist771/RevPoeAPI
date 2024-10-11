@@ -1,4 +1,4 @@
-from fastapi import UploadFile
+from fastapi import UploadFile, File
 from pydantic import BaseModel, Field
 from typing import Union, List, Dict
 from enum import Enum
@@ -24,7 +24,7 @@ class ClaudeChatRequest(BaseChatRequest):
     client_idx: int = 0
     client_type: str
     attachments: Union[List[Dict], None] = None
-    files: Union[List[str], List[UploadFile], None] = None
+    files: List[UploadFile] = File(None)
     need_web_search: bool = False
     need_artifacts: bool = False
 

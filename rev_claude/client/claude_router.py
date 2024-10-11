@@ -1,5 +1,6 @@
 import asyncio
 from functools import partial
+from typing import Optional, List
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, Request
@@ -177,12 +178,33 @@ async def obtain_reverse_official_login_router(
 
 
 @router.post("/chat")
+@router.post("/chat")
 async def chat(
-    request: Request,
-    claude_chat_request: ClaudeChatRequest,
-    clients=Depends(obtain_claude_client),
-    manager: APIKeyManager = Depends(get_api_key_manager),
+        request: Request,
+        stream: bool = Form(True),
+        conversation_id: Optional[str] = Form(None),
+        client_idx: int = Form(0),
+        client_type: str = Form(...),
+        attachments: Optional[str] = Form(None),
+        files: List[UploadFile] = File(None),
+        need_web_search: bool = Form(False),
+        need_artifacts: bool = Form(False),
+        clients=Depends(obtain_claude_client),
+        manager: APIKeyManager = Depends(get_api_key_manager),
 ):
+    # 创建 ClaudeChatRequest 对象
+    # 创建 ClaudeChatRequest 对象
+    claude_chat_request = ClaudeChatRequest(
+        stream=stream,
+        conversation_id=conversation_id,
+        client_idx=client_idx,
+        client_type=client_type,
+        attachments=attachments,
+        files=files,
+        need_web_search=need_web_search,
+        need_artifacts=need_artifacts
+    )
+
     api_key = request.headers.get("Authorization")
     has_reached_limit = manager.has_exceeded_limit(api_key)
     if has_reached_limit:
