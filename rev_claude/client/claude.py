@@ -4,6 +4,8 @@
 import json, os, uuid
 import re
 from http.cookies import SimpleCookie
+from typing import Union, List
+
 from poe_api_wrapper import AsyncPoeApi
 
 # from curl_cffi import requests
@@ -65,6 +67,22 @@ def generate_trace_id():
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
 
+async def save_file(file: UploadFile) -> str:
+    # Create a directory to store uploaded files if it doesn't exist
+    upload_dir = "uploaded_files"
+    os.makedirs(upload_dir, exist_ok=True)
+
+    # Generate a unique filename
+    file_extension = os.path.splitext(file.filename)[1]
+    unique_filename = f"{uuid.uuid4()}{file_extension}"
+    file_path = os.path.join(upload_dir, unique_filename)
+
+    # Save the file
+    with open(file_path, "wb") as buffer:
+        content = await file.read()
+        buffer.write(content)
+
+    return file_path
 
 ua = UserAgent()
 filtered_browsers = list(
@@ -289,7 +307,7 @@ class Client:
         client_type,
         client_idx,
         attachments=None,
-        files=None,
+        files: Union[List[UploadFile], UploadFile, None] = None,
         call_back=None,
         api_key=None,
         timeout=120,
@@ -327,9 +345,19 @@ class Client:
             'p-b': self.p_b,
             'p-lat': self.p_lat,
         }
-
+        file_paths = []
+        # This is a temporary solution to handle the case where the user uploads a file.
+        if files:
+            if isinstance(files, UploadFile):
+                files = [files]
+            for file in files:
+                file_path = await save_file(file)
+                file_paths.append(file_path)
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-        async for chunk in poe_bot_client.send_message(bot=model, message=messages_str):
+        async for chunk in poe_bot_client.send_message(bot=model,
+                                                       message=messages_str,
+                                                       file_path=file_paths):
+            # files need to be added later.
             text = chunk["response"]
             yield text
             response_text += text
