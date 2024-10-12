@@ -353,13 +353,22 @@ class Client:
         }
 
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-        async for chunk in poe_bot_client.send_message(bot=model,
-                                                       message=messages_str,
-                                                       file_path=file_paths):
-            # files need to be added later.
-            text = chunk["response"]
-            yield text
-            response_text += text
+        try:
+            async for chunk in poe_bot_client.send_message(bot=model,
+                                                           message=messages_str,
+                                                           file_path=file_paths):
+                # files need to be added later.
+                text = chunk["response"]
+                yield text
+                response_text += text
+        except RuntimeError as runtime_error:
+            logger.error(f"RuntimeError: {runtime_error}")
+            yield str(runtime_error)
+        except Exception as e:
+            from traceback import format_exc
+            logger.error(f"Error: {format_exc()}")
+            yield str(e)
+
 
         if call_back:
             await call_back(response_text)
