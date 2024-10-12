@@ -3,6 +3,7 @@
 
 import json, os, uuid
 import re
+import shutil
 from http.cookies import SimpleCookie
 from typing import Union, List
 
@@ -77,10 +78,13 @@ async def save_file(file: UploadFile) -> str:
     unique_filename = f"{uuid.uuid4()}{file_extension}"
     file_path = os.path.join(upload_dir, unique_filename)
 
-    # Save the file
-    with open(file_path, "wb") as buffer:
-        content = await file.read()
-        buffer.write(content)
+    try:
+        # Save the file using shutil
+        with file.file as source_file, open(file_path, "wb") as buffer:
+            shutil.copyfileobj(source_file, buffer)
+    except Exception as e:
+        logger.error(f"Error saving file {file.filename}: {str(e)}")
+        raise
 
     return file_path
 
@@ -351,8 +355,12 @@ class Client:
             if not isinstance(files, List):
                 files = [files]
             for file in files:
-                file_path = await save_file(file)
-                file_paths.append(file_path)
+                try:
+                    file_path = await save_file(file)
+                    file_paths.append(file_path)
+                except Exception as e:
+                    logger.error(f"Error saving file {file.filename}: {str(e)}")
+
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         async for chunk in poe_bot_client.send_message(bot=model,
                                                        message=messages_str,
