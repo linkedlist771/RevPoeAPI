@@ -1,6 +1,6 @@
 import asyncio
 from functools import partial
-from typing import Optional, List
+from typing import Optional, List, Union
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, Request
@@ -201,7 +201,7 @@ async def chat(
         stream: bool = Form(...),
         need_web_search: bool = Form(False),
         attachments: Optional[List[str]] = Form(None),
-        files: Optional[List[UploadFile]] = File(None),
+        files: Union[List[UploadFile], UploadFile, None] = None,
         clients=Depends(obtain_claude_client),
         manager: APIKeyManager = Depends(get_api_key_manager),
 ):
@@ -265,6 +265,8 @@ async def chat(
         attachments = []
     if not files:
         files = []
+    if isinstance(files, UploadFile):
+        files = [files]
 
     logger.debug(f"Need web search: {need_web_search}")
     hrefs = []
