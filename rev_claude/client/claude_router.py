@@ -265,7 +265,7 @@ async def chat(
         attachments = []
     if not files:
         files = []
-    if isinstance(files, UploadFile):
+    if not isinstance(files, List):
         files = [files]
     logger.debug(f"files: {files}")
     # logger.debug(f"Need web search: {need_web_search}")

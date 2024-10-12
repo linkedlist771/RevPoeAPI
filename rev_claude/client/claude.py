@@ -348,7 +348,7 @@ class Client:
         file_paths = []
         # This is a temporary solution to handle the case where the user uploads a file.
         if files:
-            if isinstance(files, UploadFile):
+            if not isinstance(files, List):
                 files = [files]
             for file in files:
                 file_path = await save_file(file)
