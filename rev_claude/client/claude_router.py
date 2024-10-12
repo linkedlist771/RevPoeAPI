@@ -200,7 +200,7 @@ async def chat(
         client_idx: int = Form(...),
         stream: bool = Form(...),
         need_web_search: bool = Form(False),
-        attachments: Optional[List[str]] = Form(None),
+        # attachments: Optional[List[str]] = Form(None),
         files: Union[List[UploadFile], UploadFile, None] = None,
         clients=Depends(obtain_claude_client),
         manager: APIKeyManager = Depends(get_api_key_manager),
@@ -261,8 +261,7 @@ async def chat(
         )
     )
 
-    if attachments is None:
-        attachments = []
+    attachments = []
     if not files:
         files = []
     # This is a temporary solution to handle the case where the user uploads a file.
