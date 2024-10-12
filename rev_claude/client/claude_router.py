@@ -267,8 +267,8 @@ async def chat(
         files = []
     if isinstance(files, UploadFile):
         files = [files]
-
-    logger.debug(f"Need web search: {need_web_search}")
+    logger.debug(f"files: {files}")
+    # logger.debug(f"Need web search: {need_web_search}")
     hrefs = []
     if need_web_search:
         from rev_claude.prompts_builder.duckduck_search_prompt import (
