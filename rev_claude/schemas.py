@@ -24,7 +24,8 @@ class ClaudeChatRequest(BaseChatRequest):
     client_idx: int = 0
     client_type: str
     attachments: Union[List[Dict], None] = None
-    files: List[UploadFile] = File(None)
+    # files: List[UploadFile] = File(None)
+    files: List[str] = []
     need_web_search: bool = False
     need_artifacts: bool = False
 

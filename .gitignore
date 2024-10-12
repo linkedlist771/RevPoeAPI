@@ -5,3 +5,4 @@ logs
 key_configs.json
 resources
 *.DS_Store
+log_file.log

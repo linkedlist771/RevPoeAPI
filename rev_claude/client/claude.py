@@ -327,9 +327,7 @@ class Client:
             'p-b': self.p_b,
             'p-lat': self.p_lat,
         }
-        # logger.debug(f"tokens: \n{tokens}")
-        # logger.debug(f"messages_str: \n{messages_str}")
-        # logger.debug(f"model: \n{model}")
+
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         async for chunk in poe_bot_client.send_message(bot=model, message=messages_str):
             text = chunk["response"]
