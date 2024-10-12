@@ -338,7 +338,8 @@ class Client:
         if len(prompt) <= 0:
             yield NO_EMPTY_PROMPT_MESSAGE
             return
-        
+        if file_paths is None:
+            file_paths = []
             # formatted_messages: list, bot_name: str
         messages = [{"role": "assistant", "content": prompt}]
         logger.info(f"formatted_messages: {messages}")
