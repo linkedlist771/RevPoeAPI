@@ -315,6 +315,7 @@ class Client:
         call_back=None,
         api_key=None,
         timeout=120,
+        file_paths=None,
     ):
         from rev_claude.history.conversation_history_manager import ConversationHistoryRequestInput, \
             conversation_history_manager
@@ -349,17 +350,6 @@ class Client:
             'p-b': self.p_b,
             'p-lat': self.p_lat,
         }
-        file_paths = []
-        # This is a temporary solution to handle the case where the user uploads a file.
-        if files:
-            if not isinstance(files, List):
-                files = [files]
-            for file in files:
-                try:
-                    file_path = await save_file(file)
-                    file_paths.append(file_path)
-                except Exception as e:
-                    logger.error(f"Error saving file {file.filename}: {str(e)}")
 
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         async for chunk in poe_bot_client.send_message(bot=model,

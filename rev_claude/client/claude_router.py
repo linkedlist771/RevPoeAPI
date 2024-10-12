@@ -9,7 +9,7 @@ from fastapi import HTTPException, File, UploadFile, Form
 
 from rev_claude.api_key.api_key_manage import APIKeyManager, get_api_key_manager
 
-from rev_claude.client.claude import upload_attachment_for_fastapi
+from rev_claude.client.claude import upload_attachment_for_fastapi, save_file
 from rev_claude.client.client_manager import ClientManager
 from rev_claude.configs import (
     NEW_CONVERSATION_RETRY,
@@ -265,8 +265,17 @@ async def chat(
         attachments = []
     if not files:
         files = []
-    if not isinstance(files, List):
-        files = [files]
+    # This is a temporary solution to handle the case where the user uploads a file.
+    file_paths = []
+    if files:
+        if not isinstance(files, List):
+            files = [files]
+        for file in files:
+            try:
+                file_path = await save_file(file)
+                file_paths.append(file_path)
+            except Exception as e:
+                logger.error(f"Error saving file {file.filename}: {str(e)}")
     logger.debug(f"files: {files}")
     # logger.debug(f"Need web search: {need_web_search}")
     hrefs = []
@@ -294,6 +303,7 @@ async def chat(
             files=files,
             call_back=call_back,
             api_key=api_key,
+            file_paths=file_paths,
         )
         streaming_res = patched_generate_data(streaming_res, conversation_id, hrefs)
         return StreamingResponse(
