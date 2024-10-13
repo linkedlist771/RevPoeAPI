@@ -341,7 +341,7 @@ class Client:
         if file_paths is None:
             file_paths = []
             # formatted_messages: list, bot_name: str
-        messages = [{"role": "assistant", "content": prompt}]
+        messages = [{"role": "user", "content": prompt}]
         logger.info(f"formatted_messages: {messages}")
         former_messages.extend(messages)
         messages = former_messages
