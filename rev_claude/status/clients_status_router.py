@@ -25,6 +25,7 @@ async def update_cookie(
     except Exception as e:
         raise HTTPException(status_code=NORMAL_ERROR, detail=str(e))
 
+
 #
 # @router.get("/check_clients_limits")
 # async def check_clients_limits():

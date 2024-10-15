@@ -68,6 +68,7 @@ def generate_trace_id():
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
 
+
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
     upload_dir = "uploaded_files"
@@ -87,6 +88,7 @@ async def save_file(file: UploadFile) -> str:
         raise
 
     return file_path
+
 
 ua = UserAgent()
 filtered_browsers = list(
@@ -144,7 +146,6 @@ class Client:
         self.cookie = self.format_cookie(cookie)
         self.cookie_key = cookie_key
         # self.organization_id = self.get_organization_id()
-
 
     def __set_credentials__(self):
         # # 创建一个SimpleCookie对象
@@ -225,82 +226,6 @@ class Client:
 
     # Send Message to Claude
 
-    def build_stream_headers(self):
-        return {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/124.0",
-            "Accept": "text/event-stream, text/event-stream",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Referer": "https://claude.ai/chats",
-            "Content-Type": "application/json",
-            "Origin": "https://claude.ai",
-            "DNT": "1",
-            "Connection": "keep-alive",
-            "Cookie": self.cookie,
-            "TE": "trailers",
-            "Sec-Ch-Ua-Mobile": "?0",
-            "Sec-Ch-Ua-Platform": "Windows",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Sentry-Trace": generate_trace_id()[2:],
-        }
-
-    async def parse_text(self, text, client_type, client_idx, model):
-        # TODO: add error handling for invalid model.
-        try:
-            # logger.debug(f"parsing_text: \n{text}")
-            parsed_response = json.loads(text)
-            if "error" in parsed_response:
-
-                # print("Error Message:", error_message)
-                logger.error(f"Error Message: {parsed_response}")
-                # raise Exception(error_message)
-                # ClientsStatusManager
-                if "exceeded_limit" in text:
-                    dict_res = json.loads(text)
-                    error_message = dict_res["error"]
-                    resetAt = int(json.loads(error_message["message"])["resetsAt"])
-                    refresh_time = resetAt
-                    start_time = int(refresh_time) - 8 * 3600
-                    client_manager = ClientsStatusManager()
-                    client_manager.set_client_limited(
-                        client_type, client_idx, start_time, model
-                    )
-                elif "Invalid" in text:
-                    logger.error(f"permission_error : {text}")
-
-                    client_manager = ClientsStatusManager()
-                    client_manager.set_client_error(client_type, client_idx)
-                    logger.error(f"设置账号状态为error")
-
-        except json.JSONDecodeError:
-            events = []
-            lines = text.split("\n")
-            for line in lines:
-                line = line.strip()
-                if line:
-                    parts = line.split(": ")
-                    if len(parts) == 2:
-                        event_type, data = parts
-                        if data != "completion" and data != "ping":
-                            try:
-                                event_data = json.loads(data)
-                                events.append(event_data["completion"])
-                            except json.JSONDecodeError:
-                                # logger.error(f"CLAUDE STREAM ERROR: {data}")
-                                if not data.endswith('"'):
-                                    data = data + '"'
-                                pattern = r'"completion":"(.*?)(?<!\\)"'
-                                match = re.search(pattern, data)
-                                if match:
-                                    completion_content = match.group(
-                                        1
-                                    )  # 提取第一个捕获组的内容
-                                    events.append(completion_content)
-                            except Exception as e:
-                                logger.error(f"Error: {e}")
-            return events
-
     # Send and Response Stream Message to Claude
 
     async def stream_message(
@@ -317,8 +242,10 @@ class Client:
         timeout=120,
         file_paths=None,
     ):
-        from rev_claude.history.conversation_history_manager import ConversationHistoryRequestInput, \
-            conversation_history_manager
+        from rev_claude.history.conversation_history_manager import (
+            ConversationHistoryRequestInput,
+            conversation_history_manager,
+        )
 
         conversation_history_request = ConversationHistoryRequestInput(
             client_idx=client_idx,
@@ -327,14 +254,19 @@ class Client:
             conversation_id=conversation_id,
             model=model,
         )
-        all_histories = await conversation_history_manager.get_conversation_histories(conversation_history_request)
+        all_histories = await conversation_history_manager.get_conversation_histories(
+            conversation_history_request
+        )
         former_messages = []
         for history in all_histories:
             if history.conversation_id == conversation_id:
                 former_messages = history.messages
                 break
         if former_messages:
-            former_messages = [{"role": message.role.value, "content": message.content} for message in former_messages]
+            former_messages = [
+                {"role": message.role.value, "content": message.content}
+                for message in former_messages
+            ]
         if len(prompt) <= 0:
             yield NO_EMPTY_PROMPT_MESSAGE
             return
@@ -345,18 +277,20 @@ class Client:
         logger.info(f"formatted_messages: {messages}")
         former_messages.extend(messages)
         messages = former_messages
-        messages_str = "\n".join([f"{message['role']}: {message['content']}" for message in messages])
+        messages_str = "\n".join(
+            [f"{message['role']}: {message['content']}" for message in messages]
+        )
         response_text = ""
         tokens = {
-            'p-b': self.p_b,
-            'p-lat': self.p_lat,
+            "p-b": self.p_b,
+            "p-lat": self.p_lat,
         }
 
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         try:
-            async for chunk in poe_bot_client.send_message(bot=model,
-                                                           message=messages_str,
-                                                           file_path=file_paths):
+            async for chunk in poe_bot_client.send_message(
+                bot=model, message=messages_str, file_path=file_paths
+            ):
                 # files need to be added later.
                 text = chunk["response"]
                 yield text
@@ -366,14 +300,13 @@ class Client:
             yield str(runtime_error)
         except Exception as e:
             from traceback import format_exc
+
             logger.error(f"Error: {format_exc()}")
             yield str(e)
-
 
         if call_back:
             await call_back(response_text)
             logger.info(f"Response text:\n {response_text}")
-
 
     # Deletes the conversation
     def delete_conversation(self, conversation_id):
@@ -603,37 +536,3 @@ class Client:
                 status_code=HTTP_481_IMAGE_UPLOAD_FAILED,
                 detail="Failed to upload image",
             )
-
-    # Renames the chat conversation title
-    def rename_chat(self, title, conversation_id):
-        url = "https://claude.ai/api/rename_chat"
-
-        payload = json.dumps(
-            {
-                "organization_uuid": f"{self.organization_id}",
-                "conversation_uuid": f"{conversation_id}",
-                "title": f"{title}",
-            }
-        )
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/124.0",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Content-Type": "application/json",
-            "Referer": "https://claude.ai/chats",
-            "Origin": "https://claude.ai",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Connection": "keep-alive",
-            "Cookie": self.cookie,
-            "TE": "trailers",
-        }
-
-        response = requests.post(
-            url, headers=headers, data=payload, impersonate="chrome110"
-        )
-
-        if response.status_code == 200:
-            return True
-        else:
-            return False

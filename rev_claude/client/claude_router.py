@@ -32,6 +32,7 @@ from loguru import logger
 
 from rev_claude.models import ClaudeModels
 from rev_claude.status_code.status_code_enum import HTTP_480_API_KEY_INVALID
+from rev_claude.utils.poe_bots_utils import get_poe_bot_info
 from rev_claude.utils.sse_utils import build_sse_data
 
 
@@ -176,35 +177,38 @@ async def obtain_reverse_official_login_router(
         content={"data": res, "valid": True},
     )
 
-  # async def stream_message(
-  #       self,
-  #       prompt,
-  #       conversation_id,
-  #       model,
-  #       client_type,
-  #       client_idx,
-  #       attachments=None,
-  #       files=None,
-  #       call_back=None,
-  #       api_key=None,
-  #       timeout=120,
-  #   ):
+
+# async def stream_message(
+#       self,
+#       prompt,
+#       conversation_id,
+#       model,
+#       client_type,
+#       client_idx,
+#       attachments=None,
+#       files=None,
+#       call_back=None,
+#       api_key=None,
+#       timeout=120,
+#   ):
+
 
 @router.post("/form_chat")
 async def chat(
-        request: Request,
-        message: str = Form(...),
-        conversation_id: Optional[str] = Form(None),
-        model: str = Form(...),
-        client_type: str = Form(...),
-        client_idx: int = Form(...),
-        stream: bool = Form(...),
-        need_web_search: bool = Form(False),
-        # attachments: Optional[List[str]] = Form(None),
-        files: Union[List[UploadFile], UploadFile, None] = None,
-        clients=Depends(obtain_claude_client),
-        manager: APIKeyManager = Depends(get_api_key_manager),
+    request: Request,
+    message: str = Form(...),
+    conversation_id: Optional[str] = Form(None),
+    model: str = Form(...),
+    client_type: str = Form(...),
+    client_idx: int = Form(...),
+    stream: bool = Form(...),
+    need_web_search: bool = Form(False),
+    # attachments: Optional[List[str]] = Form(None),
+    files: Union[List[UploadFile], UploadFile, None] = None,
+    clients=Depends(obtain_claude_client),
+    manager: APIKeyManager = Depends(get_api_key_manager),
 ):
+    model = get_poe_bot_info()[model]['baseModel']
     api_key = request.headers.get("Authorization")
     has_reached_limit = manager.has_exceeded_limit(api_key)
     if has_reached_limit:
@@ -223,7 +227,8 @@ async def chat(
         )
 
     logger.info(
-        f"Input chat request: message={message}, model={model}, client_type={client_type}, client_idx={client_idx}")
+        f"Input chat request: message={message}, model={model}, client_type={client_type}, client_idx={client_idx}"
+    )
 
     basic_clients = clients["basic_clients"]
     plus_clients = clients["plus_clients"]
@@ -282,6 +287,7 @@ async def chat(
         from rev_claude.prompts_builder.duckduck_search_prompt import (
             DuckDuckSearchPrompt,
         )
+
         message, hrefs = await DuckDuckSearchPrompt(
             prompt=message,
         ).render_prompt()
@@ -314,7 +320,6 @@ async def chat(
             build_sse_data(message="不支持非SSE"),
             media_type="text/event-stream",
         )
-
 
 
 @router.post("/chat")
@@ -394,6 +399,7 @@ async def chat(
         from rev_claude.prompts_builder.duckduck_search_prompt import (
             DuckDuckSearchPrompt,
         )
+
         message, hrefs = await DuckDuckSearchPrompt(
             prompt=message,
         ).render_prompt()

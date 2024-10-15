@@ -3,7 +3,7 @@ import traceback
 
 from fastapi import APIRouter
 from typing import List
-from loguru import  logger
+from loguru import logger
 from fastapi import Request
 from fastapi.exceptions import RequestValidationError, HTTPException
 from pydantic import ValidationError
@@ -46,6 +46,7 @@ async def push_message(
 #         from traceback import format_exc
 #         logger.error(format_exc())
 
+
 @router.post("/get_conversation_histories")
 async def get_conversation_histories(request: Request) -> List[ConversationHistory]:
     """Get conversation histories."""
@@ -56,7 +57,9 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         input_data = ConversationHistoryRequestInput(**raw_data)
 
         # 如果验证通过，继续处理请求
-        histories = await conversation_history_manager.get_conversation_histories(input_data)
+        histories = await conversation_history_manager.get_conversation_histories(
+            input_data
+        )
         return histories
 
     except ValidationError as ve:
@@ -68,7 +71,9 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
     except RequestValidationError as rve:
         # 捕获 FastAPI 请求验证错误
         logger.error(f"Request validation error: {rve}")
-        error_messages = [f"{error['loc'][-1]}: {error['msg']}" for error in rve.errors()]
+        error_messages = [
+            f"{error['loc'][-1]}: {error['msg']}" for error in rve.errors()
+        ]
         raise HTTPException(status_code=422, detail={"errors": error_messages})
 
     except json.JSONDecodeError as jde:
@@ -81,6 +86,7 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         logger.error(f"Unexpected error: {str(e)}")
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail="Internal server error")
+
 
 @router.post("/delete_all_conversations")
 async def delete_all_conversations(

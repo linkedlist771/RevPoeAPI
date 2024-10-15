@@ -3,6 +3,8 @@ from pathlib import Path
 
 API_KEY_REFRESH_INTERVAL_HOURS = 3
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+POE_BOT_INFO = DATA_DIR / "models.json"
 API_KEY_REFRESH_INTERVAL = API_KEY_REFRESH_INTERVAL_HOURS * 60 * 60
 BASIC_KEY_MAX_USAGE = 10
 PLUS_KEY_MAX_USAGE = 60
@@ -59,4 +61,5 @@ POE_BOT_TEMPERATURE = 0.95
 
 if __name__ == "__main__":
     from loguru import logger
+
     logger.info(ROOT)
