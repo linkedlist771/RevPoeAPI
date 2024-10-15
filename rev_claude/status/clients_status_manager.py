@@ -254,8 +254,9 @@ class ClientsStatusManager:
         async def retrieve_client_status(idx, client, client_type, models):
             # self.create_if_not_exist(client_type, idx, models)
             await self.create_if_not_exist(client_type, idx, models)
-            usage = await self.get_usage(client_type, idx)
-
+            # usage = await self.get_usage(client_type, idx)
+            # 现在这个usage变成了剩余可用积分
+            usage = await client.get_remaining_credits()
             account = await cookie_manager.get_account(client.cookie_key)
             # is_active = self.set_client_active_when_cd(client_type, idx)
             is_active = await self.set_client_active_when_cd(client_type, idx)
@@ -266,7 +267,7 @@ class ClientsStatusManager:
 
                 _message = await self.get_limited_message(key, client_type, idx)
                 if  not "需" in _message:
-                    _message = "可用"
+                    _message = "剩余可用积分"
             else:
                 _status = ClientStatus.CD.value
                 # key = self.get_client_status_start_time_key(client_type, idx)
