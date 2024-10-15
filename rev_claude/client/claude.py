@@ -290,7 +290,7 @@ class Client:
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
-                bot=get_poe_bot_info()[model]["baseModel"],
+                bot=get_poe_bot_info()[model.lower()]["baseModel"],
                 message=messages_str,
                 file_path=file_paths,
             ):
