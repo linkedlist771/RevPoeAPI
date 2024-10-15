@@ -8,9 +8,35 @@
         "premium_model": false,
         "object": "model",
         "owned_by": "poe",
-        "path": "gpt3_5.jpeg",
+        "path": "assistant.svg",
         "desc": "通用助手机器人。对于需要最新信息的查询，它可以从网络访问实时数据以提供更准确的答案。",
         "points": 20
+    },
+    "web-search": {
+        "baseModel": "websearch",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "poe",
+        "path": "websearch.jpeg",
+        "desc": "支持网络的助手机器人，通过搜索互联网来丰富其回答。特别擅长处理关于最新信息或具体事实的查询。由 GPT 4o Mini 驱动。",
+        "points": 15
+    },
+    "o1-mini": {
+        "baseModel": "gpt_o1_mini_128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "o1.jpeg",
+        "desc": "这个OpenAI模型是o1的更快、更便宜的版本，特别擅长编码、数学和科学应用，适用于不需要广泛通用知识的场景。它支持128k tokens的上下文。",
+        "points": 1800
     },
     "gpt-3.5-turbo": {
         "baseModel": "gpt3_5",
@@ -717,6 +743,35 @@
         "desc": "由 Playground v2.5 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
         "points": 80
     },
+    "playground-v3": {
+        "baseModel": "playgroundv25",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "playgroundv3",
+        "path": "playgroundv25.jpeg",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1254x836": "--aspect 3:2",
+            "836x1254": "--aspect 2:3",
+            "1182x886": "--aspect 4:3",
+            "886x1182": "--aspect 3:4",
+            "1161x903": "--aspect 9:7",
+            "903x1161": "--aspect 7:9",
+            "1536x640": "--aspect 12:5",
+            "640x1536": "--aspect 5:12",
+            "1365x768": "--aspect 16:9",
+            "768x1365": "--aspect 9:16",
+            "1295x809": "--aspect 16:10",
+            "809x1295": "--aspect 10:16"
+        },
+        "desc": "由 Playground v3 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
+        "points": 40
+    },
     "sdxl": {
         "baseModel": "stablediffusionxl",
         "tokens": 80,
@@ -816,6 +871,25 @@
         "desc": "由 DALL·E 3 提供支持，OpenAI 的最新图像生成模型，能够生成高质量和复杂的图像，提供多种尺寸选项。",
         "points": 200
     },
+    "flux-pro": {
+        "baseModel": "fluxpro",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "openai",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1792x1024": "--aspect 7:4",
+            "1024x1792": "--aspect 4:7"
+        },
+        "path": "flux.jpeg",
+        "desc": "最先进的图像生成，具备顶级的提示跟随、视觉质量、图像细节和输出多样性。这是最强大的 FLUX.1 版本。使用“–aspect”来选择宽高比（例如 –aspect 1:1）。",
+        "points": 1250
+    },
     "ideogram": {
         "baseModel": "ideogram",
         "tokens": 80,
@@ -839,6 +913,31 @@
         },
         "path": "ideogram.jpeg",
         "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
-        "points": 180
+        "points": 18000
+    },
+    "ideogram-v2": {
+        "baseModel": "ideogram",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "ideogram",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1254x836": "--aspect 3:2",
+            "836x1254": "--aspect 2:3",
+            "1182x886": "--aspect 4:3",
+            "886x1182": "--aspect 3:4",
+            "1365x768": "--aspect 16:9",
+            "768x1365": "--aspect 9:16",
+            "1295x809": "--aspect 16:10",
+            "809x1295": "--aspect 10:16"
+        },
+        "path": "ideogram.jpeg",
+        "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
+        "points": 1900
     }
 }
