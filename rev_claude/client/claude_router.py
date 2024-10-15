@@ -208,7 +208,6 @@ async def chat(
     clients=Depends(obtain_claude_client),
     manager: APIKeyManager = Depends(get_api_key_manager),
 ):
-    model = get_poe_bot_info()[model]['baseModel']
     api_key = request.headers.get("Authorization")
     has_reached_limit = manager.has_exceeded_limit(api_key)
     if has_reached_limit:

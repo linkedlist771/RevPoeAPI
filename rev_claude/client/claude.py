@@ -44,6 +44,7 @@ from rev_claude.status_code.status_code_enum import (
 from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
 from rev_claude.utils.httpx_utils import async_stream
+from rev_claude.utils.poe_bots_utils import get_poe_bot_info
 from rev_claude.utils.sse_utils import build_sse_data
 
 
@@ -289,7 +290,9 @@ class Client:
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
-                bot=model, message=messages_str, file_path=file_paths
+                bot=get_poe_bot_info()[model]["baseModel"],
+                message=messages_str,
+                file_path=file_paths,
             ):
                 # files need to be added later.
                 text = chunk["response"]
