@@ -228,6 +228,22 @@ class Client:
     # Send Message to Claude
 
     # Send and Response Stream Message to Claude
+    @property
+    def tokens(self):
+        return {
+            "p-b": self.p_b,
+            "p-lat": self.p_lat,
+        }
+
+    async def get_remaining_credits(self) -> int:
+        client = await AsyncPoeApi(self.tokens).create()
+        settings = await client.get_settings()
+        try:
+            remaining_credits = settings["messagePointInfo"]["messagePointBalance"]
+        except KeyError:
+            remaining_credits = 0
+        return remaining_credits
+
 
     async def stream_message(
         self,
@@ -282,12 +298,9 @@ class Client:
             [f"{message['role']}: {message['content']}" for message in messages]
         )
         response_text = ""
-        tokens = {
-            "p-b": self.p_b,
-            "p-lat": self.p_lat,
-        }
 
-        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+
+        poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
                 bot=get_poe_bot_info()[model.lower()]["baseModel"],
