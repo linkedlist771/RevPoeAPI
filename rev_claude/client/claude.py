@@ -315,8 +315,9 @@ class Client:
                 # prefixes = text
                 prefixes.append(text)
                 if len(prefixes) >= 2:
+                    logger.debug(f"text before remove prefix: {text}")
                     text = remove_prefix(text, prefixes[-2])
-                logger.debug(text)
+                    logger.debug(f"text after remove prefix: {text}")
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
