@@ -69,6 +69,8 @@ def generate_trace_id():
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
 def remove_prefix(text, prefix):
+    logger.debug(f"text: \n{text}")
+    logger.debug(f"prefix: \n{prefix}")
     logger.debug(text.startswith(prefix))
     if text.startswith(prefix):
         return text[len(prefix):]
