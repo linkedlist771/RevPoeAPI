@@ -63,7 +63,7 @@ async def validate_api_key(
 
 
 async def increase_usage_callback(api_key, model):
-    model_info = get_poe_bot_info[model].get('points', 300)
+    model_info = get_poe_bot_info()[model].get('points', 300)
     manager = get_api_key_manager()
     manager.increment_usage(api_key, model_info)
 
