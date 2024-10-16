@@ -163,7 +163,7 @@ class APIKeyManager:
         next_usage_time = current_time + timedelta(seconds=wait_time)
 
         message = (
-            f"您的账户是{key_type}类型，使用限制是{usage_limit}次/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
+            f"您的账户是{key_type}类型，额度: {usage_limit}积分/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
             f"您可以在 {next_usage_time.strftime('%H:%M:%S')} 后再次使用。"
         )
         return message
