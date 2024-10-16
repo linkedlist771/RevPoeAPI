@@ -70,6 +70,11 @@ def generate_trace_id():
     return sentry_trace
 
 
+def remove_prefix(text, prefix):
+    if text.startswith(prefix):
+        return text[len(prefix):]
+    return text
+
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
     upload_dir = "uploaded_files"
@@ -301,6 +306,7 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
 
+        prefixs = []
         poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
@@ -308,8 +314,11 @@ class Client:
                 message=messages_str,
                 file_path=file_paths,
             ):
-                # files need to be added later.
                 text = chunk["response"]
+                prefixs.append(chunk["prefix"])
+                # 检查是否有前缀在text中并去除
+                for prefix in prefixs:
+                    text = remove_prefix(text, prefix)
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
