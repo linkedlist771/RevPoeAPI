@@ -740,6 +740,7 @@
             "1295x809": "--aspect 16:10",
             "809x1295": "--aspect 10:16"
         },
+        "text2image": true,
         "desc": "由 Playground v2.5 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
         "points": 80
     },
@@ -769,6 +770,7 @@
             "1295x809": "--aspect 16:10",
             "809x1295": "--aspect 10:16"
         },
+        "text2image": true,
         "desc": "由 Playground v3 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
         "points": 40
     },
@@ -794,6 +796,7 @@
             "1536x640": "--aspect 12:5",
             "640x1536": "--aspect 5:12"
         },
+        "text2image": true,
         "desc": "由 Stable Diffusion XL 提供支持，适用于高质量图像生成和编辑，提供多种尺寸选项。",
         "points": 80
     },
@@ -808,6 +811,7 @@
         "owned_by": "bytedance",
         "path": "sd.jpeg",
         "desc": "由字节跳动提供的SDXL Lightning 提供支持，优化速度和成本，适用于快速图像生成。",
+        "text2image": true,
         "points": 80
     },
     "stable-diffusion-3": {
@@ -822,6 +826,7 @@
         "path": "sd.jpeg",
         "owned_by": "stabilityai",
         "desc": "由 Stable Diffusion 3 提供支持，最新版本的稳定扩散模型，适用于高质量图像生成和编辑。",
+        "text2image": true,
         "points": 150
     },
     "stable-diffusion-3-turbo": {
@@ -836,6 +841,7 @@
         "path": "sd.jpeg",
         "owned_by": "stabilityai",
         "desc": "由 Stable Diffusion 3 Turbo 提供支持，优化性能，适用于高质量图像生成和编辑。",
+        "text2image": true,
         "points": 180
     },
     "stable-diffusion-3-2b": {
@@ -850,6 +856,7 @@
         "path": "sd.jpeg",
         "owned_by": "stabilityai",
         "desc": "由 Stable Diffusion 3 2B 提供支持，适用于一般图像生成和编辑。",
+        "text2image": true,
         "points": 80
     },
     "dall-e-3": {
@@ -868,6 +875,7 @@
             "1024x1792": "--aspect 4:7"
         },
         "path": "dalle3.jpeg",
+        "text2image": true,
         "desc": "由 DALL·E 3 提供支持，OpenAI 的最新图像生成模型，能够生成高质量和复杂的图像，提供多种尺寸选项。",
         "points": 200
     },
@@ -887,6 +895,7 @@
             "1024x1792": "--aspect 4:7"
         },
         "path": "flux.jpeg",
+        "text2image": true,
         "desc": "最先进的图像生成，具备顶级的提示跟随、视觉质量、图像细节和输出多样性。这是最强大的 FLUX.1 版本。使用“–aspect”来选择宽高比（例如 –aspect 1:1）。",
         "points": 1250
     },
@@ -911,6 +920,7 @@
             "1295x809": "--aspect 16:10",
             "809x1295": "--aspect 10:16"
         },
+        "text2image": true,
         "path": "ideogram.jpeg",
         "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
         "points": 18000
@@ -936,6 +946,7 @@
             "1295x809": "--aspect 16:10",
             "809x1295": "--aspect 10:16"
         },
+        "text2image": true,
         "path": "ideogram.jpeg",
         "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
         "points": 1900
