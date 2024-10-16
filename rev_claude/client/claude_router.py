@@ -53,12 +53,20 @@ async def validate_api_key(
             status_code=HTTP_480_API_KEY_INVALID,
             detail="APIKEY已经过期或者不存在，请检查您的APIKEY是否正确。",
         )
-    manager.increment_usage(api_key)
+    # TODO: 这里增加使用次数次数改成对应增加对应的使用积分， 但是意思是一样的。
+    # manager.increment_usage(api_key)
     logger.info(f"API key:\n{api_key}")
     logger.info(manager.get_apikey_information(api_key))
     # 尝试激活 API key
     active_message = manager.activate_api_key(api_key)
     logger.info(active_message)
+
+
+async def increase_usage_callback(api_key, model):
+    model_info = get_poe_bot_info[model].get('points', 300)
+    manager = get_api_key_manager()
+    manager.increment_usage(api_key, model_info)
+
 
 
 router = APIRouter(dependencies=[Depends(validate_api_key)])
@@ -178,20 +186,6 @@ async def obtain_reverse_official_login_router(
     )
 
 
-# async def stream_message(
-#       self,
-#       prompt,
-#       conversation_id,
-#       model,
-#       client_type,
-#       client_idx,
-#       attachments=None,
-#       files=None,
-#       call_back=None,
-#       api_key=None,
-#       timeout=120,
-#   ):
-
 
 @router.post("/form_chat")
 async def chat(
@@ -292,9 +286,11 @@ async def chat(
         ).render_prompt()
         logger.info(f"Prompt After search: \n{message}")
 
-    call_back = partial(
+    call_back = [partial(
         push_assistant_message_callback, conversation_history_request, messages, hrefs
-    )
+    ),
+        partial(increase_usage_callback, api_key, model)]
+
 
     if stream:
         streaming_res = claude_client.stream_message(

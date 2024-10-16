@@ -125,17 +125,13 @@ class APIKeyManager:
 
     def has_exceeded_limit(self, api_key) -> bool:
         current_usage = self.get_current_usage(api_key)
-        # 首先检测是不是超过限制进行帅脚本了
-        if current_usage >= ACCOUNT_DELETE_LIMIT:
-            self.redis.delete(api_key)
-            return True
-
         key_type = self.get_api_key_type(api_key)
         if key_type == APIKeyType.BASIC.value:
             usage_limit = BASIC_KEY_MAX_USAGE
         else:
             usage_limit = PLUS_KEY_MAX_USAGE
         if current_usage >= usage_limit:
+            # 换成积分了。 对应改下就行了
             # 判断当前时间和上次使用时间的时间差
             last_usage_time = self.get_last_usage_time(api_key)
             current_timestamp = get_current_time()

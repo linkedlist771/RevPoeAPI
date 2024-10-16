@@ -254,7 +254,7 @@ class Client:
         client_idx,
         attachments=None,
         files: Union[List[UploadFile], UploadFile, None] = None,
-        call_back=None,
+        call_back = None,
         api_key=None,
         timeout=120,
         file_paths=None,
@@ -322,7 +322,11 @@ class Client:
             yield str(e)
 
         if call_back:
-            await call_back(response_text)
+            if len(response_text) == 1:
+                await call_back(response_text)
+            else:
+                await call_back[0](response_text)
+                await call_back[1]()
             logger.info(f"Response text:\n {response_text}")
 
     # Deletes the conversation

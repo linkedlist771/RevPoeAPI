@@ -923,7 +923,7 @@
         "text2image": true,
         "path": "ideogram.jpeg",
         "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
-        "points": 18000
+        "points": 1800
     },
     "ideogram-v2": {
         "baseModel": "ideogram",
