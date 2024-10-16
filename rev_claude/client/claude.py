@@ -298,7 +298,8 @@ class Client:
             [f"{message['role']}: {message['content']}" for message in messages]
         )
         response_text = ""
-
+        if get_poe_bot_info()[model.lower().get("text2image", False)]:
+            messages_str = prompt
 
         poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
