@@ -68,7 +68,10 @@ def generate_trace_id():
     # 将三个部分组合成完整的 Sentry-Trace
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
-
+def remove_prefix(text, prefix):
+    if text.startswith(prefix):
+        return text[len(prefix):]
+    return text
 
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
@@ -300,7 +303,7 @@ class Client:
         if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
-
+        prefixes = []
         poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
@@ -309,6 +312,10 @@ class Client:
                 file_path=file_paths,
             ):
                 text = chunk["response"]
+                # prefixes = text
+                prefixes.append(text)
+                if len(prefixes) >= 2:
+                    text = remove_prefix(text, prefixes[-2])
                 logger.debug(text)
                 yield text
                 response_text += text
