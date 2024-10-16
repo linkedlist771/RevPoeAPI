@@ -315,7 +315,7 @@ class Client:
                 file_path=file_paths,
             ):
                 text = chunk["response"]
-                prefixs.append(chunk["prefix"])
+                prefixs.append(text)
                 # 检查是否有前缀在text中并去除
                 for prefix in prefixs:
                     text = remove_prefix(text, prefix)
