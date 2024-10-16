@@ -32,7 +32,7 @@ async def __check_reverse_official_usage_limits():
     async def check_client(client):
         try:
             logger.debug(f"Testing client {client['type']} {client['idx']}")
-            usage = await client["client"].get_usage()
+            usage = await client["client"].get_remaining_credits()
             clients_status_manager = ClientsStatusManager()
             await clients_status_manager.set_usage(client_type=client["type"], client_idx=client["idx"], usage=usage)
 
