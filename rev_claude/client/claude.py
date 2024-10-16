@@ -300,7 +300,7 @@ class Client:
         if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
-        
+
         poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
             async for chunk in poe_bot_client.send_message(
@@ -309,6 +309,7 @@ class Client:
                 file_path=file_paths,
             ):
                 text = chunk["response"]
+                logger.debug(text)
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
