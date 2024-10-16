@@ -317,8 +317,8 @@ class Client:
                 text = chunk["response"]
                 prefixs.append(text)
                 # 检查是否有前缀在text中并去除
-                for prefix in prefixs:
-                    text = remove_prefix(text, prefix)
+                if len(prefixs) >= 1:
+                    text = remove_prefix(text, prefixs[-1])
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
