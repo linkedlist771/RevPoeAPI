@@ -291,15 +291,15 @@ class Client:
             file_paths = []
             # formatted_messages: list, bot_name: str
         messages = [{"role": "user", "content": prompt}]
-        logger.info(f"formatted_messages: {messages}")
         former_messages.extend(messages)
         messages = former_messages
         messages_str = "\n".join(
             [f"{message['role']}: {message['content']}" for message in messages]
         )
         response_text = ""
-        if get_poe_bot_info()[model.lower()].get("text2image", False):
+        if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
+        logger.info(f"formatted_messages: {messages_str}")
 
         poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
         try:
