@@ -91,6 +91,10 @@ class ClientsStatusManager:
         usage_key = self.get_client_usage_key(client_type, client_idx)
         return await (await self.get_aioredis()).incrby(usage_key, increment)
 
+    async def set_usage(self, client_type, client_idx, usage):
+        usage_key = self.get_client_usage_key(client_type, client_idx)
+        await (await self.get_aioredis()).set(usage_key, usage)
+
     async def reset_usage(self, client_type, client_idx):
         usage_key = self.get_client_usage_key(client_type, client_idx)
         await (await self.get_aioredis()).set(usage_key, 0)
@@ -98,6 +102,7 @@ class ClientsStatusManager:
     async def get_usage(self, client_type, client_idx):
         usage_key = self.get_client_usage_key(client_type, client_idx)
         usage = await self.decoded_get(usage_key)
+        #
         return int(usage) if usage is not None else 0
 
     async def get_limited_message(self, start_time_key, type, idx):
@@ -128,18 +133,6 @@ class ClientsStatusManager:
                 message += f"{__mode}:可用。\n"
         return message
 
-    # def get_dict_value(self, key):
-    #     value = self.redis.get(key)
-    #     if value is None:
-    #         return {}
-    #     try:
-    #         res = json.loads(value)
-    #         if not isinstance(res, dict):
-    #             return {}
-    #         else:
-    #             return res
-    #     except (json.JSONDecodeError, TypeError):
-    #         return {}
 
     async def get_dict_value_async(self, key):
         value = await self.decoded_get(key)
@@ -256,9 +249,11 @@ class ClientsStatusManager:
             await self.create_if_not_exist(client_type, idx, models)
             # usage = await self.get_usage(client_type, idx)
             # 现在这个usage变成了剩余可用积分
-            usage = await client.get_remaining_credits()
+            usage = await self.get_usage(client_type, idx)
+            if usage == 0:
+                actual_usage = await client.get_remaining_credits()
+                await self.set_usage(client_type, idx, actual_usage)
             account = await cookie_manager.get_account(client.cookie_key)
-            # is_active = self.set_client_active_when_cd(client_type, idx)
             is_active = await self.set_client_active_when_cd(client_type, idx)
 
             if is_active:
