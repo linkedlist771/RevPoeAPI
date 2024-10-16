@@ -312,7 +312,7 @@
         "points": 380
     },
     "claude-3.5-sonnet-200k": {
-        "baseModel": "claude_3_igloo_200k",
+        "baseModel": "claude-3.5-sonnet-200k",
         "tokens": 200000,
         "endpoints": [
             "/v1/chat/completions"
