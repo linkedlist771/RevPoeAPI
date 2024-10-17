@@ -240,29 +240,119 @@ class ClientsStatusManager:
             await self.set_async(usage_key, 0)
 
     async def get_all_clients_status(self, basic_clients, plus_clients):
-        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+        from rev_claude.cookie.claude_cookie_manage import (
+            CookieUsageType,
+            get_cookie_manager,
+        )
 
-        async def retrieve_client_status(idx, client, client_type):
-            usage = await client.get_remaining_credits()
-            await self.set_usage(client_type, idx, usage)
-            account = await get_cookie_manager().get_account(client.cookie_key)
+        async def retrieve_client_status(idx, client, client_type, models):
+            await self.create_if_not_exist(client_type, idx, models)
+            usage = await self.get_usage(client_type, idx)
+            if usage == 0:
+                actual_usage = await client.get_remaining_credits()
+                await self.set_usage(client_type, idx, actual_usage)
+            account = await cookie_manager.get_account(client.cookie_key)
+            is_active = await self.set_client_active_when_cd(client_type, idx)
 
+            if is_active:
+                _status = ClientStatus.ACTIVE.value
+                key = self.get_client_status_start_time_key(client_type, idx)
+
+                _message = await self.get_limited_message(key, client_type, idx)
+                if not "需" in _message:
+                    _message = "剩余可用积分"
+            else:
+                _status = ClientStatus.CD.value
+                # key = self.get_client_status_start_time_key(client_type, idx)
+                # _message = self.get_limited_message(key, client_type, idx)
+                key = self.get_client_status_start_time_key(client_type, idx)
+                _message = await self.get_limited_message(key, client_type, idx)
             client_type = "normal" if client_type == "basic" else client_type
+            remaining = await self.get_remaining_usage(client_type, idx)
+            # 如果不存在就设置为9999
+            if not remaining:
+                await self.set_remaining_usage(client_type, idx, 9999)
+                remaining = 9999
+            if int(remaining) < 10:
+                _message = f"临近使用完了， 剩余{remaining}次。"
             status = ClientsStatus(
                 id=account,
-                status=ClientStatus.ACTIVE.value,
+                status=_status,
                 type=client_type,
                 idx=idx,
-                message="剩余可用积分",
+                message=_message,
                 usage=usage,
-                remaining=usage,
+                remaining=remaining,
             )
             return status
 
-        async def process_clients(clients, client_type):
-            return [await retrieve_client_status(idx, client, client_type) for idx, client in clients.items()]
+        async def process_clients(clients, client_type, models):
+            """
+            这个只处理是否为普通login的账号， 也就是说不为REVERSE_API_ONLY 就是OK的
+            """
+            active_statuses = []
+            cd_statuses = []
 
-        plus_statuses = await process_clients(plus_clients, "plus") if plus_clients else []
-        basic_statuses = await process_clients(basic_clients, "basic") if basic_clients else []
+            for idx, client in clients.items():
+                status = await retrieve_client_status(idx, client, client_type, models)
+                cookie_key = client.cookie_key
+                cookie_usage_type = await cookie_manager.get_cookie_usage_type(
+                    cookie_key
+                )
 
-        return plus_statuses + basic_statuses
+                if cookie_usage_type != CookieUsageType.REVERSE_API_ONLY:
+                    if status.status == ClientStatus.ACTIVE.value:
+                        active_statuses.append(status)
+                    else:
+                        cd_statuses.append(status)
+
+            clients_status.extend(active_statuses)
+            clients_status.extend(cd_statuses)
+
+        async def add_session_login_account(clients, client_type, models):
+            """
+            同理， 这个只处理是否为session login的账号， 也就是说不为WEB_LOGIN_ONLY 就是OK的
+            """
+            for idx, client in clients.items():
+                status = await retrieve_client_status(idx, client, client_type, models)
+                status.is_session_login = True
+                cookie_key = client.cookie_key
+                cookie_usage_type = await cookie_manager.get_cookie_usage_type(
+                    cookie_key
+                )
+                if cookie_usage_type != CookieUsageType.WEB_LOGIN_ONLY:
+                    clients_status.append(status)
+
+        clients_status = []
+        cookie_manager = get_cookie_manager()
+        if plus_clients:
+            last_plus_idx = list(plus_clients.keys())
+            if not isinstance(last_plus_idx, list):
+                last_plus_idx = [last_plus_idx]
+            await add_session_login_account(
+                {
+                    __last_plus_idx: plus_clients[__last_plus_idx]
+                    for __last_plus_idx in last_plus_idx
+                },
+                "plus",
+                [ClaudeModels.OPUS.value, ClaudeModels.SONNET_3_5.value],
+            )
+
+        await process_clients(
+            plus_clients,
+            "plus",
+            [ClaudeModels.OPUS.value, ClaudeModels.SONNET_3_5.value],
+        )
+
+        if basic_clients:
+            # 当然是全部都要测试了， 但是这个for循环了两次， 感觉不太好， anyway。
+            first_basic_idx = list(basic_clients.keys())
+            await add_session_login_account(
+                {basic_idx: basic_clients[basic_idx] for basic_idx in first_basic_idx},
+                "basic",
+                [ClaudeModels.SONNET_3_5.value],
+            )
+
+        await process_clients(basic_clients, "basic", [ClaudeModels.SONNET_3_5.value])
+
+        return clients_status
