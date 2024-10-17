@@ -155,6 +155,7 @@ class Client:
     def __init__(self, cookie, cookie_key=None):
         self.cookie = self.format_cookie(cookie)
         self.cookie_key = cookie_key
+        self.poe_bot_client = None  # Add this line
         # self.organization_id = self.get_organization_id()
 
     def __set_credentials__(self):
@@ -166,6 +167,7 @@ class Client:
         self.p_lat = p_lat
         if not self.p_b or not self.p_lat:
             raise ValueError("Invalid cookie")
+        asyncio.create_task(self.update_poe_bot_client_tokens())  # Add
 
     async def __set_organization_id__(self):
         self.organization_id = await self.__async_get_organization_id()
@@ -240,13 +242,13 @@ class Client:
 
     async def get_remaining_credits(self) -> int:
         client = await self.get_poe_bot_client()
-
-        # client = await AsyncPoeApi(self.tokens).create()
         settings = await client.get_settings()
         try:
             remaining_credits = settings["messagePointInfo"]["messagePointBalance"]
-        except KeyError:
+        except Exception:
+            await asyncio.create_task(self.update_poe_bot_client_tokens())  # Add
             remaining_credits = 0
+
         return remaining_credits
 
     async def get_poe_bot_client(self):
@@ -259,12 +261,24 @@ class Client:
         }
         if formkey:
             tokens["formkey"] = formkey
-        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
 
-        if poe_bot_client.formkey and poe_bot_client.formkey != formkey:
-            await cookie_manager.set_cookie_formkey(self.cookie_key, poe_bot_client.formkey)
+        if self.poe_bot_client is None:
+            self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
 
-        return poe_bot_client
+        if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
+            await cookie_manager.set_cookie_formkey(self.cookie_key, self.poe_bot_client.formkey)
+
+        return self.poe_bot_client
+
+    async def update_poe_bot_client_tokens(self):
+        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+
+        if self.poe_bot_client:
+            self.poe_bot_client.tokens = {
+                "p-b": self.p_b,
+                "p-lat": self.p_lat,
+                "formkey": await get_cookie_manager().get_cookie_formkey(self.cookie_key)
+            }
 
     async def stream_message(
         self,
