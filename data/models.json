@@ -27,7 +27,7 @@
     },
     "o1-mini": {
         "baseModel": "gpt_o1_mini_128k",
-        "tokens": 2000,
+        "tokens": 128000,
         "endpoints": [
             "/v1/chat/completions"
         ],
@@ -37,6 +37,19 @@
         "path": "o1.jpeg",
         "desc": "这个OpenAI模型是o1的更快、更便宜的版本，特别擅长编码、数学和科学应用，适用于不需要广泛通用知识的场景。它支持128k tokens的上下文。",
         "points": 1800
+    },
+    "o1-preview": {
+        "baseModel": "gpt_o1_preview_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "o1.jpeg",
+        "desc": "这是 OpenAI 最新的 o1 模型的早期预览，该模型旨在在回应之前花更多时间进行思考。它能够处理复杂任务并解决比以前的模型在科学、编程和数学方面更难的问题。支持128k个令牌的上下文。",
+        "points": 10000
     },
     "gpt-3.5-turbo": {
         "baseModel": "gpt3_5",
