@@ -69,9 +69,9 @@ def generate_trace_id():
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
 def remove_prefix(text, prefix):
-    logger.debug(f"text: \n{text}")
-    logger.debug(f"prefix: \n{prefix}")
-    logger.debug(text.startswith(prefix))
+    # logger.debug(f"text: \n{text}")
+    # logger.debug(f"prefix: \n{prefix}")
+    # logger.debug(text.startswith(prefix))
     if text.startswith(prefix):
         return text[len(prefix):]
     return text
@@ -318,10 +318,10 @@ class Client:
                 # prefixes = text
                 prefixes.append(text)
                 if len(prefixes) >= 2:
-                    logger.debug(f"prefixes: \n{prefixes}")
-                    logger.debug(f"text before remove prefix: \n{text}")
+                    # logger.debug(f"prefixes: \n{prefixes}")
+                    # logger.debug(f"text before remove prefix: \n{text}")
                     text = remove_prefix(text, prefixes[-2])
-                    logger.debug(f"text after remove prefix: \n{text}")
+                    # logger.debug(f"text after remove prefix: \n{text}")
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
