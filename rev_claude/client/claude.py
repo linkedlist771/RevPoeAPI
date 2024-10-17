@@ -211,6 +211,7 @@ class Client:
         from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
         cookie_manager = get_cookie_manager()
         formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
+        logger.debug(f"formkey from redis:\n{formkey}")
         tokens = {
             "p-b": self.p_b,
             "p-lat": self.p_lat,
