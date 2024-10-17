@@ -31,6 +31,7 @@ from rev_claude.configs import (
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
 )
+from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
 
 from rev_claude.models import ClaudeModels
 from rev_claude.status.clients_status_manager import ClientsStatusManager
@@ -158,18 +159,21 @@ class Client:
         # self.organization_id = self.get_organization_id()
 
     def __set_credentials__(self):
-        # # 创建一个SimpleCookie对象
-        # cookie = SimpleCookie()
-        # # 加载cookie字符串
-        # cookie.load(self.cookie)
-        # # 获取指定的两个键值对
-        # p_b = cookie.get('p-b')
-        # # p-lat
-        # p_lat = cookie.get('p-lat')
         p_b = extract_cookie_value(self.cookie, "p-b")
         p_lat = extract_cookie_value(self.cookie, "p-lat")
+        # get the formkey
+
         self.p_b = p_b
         self.p_lat = p_lat
+        # tokens = {
+        #     "p-b": self.p_b,
+        #     "p-lat": self.p_lat,
+        # }
+        # # load_bundle() 尝试从redis 获取formkey, 如果不存在则从网页获取，
+        # # 然后存到redis里面。
+        #
+        # client = AsyncPoeApi(tokens=tokens)
+
         if not self.p_b or not self.p_lat:
             raise ValueError("Invalid cookie")
 
@@ -287,6 +291,7 @@ class Client:
             if history.conversation_id == conversation_id:
                 former_messages = history.messages
                 break
+        #
         if former_messages:
             former_messages = [
                 {"role": message.role.value, "content": message.content}
@@ -309,7 +314,28 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
         prefixes = []
-        poe_bot_client = await AsyncPoeApi(tokens=self.tokens).create()
+        cookie_manager = get_cookie_manager()
+        format_key_token = await cookie_manager.get_cookie_formkey(self.cookie_key)
+        logger.debug(f"format_key_token: {format_key_token}")
+        if format_key_token:
+            tokens = {
+                "formkey": format_key_token,
+                "p-b": self.p_b,
+                "p-lat": self.p_lat,
+            }
+        else:
+
+            tokens = {
+                "p-b": self.p_b,
+                "p-lat": self.p_lat,
+            }
+        #         if 'formkey' in tokens:
+        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+        formkey = await poe_bot_client.formkey
+        if formkey:
+
+            await cookie_manager.set_cookie_formkey(self.cookie_key, formkey)
+            # logger.info(f
         try:
             async for chunk in poe_bot_client.send_message(
                 bot=get_poe_bot_info()[model.lower()]["baseModel"],

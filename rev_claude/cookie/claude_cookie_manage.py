@@ -65,6 +65,9 @@ class CookieManager:
     def get_cookie_account_key(self, cookie_key):
         return f"{cookie_key}:account"
 
+    def get_cookie_formkey_key(self, cookie_key):
+        return f"{cookie_key}:formkey"
+
     def get_cookie_organization_key(self, cookie_key):
         return f"{cookie_key}:organization"
 
@@ -166,6 +169,17 @@ class CookieManager:
             "account": account,
             "usage_type": usage_type.value,
         }
+
+    async def get_cookie_formkey(self, cookie_key: str):
+        formkey_key = self.get_cookie_formkey_key(cookie_key)
+        formkey = await self.decoded_get(formkey_key)
+        return formkey
+
+    async def set_cookie_formkey(self, cookie_key: str, formkey: str):
+        formkey_key = self.get_cookie_formkey_key(cookie_key)
+        redis_instance = await self.get_aioredis()
+        await redis_instance.set(formkey_key, formkey)
+        return f"Formkey for {cookie_key} has been set."
 
     async def get_account(self, cookie_key: str):
         account_key = self.get_cookie_account_key(cookie_key)
