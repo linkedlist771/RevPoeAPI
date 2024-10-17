@@ -169,51 +169,7 @@ class Client:
             raise ValueError("Invalid cookie")
         asyncio.create_task(self.update_poe_bot_client_tokens())  # Add
 
-    async def __set_organization_id__(self):
-        self.organization_id = await self.__async_get_organization_id()
-        return self.organization_id
 
-    def retrieve_session_key(self):
-        cookie_list = self.cookie.split(";")
-        for cookie_key_pair in cookie_list:
-            if "sk-ant-si" in cookie_key_pair:
-                return cookie_key_pair.strip().replace("sessionKey=", "")
-        return
-
-    def build_organization_headers(self):
-        return {
-            "User-Agent": get_random_user_agent(),
-            # "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/124.0",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Referer": "https://claude.ai/chats",
-            "Content-Type": "application/json",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Connection": "keep-alive",
-            "Cookie": self.cookie,
-        }
-
-    async def __async_get_organization_id(self):
-        url = "https://claude.ai/api/organizations"
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.get(
-                    url, headers=self.build_organization_headers()
-                )
-                res_str = response.text
-                logger.debug(f"res_str : {res_str}")
-                res = response.json()
-                if "We are unable to serve your request" in res_str:
-                    raise Exception("We are unable to serve your request")
-                logger.debug(f"res : {res}")
-                uuid = res[0]["uuid"]
-                return uuid
-
-            except Exception as e:
-                import traceback
-
-                logger.error(traceback.format_exc())
 
     def get_content_type(self, file_path):
         # Function to determine content type based on file extension
