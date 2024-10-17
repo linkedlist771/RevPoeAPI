@@ -248,13 +248,35 @@ class Client:
         }
 
     async def get_remaining_credits(self) -> int:
-        client = await AsyncPoeApi(self.tokens).create()
+        client = await self.get_poe_bot_client()
+
+        # client = await AsyncPoeApi(self.tokens).create()
         settings = await client.get_settings()
         try:
             remaining_credits = settings["messagePointInfo"]["messagePointBalance"]
         except KeyError:
             remaining_credits = 0
         return remaining_credits
+
+    async def get_poe_bot_client(self):
+        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+        cookie_manager = get_cookie_manager()
+        formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
+
+        tokens = {
+            "p-b": self.p_b,
+            "p-lat": self.p_lat,
+        }
+
+        if formkey:
+            tokens["formkey"] = formkey
+
+        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+
+        if poe_bot_client.formkey and poe_bot_client.formkey != formkey:
+            await cookie_manager.set_cookie_formkey(self.cookie_key, poe_bot_client.formkey)
+
+        return poe_bot_client
 
     async def stream_message(
         self,
@@ -313,30 +335,9 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
         prefixes = []
-        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
 
-        cookie_manager = get_cookie_manager()
-        format_key_token = await cookie_manager.get_cookie_formkey(self.cookie_key)
-        logger.debug(f"format_key_token: {format_key_token}")
-        if format_key_token:
-            tokens = {
-                "formkey": format_key_token,
-                "p-b": self.p_b,
-                "p-lat": self.p_lat,
-            }
-        else:
+        poe_bot_client = await self.get_poe_bot_client()
 
-            tokens = {
-                "p-b": self.p_b,
-                "p-lat": self.p_lat,
-            }
-        #         if 'formkey' in tokens:
-        poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-        formkey = poe_bot_client.formkey
-        if formkey:
-
-            await cookie_manager.set_cookie_formkey(self.cookie_key, formkey)
-            # logger.info(f
         try:
             async for chunk in poe_bot_client.send_message(
                 bot=get_poe_bot_info()[model.lower()]["baseModel"],
