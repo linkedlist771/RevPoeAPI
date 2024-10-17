@@ -4,8 +4,7 @@ services:
   node-serve-front:
     image: llinkedlist/python-rev-front:v1
     ports:
-      - "5000:5000"
-      - "1145:1145"
+      - "8000:8000"
     volumes:
       - .:/workspace
     restart: always
@@ -21,7 +20,7 @@ services:
   redis:
     image: redis:latest
     volumes:
-      - redis_data:/data
+      - ./redis_data:/data
     restart: always
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
