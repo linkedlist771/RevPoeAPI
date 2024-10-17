@@ -332,7 +332,7 @@ class Client:
             }
         #         if 'formkey' in tokens:
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-        formkey = await poe_bot_client.formkey
+        formkey = poe_bot_client.formkey
         if formkey:
 
             await cookie_manager.set_cookie_formkey(self.cookie_key, formkey)
