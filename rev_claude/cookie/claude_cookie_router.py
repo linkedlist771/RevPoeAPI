@@ -60,12 +60,14 @@ async def set_cookie_usage_type(
 @router.post("/upload_cookie")
 async def upload_cookie(
     cookie: str,
+    formkey: str,
     cookie_type: CookieKeyType = CookieKeyType.BASIC.value,
     account: str = "",
     manager: CookieManager = Depends(get_cookie_manager),
 ):
     """Upload a new cookie."""
     cookie_key = await manager.upload_cookie(cookie, cookie_type.value, account)
+    await manager.set_cookie_formkey(cookie_key, formkey)
     await ClientManager().load_clients()
 
     return {"cookie_key": cookie_key}
@@ -75,12 +77,15 @@ async def upload_cookie(
 async def update_cookie(
     cookie_key: str,
     cookie: str,
+    formkey: str,
     account: str = "",
     manager: CookieManager = Depends(get_cookie_manager),
 ):
     """Update an existing cookie."""
     try:
         result = await manager.update_cookie(cookie_key, cookie, account)
+        await manager.set_cookie_formkey(cookie_key, formkey)
+        await ClientManager().load_clients()
         return {"message": result}
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))

@@ -164,15 +164,6 @@ class Client:
 
         self.p_b = p_b
         self.p_lat = p_lat
-        # tokens = {
-        #     "p-b": self.p_b,
-        #     "p-lat": self.p_lat,
-        # }
-        # # load_bundle() 尝试从redis 获取formkey, 如果不存在则从网页获取，
-        # # 然后存到redis里面。
-        #
-        # client = AsyncPoeApi(tokens=tokens)
-
         if not self.p_b or not self.p_lat:
             raise ValueError("Invalid cookie")
 
@@ -262,15 +253,12 @@ class Client:
         from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
         cookie_manager = get_cookie_manager()
         formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
-
         tokens = {
             "p-b": self.p_b,
             "p-lat": self.p_lat,
         }
-
         if formkey:
             tokens["formkey"] = formkey
-
         poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
 
         if poe_bot_client.formkey and poe_bot_client.formkey != formkey:
