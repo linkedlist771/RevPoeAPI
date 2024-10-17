@@ -66,6 +66,8 @@ async def upload_cookie(
 ):
     """Upload a new cookie."""
     cookie_key = await manager.upload_cookie(cookie, cookie_type.value, account)
+    await ClientManager().load_clients()
+
     return {"cookie_key": cookie_key}
 
 

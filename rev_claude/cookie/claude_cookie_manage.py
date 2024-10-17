@@ -193,10 +193,8 @@ class CookieManager:
                     if cookie_value:
                         cookies.append(cookie_value)
                         cookies_keys.append(base_key)
-
             if cursor == 0:
                 break
-
         return cookies, cookies_keys
 
     async def get_all_cookie_status(self):
