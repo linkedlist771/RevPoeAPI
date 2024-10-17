@@ -318,6 +318,8 @@ class Client:
             ):
                 text = chunk["response"]
                 # prefixes = text
+                if not text:
+                    continue
                 if text.rstrip("\n"):
                     prefixes.append(text)
                 if len(prefixes) >= 2:
