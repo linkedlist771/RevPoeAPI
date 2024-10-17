@@ -75,7 +75,7 @@ def remove_prefix(text, prefix):
     # logger.debug(f"prefix: \n{prefix}")
     # logger.debug(text.startswith(prefix))
     if text.startswith(prefix):
-        return text[len(prefix) :]
+        return text[len(prefix) :].rstrip("\n")
     return text
 
 
@@ -321,11 +321,11 @@ class Client:
                 if not text:
                     continue
                 if text.rstrip("\n"):
-                    prefixes.append(text)
+                    prefixes.append(text.rstrip("\n"))
                 if len(prefixes) >= 2:
                     # logger.debug(f"prefixes: \n{prefixes}")
                     # logger.debug(f"text before remove prefix: \n{text}")
-                    text = remove_prefix(text, "".join(prefixes[:-1])).rstrip("\n")
+                    text = remove_prefix(text, prefixes[-2])
                     # logger.debug(f"text after remove prefix: \n{text}")
                 yield text
                 response_text += text
