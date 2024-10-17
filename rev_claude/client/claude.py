@@ -323,7 +323,7 @@ class Client:
                 if len(prefixes) >= 2:
                     # logger.debug(f"prefixes: \n{prefixes}")
                     # logger.debug(f"text before remove prefix: \n{text}")
-                    text = remove_prefix(text, prefixes[-2]).rstrip("\n")
+                    text = remove_prefix(text, "".join(prefixes[:-1])).rstrip("\n")
                     # logger.debug(f"text after remove prefix: \n{text}")
                 yield text
                 response_text += text
