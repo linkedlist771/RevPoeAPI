@@ -64,13 +64,13 @@ async def validate_api_key(
 
 async def increase_usage_callback(api_key, model):
     try:
-        model_info = get_poe_bot_info()[model.lower()].get('points', 300)
+        model_info = get_poe_bot_info()[model.lower()].get("points", 300)
         manager = get_api_key_manager()
         manager.increment_usage(api_key, model_info)
     except Exception as e:
         from traceback import format_exc
-        logger.error(format_exc())
 
+        logger.error(format_exc())
 
 
 router = APIRouter(dependencies=[Depends(validate_api_key)])
@@ -190,7 +190,6 @@ async def obtain_reverse_official_login_router(
     )
 
 
-
 @router.post("/form_chat")
 async def chat(
     request: Request,
@@ -290,11 +289,15 @@ async def chat(
         ).render_prompt()
         logger.info(f"Prompt After search: \n{message}")
 
-    call_back = [partial(
-        push_assistant_message_callback, conversation_history_request, messages, hrefs
-    ),
-        partial(increase_usage_callback, api_key, model)]
-
+    call_back = [
+        partial(
+            push_assistant_message_callback,
+            conversation_history_request,
+            messages,
+            hrefs,
+        ),
+        partial(increase_usage_callback, api_key, model),
+    ]
 
     if stream:
         streaming_res = claude_client.stream_message(

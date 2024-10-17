@@ -68,13 +68,16 @@ def generate_trace_id():
     # 将三个部分组合成完整的 Sentry-Trace
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
+
+
 def remove_prefix(text, prefix):
     # logger.debug(f"text: \n{text}")
     # logger.debug(f"prefix: \n{prefix}")
     # logger.debug(text.startswith(prefix))
     if text.startswith(prefix):
-        return text[len(prefix):]
+        return text[len(prefix) :]
     return text
+
 
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
@@ -250,7 +253,6 @@ class Client:
             remaining_credits = 0
         return remaining_credits
 
-
     async def stream_message(
         self,
         prompt,
@@ -260,7 +262,7 @@ class Client:
         client_idx,
         attachments=None,
         files: Union[List[UploadFile], UploadFile, None] = None,
-        call_back = None,
+        call_back=None,
         api_key=None,
         timeout=120,
         file_paths=None,
@@ -316,11 +318,12 @@ class Client:
             ):
                 text = chunk["response"]
                 # prefixes = text
-                prefixes.append(text)
+                if text.rstrip("\n"):
+                    prefixes.append(text)
                 if len(prefixes) >= 2:
                     # logger.debug(f"prefixes: \n{prefixes}")
                     # logger.debug(f"text before remove prefix: \n{text}")
-                    text = remove_prefix(text, prefixes[-2])
+                    text = remove_prefix(text, prefixes[-2]).rstrip("\n")
                     # logger.debug(f"text after remove prefix: \n{text}")
                 yield text
                 response_text += text

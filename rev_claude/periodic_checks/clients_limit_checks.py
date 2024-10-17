@@ -9,7 +9,6 @@ from rev_claude.status.clients_status_manager import ClientsStatusManager
 from utility import get_client_status
 
 
-
 async def __check_reverse_official_usage_limits():
     from rev_claude.client.client_manager import ClientManager
 
@@ -29,12 +28,15 @@ async def __check_reverse_official_usage_limits():
         for status in status_list
     ]
     logger.info(f"Found {len(clients)} active clients to check")
+
     async def check_client(client):
         try:
             logger.debug(f"Testing client {client['type']} {client['idx']}")
             usage = await client["client"].get_remaining_credits()
             clients_status_manager = ClientsStatusManager()
-            await clients_status_manager.set_usage(client_type=client["type"], client_idx=client["idx"], usage=usage)
+            await clients_status_manager.set_usage(
+                client_type=client["type"], client_idx=client["idx"], usage=usage
+            )
 
             return f"Client {client['type']} {client['idx']}: {usage}"
         except Exception as e:

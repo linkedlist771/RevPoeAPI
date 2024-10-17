@@ -124,15 +124,16 @@ class ClientsStatusManager:
             time_passed = current_time - float(start_time)
             remaining_time = 8 * 3600 - time_passed
             remaining_time = int(remaining_time)
-            __mode = mode.replace("claude-3-opus-20240229", "claude-3-opus").replace(
-                "claude-3-5-sonnet-20240620", "claude-3.5-sonnet"
-            ).replace("claude-3-sonnet-20240229", "claude-3-sonnet")
+            __mode = (
+                mode.replace("claude-3-opus-20240229", "claude-3-opus")
+                .replace("claude-3-5-sonnet-20240620", "claude-3.5-sonnet")
+                .replace("claude-3-sonnet-20240229", "claude-3-sonnet")
+            )
             if remaining_time > 0:
                 message += f"{__mode}:需{remaining_time}秒。\n"
             else:
                 message += f"{__mode}:可用。\n"
         return message
-
 
     async def get_dict_value_async(self, key):
         value = await self.decoded_get(key)
@@ -261,7 +262,7 @@ class ClientsStatusManager:
                 key = self.get_client_status_start_time_key(client_type, idx)
 
                 _message = await self.get_limited_message(key, client_type, idx)
-                if  not "需" in _message:
+                if not "需" in _message:
                     _message = "剩余可用积分"
             else:
                 _status = ClientStatus.CD.value
