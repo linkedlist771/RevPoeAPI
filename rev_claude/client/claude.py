@@ -31,7 +31,6 @@ from rev_claude.configs import (
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
 )
-from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
 
 from rev_claude.models import ClaudeModels
 from rev_claude.status.clients_status_manager import ClientsStatusManager
@@ -314,6 +313,8 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
         prefixes = []
+        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+
         cookie_manager = get_cookie_manager()
         format_key_token = await cookie_manager.get_cookie_formkey(self.cookie_key)
         logger.debug(f"format_key_token: {format_key_token}")
