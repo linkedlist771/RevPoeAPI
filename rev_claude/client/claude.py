@@ -156,6 +156,7 @@ class Client:
         self.cookie = self.format_cookie(cookie)
         self.cookie_key = cookie_key
         self.poe_bot_client = None  # Add this line
+        self.formkey = None
         # self.organization_id = self.get_organization_id()
 
     def __set_credentials__(self):
@@ -201,24 +202,33 @@ class Client:
         return remaining_credits
 
     async def get_poe_bot_client(self):
-        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
-
-        cookie_manager = get_cookie_manager()
-        formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
-        logger.debug(f"formkey from redis:\n{formkey}")
         tokens = {
             "p-b": self.p_b,
             "p-lat": self.p_lat,
         }
-        if formkey:
-            tokens["formkey"] = formkey
+        if not self.formkey:
+            from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+
+            cookie_manager = get_cookie_manager()
+
+            formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
+            logger.debug(f"formkey from redis:\n{formkey}")
+
+            if formkey:
+                tokens["formkey"] = formkey
+                self.formkey = formkey
+            else:
+                self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+                if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
+                    await cookie_manager.set_cookie_formkey(
+                        self.cookie_key, self.poe_bot_client.formkey
+                    )
+        else:
+            tokens["formkey"] = self.formkey
         if self.poe_bot_client is None:
             self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
 
-        if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
-            await cookie_manager.set_cookie_formkey(
-                self.cookie_key, self.poe_bot_client.formkey
-            )
+
 
         return self.poe_bot_client
 
