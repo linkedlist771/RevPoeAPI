@@ -235,14 +235,14 @@ async def chat(
     done_data = build_sse_data(message="closed", id=conversation_id)
 
     client_type = "plus" if client_type == "plus" else "basic"
-    if (not manager.is_plus_user(api_key)) and (client_type == "plus"):
-        return StreamingResponse(
-            build_sse_data(
-                message="您的登录秘钥不是Plus 用户，请升级您的套餐以访问此账户。"
-            )
-            + done_data,
-            media_type="text/event-stream",
-        )
+    # if (not manager.is_plus_user(api_key)) and (client_type == "plus"):
+    #     return StreamingResponse(
+    #         build_sse_data(
+    #             message="您的登录秘钥不是Plus 用户，请升级您的套餐以访问此账户。"
+    #         )
+    #         + done_data,
+    #         media_type="text/event-stream",
+    #     )
 
     if client_type == "plus":
         claude_client = plus_clients[client_idx]
