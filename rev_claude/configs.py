@@ -2,15 +2,15 @@ from httpx import Timeout
 from pathlib import Path
 import os
 
-API_KEY_REFRESH_INTERVAL_HOURS = 24  # 一天刷新一次
+API_KEY_REFRESH_INTERVAL_HOURS = 99999999999  # 一天刷新一次, 用不刷新， 次数只能或者延期的时候获取。
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 LOG_DIR = ROOT / "logs"
 POE_BOT_INFO = DATA_DIR / "models.json"
 API_KEY_REFRESH_INTERVAL = API_KEY_REFRESH_INTERVAL_HOURS * 60 * 60
 # TODO: 这里增加使用次数次数改成对应增加对应的使用积分， 但是意思是一样的。
-BASIC_KEY_MAX_USAGE = 1e3
-PLUS_KEY_MAX_USAGE = 1e4  # plus用户一天有一万积分。
+BASIC_KEY_MAX_USAGE = 30e4     # 普通用户一个月30万积分
+PLUS_KEY_MAX_USAGE = 100e4  # plus 用户一个月。
 ACCOUNT_DELETE_LIMIT = 1000000000
 
 

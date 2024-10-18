@@ -195,6 +195,20 @@ class APIKeyManager:
         self.redis.set(current_usage_key, 0)
         return self.get_current_usage(api_key)
 
+    def decrement_usage(self, api_key, decrement=1):
+        """减少API密钥的使用次数。"""
+        usage_key = f"{api_key}:usage"
+        self.redis.decrby(usage_key, decrement)
+        current_usage_key = f"{api_key}:current_usage"
+        self.redis.decrby(current_usage_key, decrement)
+        return (
+            f"API密钥 {api_key}的使用次数已减少。:\n"
+            f"usage: {self.get_usage(api_key)}\n"
+            f"current_usage: {self.get_current_usage(api_key)}"
+        )
+
+
+
     # def delete_api_key(self, api_key):
     #     """Delete an API key and its associated usage count."""
     #     usage_key = f"{api_key}:usage"

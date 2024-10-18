@@ -51,6 +51,21 @@ async def increment_usage(
         raise HTTPException(status_code=404, detail=str(e))
 
 
+@router.post("/add_score_and_extend_expiration/{api_key}")
+async def add_score_and_extend_expiration(
+    api_key: str, points: int,
+        additional_days: int, manager: APIKeyManager = Depends(get_api_key_manager)
+):
+    """Add a score to an API key and extend its expiration time."""
+    try:
+        decrement_result = manager.decrement_usage(api_key, points)
+        extend_result = manager.extend_api_key_expiration(api_key, additional_days)
+        return {"api_key": api_key, "decrement_result": decrement_result, "extend_result": extend_result}
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+
 @router.post("/reset_current_usage/{api_key}")
 async def reset_current_usage(
     api_key: str, manager: APIKeyManager = Depends(get_api_key_manager)
