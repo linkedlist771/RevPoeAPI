@@ -70,6 +70,9 @@ BOTS_LIST = {
     'Solar-Mini':'upstage_solar_0_70b_16bit',
     'Gemini-1.5-Flash-Search': 'gemini_pro_search',
     'Gemini-1.5-Pro-2M': 'gemini_1_5_pro_1m',
+    'o1-mini': 'gpt_o1_mini_128k',
+    'o1-preview': 'gpt_o1_preview_128k',
+
 }
 
 REVERSE_BOTS_LIST = {v: k for k, v in BOTS_LIST.items()}
