@@ -32,6 +32,7 @@ async def __check_reverse_official_usage_limits():
     async def check_client(client):
         try:
             logger.debug(f"Testing client {client['type']} {client['idx']}")
+            await client["client"].renew_poe_bot_client()
             usage = await client["client"].get_remaining_credits()
             clients_status_manager = ClientsStatusManager()
             await clients_status_manager.set_usage(

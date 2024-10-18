@@ -232,6 +232,41 @@ class Client:
 
         return self.poe_bot_client
 
+    async def renew_poe_bot_client(self):
+        # Re-extract tokens from the cookie
+        p_b = extract_cookie_value(self.cookie, "p-b")
+        p_lat = extract_cookie_value(self.cookie, "p-lat")
+
+        self.p_b = p_b
+        self.p_lat = p_lat
+
+        if not self.p_b or not self.p_lat:
+            raise ValueError("Invalid cookie")
+
+        # Re-fetch formkey from the cookie manager
+        from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+        cookie_manager = get_cookie_manager()
+        formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
+        logger.debug(f"formkey from redis in renew_poe_bot_client:\n{formkey}")
+
+        tokens = {
+            "p-b": self.p_b,
+            "p-lat": self.p_lat,
+        }
+
+        if formkey:
+            tokens["formkey"] = formkey
+            self.formkey = formkey
+
+        # Create a new poe_bot_client instance
+        self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
+
+        # Update formkey in the cookie manager if it has changed
+        if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
+            await cookie_manager.set_cookie_formkey(
+                self.cookie_key, self.poe_bot_client.formkey
+            )
+
     async def update_poe_bot_client_tokens(self):
         from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
 
