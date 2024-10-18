@@ -2,10 +2,11 @@ from rev_claude.api_key.api_key_manage import APIKeyManager, get_api_key_manager
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 
+from rev_claude.configs import BASIC_KEY_MAX_USAGE, PLUS_KEY_MAX_USAGE
 from rev_claude.schemas import (
     CreateAPIKeyRequest,
     BatchAPIKeysDeleteRequest,
-    ExtendExpirationRequest,
+    ExtendExpirationRequest, APIKeyType,
 )
 
 router = APIRouter()
@@ -24,8 +25,15 @@ async def create_key(
     api_key_type = str(create_apikey_request.key_type)
     expiration_seconds = int(create_apikey_request.expiration_days * 24 * 60 * 60)
     api_keys = []
+    if api_key_type == APIKeyType.BASIC.value:
+        usage_limit = BASIC_KEY_MAX_USAGE
+    else:
+        usage_limit = PLUS_KEY_MAX_USAGE
     for i in range(create_apikey_request.key_number):
         api_key = manager.create_api_key(expiration_seconds, api_key_type)
+        # 这里还要加上响应的使用次数
+        usage_to_increase = int((- create_apikey_request.expiration_days + 30)  / 30 * usage_limit)
+        manager.increment_usage(api_key, usage_to_increase)
         api_keys.append(api_key)
     return {"api_key": api_keys}
 
