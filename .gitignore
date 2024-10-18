@@ -1,6 +1,7 @@
 checking
 .idea
 *.pyc
+logs/*.log
 key_configs.json
 resources
 *.DS_Store

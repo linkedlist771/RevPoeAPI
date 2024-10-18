@@ -5,6 +5,7 @@ import os
 API_KEY_REFRESH_INTERVAL_HOURS = 24  # 一天刷新一次
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
+LOG_DIR = ROOT / "logs"
 POE_BOT_INFO = DATA_DIR / "models.json"
 API_KEY_REFRESH_INTERVAL = API_KEY_REFRESH_INTERVAL_HOURS * 60 * 60
 # TODO: 这里增加使用次数次数改成对应增加对应的使用积分， 但是意思是一样的。
