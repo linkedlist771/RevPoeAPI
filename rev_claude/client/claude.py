@@ -7,7 +7,6 @@ import shutil
 from http.cookies import SimpleCookie
 from typing import Union, List
 
-from poe_api_wrapper import AsyncPoeApi
 
 # from curl_cffi import requests
 import httpx
@@ -33,6 +32,7 @@ from rev_claude.configs import (
 )
 
 from rev_claude.models import ClaudeModels
+from rev_claude.poe_api_wrapper import AsyncPoeApi
 from rev_claude.status.clients_status_manager import ClientsStatusManager
 from fastapi import UploadFile, status, HTTPException
 from fastapi.responses import JSONResponse
@@ -291,26 +291,22 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_messages: {messages_str}")
         prefixes = []
-
         poe_bot_client = await self.get_poe_bot_client()
-
+        model_name = get_poe_bot_info()[model.lower()]["baseModel"]
+        logger.debug(f"actual model name: \n{model_name}")
         try:
             async for chunk in poe_bot_client.send_message(
-                bot=get_poe_bot_info()[model.lower()]["baseModel"],
+                bot=model_name,
                 message=messages_str,
                 file_path=file_paths,
             ):
                 text = chunk["response"]
-                # prefixes = text
                 if not text:
                     continue
                 if text.rstrip("\n"):
                     prefixes.append(text.rstrip("\n"))
                 if len(prefixes) >= 2:
-                    # logger.debug(f"prefixes: \n{prefixes}")
-                    # logger.debug(f"text before remove prefix: \n{text}")
                     text = remove_prefix(text, prefixes[-2])
-                    # logger.debug(f"text after remove prefix: \n{text}")
                 yield text
                 response_text += text
         except RuntimeError as runtime_error:
