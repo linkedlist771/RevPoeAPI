@@ -279,19 +279,14 @@ class ClientsStatusManager:
                 status_list.append(status)
             clients_status.extend(status_list)
 
-
-
         clients_status = []
         cookie_manager = get_cookie_manager()
-
 
         await process_clients(
             plus_clients,
             "plus",
             [ClaudeModels.OPUS.value, ClaudeModels.SONNET_3_5.value],
         )
-
-
 
         await process_clients(basic_clients, "basic", [ClaudeModels.SONNET_3_5.value])
 

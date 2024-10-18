@@ -169,8 +169,6 @@ class Client:
             raise ValueError("Invalid cookie")
         asyncio.create_task(self.update_poe_bot_client_tokens())  # Add
 
-
-
     def get_content_type(self, file_path):
         # Function to determine content type based on file extension
         extension = os.path.splitext(file_path)[-1].lower()
@@ -183,10 +181,6 @@ class Client:
         # Add more content types as needed for other file types
         else:
             return "application/octet-stream"
-
-    # Lists all the conversations you had with Claud
-
-    # Send Message to Claude
 
     # Send and Response Stream Message to Claude
     @property
@@ -204,11 +198,11 @@ class Client:
         except Exception:
             await asyncio.create_task(self.update_poe_bot_client_tokens())  # Add
             remaining_credits = 0
-
         return remaining_credits
 
     async def get_poe_bot_client(self):
         from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+
         cookie_manager = get_cookie_manager()
         formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
         logger.debug(f"formkey from redis:\n{formkey}")
@@ -218,12 +212,13 @@ class Client:
         }
         if formkey:
             tokens["formkey"] = formkey
-
         if self.poe_bot_client is None:
             self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
 
         if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
-            await cookie_manager.set_cookie_formkey(self.cookie_key, self.poe_bot_client.formkey)
+            await cookie_manager.set_cookie_formkey(
+                self.cookie_key, self.poe_bot_client.formkey
+            )
 
         return self.poe_bot_client
 
@@ -234,7 +229,9 @@ class Client:
             self.poe_bot_client.tokens = {
                 "p-b": self.p_b,
                 "p-lat": self.p_lat,
-                "formkey": await get_cookie_manager().get_cookie_formkey(self.cookie_key)
+                "formkey": await get_cookie_manager().get_cookie_formkey(
+                    self.cookie_key
+                ),
             }
 
     async def stream_message(
