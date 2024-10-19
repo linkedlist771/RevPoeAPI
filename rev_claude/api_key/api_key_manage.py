@@ -207,8 +207,6 @@ class APIKeyManager:
             f"current_usage: {self.get_current_usage(api_key)}"
         )
 
-
-
     # def delete_api_key(self, api_key):
     #     """Delete an API key and its associated usage count."""
     #     usage_key = f"{api_key}:usage"

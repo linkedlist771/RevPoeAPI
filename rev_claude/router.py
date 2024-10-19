@@ -10,6 +10,9 @@ from rev_claude.history.conversation_history_router import (
 from rev_claude.artifacts_sharing.artifacts_sharing_router import (
     router as artifacts_sharing_router,
 )
+from rev_claude.device_verification.device_verification_router import (
+    router as device_verification_router,
+)
 
 router = APIRouter(prefix="/api/v1")
 router.include_router(claude_router, prefix="/claude", tags=["claude"])
@@ -23,6 +26,11 @@ router.include_router(
     prefix="/conversation_history",
     tags=["conversation_history"],
 )
+# router.include_router(
+#     artifacts_sharing_router, prefix="/artifacts_sharing", tags=["artifacts_sharing"]
+# )
 router.include_router(
-    artifacts_sharing_router, prefix="/artifacts_sharing", tags=["artifacts_sharing"]
+    device_verification_router,
+    prefix="/device_verification",
+    tags=["device_verification"],
 )

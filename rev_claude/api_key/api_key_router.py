@@ -6,7 +6,8 @@ from rev_claude.configs import BASIC_KEY_MAX_USAGE, PLUS_KEY_MAX_USAGE
 from rev_claude.schemas import (
     CreateAPIKeyRequest,
     BatchAPIKeysDeleteRequest,
-    ExtendExpirationRequest, APIKeyType,
+    ExtendExpirationRequest,
+    APIKeyType,
 )
 
 router = APIRouter()
@@ -32,7 +33,9 @@ async def create_key(
     for i in range(create_apikey_request.key_number):
         api_key = manager.create_api_key(expiration_seconds, api_key_type)
         # 这里还要加上响应的使用次数
-        usage_to_increase = int((- create_apikey_request.expiration_days + 30)  / 30 * usage_limit)
+        usage_to_increase = int(
+            (-create_apikey_request.expiration_days + 30) / 30 * usage_limit
+        )
         manager.increment_usage(api_key, usage_to_increase)
         api_keys.append(api_key)
     return {"api_key": api_keys}
@@ -61,17 +64,22 @@ async def increment_usage(
 
 @router.post("/add_score_and_extend_expiration/{api_key}")
 async def add_score_and_extend_expiration(
-    api_key: str, points: int,
-        additional_days: int, manager: APIKeyManager = Depends(get_api_key_manager)
+    api_key: str,
+    points: int,
+    additional_days: int,
+    manager: APIKeyManager = Depends(get_api_key_manager),
 ):
     """Add a score to an API key and extend its expiration time."""
     try:
         decrement_result = manager.decrement_usage(api_key, points)
         extend_result = manager.extend_api_key_expiration(api_key, additional_days)
-        return {"api_key": api_key, "decrement_result": decrement_result, "extend_result": extend_result}
+        return {
+            "api_key": api_key,
+            "decrement_result": decrement_result,
+            "extend_result": extend_result,
+        }
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
-
 
 
 @router.post("/reset_current_usage/{api_key}")

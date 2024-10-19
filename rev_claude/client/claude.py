@@ -219,7 +219,10 @@ class Client:
                 self.formkey = formkey
             else:
                 self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-                if self.poe_bot_client.formkey and self.poe_bot_client.formkey != formkey:
+                if (
+                    self.poe_bot_client.formkey
+                    and self.poe_bot_client.formkey != formkey
+                ):
                     await cookie_manager.set_cookie_formkey(
                         self.cookie_key, self.poe_bot_client.formkey
                     )
@@ -227,8 +230,6 @@ class Client:
             tokens["formkey"] = self.formkey
         if self.poe_bot_client is None:
             self.poe_bot_client = await AsyncPoeApi(tokens=tokens).create()
-
-
 
         return self.poe_bot_client
 
@@ -245,6 +246,7 @@ class Client:
 
         # Re-fetch formkey from the cookie manager
         from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+
         cookie_manager = get_cookie_manager()
         formkey = await cookie_manager.get_cookie_formkey(self.cookie_key)
         logger.debug(f"formkey from redis in renew_poe_bot_client:\n{formkey}")
