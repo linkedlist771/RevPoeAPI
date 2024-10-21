@@ -10,6 +10,7 @@ import hashlib
 
 router = APIRouter()
 
+
 def get_request_device_id_hash(request: Request):
     """
     Generate a unique device ID hash for the user based on their User-Agent and IP address.
@@ -21,11 +22,14 @@ def get_request_device_id_hash(request: Request):
     device_id = hashlib.sha256(device_info).hexdigest()
     return device_id
 
+
 @router.get("/device/{api_key}/status")
 async def get_device_status(
     api_key: str,
     request: Request,
-    device_manager: DeviceVerificationManager = Depends(get_device_verification_manager),
+    device_manager: DeviceVerificationManager = Depends(
+        get_device_verification_manager
+    ),
     api_key_manager: APIKeyManager = Depends(get_api_key_manager),
 ):
     """
@@ -79,11 +83,14 @@ async def get_device_status(
         status_code=200,
     )
 
+
 @router.post("/device/{api_key}/update")
 async def update_device_info(
     api_key: str,
     request: Request,
-    device_manager: DeviceVerificationManager = Depends(get_device_verification_manager),
+    device_manager: DeviceVerificationManager = Depends(
+        get_device_verification_manager
+    ),
     api_key_manager: APIKeyManager = Depends(get_api_key_manager),
 ):
     """
