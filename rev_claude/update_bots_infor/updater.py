@@ -1,7 +1,14 @@
 import asyncio
 from loguru import logger
 from rev_claude.client.client_manager import ClientManager
+from rev_claude.configs import DATA_DIR
 from rev_claude.update_bots_infor.utils import get_available_bots
+from rev_claude.utils.json_utils import save_json
+
+BOTS_INFORMATION_DIR = DATA_DIR / "bots_information"  # this information
+ALL_AVAILABLE_BOTS_FILE = BOTS_INFORMATION_DIR / "all_available_bots.json"
+
+# should be updated periodically
 
 
 class PoeBotsUpdater:
@@ -14,7 +21,7 @@ class PoeBotsUpdater:
 
 
 async def amian():
-    bots_count = 5000
+    bots_count = 500
     get_all_bots = True
     poe_bots_updater = PoeBotsUpdater()
     await poe_bots_updater.async_init()
@@ -22,6 +29,7 @@ async def amian():
         count=bots_count, get_all=get_all_bots
     )
     bots_size = len(all_bots_information)
+    save_json(ALL_AVAILABLE_BOTS_FILE, all_bots_information)
     logger.debug(all_bots_information)
     logger.debug(f"bots length:\n{bots_size}")
 

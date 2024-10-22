@@ -2,6 +2,7 @@ from rev_claude.client.client_manager import ClientManager
 from rev_claude.poe_api_wrapper import AsyncPoeApi
 from loguru import logger
 
+
 async def get_first_plus_client() -> AsyncPoeApi:
     basic_clients, plus_clients = ClientManager().get_clients()
     # logger.debug(f"basic_clients: \n{basic_clients}")
