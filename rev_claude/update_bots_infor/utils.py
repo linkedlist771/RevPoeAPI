@@ -4,8 +4,8 @@ from loguru import logger
 
 async def get_first_plus_client() -> AsyncPoeApi:
     basic_clients, plus_clients = ClientManager().get_clients()
-    logger.debug(f"basic_clients: \n{basic_clients}")
-    logger.debug(f"plus_clients: \n{plus_clients}")
+    # logger.debug(f"basic_clients: \n{basic_clients}")
+    # logger.debug(f"plus_clients: \n{plus_clients}")
     client = list(plus_clients.values())[0]
     return await client.get_poe_bot_client()
 
