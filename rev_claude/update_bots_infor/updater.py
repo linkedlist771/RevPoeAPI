@@ -8,6 +8,9 @@ from rev_claude.utils.json_utils import save_json
 BOTS_INFORMATION_DIR = DATA_DIR / "bots_information"  # this information
 ALL_AVAILABLE_BOTS_FILE = BOTS_INFORMATION_DIR / "all_available_bots.json"
 
+
+
+BOTS_INFORMATION_DIR.mkdir(exist_ok=True, parents=True)
 # should be updated periodically
 
 
