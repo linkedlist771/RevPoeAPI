@@ -1,0 +1,4658 @@
+{
+    "Claude-3.5-Sonnet": {
+        "bot": {
+            "id": "Qm90OjEwMTk=",
+            "botId": 1019,
+            "handle": "Claude-3.5-Sonnet",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3.5-Sonnet",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1019-200-ecyfizaydihfkxfwhwjlruyjdyoxengr.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3.5-Sonnet",
+            "limitedAccessType": "no_limit",
+            "nickname": "claude_3_igloo",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-3.5-Turbo-Raw": {
+        "bot": {
+            "id": "Qm90OjMwMTI=",
+            "botId": 3012,
+            "handle": "GPT-3.5-Turbo-Raw",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-3.5-Turbo-Raw",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3012-200-hqhelenyzzfwwrvdbvajtfyfyrtnjksz.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo-Raw",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt3_5",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "MS-PowerPoints": {
+        "bot": {
+            "id": "Qm90OjI3NTc2NzI=",
+            "botId": 2757672,
+            "handle": "MS-PowerPoints",
+            "deletionState": "not_deleted",
+            "displayName": "MS-PowerPoints",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-2757672-200-evfeuczptqyrwrlxdbrcfgmwnzjcruyt.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo",
+            "limitedAccessType": "no_limit",
+            "nickname": "mspowerpoints",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4-Classic": {
+        "bot": {
+            "id": "Qm90OjMwMTQ=",
+            "botId": 3014,
+            "handle": "GPT-4-Classic",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4-Classic",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3014-200-juzifapbssqruonlejbcdkwvmgjwaroi.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4-Classic",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt4_classic",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4o": {
+        "bot": {
+            "id": "Qm90OjMwMTU=",
+            "botId": 3015,
+            "handle": "GPT-4o",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4o",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3015-200-ivodfqemfvztmvgafhdouijhknthkvmp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4o",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt4_o",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Flash-Search": {
+        "bot": {
+            "id": "Qm90OjYwMDc=",
+            "botId": 6007,
+            "handle": "Gemini-1.5-Flash-Search",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Flash-Search",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6007-200-hvcoujefiovhgphwaeclpewpwokaahas.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Flash-Search",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemini_pro_search",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3.5-Sonnet-200k": {
+        "bot": {
+            "id": "Qm90OjEwMjA=",
+            "botId": 1020,
+            "handle": "Claude-3.5-Sonnet-200k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3.5-Sonnet-200k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1020-200-rsaquteebhxevfsndwaaysadydbuvtez.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3.5-Sonnet-200k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_3_igloo_200k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4-Turbo": {
+        "bot": {
+            "id": "Qm90OjMwMDc=",
+            "botId": 3007,
+            "handle": "GPT-4-Turbo",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4-Turbo",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3007-200-bvmjtgglfjudsgwaznrljnhngtdulrxz.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4-Turbo",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "beaver",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Photo_CreateE": {
+        "bot": {
+            "id": "Qm90OjI1NTA4NTM=",
+            "botId": 2550853,
+            "handle": "Photo_CreateE",
+            "deletionState": "not_deleted",
+            "displayName": "Photo_CreateE",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": true,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-2550853-200-agfudgmxnjclzyirytlnnyknjpinpiqa.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "StableDiffusionXL",
+            "limitedAccessType": "no_limit",
+            "nickname": "photocreatee",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "o1-mini": {
+        "bot": {
+            "id": "Qm90OjMwMjU=",
+            "botId": 3025,
+            "handle": "o1-mini",
+            "deletionState": "not_deleted",
+            "displayName": "o1-mini",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3025-200-hhrrqrzhtikatlbwhnxhygqyraobsyer.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "o1-mini",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt_o1_mini_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Assistant": {
+        "bot": {
+            "id": "Qm90OjMwMDI=",
+            "botId": 3002,
+            "handle": "Assistant",
+            "deletionState": "not_deleted",
+            "displayName": "Assistant",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "LocalBotImage",
+                "localName": "assistant"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Assistant",
+            "limitedAccessType": "no_limit",
+            "nickname": "capybara",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-405B-T": {
+        "bot": {
+            "id": "Qm90OjQ2NDI1NjA=",
+            "botId": 4642560,
+            "handle": "Llama-3.1-405B-T",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-405B-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642560-200-dojztaqhknuldlxggdsyunxzsacxtvjn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-405B-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama31405bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Qwen-72B-T": {
+        "bot": {
+            "id": "Qm90OjM2OTc4Mjk=",
+            "botId": 3697829,
+            "handle": "Qwen-72B-T",
+            "deletionState": "not_deleted",
+            "displayName": "Qwen-72B-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3697829-200-nwaxdwsysmgosvmgbzxhizqxnvjebjgf.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Qwen-72B-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "qwen72bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "FLUX-pro": {
+        "bot": {
+            "id": "Qm90OjQ2OTI0MTc=",
+            "botId": 4692417,
+            "handle": "FLUX-pro",
+            "deletionState": "not_deleted",
+            "displayName": "FLUX-pro",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4692417-200-wtlsxnljbtvslvkuwrdtrkywupuyteub.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "FLUX-pro",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "fluxpro",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "StableDiffusionXL": {
+        "bot": {
+            "id": "Qm90OjE1Nzk4NTI=",
+            "botId": 1579852,
+            "handle": "StableDiffusionXL",
+            "deletionState": "not_deleted",
+            "displayName": "StableDiffusionXL",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": true,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1579852-200-lucxefupsdwraneitjvtcsgorqrbmncv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "StableDiffusionXL",
+            "limitedAccessType": "no_limit",
+            "nickname": "stablediffusionxl",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "SD3-Turbo": {
+        "bot": {
+            "id": "Qm90OjQwNDIxODM=",
+            "botId": 4042183,
+            "handle": "SD3-Turbo",
+            "deletionState": "not_deleted",
+            "displayName": "SD3-Turbo",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4042183-200-xsgtfivmvgzjkvvlggrvzofjejsohaer.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "SD3-Turbo",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "sd3turbo",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "FLUX-pro-1.1": {
+        "bot": {
+            "id": "Qm90OjUwMzg0OTM=",
+            "botId": 5038493,
+            "handle": "FLUX-pro-1.1",
+            "deletionState": "not_deleted",
+            "displayName": "FLUX-pro-1.1",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5038493-200-kaqjjvliljatttdmmgeqyflyvlevubcb.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "FLUX-pro-1.1",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "fluxpro11",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Web-Search": {
+        "bot": {
+            "id": "Qm90OjIyNTQ3MDQ=",
+            "botId": 2254704,
+            "handle": "Web-Search",
+            "deletionState": "not_deleted",
+            "displayName": "Web-Search",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-2254704-200-qzclbtuxtlnlkgqjjcfqfziyxncqehra.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Web-Search",
+            "limitedAccessType": "no_limit",
+            "nickname": "websearch",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4-Turbo-128k": {
+        "bot": {
+            "id": "Qm90OjMwMTA=",
+            "botId": 3010,
+            "handle": "GPT-4-Turbo-128k",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4-Turbo-128k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3010-200-hdigbpuraghmvxelmnbgjgduanukevwx.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4-Turbo-128k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "vizcacha",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Playground-v2.5": {
+        "bot": {
+            "id": "Qm90OjMwODkxMzU=",
+            "botId": 3089135,
+            "handle": "Playground-v2.5",
+            "deletionState": "not_deleted",
+            "displayName": "Playground-v2.5",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": true,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3089135-200-nnvcmawmcgkxboozejerfbwbysaomhsi.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Playground-v2.5",
+            "limitedAccessType": "no_limit",
+            "nickname": "playgroundv25",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-70B-T": {
+        "bot": {
+            "id": "Qm90OjQwMzUyOTc=",
+            "botId": 4035297,
+            "handle": "Llama-3-70B-T",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-70B-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4035297-200-djtgxhlxkcnmbobklcpsctuyqpbszrtp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-70B-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama370bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4o-128k": {
+        "bot": {
+            "id": "Qm90OjMwMTY=",
+            "botId": 3016,
+            "handle": "GPT-4o-128k",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4o-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3016-200-dgvjlxvfcjggivthnrwfvawlyhpuklkm.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4o-128k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt4_o_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4o-Mini-128k": {
+        "bot": {
+            "id": "Qm90OjMwMTg=",
+            "botId": 3018,
+            "handle": "GPT-4o-Mini-128k",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4o-Mini-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3018-200-nmgcqxtdyfdaoleisubncatopsluiauj.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4o-Mini-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt4_o_mini_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Pro": {
+        "bot": {
+            "id": "Qm90OjYwMDg=",
+            "botId": 6008,
+            "handle": "Gemini-1.5-Pro",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Pro",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6008-200-nxbknipknljbdzryoyykfbeoigkcnlnz.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Pro",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemini_1_5_pro",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4o-Mini": {
+        "bot": {
+            "id": "Qm90OjMwMTc=",
+            "botId": 3017,
+            "handle": "GPT-4o-Mini",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4o-Mini",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3017-200-ffkgsbdxtxdxeieebtyvgplzvpqsuakd.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4o-Mini",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt4_o_mini",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-3.5-Turbo-16k": {
+        "bot": {
+            "id": "Qm90OjMwMDk=",
+            "botId": 3009,
+            "handle": "GPT-3.5-Turbo-16k",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-3.5-Turbo-16k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3009-200-xhftaxojdaaaennzvlbzceqpjkkrewcn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo-16k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "agouti",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Mistral-Medium": {
+        "bot": {
+            "id": "Qm90OjcwMDk=",
+            "botId": 7009,
+            "handle": "Mistral-Medium",
+            "deletionState": "not_deleted",
+            "displayName": "Mistral-Medium",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7009-200-wxkbzvleprmbkslrrqmnswcikmnhgvvw.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mistral-Medium",
+            "limitedAccessType": "no_limit",
+            "nickname": "mistral_medium",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "fal-sdxl-lightning": {
+        "bot": {
+            "id": "Qm90OjM5NTMxNTI=",
+            "botId": 3953152,
+            "handle": "fal-sdxl-lightning",
+            "deletionState": "not_deleted",
+            "displayName": "fal-sdxl-lightning",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3953152-200-rbailrjbuakkakbpzythvqzcykvpsexp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "fal-sdxl-lightning",
+            "limitedAccessType": "no_limit",
+            "nickname": "falsdxllightning",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "StableDiffusion3": {
+        "bot": {
+            "id": "Qm90OjQwNDE5ODk=",
+            "botId": 4041989,
+            "handle": "StableDiffusion3",
+            "deletionState": "not_deleted",
+            "displayName": "StableDiffusion3",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4041989-200-oonfoultoysscqohajybollnliztvpmm.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "StableDiffusion3",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "stablediffusion3",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-2": {
+        "bot": {
+            "id": "Qm90OjEwMTU=",
+            "botId": 1015,
+            "handle": "Claude-2",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-2",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1015-200-rclyacbfxvetegvwlbcztydxbtggrvaf.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-2",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_2_short",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "StableDiffusion3-2B": {
+        "bot": {
+            "id": "Qm90OjQ0MDIxMTg=",
+            "botId": 4402118,
+            "handle": "StableDiffusion3-2B",
+            "deletionState": "not_deleted",
+            "displayName": "StableDiffusion3-2B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4402118-200-woqnbpfnmnrkixcgbmmxxbdvomiyhywe.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "StableDiffusion3-2B",
+            "limitedAccessType": "no_limit",
+            "nickname": "stablediffusion32b",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-instant": {
+        "bot": {
+            "id": "Qm90OjEwMDY=",
+            "botId": 1006,
+            "handle": "Claude-instant",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-instant",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "LocalBotImage",
+                "localName": "Avatar_Placeholder_Orange"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-instant",
+            "limitedAccessType": "no_limit",
+            "nickname": "a2",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-8b-Groq": {
+        "bot": {
+            "id": "Qm90OjMzNzczMDI=",
+            "botId": 3377302,
+            "handle": "Llama-3-8b-Groq",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-8b-Groq",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3377302-200-dedxqnkepkmeylpbzscnealdwevdvipb.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-8b-Groq",
+            "limitedAccessType": "no_limit",
+            "nickname": "groq_llama_3_8b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Code-Llama-34b": {
+        "bot": {
+            "id": "Qm90OjcwMDU=",
+            "botId": 7005,
+            "handle": "Code-Llama-34b",
+            "deletionState": "not_deleted",
+            "displayName": "Code-Llama-34b",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7005-200-zblubkfzxrrchehdibuoldnljdevzogm.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Code-Llama-34b",
+            "limitedAccessType": "no_limit",
+            "nickname": "code_llama_34b_instruct",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-3.5-Turbo": {
+        "bot": {
+            "id": "Qm90OjMwMDQ=",
+            "botId": 3004,
+            "handle": "GPT-3.5-Turbo",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-3.5-Turbo",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3004-200-jougqzjtwfqfyqprxbdwofvnwattmtrg.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo",
+            "limitedAccessType": "no_limit",
+            "nickname": "chinchilla",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Flash": {
+        "bot": {
+            "id": "Qm90OjYwMTI=",
+            "botId": 6012,
+            "handle": "Gemini-1.5-Flash",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Flash",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6012-200-woirfuyuelhdyuqwaykvmasfbsizypef.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Flash",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemini_1_5_flash",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "l-j-l.chat": {
+        "bot": {
+            "id": "Qm90OjQ2NTExNTA=",
+            "botId": 4651150,
+            "handle": "l-j-l.chat",
+            "deletionState": "not_deleted",
+            "displayName": "l-j-l.chat",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": null,
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Haiku",
+            "limitedAccessType": "no_limit",
+            "nickname": "ljlchat",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Haiku": {
+        "bot": {
+            "id": "Qm90OjEwMTc=",
+            "botId": 1017,
+            "handle": "Claude-3-Haiku",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Haiku",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1017-200-oorzovnctrmxyclcflzillghrpzdgrgv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Haiku",
+            "limitedAccessType": "no_limit",
+            "nickname": "claude_3_haiku",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "PhysicsHP": {
+        "bot": {
+            "id": "Qm90OjM4OTI0NDY=",
+            "botId": 3892446,
+            "handle": "PhysicsHP",
+            "deletionState": "not_deleted",
+            "displayName": "PhysicsHP",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": null,
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo",
+            "limitedAccessType": "no_limit",
+            "nickname": "physicshp",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Flash-128k": {
+        "bot": {
+            "id": "Qm90OjYwMTM=",
+            "botId": 6013,
+            "handle": "Gemini-1.5-Flash-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Flash-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6013-200-qnqnkmpurobtfpkthvzgwjjznzbevzdt.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Flash-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemini_1_5_flash_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Opus": {
+        "bot": {
+            "id": "Qm90OjEwMTI=",
+            "botId": 1012,
+            "handle": "Claude-3-Opus",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Opus",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1012-200-zgsjkgmkvwlyruffvyacfdyvzdeetqld.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Opus",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_2_1_cedar",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Qwen-1.5-110B-T": {
+        "bot": {
+            "id": "Qm90OjQxNjA3OTE=",
+            "botId": 4160791,
+            "handle": "Qwen-1.5-110B-T",
+            "deletionState": "not_deleted",
+            "displayName": "Qwen-1.5-110B-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4160791-200-qlqunomdvkyitpedtghnhsgjlutapgfl.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Qwen-1.5-110B-T",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "qwen15110bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Opus-200k": {
+        "bot": {
+            "id": "Qm90OjEwMTQ=",
+            "botId": 1014,
+            "handle": "Claude-3-Opus-200k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Opus-200k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1014-200-sqysrefmcjdcrowsvjcdivazoymttobz.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Opus-200k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_3_opus_200k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Sonnet": {
+        "bot": {
+            "id": "Qm90OjEwMTE=",
+            "botId": 1011,
+            "handle": "Claude-3-Sonnet",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Sonnet",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1011-200-knlknxoibxiimbziglmdvmyyshvldzml.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Sonnet",
+            "limitedAccessType": "no_limit",
+            "nickname": "claude_2_1_bamboo",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Grok-2-Beta": {
+        "bot": {
+            "id": "Qm90OjQ4MDUzNDE=",
+            "botId": 4805341,
+            "handle": "Grok-2-Beta",
+            "deletionState": "not_deleted",
+            "displayName": "Grok-2-Beta",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4805341-200-apkspqpgutklteegqmvzmqiyidenhoyj.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Pro",
+            "limitedAccessType": "no_limit",
+            "nickname": "grok2beta",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Playground-v3": {
+        "bot": {
+            "id": "Qm90OjQ3OTEyNzg=",
+            "botId": 4791278,
+            "handle": "Playground-v3",
+            "deletionState": "not_deleted",
+            "displayName": "Playground-v3",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4791278-200-dkexsqtdupzuvzyljnykjtrjupgkgiox.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Playground-v3",
+            "limitedAccessType": "no_limit",
+            "nickname": "playgroundv3",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-405B": {
+        "bot": {
+            "id": "Qm90OjQ3MjgzOTI=",
+            "botId": 4728392,
+            "handle": "Llama-3.1-405B",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-405B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4728392-200-zoyylcjtvbgvmzmnzwydlncxaufcjrdd.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-405B",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama31405b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "ChatGPT-4o-Latest": {
+        "bot": {
+            "id": "Qm90OjMwMTk=",
+            "botId": 3019,
+            "handle": "ChatGPT-4o-Latest",
+            "deletionState": "not_deleted",
+            "displayName": "ChatGPT-4o-Latest",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3019-200-ocmqfnjwaeznwqzmojxtmjqsobsxmmik.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "ChatGPT-4o-Latest",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt4_o_latest",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "FLUX-schnell": {
+        "bot": {
+            "id": "Qm90OjQ2OTIwNTM=",
+            "botId": 4692053,
+            "handle": "FLUX-schnell",
+            "deletionState": "not_deleted",
+            "displayName": "FLUX-schnell",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4692053-200-dqazarvqsjcnksmiaxwnfzwsrwivvchr.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "FLUX-schnell",
+            "limitedAccessType": "no_limit",
+            "nickname": "fluxschnell",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "FLUX-dev": {
+        "bot": {
+            "id": "Qm90OjQ2OTE5Mzk=",
+            "botId": 4691939,
+            "handle": "FLUX-dev",
+            "deletionState": "not_deleted",
+            "displayName": "FLUX-dev",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4691939-200-wjmsiwztndchfvsdmvowztddsrmszhtw.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "FLUX-dev",
+            "limitedAccessType": "no_limit",
+            "nickname": "fluxdev",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "DALL-E-3": {
+        "bot": {
+            "id": "Qm90OjI4MjgwMjk=",
+            "botId": 2828029,
+            "handle": "DALL-E-3",
+            "deletionState": "not_deleted",
+            "displayName": "DALL-E-3",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-2828029-200-mlvmbysbpfpcjfyxswvxbzufpvszchqb.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "DALL-E-3",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "dalle3",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "FLUX-ULTRA": {
+        "bot": {
+            "id": "Qm90OjQ3NjM1NzY=",
+            "botId": 4763576,
+            "handle": "FLUX-ULTRA",
+            "deletionState": "not_deleted",
+            "displayName": "FLUX-ULTRA",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4763576-200-ivqrcnwvhkfeeigelnbugtwzblokfhlh.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "FLUX-schnell",
+            "limitedAccessType": "no_limit",
+            "nickname": "fluxultra",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "remove-background": {
+        "bot": {
+            "id": "Qm90OjQxNDIwNDQ=",
+            "botId": 4142044,
+            "handle": "remove-background",
+            "deletionState": "not_deleted",
+            "displayName": "remove-background",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4142044-200-nhzozhqojyjdovdvbfqvqrmclhfvpuqt.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "remove-background",
+            "limitedAccessType": "no_limit",
+            "nickname": "removebackground",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-70b-Groq": {
+        "bot": {
+            "id": "Qm90OjQwNjQxMjQ=",
+            "botId": 4064124,
+            "handle": "Llama-3-70b-Groq",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-70b-Groq",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4064124-200-zzqqvdszcmfxrivdwslzwcpmcqhucnmx.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-70b-Groq",
+            "limitedAccessType": "no_limit",
+            "nickname": "groq_llama_3_70b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-instant-100k": {
+        "bot": {
+            "id": "Qm90OjEwMDk=",
+            "botId": 1009,
+            "handle": "Claude-instant-100k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-instant-100k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "LocalBotImage",
+                "localName": "Avatar_Placeholder_Orange"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-instant-100k",
+            "limitedAccessType": "no_limit",
+            "nickname": "a2_100k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Hailuo-AI": {
+        "bot": {
+            "id": "Qm90OjUxMTc0MzU=",
+            "botId": 5117435,
+            "handle": "Hailuo-AI",
+            "deletionState": "not_deleted",
+            "displayName": "Hailuo-AI",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5117435-200-poindnzhlfwddmannizkdudeofubxulg.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Hailuo-AI",
+            "limitedAccessType": "no_limit",
+            "nickname": "hailuoai",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-70B": {
+        "bot": {
+            "id": "Qm90OjQ3MzE0NzI=",
+            "botId": 4731472,
+            "handle": "Llama-3.1-70B",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-70B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4731472-200-uomiqutkjmccfkuctvnilhhuzsxxbvrf.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-70B",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3170b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-8B": {
+        "bot": {
+            "id": "Qm90OjQ3MzE0Nzc=",
+            "botId": 4731477,
+            "handle": "Llama-3.1-8B",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-8B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4731477-200-bhryiiabfwrxzkyekbvpmkjfyigkbqpp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-8B",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama318b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "o1-preview": {
+        "bot": {
+            "id": "Qm90OjMwMjM=",
+            "botId": 3023,
+            "handle": "o1-preview",
+            "deletionState": "not_deleted",
+            "displayName": "o1-preview",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3023-200-zawrsvwgmmzqdppjgwcxirwmaannoogj.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "o1-preview",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt_o1_preview_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Imagen3": {
+        "bot": {
+            "id": "Qm90OjUxMDYwMDU=",
+            "botId": 5106005,
+            "handle": "Imagen3",
+            "deletionState": "not_deleted",
+            "displayName": "Imagen3",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5106005-200-anrotmjzvifcxlislezaayicbezvxwol.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Imagen3",
+            "limitedAccessType": "no_limit",
+            "nickname": "imagen3",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Imagen3-Fast": {
+        "bot": {
+            "id": "Qm90OjUxMTI5MDU=",
+            "botId": 5112905,
+            "handle": "Imagen3-Fast",
+            "deletionState": "not_deleted",
+            "displayName": "Imagen3-Fast",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5112905-200-idpiygkzwdxnlfxfmsipzuamueegzbss.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Imagen3-Fast",
+            "limitedAccessType": "no_limit",
+            "nickname": "imagen3fast",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Ideogram-v2": {
+        "bot": {
+            "id": "Qm90OjQ4MDE5MTU=",
+            "botId": 4801915,
+            "handle": "Ideogram-v2",
+            "deletionState": "not_deleted",
+            "displayName": "Ideogram-v2",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4801915-200-iiapwrsitfvrxjugdgapgdgcgkozfanr.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Ideogram-v2",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "ideogramv2",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Ideogram": {
+        "bot": {
+            "id": "Qm90OjM5MzM4OTc=",
+            "botId": 3933897,
+            "handle": "Ideogram",
+            "deletionState": "not_deleted",
+            "displayName": "Ideogram",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3933897-200-jryujzecwktazxbclyqibmpmzpjkwcmx.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Ideogram",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "ideogram",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "PlaygroundUpscaler": {
+        "bot": {
+            "id": "Qm90OjQyNTE0NjA=",
+            "botId": 4251460,
+            "handle": "PlaygroundUpscaler",
+            "deletionState": "not_deleted",
+            "displayName": "PlaygroundUpscaler",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4251460-200-hqyyebdpztuprqsvzlaqkyhvletwthny.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "PlaygroundUpscaler",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "playgroundupscaler",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Pika": {
+        "bot": {
+            "id": "Qm90OjQyMjk5NzE=",
+            "botId": 4229971,
+            "handle": "Pika",
+            "deletionState": "not_deleted",
+            "displayName": "Pika",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4229971-200-puyjnwkbdurpgjtcctjaaeczbhginsob.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Pika",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "pika",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "LivePortrait": {
+        "bot": {
+            "id": "Qm90OjQ1NjIzNTU=",
+            "botId": 4562355,
+            "handle": "LivePortrait",
+            "deletionState": "not_deleted",
+            "displayName": "LivePortrait",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4562355-200-keofzhrnpnyiglsjgftwqklymqhmhnyk.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "LivePortrait",
+            "limitedAccessType": "no_limit",
+            "nickname": "liveportrait",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-405B-FW-128k": {
+        "bot": {
+            "id": "Qm90OjQ2NDI2NjI=",
+            "botId": 4642662,
+            "handle": "Llama-3.1-405B-FW-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-405B-FW-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642662-200-wyomjezjkwvlrswrmnbnmgqrwflclaou.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-405B-FW-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama31405bfw128k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-8B-T-128k": {
+        "bot": {
+            "id": "Qm90OjQ2NDI1NjM=",
+            "botId": 4642563,
+            "handle": "Llama-3.1-8B-T-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-8B-T-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642563-200-hfnqiywxzwlzyzmwqjnudjbicetnauzt.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-8B-T-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama318bt128k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-70B-FW-128k": {
+        "bot": {
+            "id": "Qm90OjQ2NDI2NzI=",
+            "botId": 4642672,
+            "handle": "Llama-3.1-70B-FW-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-70B-FW-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642672-200-ymwhaejwsjkjmahwboguggdzqyhnrczn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-70B-FW-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3170bfw128k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-70B-T-128k": {
+        "bot": {
+            "id": "Qm90OjQ2NDI1NjI=",
+            "botId": 4642562,
+            "handle": "Llama-3.1-70B-T-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-70B-T-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642562-200-zphinbvwwtzrjpyuvxxehzlxeieyicxg.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-70B-T-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3170bt128k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-8B-FW-128k": {
+        "bot": {
+            "id": "Qm90OjQ2NDI2NzQ=",
+            "botId": 4642674,
+            "handle": "Llama-3.1-8B-FW-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-8B-FW-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4642674-200-kucesxchjsbsycmycjltrywpbybdfuhn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-8B-FW-128k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama318bfw128k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Gemma-2-27b-T": {
+        "bot": {
+            "id": "Qm90OjQ2MTA1MzY=",
+            "botId": 4610536,
+            "handle": "Gemma-2-27b-T",
+            "deletionState": "not_deleted",
+            "displayName": "Gemma-2-27b-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4610536-200-xkyrodtdklolqcnnovzjrgotdzgulfgt.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemma-2-27b-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemma227bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Pro-128k": {
+        "bot": {
+            "id": "Qm90OjYwMDk=",
+            "botId": 6009,
+            "handle": "Gemini-1.5-Pro-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Pro-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6009-200-fjielkjszqhxukdubrnakzggdmaeyjnq.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Pro-128k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gemini_1_5_pro_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Flash-1M": {
+        "bot": {
+            "id": "Qm90OjYwMTQ=",
+            "botId": 6014,
+            "handle": "Gemini-1.5-Flash-1M",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Flash-1M",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6014-200-tcyrrbkcpjcpcbuypavinsuhhiogcepk.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Flash-1M",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gemini_1_5_flash_1m",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Pro-2M": {
+        "bot": {
+            "id": "Qm90OjYwMTA=",
+            "botId": 6010,
+            "handle": "Gemini-1.5-Pro-2M",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Pro-2M",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6010-200-xkjxanrtgivlzybyykfsoecdtfusugrv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Pro-2M",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gemini_1_5_pro_1m",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "ChatGPT-4o-Latest-128k": {
+        "bot": {
+            "id": "Qm90OjMwMjA=",
+            "botId": 3020,
+            "handle": "ChatGPT-4o-Latest-128k",
+            "deletionState": "not_deleted",
+            "displayName": "ChatGPT-4o-Latest-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3020-200-tvganroesptxssqyseyhnpgpfgjjrldv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "ChatGPT-4o-Latest-128k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt4_o_latest_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.5-Pro-Search": {
+        "bot": {
+            "id": "Qm90OjYwMTE=",
+            "botId": 6011,
+            "handle": "Gemini-1.5-Pro-Search",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.5-Pro-Search",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6011-200-xeyjzyxruiygnulozyysiywaipexfree.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.5-Pro-Search",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gemini_1_5_pro_search",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Gemini-1.0-Pro": {
+        "bot": {
+            "id": "Qm90OjYwMDQ=",
+            "botId": 6004,
+            "handle": "Gemini-1.0-Pro",
+            "deletionState": "not_deleted",
+            "displayName": "Gemini-1.0-Pro",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6004-200-qckiyedrwdtrnhdzewunjclkwdqdeibm.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemini-1.0-Pro",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemini_pro",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "SD3-Medium": {
+        "bot": {
+            "id": "Qm90OjQ0MDQ0MTk=",
+            "botId": 4404419,
+            "handle": "SD3-Medium",
+            "deletionState": "not_deleted",
+            "displayName": "SD3-Medium",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4404419-200-kuixjkttkmvqwbwamkvfpzmdrbtswqxc.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "SD3-Medium",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "sd3medium",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-70b-Inst-FW": {
+        "bot": {
+            "id": "Qm90OjQwMzYxMTU=",
+            "botId": 4036115,
+            "handle": "Llama-3-70b-Inst-FW",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-70b-Inst-FW",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4036115-200-kdobqjfbmkgswbqkxnolgumuhxbfcmpe.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-70b-Inst-FW",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama370binstfw",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Mixtral8x22b-Inst-FW": {
+        "bot": {
+            "id": "Qm90OjM5OTM3MzY=",
+            "botId": 3993736,
+            "handle": "Mixtral8x22b-Inst-FW",
+            "deletionState": "not_deleted",
+            "displayName": "Mixtral8x22b-Inst-FW",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3993736-200-bfevqevrnmmcehczovuycpxismwvsfgp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mixtral8x22b-Inst-FW",
+            "limitedAccessType": "no_limit",
+            "nickname": "mixtral8x22binstfw",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Command-R": {
+        "bot": {
+            "id": "Qm90OjM4NDMxOTc=",
+            "botId": 3843197,
+            "handle": "Command-R",
+            "deletionState": "not_deleted",
+            "displayName": "Command-R",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3843197-200-cusraxjispryimltoijbphlngyvjyqhd.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Command-R",
+            "limitedAccessType": "no_limit",
+            "nickname": "commandr",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Gemma-2-9b-T": {
+        "bot": {
+            "id": "Qm90OjQ2MTA1MzQ=",
+            "botId": 4610534,
+            "handle": "Gemma-2-9b-T",
+            "deletionState": "not_deleted",
+            "displayName": "Gemma-2-9b-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4610534-200-uonguqsdxlektaivekfbvlkixqsbzpwo.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Gemma-2-9b-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "gemma29bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Mistral-Large-2": {
+        "bot": {
+            "id": "Qm90OjcwMTA=",
+            "botId": 7010,
+            "handle": "Mistral-Large-2",
+            "deletionState": "not_deleted",
+            "displayName": "Mistral-Large-2",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7010-200-jaspeixxffhayqwvhydkkjjmjwtjzgrv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mistral-Large-2",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "mistral_large",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Mistral-Large-2-128k": {
+        "bot": {
+            "id": "Qm90OjcwMTE=",
+            "botId": 7011,
+            "handle": "Mistral-Large-2-128k",
+            "deletionState": "not_deleted",
+            "displayName": "Mistral-Large-2-128k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7011-200-oajnusxrjfnsanhumoloimwrwctofaad.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mistral-Large-2-128k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "mistral_large_128k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "RekaCore": {
+        "bot": {
+            "id": "Qm90OjM5OTk5NDc=",
+            "botId": 3999947,
+            "handle": "RekaCore",
+            "deletionState": "not_deleted",
+            "displayName": "RekaCore",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3999947-200-pcxpgucyuilduxfvuilppbgzhritxhan.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "RekaCore",
+            "limitedAccessType": "no_limit",
+            "nickname": "rekacore",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "RekaFlash": {
+        "bot": {
+            "id": "Qm90OjM2MDc3ODg=",
+            "botId": 3607788,
+            "handle": "RekaFlash",
+            "deletionState": "not_deleted",
+            "displayName": "RekaFlash",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3607788-200-xuvlpqzwfzykawbpmwvrdifizmzczifv.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "RekaFlash",
+            "limitedAccessType": "no_limit",
+            "nickname": "rekaflash",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Command-R-Plus": {
+        "bot": {
+            "id": "Qm90OjM5NzUzMTI=",
+            "botId": 3975312,
+            "handle": "Command-R-Plus",
+            "deletionState": "not_deleted",
+            "displayName": "Command-R-Plus",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3975312-200-wvngbssarrrzyjqicprkrgexhqbvojcn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Command-R-Plus",
+            "limitedAccessType": "no_limit",
+            "nickname": "commandrplus",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Sonnet-200k": {
+        "bot": {
+            "id": "Qm90OjEwMTM=",
+            "botId": 1013,
+            "handle": "Claude-3-Sonnet-200k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Sonnet-200k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1013-200-yrpxotasrpkwycdohrqrbvvgdbnmjgif.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Sonnet-200k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_3_sonnet_200k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-3-Haiku-200k": {
+        "bot": {
+            "id": "Qm90OjEwMTg=",
+            "botId": 1018,
+            "handle": "Claude-3-Haiku-200k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-3-Haiku-200k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1018-200-qluzttqfxujnaetrgbudzzasmixwbiqi.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-3-Haiku-200k",
+            "limitedAccessType": "no_limit",
+            "nickname": "claude_3_haiku_200k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Mixtral-8x7B-Chat": {
+        "bot": {
+            "id": "Qm90OjMxMjk2MDI=",
+            "botId": 3129602,
+            "handle": "Mixtral-8x7B-Chat",
+            "deletionState": "not_deleted",
+            "displayName": "Mixtral-8x7B-Chat",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3129602-200-bxcnsqpzlksuilfptbonwryllkrtdimb.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mixtral-8x7B-Chat",
+            "limitedAccessType": "no_limit",
+            "nickname": "mixtral8x7bchat",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Qwen2-72B-Instruct-T": {
+        "bot": {
+            "id": "Qm90OjQ0MDkyMDg=",
+            "botId": 4409208,
+            "handle": "Qwen2-72B-Instruct-T",
+            "deletionState": "not_deleted",
+            "displayName": "Qwen2-72B-Instruct-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4409208-200-kvyhbmgjddjackcaxlmnggmquxjxcioi.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Qwen2-72B-Instruct-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "qwen272binstructt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-2-100k": {
+        "bot": {
+            "id": "Qm90OjEwMDg=",
+            "botId": 1008,
+            "handle": "Claude-2-100k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-2-100k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "LocalBotImage",
+                "localName": "Avatar_Orange_Gradient"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-2-100k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "a2_2",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-4-Classic-0314": {
+        "bot": {
+            "id": "Qm90OjMwMjE=",
+            "botId": 3021,
+            "handle": "GPT-4-Classic-0314",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4-Classic-0314",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3021-200-qkfjielkjszqhxukdubrnakzggdmaeyj.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4-Classic-0314",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "gpt4_classic_0314",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Google-PaLM": {
+        "bot": {
+            "id": "Qm90OjYwMDA=",
+            "botId": 6000,
+            "handle": "Google-PaLM",
+            "deletionState": "not_deleted",
+            "displayName": "Google-PaLM",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "LocalBotImage",
+                "localName": "googlePalmAvatar"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Google-PaLM",
+            "limitedAccessType": "no_limit",
+            "nickname": "acouchy",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-8B-T": {
+        "bot": {
+            "id": "Qm90OjQwMzUyNjE=",
+            "botId": 4035261,
+            "handle": "Llama-3-8B-T",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-8B-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4035261-200-nrqaacrohyhqrhlmclaudtpkgjqqcnur.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-8B-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama38bt",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "MythoMax-L2-13B": {
+        "bot": {
+            "id": "Qm90OjM2MTgyNTQ=",
+            "botId": 3618254,
+            "handle": "MythoMax-L2-13B",
+            "deletionState": "not_deleted",
+            "displayName": "MythoMax-L2-13B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3618254-200-jizfrjckqzmdtpllccvvkrexzcmwjllx.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "MythoMax-L2-13B",
+            "limitedAccessType": "no_limit",
+            "nickname": "mythomaxl213b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Solar-Pro-Preview": {
+        "bot": {
+            "id": "Qm90OjcwMDY=",
+            "botId": 7006,
+            "handle": "Solar-Pro-Preview",
+            "deletionState": "not_deleted",
+            "displayName": "Solar-Pro-Preview",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7006-200-vawvkuecismyzqxchgrbiayuvjzowwuy.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Solar-Pro-Preview",
+            "limitedAccessType": "no_limit",
+            "nickname": "upstage_solar_0_70b_16bit",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "GPT-3.5-Turbo-Instruct": {
+        "bot": {
+            "id": "Qm90OjMwMTE=",
+            "botId": 3011,
+            "handle": "GPT-3.5-Turbo-Instruct",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-3.5-Turbo-Instruct",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3011-200-rhbndzfymcsktyrgnuztlvtjnslbvbxk.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-3.5-Turbo-Instruct",
+            "limitedAccessType": "no_limit",
+            "nickname": "chinchilla_instruct",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Claude-2.1-200k": {
+        "bot": {
+            "id": "Qm90OjEwMTY=",
+            "botId": 1016,
+            "handle": "Claude-2.1-200k",
+            "deletionState": "not_deleted",
+            "displayName": "Claude-2.1-200k",
+            "isLimitedAccess": true,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-1016-200-xxwgicmffyschctlfikrdaxtgnrgoqdn.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Claude-2.1-200k",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "claude_2_1_200k",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Mixtral-8x7b-Groq": {
+        "bot": {
+            "id": "Qm90OjM0NjI2Mzg=",
+            "botId": 3462638,
+            "handle": "Mixtral-8x7b-Groq",
+            "deletionState": "not_deleted",
+            "displayName": "Mixtral-8x7b-Groq",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3462638-200-xzqrewfckzplacspczcbuokkmalvmaco.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mixtral-8x7b-Groq",
+            "limitedAccessType": "no_limit",
+            "nickname": "groq_mixtral_8x_7b",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Mistral-7B-v0.3-T": {
+        "bot": {
+            "id": "Qm90OjQyOTQzNTI=",
+            "botId": 4294352,
+            "handle": "Mistral-7B-v0.3-T",
+            "deletionState": "not_deleted",
+            "displayName": "Mistral-7B-v0.3-T",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4294352-200-oxnbtlaufngjezjysazxqayfhakmasfs.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Mistral-7B-v0.3-T",
+            "limitedAccessType": "no_limit",
+            "nickname": "mistral7bv03t",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.2-11B": {
+        "bot": {
+            "id": "Qm90OjQ5OTYwNTU=",
+            "botId": 4996055,
+            "handle": "Llama-3.2-11B",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.2-11B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4996055-200-zeezamherlzndlatfjzkcdiuevuhjexf.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.2-11B",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3211b",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.2-90B-FW-131k": {
+        "bot": {
+            "id": "Qm90OjQ5OTYwNjA=",
+            "botId": 4996060,
+            "handle": "Llama-3.2-90B-FW-131k",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.2-90B-FW-131k",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4996060-200-davjholarmrozdnjuujgqhikzvxtkrwe.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.2-90B-FW-131k",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3290bfw131k",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Tako": {
+        "bot": {
+            "id": "Qm90OjQ3NzAzNjY=",
+            "botId": 4770366,
+            "handle": "Tako",
+            "deletionState": "not_deleted",
+            "displayName": "Tako",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4770366-200-bdcugycfrjdmfoxgwkmjsxvnfgjuzloq.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Tako",
+            "limitedAccessType": "no_limit",
+            "nickname": "tako",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-405B-Base": {
+        "bot": {
+            "id": "Qm90OjQ4MDUwNzk=",
+            "botId": 4805079,
+            "handle": "Llama-3.1-405B-Base",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-405B-Base",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4805079-200-npphxmijfwerioachittpktoagwutodh.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-405B-Base",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama31405bbase",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3-70B-FP16": {
+        "bot": {
+            "id": "Qm90OjQ3ODY2Njg=",
+            "botId": 4786668,
+            "handle": "Llama-3-70B-FP16",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3-70B-FP16",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4786668-200-zerzpreehnvtlcuqhmlqkgecwgwzqfdw.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3-70B-FP16",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama370bfp16",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-8B-FP16": {
+        "bot": {
+            "id": "Qm90OjQ3ODY2NjY=",
+            "botId": 4786666,
+            "handle": "Llama-3.1-8B-FP16",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-8B-FP16",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4786666-200-dknymrjpbgfcmbyaymdyojqrcqswewou.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-8B-FP16",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama318bfp16",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-70B-FP16": {
+        "bot": {
+            "id": "Qm90OjQ3ODY2NjE=",
+            "botId": 4786661,
+            "handle": "Llama-3.1-70B-FP16",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-70B-FP16",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4786661-200-bvszqbntfueitepctzfjglfejbxwuvbx.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-70B-FP16",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama3170bfp16",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Llama-3.1-405B-FP16": {
+        "bot": {
+            "id": "Qm90OjQ3ODY2NTg=",
+            "botId": 4786658,
+            "handle": "Llama-3.1-405B-FP16",
+            "deletionState": "not_deleted",
+            "displayName": "Llama-3.1-405B-FP16",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4786658-200-dwqpbzpevtufncpflnjahakwhqqhtuqr.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Llama-3.1-405B-FP16",
+            "limitedAccessType": "no_limit",
+            "nickname": "llama31405bfp16",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "Hermes-3-70B": {
+        "bot": {
+            "id": "Qm90OjQ3ODY0OTA=",
+            "botId": 4786490,
+            "handle": "Hermes-3-70B",
+            "deletionState": "not_deleted",
+            "displayName": "Hermes-3-70B",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-4786490-200-naiwyfebguqsbzdcrddhkzmjgvqqwtdu.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "Hermes-3-70B",
+            "limitedAccessType": "no_limit",
+            "nickname": "hermes370b",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    }
+}
