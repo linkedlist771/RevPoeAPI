@@ -14,7 +14,7 @@ class PoeBotsUpdater:
 
 
 async def amian():
-    bots_count = 500
+    bots_count = 5000
     get_all_bots = True
     poe_bots_updater = PoeBotsUpdater()
     await poe_bots_updater.async_init()
