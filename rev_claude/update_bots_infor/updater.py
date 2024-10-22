@@ -7,7 +7,6 @@ from rev_claude.update_bots_infor.utils import get_available_bots
 class PoeBotsUpdater:
     def __init__(self):
         # start to init the clients
-        # ClientManager()
         pass
 
     async def async_init(self):

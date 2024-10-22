@@ -4,7 +4,7 @@ from rev_claude.poe_api_wrapper import AsyncPoeApi
 
 def get_first_plus_client() -> AsyncPoeApi:
     basic_clients, plus_clients = ClientManager().get_clients()
-    client = next(iter(plus_clients.values()))
+    client = list(plus_clients.values())[0]
     return client.poe_bot_client
 
 
