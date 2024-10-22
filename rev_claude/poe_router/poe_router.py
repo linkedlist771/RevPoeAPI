@@ -16,8 +16,8 @@ router = APIRouter()
 
 @router.post("/get_available_bots")
 async def get_available_bots(
-        count: int = 25,
-        get_all: bool = False,
+    count: int = 25,
+    get_all: bool = False,
 ):
     basic_clients, plus_clients = ClientManager().get_clients()
     client = next(iter(plus_clients.values()))
