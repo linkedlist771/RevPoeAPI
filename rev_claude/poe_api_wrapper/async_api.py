@@ -1024,6 +1024,9 @@ class AsyncPoeApi:
                         logger.warning(
                             "This file type is not supported. Please try again with a different file."
                         )
+                        raise RuntimeError(
+                            f"This file type is not supported. Please try again with a different file."
+                        )
                     elif status == "reached_limit":
                         raise RuntimeError(f"Daily limit reached for {bot}.")
                     elif status == "too_many_tokens":
@@ -1123,6 +1126,9 @@ class AsyncPoeApi:
                     elif status == "unsupported_file_type" and file_path != []:
                         logger.warning(
                             "This file type is not supported. Please try again with a different file."
+                        )
+                        raise RuntimeError(
+                            f"This file type is not supported. Please try again with a different file."
                         )
                     elif status == "reached_limit":
                         raise RuntimeError(f"Daily limit reached for {bot}.")
