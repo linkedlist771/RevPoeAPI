@@ -805,8 +805,8 @@ class AsyncPoeApi:
             )
 
         self.active_messages[chatId] = None
-        # self.message_queues[chatId] = queue.Queue()
-        self.message_queues[chatId] = asyncio.Queue()
+        self.message_queues[chatId] = queue.Queue()
+
         last_text = ""
         stateChange = False
         suggest_attempts = 6
@@ -815,15 +815,11 @@ class AsyncPoeApi:
 
         while True:
             try:
-                # ws_data = self.message_queues[chatId].get(timeout=timeout)
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
-
+                ws_data = self.message_queues[chatId].get(timeout=timeout)
             except KeyError:
                 await asyncio.sleep(1)
                 continue
-            # except queue.Empty:
-            except asyncio.TimeoutError:
-
+            except queue.Empty:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
@@ -1117,8 +1113,8 @@ class AsyncPoeApi:
                 raise e
 
         self.active_messages[chatId] = None
-        # self.message_queues[chatId] = queue.Queue()
-        self.message_queues[chatId] = asyncio.Queue()
+        self.message_queues[chatId] = queue.Queue()
+
         last_text = ""
         stateChange = False
         suggest_attempts = 6
@@ -1127,15 +1123,11 @@ class AsyncPoeApi:
 
         while True:
             try:
-                # ws_data = self.message_queues[chatId].get(timeout=timeout)
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
-
+                ws_data = self.message_queues[chatId].get(timeout=timeout)
             except KeyError:
                 await asyncio.sleep(1)
                 continue
-            # except queue.Empty:
-            except asyncio.TimeoutError:
-
+            except queue.Empty:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
