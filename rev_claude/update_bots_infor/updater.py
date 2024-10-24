@@ -149,7 +149,6 @@ class PoeBotsUpdater:
                 point = bot_info.get("messagePointLimit", {}).get("displayMessagePointPrice", 0)
                 powered_by = bot_info.get("poweredBy", "")
                 desc = bot_info.get("description", "")
-
                 # Create bot information using pydantic model
                 bot_data = BotInformation(
                     baseModel=handle,
@@ -157,7 +156,7 @@ class PoeBotsUpdater:
                     endpoints=["/v1/chat/completions"],
                     premium_model=point > 0,
                     object="model",
-                    owned_by=powered_by or "poe",
+                    owned_by=powered_by.replace("This bot is a server bot. It is powered by a server managed by @", "") or "poe",
                     path=f"{handle}.png",
                     desc=desc,
                     text2image=False,  # Default value, adjust based on bot capabilities
