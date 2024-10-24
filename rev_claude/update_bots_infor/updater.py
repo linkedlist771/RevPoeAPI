@@ -3,7 +3,6 @@ import traceback
 from typing import Dict, Any
 
 import aiohttp
-from blackd import handle
 from loguru import logger
 from rev_claude.configs import DATA_DIR
 from rev_claude.update_bots_infor.utils import get_available_bots, get_bot_information
