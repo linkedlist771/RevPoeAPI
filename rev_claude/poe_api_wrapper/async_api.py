@@ -733,21 +733,21 @@ class AsyncPoeApi:
                 f"Bot {handle} not found. Make sure the bot exists before creating new chat."
             )
         botData = response_json["data"]["bot"]
-        data = {
-            "handle": botData["handle"],
-            "model": botData["model"],
-            "supportsFileUpload": botData["supportsFileUpload"],
-            "messageTimeoutSecs": botData["messageTimeoutSecs"],
-            "displayMessagePointPrice": botData["messagePointLimit"][
-                "displayMessagePointPrice"
-            ],
-            "numRemainingMessages": botData["messagePointLimit"][
-                "numRemainingMessages"
-            ],
-            "viewerIsCreator": botData["viewerIsCreator"],
-            "id": botData["id"],
-        }
-        return data
+        # data = {
+        #     "handle": botData["handle"],
+        #     "model": botData["model"],
+        #     "supportsFileUpload": botData["supportsFileUpload"],
+        #     "messageTimeoutSecs": botData["messageTimeoutSecs"],
+        #     "displayMessagePointPrice": botData["messagePointLimit"][
+        #         "displayMessagePointPrice"
+        #     ],
+        #     "numRemainingMessages": botData["messagePointLimit"][
+        #         "numRemainingMessages"
+        #     ],
+        #     "viewerIsCreator": botData["viewerIsCreator"],
+        #     "id": botData["id"],
+        # }
+        return botData
 
     async def retry_message(
         self, chatCode: str, suggest_replies: bool = False, timeout: int = 15
@@ -893,7 +893,7 @@ class AsyncPoeApi:
                 response["suggestedReplies"] = suggestedReplies
 
                 if response["state"] == "error_user_message_too_long":
-                    response["response"] = "Message too long. Please try again!"
+                    response["response"] = "上下文太长超过限制， 请清空上下文。"
                     yield response
                     break
 
@@ -1221,7 +1221,7 @@ class AsyncPoeApi:
                 response["suggestedReplies"] = suggestedReplies
 
                 if response["state"] == "error_user_message_too_long":
-                    response["response"] = "Message too long. Please try again!"
+                    response["response"] = "上下文太长超过限制， 请清空上下文。"
                     yield response
                     break
 

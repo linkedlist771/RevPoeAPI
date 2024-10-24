@@ -1,0 +1,1032 @@
+{
+    "gpt3_5": {
+        "handle": "GPT-3.5-Turbo-Raw",
+        "model": "gpt3_5",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTI="
+    },
+    "mspowerpoints": {
+        "handle": "MS-PowerPoints",
+        "model": "chinchilla",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjI3NTc2NzI="
+    },
+    "gpt4_classic": {
+        "handle": "GPT-4-Classic",
+        "model": "gpt4_classic",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 2250,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTQ="
+    },
+    "gpt4_o": {
+        "handle": "GPT-4o",
+        "model": "gpt4_o",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 300,
+        "numRemainingMessages": 8,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTU="
+    },
+    "gemini_pro_search": {
+        "handle": "Gemini-1.5-Flash-Search",
+        "model": "gemini_pro_search",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 25,
+        "numRemainingMessages": 104,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMDc="
+    },
+    "beaver": {
+        "handle": "GPT-4-Turbo",
+        "model": "beaver",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 500,
+        "numRemainingMessages": 5,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMDc="
+    },
+    "photocreatee": {
+        "handle": "Photo_CreateE",
+        "model": "stablediffusionxl",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 120,
+        "numRemainingMessages": 21,
+        "viewerIsCreator": false,
+        "id": "Qm90OjI1NTA4NTM="
+    },
+    "gpt_o1_mini_128k": {
+        "handle": "o1-mini",
+        "model": "gpt_o1_mini_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 240,
+        "displayMessagePointPrice": 1800,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMjU="
+    },
+    "capybara": {
+        "handle": "Assistant",
+        "model": "capybara",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMDI="
+    },
+    "llama31405bt": {
+        "handle": "Llama-3.1-405B-T",
+        "model": "llama31405bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 335,
+        "numRemainingMessages": 7,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI1NjA="
+    },
+    "qwen72bt": {
+        "handle": "Qwen-72B-T",
+        "model": "qwen72bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 125,
+        "numRemainingMessages": 20,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM2OTc4Mjk="
+    },
+    "fluxpro": {
+        "handle": "FLUX-pro",
+        "model": "fluxpro",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1250,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2OTI0MTc="
+    },
+    "stablediffusionxl": {
+        "handle": "StableDiffusionXL",
+        "model": "stablediffusionxl",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 120,
+        "numRemainingMessages": 21,
+        "viewerIsCreator": false,
+        "id": "Qm90OjE1Nzk4NTI="
+    },
+    "sd3turbo": {
+        "handle": "SD3-Turbo",
+        "model": "sd3turbo",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1000,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQwNDIxODM="
+    },
+    "fluxpro11": {
+        "handle": "FLUX-pro-1.1",
+        "model": "fluxpro11",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1000,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjUwMzg0OTM="
+    },
+    "websearch": {
+        "handle": "Web-Search",
+        "model": "websearch",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 15,
+        "numRemainingMessages": 174,
+        "viewerIsCreator": false,
+        "id": "Qm90OjIyNTQ3MDQ="
+    },
+    "vizcacha": {
+        "handle": "GPT-4-Turbo-128k",
+        "model": "vizcacha",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 2500,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTA="
+    },
+    "playgroundv25": {
+        "handle": "Playground-v2.5",
+        "model": "playgroundv25",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 40,
+        "numRemainingMessages": 65,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwODkxMzU="
+    },
+    "llama370bt": {
+        "handle": "Llama-3-70B-T",
+        "model": "llama370bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQwMzUyOTc="
+    },
+    "gpt4_o_128k": {
+        "handle": "GPT-4o-128k",
+        "model": "gpt4_o_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 650,
+        "numRemainingMessages": 4,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTY="
+    },
+    "gpt4_o_mini_128k": {
+        "handle": "GPT-4o-Mini-128k",
+        "model": "gpt4_o_mini_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTg="
+    },
+    "gemini_1_5_pro": {
+        "handle": "Gemini-1.5-Pro",
+        "model": "gemini_1_5_pro",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 175,
+        "numRemainingMessages": 14,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMDg="
+    },
+    "gpt4_o_mini": {
+        "handle": "GPT-4o-Mini",
+        "model": "gpt4_o_mini",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 15,
+        "numRemainingMessages": 174,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTc="
+    },
+    "agouti": {
+        "handle": "GPT-3.5-Turbo-16k",
+        "model": "agouti",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 55,
+        "numRemainingMessages": 47,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMDk="
+    },
+    "mistral_medium": {
+        "handle": "Mistral-Medium",
+        "model": "mistral_medium",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 165,
+        "numRemainingMessages": 15,
+        "viewerIsCreator": false,
+        "id": "Qm90OjcwMDk="
+    },
+    "falsdxllightning": {
+        "handle": "fal-sdxl-lightning",
+        "model": "falsdxllightning",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 25,
+        "numRemainingMessages": 104,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM5NTMxNTI="
+    },
+    "stablediffusion3": {
+        "handle": "StableDiffusion3",
+        "model": "stablediffusion3",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1600,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQwNDE5ODk="
+    },
+    "claude_2_short": {
+        "handle": "Claude-2",
+        "model": "claude_2_short",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 620,
+        "numRemainingMessages": 4,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTU="
+    },
+    "stablediffusion32b": {
+        "handle": "StableDiffusion3-2B",
+        "model": "stablediffusion32b",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 250,
+        "numRemainingMessages": 10,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ0MDIxMTg="
+    },
+    "a2": {
+        "handle": "Claude-instant",
+        "model": "a2",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 50,
+        "numRemainingMessages": 52,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMDY="
+    },
+    "code_llama_34b_instruct": {
+        "handle": "Code-Llama-34b",
+        "model": "code_llama_34b_instruct",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjcwMDU="
+    },
+    "chinchilla": {
+        "handle": "GPT-3.5-Turbo",
+        "model": "chinchilla",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMDQ="
+    },
+    "gemini_1_5_flash": {
+        "handle": "Gemini-1.5-Flash",
+        "model": "gemini_1_5_flash",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 5,
+        "numRemainingMessages": 524,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMTI="
+    },
+    "ljlchat": {
+        "handle": "l-j-l.chat",
+        "model": "claude_3_haiku",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 30,
+        "numRemainingMessages": 87,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NTExNTA="
+    },
+    "claude_3_haiku": {
+        "handle": "Claude-3-Haiku",
+        "model": "claude_3_haiku",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 30,
+        "numRemainingMessages": 87,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTc="
+    },
+    "physicshp": {
+        "handle": "PhysicsHP",
+        "model": "chinchilla",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM4OTI0NDY="
+    },
+    "gemini_1_5_flash_128k": {
+        "handle": "Gemini-1.5-Flash-128k",
+        "model": "gemini_1_5_flash_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 300,
+        "numRemainingMessages": 8,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMTM="
+    },
+    "claude_2_1_cedar": {
+        "handle": "Claude-3-Opus",
+        "model": "claude_2_1_cedar",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 2000,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTI="
+    },
+    "qwen15110bt": {
+        "handle": "Qwen-1.5-110B-T",
+        "model": "qwen15110bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 375,
+        "numRemainingMessages": 6,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQxNjA3OTE="
+    },
+    "claude_3_opus_200k": {
+        "handle": "Claude-3-Opus-200k",
+        "model": "claude_3_opus_200k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 12000,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTQ="
+    },
+    "claude_2_1_bamboo": {
+        "handle": "Claude-3-Sonnet",
+        "model": "claude_2_1_bamboo",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 360,
+        "numRemainingMessages": 7,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTE="
+    },
+    "grok2beta": {
+        "handle": "Grok-2-Beta",
+        "model": "gemini_1_5_pro",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 200,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ4MDUzNDE="
+    },
+    "playgroundv3": {
+        "handle": "Playground-v3",
+        "model": "playgroundv3",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 40,
+        "numRemainingMessages": 65,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3OTEyNzg="
+    },
+    "llama31405b": {
+        "handle": "Llama-3.1-405B",
+        "model": "llama31405b",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 350,
+        "numRemainingMessages": 7,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3MjgzOTI="
+    },
+    "fluxschnell": {
+        "handle": "FLUX-schnell",
+        "model": "fluxschnell",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2OTIwNTM="
+    },
+    "fluxdev": {
+        "handle": "FLUX-dev",
+        "model": "fluxdev",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 625,
+        "numRemainingMessages": 4,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2OTE5Mzk="
+    },
+    "dalle3": {
+        "handle": "DALL-E-3",
+        "model": "dalle3",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1500,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjI4MjgwMjk="
+    },
+    "fluxultra": {
+        "handle": "FLUX-ULTRA",
+        "model": "fluxschnell",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 209,
+        "numRemainingMessages": 12,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3NjM1NzY="
+    },
+    "removebackground": {
+        "handle": "remove-background",
+        "model": "removebackground",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 25,
+        "numRemainingMessages": 104,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQxNDIwNDQ="
+    },
+    "a2_100k": {
+        "handle": "Claude-instant-100k",
+        "model": "a2_100k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMDk="
+    },
+    "hailuoai": {
+        "handle": "Hailuo-AI",
+        "model": "hailuoai",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 12500,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjUxMTc0MzU="
+    },
+    "llama3170b": {
+        "handle": "Llama-3.1-70B",
+        "model": "llama3170b",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 115,
+        "numRemainingMessages": 22,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3MzE0NzI="
+    },
+    "llama318b": {
+        "handle": "Llama-3.1-8B",
+        "model": "llama318b",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3MzE0Nzc="
+    },
+    "gpt_o1_preview_128k": {
+        "handle": "o1-preview",
+        "model": "gpt_o1_preview_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 240,
+        "displayMessagePointPrice": 10000,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMjM="
+    },
+    "imagen3": {
+        "handle": "Imagen3",
+        "model": "imagen3",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1000,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjUxMDYwMDU="
+    },
+    "imagen3fast": {
+        "handle": "Imagen3-Fast",
+        "model": "imagen3fast",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 500,
+        "numRemainingMessages": 5,
+        "viewerIsCreator": false,
+        "id": "Qm90OjUxMTI5MDU="
+    },
+    "ideogramv2": {
+        "handle": "Ideogram-v2",
+        "model": "ideogramv2",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1900,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ4MDE5MTU="
+    },
+    "ideogram": {
+        "handle": "Ideogram",
+        "model": "ideogram",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1500,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM5MzM4OTc="
+    },
+    "playgroundupscaler": {
+        "handle": "PlaygroundUpscaler",
+        "model": "playgroundupscaler",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 375,
+        "numRemainingMessages": 6,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQyNTE0NjA="
+    },
+    "pika": {
+        "handle": "Pika",
+        "model": "pika",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 3750,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQyMjk5NzE="
+    },
+    "liveportrait": {
+        "handle": "LivePortrait",
+        "model": "liveportrait",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ1NjIzNTU="
+    },
+    "llama31405bfw128k": {
+        "handle": "Llama-3.1-405B-FW-128k",
+        "model": "llama31405bfw128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1500,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI2NjI="
+    },
+    "llama318bt128k": {
+        "handle": "Llama-3.1-8B-T-128k",
+        "model": "llama318bt128k",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 100,
+        "numRemainingMessages": 26,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI1NjM="
+    },
+    "llama3170bfw128k": {
+        "handle": "Llama-3.1-70B-FW-128k",
+        "model": "llama3170bfw128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 400,
+        "numRemainingMessages": 6,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI2NzI="
+    },
+    "llama3170bt128k": {
+        "handle": "Llama-3.1-70B-T-128k",
+        "model": "llama3170bt128k",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 460,
+        "numRemainingMessages": 5,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI1NjI="
+    },
+    "llama318bfw128k": {
+        "handle": "Llama-3.1-8B-FW-128k",
+        "model": "llama318bfw128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 50,
+        "numRemainingMessages": 52,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2NDI2NzQ="
+    },
+    "gemma227bt": {
+        "handle": "Gemma-2-27b-T",
+        "model": "gemma227bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 90,
+        "numRemainingMessages": 29,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2MTA1MzY="
+    },
+    "gemini_1_5_pro_128k": {
+        "handle": "Gemini-1.5-Pro-128k",
+        "model": "gemini_1_5_pro_128k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 240,
+        "displayMessagePointPrice": 1750,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMDk="
+    },
+    "gemini_1_5_flash_1m": {
+        "handle": "Gemini-1.5-Flash-1M",
+        "model": "gemini_1_5_flash_1m",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 1700,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMTQ="
+    },
+    "gemini_1_5_pro_1m": {
+        "handle": "Gemini-1.5-Pro-2M",
+        "model": "gemini_1_5_pro_1m",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 240,
+        "displayMessagePointPrice": 35000,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMTA="
+    },
+    "gemini_1_5_pro_search": {
+        "handle": "Gemini-1.5-Pro-Search",
+        "model": "gemini_1_5_pro_search",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 175,
+        "numRemainingMessages": 14,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMTE="
+    },
+    "gemini_pro": {
+        "handle": "Gemini-1.0-Pro",
+        "model": "gemini_pro",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMDQ="
+    },
+    "sd3medium": {
+        "handle": "SD3-Medium",
+        "model": "sd3medium",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 870,
+        "numRemainingMessages": 3,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ0MDQ0MTk="
+    },
+    "llama370binstfw": {
+        "handle": "Llama-3-70b-Inst-FW",
+        "model": "llama370binstfw",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 75,
+        "numRemainingMessages": 34,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQwMzYxMTU="
+    },
+    "mixtral8x22binstfw": {
+        "handle": "Mixtral8x22b-Inst-FW",
+        "model": "mixtral8x22binstfw",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 120,
+        "numRemainingMessages": 21,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM5OTM3MzY="
+    },
+    "commandr": {
+        "handle": "Command-R",
+        "model": "commandr",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 170,
+        "numRemainingMessages": 15,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM4NDMxOTc="
+    },
+    "gemma29bt": {
+        "handle": "Gemma-2-9b-T",
+        "model": "gemma29bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 35,
+        "numRemainingMessages": 74,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ2MTA1MzQ="
+    },
+    "mistral_large": {
+        "handle": "Mistral-Large-2",
+        "model": "mistral_large",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 30,
+        "displayMessagePointPrice": 1000,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjcwMTA="
+    },
+    "rekacore": {
+        "handle": "RekaCore",
+        "model": "rekacore",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1250,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM5OTk5NDc="
+    },
+    "rekaflash": {
+        "handle": "RekaFlash",
+        "model": "rekaflash",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 40,
+        "numRemainingMessages": 65,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM2MDc3ODg="
+    },
+    "commandrplus": {
+        "handle": "Command-R-Plus",
+        "model": "commandrplus",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1130,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM5NzUzMTI="
+    },
+    "claude_3_sonnet_200k": {
+        "handle": "Claude-3-Sonnet-200k",
+        "model": "claude_3_sonnet_200k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 1390,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTM="
+    },
+    "claude_3_haiku_200k": {
+        "handle": "Claude-3-Haiku-200k",
+        "model": "claude_3_haiku_200k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 200,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTg="
+    },
+    "mixtral8x7bchat": {
+        "handle": "Mixtral-8x7B-Chat",
+        "model": "mixtral8x7bchat",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMxMjk2MDI="
+    },
+    "qwen272binstructt": {
+        "handle": "Qwen2-72B-Instruct-T",
+        "model": "qwen272binstructt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 190,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ0MDkyMDg="
+    },
+    "a2_2": {
+        "handle": "Claude-2-100k",
+        "model": "a2_2",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 1400,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMDg="
+    },
+    "gpt4_classic_0314": {
+        "handle": "GPT-4-Classic-0314",
+        "model": "gpt4_classic_0314",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 2250,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMjE="
+    },
+    "acouchy": {
+        "handle": "Google-PaLM",
+        "model": "acouchy",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 60,
+        "displayMessagePointPrice": 50,
+        "numRemainingMessages": 52,
+        "viewerIsCreator": false,
+        "id": "Qm90OjYwMDA="
+    },
+    "llama38bt": {
+        "handle": "Llama-3-8B-T",
+        "model": "llama38bt",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 15,
+        "numRemainingMessages": 174,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQwMzUyNjE="
+    },
+    "mythomaxl213b": {
+        "handle": "MythoMax-L2-13B",
+        "model": "mythomaxl213b",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 15,
+        "numRemainingMessages": 174,
+        "viewerIsCreator": false,
+        "id": "Qm90OjM2MTgyNTQ="
+    },
+    "upstage_solar_0_70b_16bit": {
+        "handle": "Solar-Pro-Preview",
+        "model": "upstage_solar_0_70b_16bit",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 1,
+        "numRemainingMessages": 2620,
+        "viewerIsCreator": false,
+        "id": "Qm90OjcwMDY="
+    },
+    "chinchilla_instruct": {
+        "handle": "GPT-3.5-Turbo-Instruct",
+        "model": "chinchilla_instruct",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 15,
+        "displayMessagePointPrice": 20,
+        "numRemainingMessages": 131,
+        "viewerIsCreator": false,
+        "id": "Qm90OjMwMTE="
+    },
+    "claude_2_1_200k": {
+        "handle": "Claude-2.1-200k",
+        "model": "claude_2_1_200k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 120,
+        "displayMessagePointPrice": 3000,
+        "numRemainingMessages": 0,
+        "viewerIsCreator": false,
+        "id": "Qm90OjEwMTY="
+    },
+    "mistral7bv03t": {
+        "handle": "Mistral-7B-v0.3-T",
+        "model": "mistral7bv03t",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 45,
+        "numRemainingMessages": 58,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQyOTQzNTI="
+    },
+    "llama3211b": {
+        "handle": "Llama-3.2-11B",
+        "model": "llama3211b",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 115,
+        "numRemainingMessages": 22,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ5OTYwNTU="
+    },
+    "llama3290bfw131k": {
+        "handle": "Llama-3.2-90B-FW-131k",
+        "model": "llama3290bfw131k",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 475,
+        "numRemainingMessages": 5,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ5OTYwNjA="
+    },
+    "tako": {
+        "handle": "Tako",
+        "model": "tako",
+        "supportsFileUpload": false,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1000,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3NzAzNjY="
+    },
+    "llama31405bbase": {
+        "handle": "Llama-3.1-405B-Base",
+        "model": "llama31405bbase",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 1030,
+        "numRemainingMessages": 2,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ4MDUwNzk="
+    },
+    "llama370bfp16": {
+        "handle": "Llama-3-70B-FP16",
+        "model": "llama370bfp16",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 200,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3ODY2Njg="
+    },
+    "llama318bfp16": {
+        "handle": "Llama-3.1-8B-FP16",
+        "model": "llama318bfp16",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 50,
+        "numRemainingMessages": 52,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3ODY2NjY="
+    },
+    "llama3170bfp16": {
+        "handle": "Llama-3.1-70B-FP16",
+        "model": "llama3170bfp16",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 200,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3ODY2NjE="
+    },
+    "llama31405bfp16": {
+        "handle": "Llama-3.1-405B-FP16",
+        "model": "llama31405bfp16",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 2070,
+        "numRemainingMessages": 1,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3ODY2NTg="
+    },
+    "hermes370b": {
+        "handle": "Hermes-3-70B",
+        "model": "hermes370b",
+        "supportsFileUpload": true,
+        "messageTimeoutSecs": 600,
+        "displayMessagePointPrice": 200,
+        "numRemainingMessages": 13,
+        "viewerIsCreator": false,
+        "id": "Qm90OjQ3ODY0OTA="
+    }
+}
