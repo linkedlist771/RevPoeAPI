@@ -1057,6 +1057,7 @@ class AsyncPoeApi:
                             yield chunk
                         return
 
+                    logger.debug(f"message_data:\n{message_data}")
                     logger.info(
                         f"New Thread created | {message_data['data']['messageEdgeCreate']['chat']['chatCode']}"
                     )
