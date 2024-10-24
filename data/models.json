@@ -1,148 +1,4 @@
-{
-    "photo_createe": {
-        "baseModel": "photocreatee",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "poe",
-        "path": "assistant.svg",
-        "desc": "这个机器人可以生成逼真的图库照片、风格照片或动物照片。",
-        "text2image": true,
-        "points": 120
-    },
-    "assistant": {
-        "baseModel": "capybara",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "poe",
-        "path": "assistant.svg",
-        "desc": "通用助手机器人。对于需要最新信息的查询，它可以从网络访问实时数据以提供更准确的答案。",
-        "points": 20
-    },
-    "web-search": {
-        "baseModel": "websearch",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "poe",
-        "path": "websearch.jpeg",
-        "desc": "支持网络的助手机器人，通过搜索互联网来丰富其回答。特别擅长处理关于最新信息或具体事实的查询。由 GPT 4o Mini 驱动。",
-        "points": 15
-    },
-    "o1-mini": {
-        "baseModel": "gpt_o1_mini_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "o1.jpeg",
-        "desc": "这个OpenAI模型是o1的更快、更便宜的版本，特别擅长编码、数学和科学应用，适用于不需要广泛通用知识的场景。它支持128k tokens的上下文。",
-        "points": 1800
-    },
-    "o1-preview": {
-        "baseModel": "gpt_o1_preview_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "o1.jpeg",
-        "desc": "这是 OpenAI 最新的 o1 模型的早期预览，该模型旨在在回应之前花更多时间进行思考。它能够处理复杂任务并解决比以前的模型在科学、编程和数学方面更难的问题。支持128k个令牌的上下文。",
-        "points": 10000
-    },
-    "gpt-3.5-turbo": {
-        "baseModel": "gpt3_5",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "gpt3_5.jpeg",
-        "desc": "由 GPT-3.5 Turbo 驱动。",
-        "points": 20
-    },
-    "gpt-3.5-turbo-instruct": {
-        "baseModel": "chinchilla_instruct",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gpt3_5.jpeg",
-        "desc": "由 GPT-3.5 Turbo Instruct 驱动。",
-        "owned_by": "openai",
-        "points": 20
-    },
-    "gpt-3.5-turbo-16k": {
-        "baseModel": "agouti",
-        "tokens": 16000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gpt3_5.jpeg",
-        "desc": "由 GPT-3.5 Turbo Instruct-16K 驱动。",
-        "owned_by": "openai",
-        "points": 55
-    },
-    "gpt-4": {
-        "baseModel": "gpt4_classic",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "desc": "OpenAI 的 GPT-4 模型。文本输入由 gpt-4-0613（非 Turbo）驱动，图像输入由 gpt-4o 提供支持。",
-        "path": "gpt4.jpeg",
-        "owned_by": "openai",
-        "points": 2250
-    },
-    "gpt-4-turbo": {
-        "baseModel": "beaver",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4.jpeg",
-        "owned_by": "openai",
-        "desc": "由 GPT-4 Turbo 提供支持，具有更高的性能和更大的上下文窗口（4000 个 tokens）。",
-        "points": 500
-    },
-    "gpt-4-turbo-128k": {
-        "baseModel": "vizcacha",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4.jpeg",
-        "owned_by": "openai",
-        "desc": "由 GPT-4 Turbo 提供支持，具有超大上下文窗口（128,000 个 tokens），适用于处理超长文本。",
-        "points": 2500
-    },
+                  {
     "gpt-4o": {
         "baseModel": "gpt4_o",
         "tokens": 4000,
@@ -153,281 +9,50 @@
         "object": "model",
         "owned_by": "openai",
         "path": "gpt4o.jpeg",
-        "desc": "OpenAI 最强大的模型。在定量问题（数学和物理）、创意写作以及许多其他挑战性任务中比 GPT-3.5 更强。由 GPT-4o 提供支持。上下文窗口已缩短，以优化速度和成本。对于更长的上下文消息，请尝试 GPT-4o-128k。",
+        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u5728\u5b9a\u91cf\u95ee\u9898\uff08\u6570\u5b66\u548c\u7269\u7406\uff09\u3001\u521b\u610f\u5199\u4f5c\u4ee5\u53ca\u8bb8\u591a\u5176\u4ed6\u6311\u6218\u6027\u4efb\u52a1\u4e2d\u6bd4 GPT-3.5 \u66f4\u5f3a\u3002\u7531 GPT-4o \u63d0\u4f9b\u652f\u6301\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u7f29\u77ed\uff0c\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u66f4\u957f\u7684\u4e0a\u4e0b\u6587\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 GPT-4o-128k\u3002",
         "points": 300
     },
-    "gpt-4o-128k": {
-        "baseModel": "gpt4_o_128k",
-        "tokens": 128000,
+    "gpt-3.5-turbo-raw": {
+        "baseModel": "gpt-3.5-turbo-raw",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "OpenAI 最强大的模型之一，具有超大上下文窗口（128,000 个 tokens）。适用于复杂任务和超长文本处理。",
-        "points": 650
+        "owned_by": "This bot is powered by OpenAI.",
+        "path": "gpt-3.5-turbo-raw.png",
+        "desc": "Powered by gpt-3.5-turbo without a system prompt.",
+        "text2image": false,
+        "points": 20
     },
-    "gpt-4o-mini": {
-        "baseModel": "gpt4_o_mini",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "由 GPT-4o Mini 提供支持，优化速度和成本的同时，仍然具备强大的功能，适用于一般用途。",
-        "points": 15
-    },
-    "gpt-4o-mini-128k": {
-        "baseModel": "gpt4_o_mini_128k",
-        "tokens": 128000,
+    "ms-powerpoints": {
+        "baseModel": "ms-powerpoints",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "由 GPT-4o Mini 提供支持，具有超大上下文窗口（128,000 个 tokens），在保持性能的同时优化了速度和成本。",
-        "points": 75
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "ms-powerpoints.png",
+        "desc": "High Quality MS PowerPoint Presentation with Tips ",
+        "text2image": false,
+        "points": 20
     },
-    "claude-instant": {
-        "baseModel": "a2",
-        "tokens": 9000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "path": "claude2.png",
-        "object": "model",
-        "owned_by": "anthropic",
-        "desc": "由 Claude Instant 提供支持，擅长快速响应和一般任务，具有 9,000 个 tokens 的上下文窗口。",
-        "points": 50
-    },
-    "claude-instant-100k": {
-        "baseModel": "a2_100k",
-        "tokens": 100000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "由 Claude Instant 提供支持，具有 100,000 个 tokens 的超大上下文窗口，适用于处理长文本和复杂任务。",
-        "points": 75
-    },
-    "claude-2": {
-        "baseModel": "claude_2_short",
-        "tokens": 4000,
+    "gpt-4-classic": {
+        "baseModel": "gpt-4-classic",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic 的高级模型 Claude 2，擅长复杂任务如编码、写作和分析，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 620
-    },
-    "claude-2-100k": {
-        "baseModel": "a2_2",
-        "tokens": 100000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic 的高级模型 Claude 2，具有 100,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务。",
-        "points": 1400
-    },
-    "claude-3-opus": {
-        "baseModel": "claude_2_1_cedar",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "由 Claude 3 Opus 提供支持，擅长复杂任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 2000
-    },
-    "claude-3-sonnet": {
-        "baseModel": "claude_2_1_bamboo",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "由 Claude 3 Sonnet 提供支持，擅长一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 360
-    },
-    "claude-3-haiku": {
-        "baseModel": "claude_3_haiku",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "由 Claude 3 Haiku 提供支持，优化速度和成本，适用于一般用途，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 30
-    },
-    "claude-3-opus-200k": {
-        "baseModel": "claude_3_opus_200k",
-        "tokens": 200000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "由 Claude 3 Opus 提供支持，具有 200,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务。",
-        "points": 12000
-    },
-    "claude-3-sonnet-200k": {
-        "baseModel": "claude_3_sonnet_200k",
-        "tokens": 200000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "由 Claude 3 Sonnet 提供支持，具有 200,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务。",
-        "points": 1390
-    },
-    "claude-3-haiku-200k": {
-        "baseModel": "claude_3_haiku_200k",
-        "tokens": 200000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "anthropic",
-        "path": "claude.jpeg",
-        "desc": "由 Claude 3 Haiku 提供支持，具有 200,000 个 tokens 的超大上下文窗口，优化速度和成本，适用于处理超长文本。",
-        "points": 200
-    },
-    "claude-3.5-sonnet": {
-        "baseModel": "claude-3.5-sonnet",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "anthropic",
-        "path": "claude.jpeg",
-        "desc": "Anthropic 最强大的模型。擅长复杂任务如编码、写作、分析和视觉处理。上下文窗口已被缩短以优化速度和成本。对于需要更长上下文的消息，请尝试 Claude-3.5-Sonnet-200k。积分可能会发生变化。",
-        "points": 380
-    },
-    "claude-3.5-sonnet-200k": {
-        "baseModel": "claude-3.5-sonnet-200k",
-        "tokens": 200000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "anthropic",
-        "path": "claude.jpeg",
-        "desc": "Anthropic公司最强大的模型。擅长复杂任务，如自主编码和视觉处理。此外，在处理长文档时表现出色，能够确保搜索和检索等任务的准确性，并能比较多个长篇文档。支持 200,000 个 tokens 的上下文。积分可能会发生变化。",
-        "points": 1800
-    },
-    "gemini-1.5-pro": {
-        "baseModel": "gemini_1_5_pro",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Pro 提供支持，擅长复杂任务，如编码、写作和分析，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 175
-    },
-    "gemini-1.5-pro-128k": {
-        "baseModel": "gemini_1_5_pro_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Pro 提供支持，具有 128,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务。",
-        "points": 1750
-    },
-    "gemini-1.5-pro-2m": {
-        "baseModel": "gemini_1_5_pro_1m",
-        "tokens": 2000000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Pro 提供支持，具有 2,000,000 个 tokens 的超大上下文窗口，适用于处理超长文本和海量数据任务。",
-        "points": 35000
-    },
-    "gemini-1.5-flash": {
-        "baseModel": "gemini_1_5_flash",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Flash 提供支持，优化速度和成本，适用于一般用途，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 5
-    },
-    "gemini-1.5-flash-128k": {
-        "baseModel": "gemini_1_5_flash_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Flash 提供支持，具有 128,000 个 tokens 的超大上下文窗口，适用于处理长文本和复杂任务。",
-        "points": 300
-    },
-    "gemini-1.5-flash-1m": {
-        "baseModel": "gemini_1_5_flash_1m",
-        "tokens": 1000000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Flash 提供支持，具有 1,000,000 个 tokens 的超大上下文窗口，适用于处理超长文本和大型数据集。",
-        "points": 1700
+        "owned_by": "This bot is powered by OpenAI.",
+        "path": "gpt-4-classic.png",
+        "desc": "OpenAI's GPT-4 model. Powered by gpt-4-0613 (non-Turbo) for text input and gpt-4o for image input.",
+        "text2image": false,
+        "points": 2250
     },
     "gemini-1.5-flash-search": {
         "baseModel": "gemini_pro_search",
@@ -439,281 +64,177 @@
         "object": "model",
         "path": "gemini.jpeg",
         "owned_by": "google",
-        "desc": "由 Gemini 1.5 Flash Search 提供支持，优化搜索和检索任务，具有 4,000 个 tokens 的上下文窗口。",
+        "desc": "\u7531 Gemini 1.5 Flash Search \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u641c\u7d22\u548c\u68c0\u7d22\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
         "points": 25
     },
-    "gemini-1.5-pro-search": {
-        "baseModel": "gemini_1_5_pro_search",
+    "gpt-4-turbo": {
+        "baseModel": "beaver",
         "tokens": 4000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemini 1.5 Pro Search 提供支持，专为高级搜索和数据分析任务设计，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 175
+        "path": "gpt4.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u66f4\u9ad8\u7684\u6027\u80fd\u548c\u66f4\u5927\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff084000 \u4e2a tokens\uff09\u3002",
+        "points": 500
     },
-    "code-llama-34b": {
-        "baseModel": "code_llama_34b_instruct",
-        "tokens": 4000,
+    "photo_createe": {
+        "baseModel": "photocreatee",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": false,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Code Llama 34B 提供支持，具备更强的代码生成和理解能力，适用于高级编程任务，具有 4,000 个 tokens 的上下文窗口。",
+        "owned_by": "poe",
+        "path": "assistant.svg",
+        "desc": "\u8fd9\u4e2a\u673a\u5668\u4eba\u53ef\u4ee5\u751f\u6210\u903c\u771f\u7684\u56fe\u5e93\u7167\u7247\u3001\u98ce\u683c\u7167\u7247\u6216\u52a8\u7269\u7167\u7247\u3002",
+        "text2image": true,
+        "points": 120
+    },
+    "o1-mini": {
+        "baseModel": "gpt_o1_mini_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "o1.jpeg",
+        "desc": "\u8fd9\u4e2aOpenAI\u6a21\u578b\u662fo1\u7684\u66f4\u5feb\u3001\u66f4\u4fbf\u5b9c\u7684\u7248\u672c\uff0c\u7279\u522b\u64c5\u957f\u7f16\u7801\u3001\u6570\u5b66\u548c\u79d1\u5b66\u5e94\u7528\uff0c\u9002\u7528\u4e8e\u4e0d\u9700\u8981\u5e7f\u6cdb\u901a\u7528\u77e5\u8bc6\u7684\u573a\u666f\u3002\u5b83\u652f\u6301128k tokens\u7684\u4e0a\u4e0b\u6587\u3002",
+        "points": 1800
+    },
+    "assistant": {
+        "baseModel": "capybara",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "poe",
+        "path": "assistant.svg",
+        "desc": "\u901a\u7528\u52a9\u624b\u673a\u5668\u4eba\u3002\u5bf9\u4e8e\u9700\u8981\u6700\u65b0\u4fe1\u606f\u7684\u67e5\u8be2\uff0c\u5b83\u53ef\u4ee5\u4ece\u7f51\u7edc\u8bbf\u95ee\u5b9e\u65f6\u6570\u636e\u4ee5\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u7b54\u6848\u3002",
         "points": 20
     },
-    "llama-3-70b": {
-        "baseModel": "groq_llama_3_70b",
-        "tokens": 8000,
+    "llama-3.1-405b-t": {
+        "baseModel": "llama-3.1-405b-t",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3 70B 提供支持，具备更高性能，适用于复杂任务，具有 8,000 个 tokens 的上下文窗口。",
-        "points": 400
+        "owned_by": "togetherai.",
+        "path": "llama-3.1-405b-t.png",
+        "desc": "Llama 3.1 405B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 335
     },
-    "llama-3-70b-instruct": {
-        "baseModel": "llama370bt",
-        "tokens": 8000,
+    "qwen-72b-t": {
+        "baseModel": "qwen-72b-t",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3 70B Instruct 提供支持，优化了指令遵循能力，适用于需要精确指导的任务，具有 8,000 个 tokens 的上下文窗口。",
-        "points": 450
+        "owned_by": "togetherai.",
+        "path": "qwen-72b-t.png",
+        "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 72B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 125
     },
-    "llama-3.1-8b-128k": {
-        "baseModel": "llama318bfw128k",
-        "tokens": 128000,
+    "flux-pro": {
+        "baseModel": "fluxpro",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "openai",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1792x1024": "--aspect 7:4",
+            "1024x1792": "--aspect 4:7"
+        },
+        "path": "flux.jpeg",
+        "text2image": true,
+        "desc": "\u6700\u5148\u8fdb\u7684\u56fe\u50cf\u751f\u6210\uff0c\u5177\u5907\u9876\u7ea7\u7684\u63d0\u793a\u8ddf\u968f\u3001\u89c6\u89c9\u8d28\u91cf\u3001\u56fe\u50cf\u7ec6\u8282\u548c\u8f93\u51fa\u591a\u6837\u6027\u3002\u8fd9\u662f\u6700\u5f3a\u5927\u7684 FLUX.1 \u7248\u672c\u3002\u4f7f\u7528\u201c\u2013aspect\u201d\u6765\u9009\u62e9\u5bbd\u9ad8\u6bd4\uff08\u4f8b\u5982 \u2013aspect 1:1\uff09\u3002",
+        "points": 1250
+    },
+    "stablediffusionxl": {
+        "baseModel": "stablediffusionxl",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3.1 8B 提供支持，具有 128,000 个 tokens 的超大上下文窗口，适用于长文本处理和复杂任务。",
-        "points": 800
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "stablediffusionxl.png",
+        "desc": "Generates high quality images based on the user's most recent prompt. \n\nAllows users to specify elements to avoid in the image using the \"--no\" parameter at the end of the prompt. Select an aspect ratio with \"--aspect\". (e.g. \"Tall trees, daylight --no rain --aspect 7:4\"). Valid aspect ratios are 1:1, 7:4, 4:7, 9:7, 7:9, 19:13, 13:19, 12:5, & 5:12. \n\nPowered by Stable Diffusion XL.",
+        "text2image": false,
+        "points": 120
     },
-    "llama-3.1-70b-128k": {
-        "baseModel": "llama3170bfw128k",
-        "tokens": 128000,
+    "sd3-turbo": {
+        "baseModel": "sd3-turbo",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3.1 70B 提供支持，具有 128,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务，性能更强。",
-        "points": 1500
+        "owned_by": "fireworksai.",
+        "path": "sd3-turbo.png",
+        "desc": "Distilled, few-step version of Stable Diffusion 3, which understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
+        "text2image": false,
+        "points": 1000
     },
-    "llama-3.1-405b-instruct": {
-        "baseModel": "llama31405bt",
-        "tokens": 4000,
+    "flux-pro-1.1": {
+        "baseModel": "flux-pro-1.1",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3.1 405B Instruct 提供支持，是高参数量模型，具备卓越的性能，适用于最复杂的任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 3000
+        "owned_by": "fal.",
+        "path": "flux-pro-1.1.png",
+        "desc": "State-of-the-art image generation with top-of-the-line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX 1.1, use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 1000
     },
-    "llama-3.1-405b-128k": {
-        "baseModel": "llama31405bfw128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "由 Llama 3.1 405B 提供支持，具有 128,000 个 tokens 的超大上下文窗口，适用于超长文本和最复杂的任务。",
-        "points": 5000
-    },
-    "mistral-7b": {
-        "baseModel": "groq_mixtral_8x_7b",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "mistral.jpeg",
-        "owned_by": "mistralai",
-        "desc": "由 Mistral 7B 提供支持，轻量级模型，适用于一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 100
-    },
-    "mistral-medium": {
-        "baseModel": "mistral_medium",
-        "tokens": 32000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "mistral.jpeg",
-        "owned_by": "mistralai",
-        "desc": "由 Mistral Medium 提供支持，具有 32,000 个 tokens 的上下文窗口，适用于处理较长文本和复杂任务。",
-        "points": 800
-    },
-    "mistral-large": {
-        "baseModel": "mistral_large",
-        "tokens": 32000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "mistral.jpeg",
-        "owned_by": "mistralai",
-        "desc": "由 Mistral Large 提供支持，性能更强，具有 32,000 个 tokens 的上下文窗口，适用于复杂任务和长文本处理。",
-        "points": 1200
-    },
-    "palm-2": {
-        "baseModel": "acouchy",
-        "tokens": 8000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 PaLM 2 提供支持，适用于通用任务，具有 8,000 个 tokens 的上下文窗口。",
-        "points": 300
-    },
-    "mytho-max-l2-13b": {
-        "baseModel": "mythomaxl213b",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "gryphe",
-        "path": "mytho.jpeg",
-        "desc": "由 Mythomax L2 13B 提供支持，适用于一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 250
-    },
-    "solar-mini": {
-        "baseModel": "upstage_solar_0_70b_16bit",
+    "web-search": {
+        "baseModel": "websearch",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": false,
         "object": "model",
-        "owned_by": "upstage",
-        "path": "solar.jpeg",
-        "desc": "由 Solar Mini 提供支持，轻量级模型，适用于一般任务，具有 2,000 个 tokens 的上下文窗口。",
-        "points": 100
+        "owned_by": "poe",
+        "path": "websearch.jpeg",
+        "desc": "\u652f\u6301\u7f51\u7edc\u7684\u52a9\u624b\u673a\u5668\u4eba\uff0c\u901a\u8fc7\u641c\u7d22\u4e92\u8054\u7f51\u6765\u4e30\u5bcc\u5176\u56de\u7b54\u3002\u7279\u522b\u64c5\u957f\u5904\u7406\u5173\u4e8e\u6700\u65b0\u4fe1\u606f\u6216\u5177\u4f53\u4e8b\u5b9e\u7684\u67e5\u8be2\u3002\u7531 GPT 4o Mini \u9a71\u52a8\u3002",
+        "points": 15
     },
-    "gemma-7b": {
-        "baseModel": "gemma7bfw",
-        "tokens": 4000,
+    "gpt-4-turbo-128k": {
+        "baseModel": "vizcacha",
+        "tokens": 128000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemma 7B 提供支持，适用于一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 200
-    },
-    "gemma-instruct-7b": {
-        "baseModel": "gemmainstruct7bt",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "由 Gemma Instruct 7B 提供支持，优化了指令遵循能力，适用于需要精确指导的任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 220
-    },
-    "qwen-1.5-72b": {
-        "baseModel": "qwen72bt",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "qwen.jpeg",
-        "owned_by": "alibaba",
-        "desc": "由 通义千问 1.5 72B 提供支持，适用于一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 300
-    },
-    "qwen-1.5-110b": {
-        "baseModel": "qwen15110bt",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "qwen.jpeg",
-        "owned_by": "alibaba",
-        "desc": "由 通义千问 1.5 110B 提供支持，具备更强性能，适用于复杂任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 400
-    },
-    "qwen-2-72b": {
-        "baseModel": "qwen272bchat",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "qwen.jpeg",
-        "owned_by": "alibaba",
-        "desc": "由 通义千问 2 72B 提供支持，适用于一般任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 350
-    },
-    "qwen-2-72b-instruct": {
-        "baseModel": "qwen272binstructt",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "qwen.jpeg",
-        "owned_by": "alibaba",
-        "desc": "由 通义千问 2 72B Instruct 提供支持，优化了指令遵循能力，适用于需要精确指导的任务，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 370
-    },
-    "snowflake-arctic-instruct": {
-        "baseModel": "snowflakearctict",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "snowflake",
-        "path": "snowflake.jpeg",
-        "desc": "由 Snowflake Arctic Instruct 提供支持，优化了指令遵循能力，适用于需要精确指导的任务，具有 2,000 个 tokens 的上下文窗口。",
-        "points": 180
+        "path": "gpt4.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u3002",
+        "points": 2500
     },
     "playground-v2.5": {
         "baseModel": "playgroundv25",
@@ -742,8 +263,328 @@
             "809x1295": "--aspect 10:16"
         },
         "text2image": true,
-        "desc": "由 Playground v2.5 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
+        "desc": "\u7531 Playground v2.5 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
         "points": 40
+    },
+    "llama-3-70b-t": {
+        "baseModel": "llama-3-70b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3-70b-t.png",
+        "desc": "Llama 3 70B Instruct from Meta.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 75
+    },
+    "gpt-4o-128k": {
+        "baseModel": "gpt4_o_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u4e4b\u4e00\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\u3002\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\u548c\u8d85\u957f\u6587\u672c\u5904\u7406\u3002",
+        "points": 650
+    },
+    "gpt-4o-mini-128k": {
+        "baseModel": "gpt4_o_mini_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u5728\u4fdd\u6301\u6027\u80fd\u7684\u540c\u65f6\u4f18\u5316\u4e86\u901f\u5ea6\u548c\u6210\u672c\u3002",
+        "points": 75
+    },
+    "gemini-1.5-pro": {
+        "baseModel": "gemini_1_5_pro",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 175
+    },
+    "gpt-4o-mini": {
+        "baseModel": "gpt4_o_mini",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u7684\u540c\u65f6\uff0c\u4ecd\u7136\u5177\u5907\u5f3a\u5927\u7684\u529f\u80fd\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\u3002",
+        "points": 15
+    },
+    "gpt-3.5-turbo-16k": {
+        "baseModel": "agouti",
+        "tokens": 16000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gpt3_5.jpeg",
+        "desc": "\u7531 GPT-3.5 Turbo Instruct-16K \u9a71\u52a8\u3002",
+        "owned_by": "openai",
+        "points": 55
+    },
+    "mistral-medium": {
+        "baseModel": "mistral_medium",
+        "tokens": 32000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "mistral.jpeg",
+        "owned_by": "mistralai",
+        "desc": "\u7531 Mistral Medium \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 32,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8f83\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 800
+    },
+    "fal-sdxl-lightning": {
+        "baseModel": "fal-sdxl-lightning",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "fal-sdxl-lightning.png",
+        "desc": "Fastest ever image generation, and see the quality scaling up!",
+        "text2image": false,
+        "points": 25
+    },
+    "stablediffusion3": {
+        "baseModel": "stablediffusion3",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "stablediffusion3.png",
+        "desc": "Understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
+        "text2image": false,
+        "points": 1600
+    },
+    "claude-2": {
+        "baseModel": "claude_2_short",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude2.png",
+        "owned_by": "anthropic",
+        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 620
+    },
+    "stablediffusion3-2b": {
+        "baseModel": "stablediffusion3-2b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "stablediffusion3-2b.png",
+        "desc": "Stable Diffusion v3 Medium - by fal.ai",
+        "text2image": false,
+        "points": 250
+    },
+    "claude-instant": {
+        "baseModel": "a2",
+        "tokens": 9000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "path": "claude2.png",
+        "object": "model",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u5feb\u901f\u54cd\u5e94\u548c\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 9,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 50
+    },
+    "code-llama-34b": {
+        "baseModel": "code_llama_34b_instruct",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Code Llama 34B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u5907\u66f4\u5f3a\u7684\u4ee3\u7801\u751f\u6210\u548c\u7406\u89e3\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9ad8\u7ea7\u7f16\u7a0b\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 20
+    },
+    "gpt-3.5-turbo": {
+        "baseModel": "gpt3_5",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "gpt3_5.jpeg",
+        "desc": "\u7531 GPT-3.5 Turbo \u9a71\u52a8\u3002",
+        "points": 20
+    },
+    "gemini-1.5-flash": {
+        "baseModel": "gemini_1_5_flash",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 5
+    },
+    "l-j-l.chat": {
+        "baseModel": "l-j-l.chat",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "l-j-l.chat.png",
+        "desc": "\u6587\u5b57\u8f6c\u8bed\u97f3\u5305",
+        "text2image": false,
+        "points": 30
+    },
+    "claude-3-haiku": {
+        "baseModel": "claude_3_haiku",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Haiku \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 30
+    },
+    "physicshp": {
+        "baseModel": "physicshp",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "physicshp.png",
+        "desc": "Quiz on phy topics",
+        "text2image": false,
+        "points": 20
+    },
+    "gemini-1.5-flash-128k": {
+        "baseModel": "gemini_1_5_flash_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 300
+    },
+    "claude-3-opus": {
+        "baseModel": "claude_2_1_cedar",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Opus \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 2000
+    },
+    "qwen-1.5-110b-t": {
+        "baseModel": "qwen-1.5-110b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "qwen-1.5-110b-t.png",
+        "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 110B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 375
+    },
+    "claude-3-opus-200k": {
+        "baseModel": "claude_3_opus_200k",
+        "tokens": 200000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Opus \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 200,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 12000
+    },
+    "claude-3-sonnet": {
+        "baseModel": "claude_2_1_bamboo",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Sonnet \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 360
+    },
+    "grok-2-beta": {
+        "baseModel": "grok-2-beta",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Gemini-1.5-Pro, a model that is powered by Google.",
+        "path": "grok-2-beta.png",
+        "desc": "Designed to be witty, rebellious, and unfiltered, Grok answers questions with a playful yet edgy tone, inspired by The Hitchhiker's Guide to the Galaxy.\nIt can switch between a humorous 'fun mode' and a more straightforward 'regular mode,' offering advanced reasoning, coding capabilities, real-time information processing, and image generation with the FLUX.1 engine.",
+        "text2image": false,
+        "points": 200
     },
     "playground-v3": {
         "baseModel": "playgroundv25",
@@ -772,93 +613,50 @@
             "809x1295": "--aspect 10:16"
         },
         "text2image": true,
-        "desc": "由 Playground v3 提供支持，适用于图像生成和编辑，提供多种尺寸选项。",
+        "desc": "\u7531 Playground v3 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
         "points": 40
     },
-    "sdxl": {
-        "baseModel": "stablediffusionxl",
-        "tokens": 80,
+    "llama-3.1-405b": {
+        "baseModel": "llama-3.1-405b",
+        "tokens": 2000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "sd.jpeg",
-        "owned_by": "stabilityai",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1792x1024": "--aspect 7:4",
-            "1024x1792": "--aspect 4:7",
-            "1152x896": "--aspect 9:7",
-            "896x1152": "--aspect 7:9",
-            "1216x832": "--aspect 19:13",
-            "832x1216": "--aspect 13:19",
-            "1536x640": "--aspect 12:5",
-            "640x1536": "--aspect 5:12"
-        },
-        "text2image": true,
-        "desc": "由 Stable Diffusion XL 提供支持，适用于高质量图像生成和编辑，提供多种尺寸选项。",
-        "points": 120
-    },
-    "sdxl-lightning": {
-        "baseModel": "falsdxllightning",
-        "tokens": 80,
-        "endpoints": [
-            "/v1/images/generations"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "bytedance",
-        "path": "sd.jpeg",
-        "desc": "由字节跳动提供的SDXL Lightning 提供支持，优化速度和成本，适用于快速图像生成。",
-        "text2image": true,
-        "points": 25
-    },
-    "stable-diffusion-3": {
-        "baseModel": "stablediffusion3",
-        "tokens": 80,
-        "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "sd.jpeg",
-        "owned_by": "stabilityai",
-        "desc": "由 Stable Diffusion 3 提供支持，最新版本的稳定扩散模型，适用于高质量图像生成和编辑。",
-        "text2image": true,
-        "points": 1600
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "llama-3.1-405b.png",
+        "desc": "The pinnacle of Meta's Llama 3.1 family, this open-source language model excels in multilingual dialogue, outperforming numerous industry benchmarks for both closed and open-source conversational AI systems. Context window has been shortened to optimize for speed and cost. For longer context messages, please try Llama-3.1-405B-FW-128k. The compute points value is subject to change.",
+        "text2image": false,
+        "points": 350
     },
-    "stable-diffusion-3-turbo": {
-        "baseModel": "sd3turbo",
-        "tokens": 80,
+    "flux-schnell": {
+        "baseModel": "flux-schnell",
+        "tokens": 2000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "sd.jpeg",
-        "owned_by": "stabilityai",
-        "desc": "由 Stable Diffusion 3 Turbo 提供支持，优化性能，适用于高质量图像生成和编辑。",
-        "text2image": true,
-        "points": 1000
+        "owned_by": "fal.",
+        "path": "flux-schnell.png",
+        "desc": "Turbo speed image generation with strengths in prompt following, visual quality, image detail and output diversity. This is the fastest version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 75
     },
-    "stable-diffusion-3-2b": {
-        "baseModel": "stablediffusion32b",
-        "tokens": 80,
+    "flux-dev": {
+        "baseModel": "flux-dev",
+        "tokens": 2000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "sd.jpeg",
-        "owned_by": "stabilityai",
-        "desc": "由 Stable Diffusion 3 2B 提供支持，适用于一般图像生成和编辑。",
-        "text2image": true,
-        "points": 250
+        "owned_by": "fal.",
+        "path": "flux-dev.png",
+        "desc": "High-performance image generation with top of the line prompt following, visual quality, image detail and output diversity. This is a more efficient version of FLUX-pro, balancing quality and speed. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 625
     },
     "dall-e-3": {
         "baseModel": "dalle3",
@@ -877,54 +675,132 @@
         },
         "path": "dalle3.jpeg",
         "text2image": true,
-        "desc": "由 DALL·E 3 提供支持，OpenAI 的最新图像生成模型，能够生成高质量和复杂的图像，提供多种尺寸选项。",
+        "desc": "\u7531 DALL\u00b7E 3 \u63d0\u4f9b\u652f\u6301\uff0cOpenAI \u7684\u6700\u65b0\u56fe\u50cf\u751f\u6210\u6a21\u578b\uff0c\u80fd\u591f\u751f\u6210\u9ad8\u8d28\u91cf\u548c\u590d\u6742\u7684\u56fe\u50cf\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
         "points": 1500
     },
-    "flux-pro": {
-        "baseModel": "fluxpro",
-        "tokens": 80,
+    "flux-ultra": {
+        "baseModel": "flux-ultra",
+        "tokens": 2000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
         "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses FLUX-schnell, a model that is powered by Poe and third party model providers.",
+        "path": "flux-ultra.png",
+        "desc": "Unparalleled Image Quality\n\nFLUX-ULTRA produces images with:\n\n- Hyperrealistic details that blur the line between digital art and photography\n- Cinematic quality rivaling Hollywood productions\n- Intricate, insanely detailed compositions that reward close inspection\n- Beautiful color grading that enhances mood and atmosphere\n\n Professional-Grade Output\n\nEvery image generated by FLUX-ULTRA simulates the quality of high-end photography equipment:\n\n- Emulates the crisp clarity of 25mm lens shots\n- Artful manipulation of depth of field for striking visual focus\n- Precise simulated camera settings: 1/1000 shutter speed, F/22 aperture\n- Perfected white balance for true-to-life color reproduction",
+        "text2image": false,
+        "points": 209
+    },
+    "remove-background": {
+        "baseModel": "remove-background",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "remove-background.png",
+        "desc": "Remove background from your images",
+        "text2image": false,
+        "points": 25
+    },
+    "claude-instant-100k": {
+        "baseModel": "a2_100k",
+        "tokens": 100000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude2.png",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 75
+    },
+    "hailuo-ai": {
+        "baseModel": "hailuo-ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "hailuo-ai.png",
+        "desc": "Best-in-class text and image to video model by MiniMax.",
+        "text2image": false,
+        "points": 12500
+    },
+    "llama-3.1-70b": {
+        "baseModel": "llama-3.1-70b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "llama-3.1-70b.png",
+        "desc": "A medium-sized model from Meta's Llama 3.1 family which balances intelligence and speed. This open-source language model excels in multilingual dialogue, outperforming numerous industry benchmarks for both closed and open-source conversational AI systems. Context window has been shortened to optimize for speed and cost. For longer context messages, please try Llama-3.1-70B-FW-128k or Llama-3.1-70B-T-128k. The compute points value is subject to change.",
+        "text2image": false,
+        "points": 115
+    },
+    "llama-3.1-8b": {
+        "baseModel": "llama-3.1-8b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "llama-3.1-8b.png",
+        "desc": "The smallest and fastest model from Meta's Llama 3.1 family. This open-source language model excels in multilingual dialogue, outperforming numerous industry benchmarks for both closed and open-source conversational AI systems. Context window has been shortened to optimize for speed and cost. For longer context messages, please try Llama-3.1-70B-FW-128k or Llama-3.1-70B-T-128k. The compute points value is subject to change.",
+        "text2image": false,
+        "points": 20
+    },
+    "o1-preview": {
+        "baseModel": "gpt_o1_preview_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
         "object": "model",
         "owned_by": "openai",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1792x1024": "--aspect 7:4",
-            "1024x1792": "--aspect 4:7"
-        },
-        "path": "flux.jpeg",
-        "text2image": true,
-        "desc": "最先进的图像生成，具备顶级的提示跟随、视觉质量、图像细节和输出多样性。这是最强大的 FLUX.1 版本。使用“–aspect”来选择宽高比（例如 –aspect 1:1）。",
-        "points": 1250
+        "path": "o1.jpeg",
+        "desc": "\u8fd9\u662f OpenAI \u6700\u65b0\u7684 o1 \u6a21\u578b\u7684\u65e9\u671f\u9884\u89c8\uff0c\u8be5\u6a21\u578b\u65e8\u5728\u5728\u56de\u5e94\u4e4b\u524d\u82b1\u66f4\u591a\u65f6\u95f4\u8fdb\u884c\u601d\u8003\u3002\u5b83\u80fd\u591f\u5904\u7406\u590d\u6742\u4efb\u52a1\u5e76\u89e3\u51b3\u6bd4\u4ee5\u524d\u7684\u6a21\u578b\u5728\u79d1\u5b66\u3001\u7f16\u7a0b\u548c\u6570\u5b66\u65b9\u9762\u66f4\u96be\u7684\u95ee\u9898\u3002\u652f\u6301128k\u4e2a\u4ee4\u724c\u7684\u4e0a\u4e0b\u6587\u3002",
+        "points": 10000
     },
-    "ideogram": {
-        "baseModel": "ideogram",
-        "tokens": 80,
+    "imagen3": {
+        "baseModel": "imagen3",
+        "tokens": 2000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "owned_by": "ideogram",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1254x836": "--aspect 3:2",
-            "836x1254": "--aspect 2:3",
-            "1182x886": "--aspect 4:3",
-            "886x1182": "--aspect 3:4",
-            "1365x768": "--aspect 16:9",
-            "768x1365": "--aspect 9:16",
-            "1295x809": "--aspect 16:10",
-            "809x1295": "--aspect 10:16"
-        },
-        "text2image": true,
-        "path": "ideogram.jpeg",
-        "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
-        "points": 1500
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "imagen3.png",
+        "desc": "Google DeepMind\u2019s highest quality text-to-image model, capable of generating images with\u00a0great detail, rich lighting,\u00a0and\u00a0few distracting artifacts. To adjust the aspect ratio of your image add --aspect-ratio (1:1, 16:9, 9:16, 4:3, 3:4). To remove visual specific elements, add --no (elements to remove). For simpler prompts, faster results, & lower cost, use @Imagen3-Fast",
+        "text2image": false,
+        "points": 1000
+    },
+    "imagen3-fast": {
+        "baseModel": "imagen3-fast",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "imagen3-fast.png",
+        "desc": "Google DeepMind\u2019s highest quality text-to-image model, capable of generating images with\u00a0great detail, rich lighting,\u00a0and\u00a0few distracting artifacts \u2014 optimized for short, simple prompts. To adjust the aspect ratio of your image add --aspect-ratio (1:1, 16:9, 9:16, 4:3, 3:4). For more complex prompts, use @Imagen3",
+        "text2image": false,
+        "points": 500
     },
     "ideogram-v2": {
         "baseModel": "ideogram",
@@ -949,7 +825,1055 @@
         },
         "text2image": true,
         "path": "ideogram.jpeg",
-        "desc": "由 Ideogram 提供支持，专注于生成文字和符号图像，适用于创意设计，提供多种尺寸选项。",
+        "desc": "\u7531 Ideogram \u63d0\u4f9b\u652f\u6301\uff0c\u4e13\u6ce8\u4e8e\u751f\u6210\u6587\u5b57\u548c\u7b26\u53f7\u56fe\u50cf\uff0c\u9002\u7528\u4e8e\u521b\u610f\u8bbe\u8ba1\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
         "points": 1900
+    },
+    "stablediffusion3.5-l": {
+        "baseModel": "stablediffusion3.5-l",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "stablediffusion3.5-l.png",
+        "desc": "Stability.ai's StableDiffusion3.5 Large, hosted by @fal, is the Stable Diffusion family's most powerful image generation model both in terms of image quality and prompt adherence. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 1625
+    },
+    "ideogram": {
+        "baseModel": "ideogram",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "ideogram",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1254x836": "--aspect 3:2",
+            "836x1254": "--aspect 2:3",
+            "1182x886": "--aspect 4:3",
+            "886x1182": "--aspect 3:4",
+            "1365x768": "--aspect 16:9",
+            "768x1365": "--aspect 9:16",
+            "1295x809": "--aspect 16:10",
+            "809x1295": "--aspect 10:16"
+        },
+        "text2image": true,
+        "path": "ideogram.jpeg",
+        "desc": "\u7531 Ideogram \u63d0\u4f9b\u652f\u6301\uff0c\u4e13\u6ce8\u4e8e\u751f\u6210\u6587\u5b57\u548c\u7b26\u53f7\u56fe\u50cf\uff0c\u9002\u7528\u4e8e\u521b\u610f\u8bbe\u8ba1\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
+        "points": 1500
+    },
+    "playgroundupscaler": {
+        "baseModel": "playgroundupscaler",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "playgroundupscaler.png",
+        "desc": "Enhances the quality and detail of an image while upscaling resolution by 4x with the Playground AI model.",
+        "text2image": false,
+        "points": 375
+    },
+    "pika": {
+        "baseModel": "pika",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "pika.png",
+        "desc": "Generate a video using a text prompt, an image, or a video. Pass in optional parameters using flags following your prompt. (e.g. \"A cat riding a skateboard --aspect 16:9 --framerate 24\")\n\nAdditional parameters:\n--aspect (e.g. 16:9, 19:13)\n--framerate (between 8-24)\n--motion (motion intensity, between 0-4)\n--gs (guidance scale/relevance to text, between 8-24)\n--no (negative prompt, e.g. ugly, scary)\n--seed (e.g. 12345)\n\nCamera control (use one at a time):\n--zoom (\"in\" or \"out\")\n--pan (\"left\" or \"right\")\n--tilt (\"up\" or \"down\")\n--rotate (\"cw\" or \"ccw\")\n\nPowered by Pika.",
+        "text2image": false,
+        "points": 3750
+    },
+    "liveportrait": {
+        "baseModel": "liveportrait",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "liveportrait.png",
+        "desc": "Animates given portraits with the motion's in the video. Powered by fal.ai",
+        "text2image": false,
+        "points": 75
+    },
+    "llama-3.1-405b-fw-128k": {
+        "baseModel": "llama-3.1-405b-fw-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3.1-405b-fw-128k.png",
+        "desc": "The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes. The Llama 3.1 instruction tuned text only models (8B, 70B, 405B) are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+        "text2image": false,
+        "points": 1500
+    },
+    "llama-3.1-8b-t-128k": {
+        "baseModel": "llama-3.1-8b-t-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3.1-8b-t-128k.png",
+        "desc": "Llama 3.1 8B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 100
+    },
+    "llama-3.1-70b-fw-128k": {
+        "baseModel": "llama-3.1-70b-fw-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3.1-70b-fw-128k.png",
+        "desc": "The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes. The Llama 3.1 instruction tuned text only models (8B, 70B, 405B) are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+        "text2image": false,
+        "points": 400
+    },
+    "llama-3.1-70b-t-128k": {
+        "baseModel": "llama-3.1-70b-t-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3.1-70b-t-128k.png",
+        "desc": "Llama 3.1 70B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 460
+    },
+    "llama-3.1-8b-fw-128k": {
+        "baseModel": "llama-3.1-8b-fw-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3.1-8b-fw-128k.png",
+        "desc": "The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes. The Llama 3.1 instruction tuned text only models (8B, 70B, 405B) are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+        "text2image": false,
+        "points": 50
+    },
+    "gemma-2-27b-t": {
+        "baseModel": "gemma-2-27b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "gemma-2-27b-t.png",
+        "desc": "Gemma 2 27B Instruct from Google.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 90
+    },
+    "gemini-1.5-pro-128k": {
+        "baseModel": "gemini_1_5_pro_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 1750
+    },
+    "gemini-1.5-flash-1m": {
+        "baseModel": "gemini_1_5_flash_1m",
+        "tokens": 1000000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 1,000,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u5927\u578b\u6570\u636e\u96c6\u3002",
+        "points": 1700
+    },
+    "gemini-1.5-pro-2m": {
+        "baseModel": "gemini_1_5_pro_1m",
+        "tokens": 2000000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 2,000,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u6d77\u91cf\u6570\u636e\u4efb\u52a1\u3002",
+        "points": 35000
+    },
+    "gemini-1.5-pro-search": {
+        "baseModel": "gemini_1_5_pro_search",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Pro Search \u63d0\u4f9b\u652f\u6301\uff0c\u4e13\u4e3a\u9ad8\u7ea7\u641c\u7d22\u548c\u6570\u636e\u5206\u6790\u4efb\u52a1\u8bbe\u8ba1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 175
+    },
+    "gemini-1.0-pro": {
+        "baseModel": "gemini-1.0-pro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Google.",
+        "path": "gemini-1.0-pro.png",
+        "desc": "The multi-modal model from Google's Gemini family that balances model performance and speed. Exhibits strong generalist capabilities and excels particularly in cross-modal reasoning.\n\nThe model accepts text, image, and video input and provides text output. It considers only the images and videos from the latest user message, with a restriction of one video per message.",
+        "text2image": false,
+        "points": 20
+    },
+    "sd3-medium": {
+        "baseModel": "sd3-medium",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "sd3-medium.png",
+        "desc": "2-billion parameter version of Stable Diffusion 3, which understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
+        "text2image": false,
+        "points": 870
+    },
+    "llama-3-70b-inst-fw": {
+        "baseModel": "llama-3-70b-inst-fw",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3-70b-inst-fw.png",
+        "desc": "Meta's Llama-3-70B-Instruct hosted by Fireworks AI. ",
+        "text2image": false,
+        "points": 75
+    },
+    "mixtral8x22b-inst-fw": {
+        "baseModel": "mixtral8x22b-inst-fw",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "mixtral8x22b-inst-fw.png",
+        "desc": "Mixtral 8x22B Mixture-of-Experts instruct model from Mistral hosted by Fireworks. ",
+        "text2image": false,
+        "points": 120
+    },
+    "command-r": {
+        "baseModel": "command-r",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "1vnzh.",
+        "path": "command-r.png",
+        "desc": "I can search the web for up to date information and respond in over 10 languages!",
+        "text2image": false,
+        "points": 170
+    },
+    "gemma-2-9b-t": {
+        "baseModel": "gemma-2-9b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "gemma-2-9b-t.png",
+        "desc": "Gemma 2 9B Instruct from Google.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 35
+    },
+    "mistral-large-2": {
+        "baseModel": "mistral-large-2",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Mistral.",
+        "path": "mistral-large-2.png",
+        "desc": "Mistral's latest text generation model (Mistral-Large-2407) with top-tier reasoning capabilities. It can be used for complex multilingual reasoning tasks, including text understanding, transformation, and code generation. Context window has been shortened to 32k tokens (around 24,000 words) to optimize for speed and cost. For longer context messages, try Mistral-Large-2-128k.",
+        "text2image": false,
+        "points": 1000
+    },
+    "rekacore": {
+        "baseModel": "rekacore",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "reka.",
+        "path": "rekacore.png",
+        "desc": "Reka's largest and most capable multimodal language model. Works with text, images, and video inputs. 8k context length.",
+        "text2image": false,
+        "points": 1250
+    },
+    "rekaflash": {
+        "baseModel": "rekaflash",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "reka.",
+        "path": "rekaflash.png",
+        "desc": "Reka's efficient and capable 21B multimodal model optimized for fast workloads and amazing quality. Works with text, images and video inputs.",
+        "text2image": false,
+        "points": 40
+    },
+    "command-r-plus": {
+        "baseModel": "command-r-plus",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "1vnzh.",
+        "path": "command-r-plus.png",
+        "desc": "A supercharged version of Command R. I can search the web for up to date information and respond in over 10 languages!",
+        "text2image": false,
+        "points": 1130
+    },
+    "claude-3-sonnet-200k": {
+        "baseModel": "claude_3_sonnet_200k",
+        "tokens": 200000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Sonnet \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 200,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 1390
+    },
+    "claude-3-haiku-200k": {
+        "baseModel": "claude_3_haiku_200k",
+        "tokens": 200000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "anthropic",
+        "path": "claude.jpeg",
+        "desc": "\u7531 Claude 3 Haiku \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 200,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u3002",
+        "points": 200
+    },
+    "mixtral-8x7b-chat": {
+        "baseModel": "mixtral-8x7b-chat",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "mixtral-8x7b-chat.png",
+        "desc": "Mixtral 8x7B Mixture-of-Experts model from Mistral AI fine-tuned for instruction following\n\nHosted by Fireworks.ai: https://app.fireworks.ai/models/fireworks/mixtral-8x7b-instruct",
+        "text2image": false,
+        "points": 20
+    },
+    "qwen2-72b-instruct-t": {
+        "baseModel": "qwen2-72b-instruct-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "qwen2-72b-instruct-t.png",
+        "desc": "Qwen2 (\u901a\u4e49\u5343\u95ee2) 72B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 190
+    },
+    "claude-2-100k": {
+        "baseModel": "a2_2",
+        "tokens": 100000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude2.png",
+        "owned_by": "anthropic",
+        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 1400
+    },
+    "gpt-4-classic-0314": {
+        "baseModel": "gpt-4-classic-0314",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by OpenAI.",
+        "path": "gpt-4-classic-0314.png",
+        "desc": "OpenAI's GPT-4 model. Powered by gpt-4-0314 (non-Turbo) for text input and gpt-4o for image input.",
+        "text2image": false,
+        "points": 2250
+    },
+    "google-palm": {
+        "baseModel": "google-palm",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Google.",
+        "path": "google-palm.png",
+        "desc": "Powered by Google's PaLM 2 chat-bison@002 model. Supports a context window of 8k tokens.",
+        "text2image": false,
+        "points": 50
+    },
+    "llama-3-8b-t": {
+        "baseModel": "llama-3-8b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3-8b-t.png",
+        "desc": "Llama 3 8B Instruct from Meta.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 15
+    },
+    "mythomax-l2-13b": {
+        "baseModel": "mythomax-l2-13b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "mythomax-l2-13b.png",
+        "desc": "This model was created by Gryphe based on LLama-2-13B and is proficient at both roleplaying and storywriting.",
+        "text2image": false,
+        "points": 15
+    },
+    "solar-pro-preview": {
+        "baseModel": "solar-pro-preview",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by TranslationUnit(text='an open source model hosted by Poe', params={}).",
+        "path": "solar-pro-preview.png",
+        "desc": "A sneak peek into Solar Pro, Upstage's state-of-the-art model designed to deliver exceptional performance on a single GPU.",
+        "text2image": false,
+        "points": 1
+    },
+    "gpt-3.5-turbo-instruct": {
+        "baseModel": "chinchilla_instruct",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gpt3_5.jpeg",
+        "desc": "\u7531 GPT-3.5 Turbo Instruct \u9a71\u52a8\u3002",
+        "owned_by": "openai",
+        "points": 20
+    },
+    "claude-2.1-200k": {
+        "baseModel": "claude-2.1-200k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Anthropic.",
+        "path": "claude-2.1-200k.png",
+        "desc": "Anthropic's Claude 2.1 has performance improvements over Claude 2 and an increased context size of 200k tokens.",
+        "text2image": false,
+        "points": 3000
+    },
+    "mistral-7b-v0.3-t": {
+        "baseModel": "mistral-7b-v0.3-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "mistral-7b-v0.3-t.png",
+        "desc": "Mistral Instruct 7B v0.3 from Mistral AI.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 45
+    },
+    "llama-3.2-11b": {
+        "baseModel": "llama-3.2-11b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3.2-11b.png",
+        "desc": "Llama goes multimodal! With the Llama 3.2 new 11B vision LLM, you will now be able to reason on high-resolution images such as charts, graphs, or image captioning. This is the vision instruct-tuned model from Meta, hosted by Fireworks AI. This bot only supports 1 image per message currently.",
+        "text2image": false,
+        "points": 115
+    },
+    "llama-3.2-90b-fw-131k": {
+        "baseModel": "llama-3.2-90b-fw-131k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "llama-3.2-90b-fw-131k.png",
+        "desc": "Llama goes multimodal! With the Llama 3.2 new 90B vision LLM, you will now be able to reason on high-resolution images such as charts, graphs, or image captioning. This is the vision instruct-tuned model from Meta, hosted by Fireworks AI. This bot only supports 1 image per message currently.",
+        "text2image": false,
+        "points": 475
+    },
+    "tako": {
+        "baseModel": "tako",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "tako.png",
+        "desc": "Tako is a bot that transforms your questions about stocks, sports, economics or politics into interactive, shareable knowledge cards from trusted sources. Tako's knowledge graph is built exclusively from authoritative, real-time data providers, and is embeddable in your apps, research and storytelling. You can adjust the specificity threshold by typing `--specificity 30` (or a value between 0 - 100) at the end of your query/question; the default is 60.",
+        "text2image": false,
+        "points": 1000
+    },
+    "llama-3.1-405b-base": {
+        "baseModel": "llama-3.1-405b-base",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3.1-405b-base.png",
+        "desc": "SOTA base completion model that enables seamless interactions.",
+        "text2image": false,
+        "points": 1030
+    },
+    "llama-3-70b-fp16": {
+        "baseModel": "llama-3-70b-fp16",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3-70b-fp16.png",
+        "desc": "A highly efficient and powerful model designed for a veriety of tasks with 128K context length.",
+        "text2image": false,
+        "points": 200
+    },
+    "llama-3.1-8b-fp16": {
+        "baseModel": "llama-3.1-8b-fp16",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3.1-8b-fp16.png",
+        "desc": "The smallest and fastest member of the Llama 3.1 family, offering exceptional efficiency and rapid response times with 128K context length.",
+        "text2image": false,
+        "points": 50
+    },
+    "llama-3.1-70b-fp16": {
+        "baseModel": "llama-3.1-70b-fp16",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3.1-70b-fp16.png",
+        "desc": "The best LLM at its size with faster response times compared to the 405B model with 128K context length.",
+        "text2image": false,
+        "points": 200
+    },
+    "llama-3.1-405b-fp16": {
+        "baseModel": "llama-3.1-405b-fp16",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3.1-405b-fp16.png",
+        "desc": "The Biggest and Best open-source AI model trained by Meta, beating GPT-4o across most benchmarks. This bot is in BF16 and with 128K context length.",
+        "text2image": false,
+        "points": 2070
+    },
+    "hermes-3-70b": {
+        "baseModel": "hermes-3-70b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "hyperbolic.",
+        "path": "hermes-3-70b.png",
+        "desc": "Hermes 3 is the latest version of our flagship Hermes series of LLMs by Nous Research.\nHermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\nThe ethos of the Hermes series of models is focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.",
+        "text2image": false,
+        "points": 200
+    },
+    "flux-1-schnell-fw": {
+        "baseModel": "flux-1-schnell-fw",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "flux-1-schnell-fw.png",
+        "desc": "FLUX.1 [schnell] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions. Bot powered by fireworks.ai.\n\nKey Features\n1. Cutting-edge output quality and competitive prompt following, matching the performance of closed source alternatives.\n2. Trained using latent adversarial diffusion distillation, FLUX.1 [schnell] can generate high-quality images in only 1 to 4 steps.\n3. Released under the apache-2.0 licence, the model can be used for personal, scientific, and commercial purposes.",
+        "text2image": false,
+        "points": 0
+    },
+    "flux-1-dev-fw": {
+        "baseModel": "flux-1-dev-fw",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "flux-1-dev-fw.png",
+        "desc": "FLUX.1 [dev] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions. Bot powered by fireworks.ai\n\nKey Features\n1. Cutting-edge output quality, second only to our state-of-the-art model FLUX.1 [pro].\n2. Competitive prompt following, matching the performance of closed source alternatives .\n3. Trained using guidance distillation, making FLUX.1 [dev] more efficient.\n4. Open weights to drive new scientific research, and empower artists to develop innovative workflows.\n5. Generated outputs can be used for personal, scientific, and commercial purposes as described in the FLUX.1 [dev] Non-Commercial License.",
+        "text2image": false,
+        "points": 0
+    },
+    "gpt-4": {
+        "baseModel": "gpt4_classic",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "desc": "OpenAI \u7684 GPT-4 \u6a21\u578b\u3002\u6587\u672c\u8f93\u5165\u7531 gpt-4-0613\uff08\u975e Turbo\uff09\u9a71\u52a8\uff0c\u56fe\u50cf\u8f93\u5165\u7531 gpt-4o \u63d0\u4f9b\u652f\u6301\u3002",
+        "path": "gpt4.jpeg",
+        "owned_by": "openai",
+        "points": 2250
+    },
+    "claude-3.5-sonnet": {
+        "baseModel": "claude-3.5-sonnet",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "anthropic",
+        "path": "claude.jpeg",
+        "desc": "Anthropic \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u3001\u5206\u6790\u548c\u89c6\u89c9\u5904\u7406\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u88ab\u7f29\u77ed\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u9700\u8981\u66f4\u957f\u4e0a\u4e0b\u6587\u7684\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 Claude-3.5-Sonnet-200k\u3002\u79ef\u5206\u53ef\u80fd\u4f1a\u53d1\u751f\u53d8\u5316\u3002",
+        "points": 380
+    },
+    "claude-3.5-sonnet-200k": {
+        "baseModel": "claude-3.5-sonnet-200k",
+        "tokens": 200000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "anthropic",
+        "path": "claude.jpeg",
+        "desc": "Anthropic\u516c\u53f8\u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5982\u81ea\u4e3b\u7f16\u7801\u548c\u89c6\u89c9\u5904\u7406\u3002\u6b64\u5916\uff0c\u5728\u5904\u7406\u957f\u6587\u6863\u65f6\u8868\u73b0\u51fa\u8272\uff0c\u80fd\u591f\u786e\u4fdd\u641c\u7d22\u548c\u68c0\u7d22\u7b49\u4efb\u52a1\u7684\u51c6\u786e\u6027\uff0c\u5e76\u80fd\u6bd4\u8f83\u591a\u4e2a\u957f\u7bc7\u6587\u6863\u3002\u652f\u6301 200,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u3002\u79ef\u5206\u53ef\u80fd\u4f1a\u53d1\u751f\u53d8\u5316\u3002",
+        "points": 1800
+    },
+    "llama-3-70b": {
+        "baseModel": "groq_llama_3_70b",
+        "tokens": 8000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3 70B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u5907\u66f4\u9ad8\u6027\u80fd\uff0c\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\uff0c\u5177\u6709 8,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 400
+    },
+    "llama-3-70b-instruct": {
+        "baseModel": "llama370bt",
+        "tokens": 8000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3 70B Instruct \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u4e86\u6307\u4ee4\u9075\u5faa\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9700\u8981\u7cbe\u786e\u6307\u5bfc\u7684\u4efb\u52a1\uff0c\u5177\u6709 8,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 450
+    },
+    "llama-3.1-8b-128k": {
+        "baseModel": "llama318bfw128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3.1 8B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u957f\u6587\u672c\u5904\u7406\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 800
+    },
+    "llama-3.1-70b-128k": {
+        "baseModel": "llama3170bfw128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3.1 70B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\uff0c\u6027\u80fd\u66f4\u5f3a\u3002",
+        "points": 1500
+    },
+    "llama-3.1-405b-instruct": {
+        "baseModel": "llama31405bt",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3.1 405B Instruct \u63d0\u4f9b\u652f\u6301\uff0c\u662f\u9ad8\u53c2\u6570\u91cf\u6a21\u578b\uff0c\u5177\u5907\u5353\u8d8a\u7684\u6027\u80fd\uff0c\u9002\u7528\u4e8e\u6700\u590d\u6742\u7684\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 3000
+    },
+    "llama-3.1-405b-128k": {
+        "baseModel": "llama31405bfw128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Llama 3.1 405B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u8d85\u957f\u6587\u672c\u548c\u6700\u590d\u6742\u7684\u4efb\u52a1\u3002",
+        "points": 5000
+    },
+    "mistral-7b": {
+        "baseModel": "groq_mixtral_8x_7b",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "mistral.jpeg",
+        "owned_by": "mistralai",
+        "desc": "\u7531 Mistral 7B \u63d0\u4f9b\u652f\u6301\uff0c\u8f7b\u91cf\u7ea7\u6a21\u578b\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 100
+    },
+    "mistral-large": {
+        "baseModel": "mistral_large",
+        "tokens": 32000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "mistral.jpeg",
+        "owned_by": "mistralai",
+        "desc": "\u7531 Mistral Large \u63d0\u4f9b\u652f\u6301\uff0c\u6027\u80fd\u66f4\u5f3a\uff0c\u5177\u6709 32,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\u548c\u957f\u6587\u672c\u5904\u7406\u3002",
+        "points": 1200
+    },
+    "palm-2": {
+        "baseModel": "acouchy",
+        "tokens": 8000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 PaLM 2 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u901a\u7528\u4efb\u52a1\uff0c\u5177\u6709 8,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 300
+    },
+    "mytho-max-l2-13b": {
+        "baseModel": "mythomaxl213b",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "gryphe",
+        "path": "mytho.jpeg",
+        "desc": "\u7531 Mythomax L2 13B \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 250
+    },
+    "solar-mini": {
+        "baseModel": "upstage_solar_0_70b_16bit",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "upstage",
+        "path": "solar.jpeg",
+        "desc": "\u7531 Solar Mini \u63d0\u4f9b\u652f\u6301\uff0c\u8f7b\u91cf\u7ea7\u6a21\u578b\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 2,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 100
+    },
+    "gemma-7b": {
+        "baseModel": "gemma7bfw",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemma 7B \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 200
+    },
+    "gemma-instruct-7b": {
+        "baseModel": "gemmainstruct7bt",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemma Instruct 7B \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u4e86\u6307\u4ee4\u9075\u5faa\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9700\u8981\u7cbe\u786e\u6307\u5bfc\u7684\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 220
+    },
+    "qwen-1.5-72b": {
+        "baseModel": "qwen72bt",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "qwen.jpeg",
+        "owned_by": "alibaba",
+        "desc": "\u7531 \u901a\u4e49\u5343\u95ee 1.5 72B \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 300
+    },
+    "qwen-1.5-110b": {
+        "baseModel": "qwen15110bt",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "qwen.jpeg",
+        "owned_by": "alibaba",
+        "desc": "\u7531 \u901a\u4e49\u5343\u95ee 1.5 110B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u5907\u66f4\u5f3a\u6027\u80fd\uff0c\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 400
+    },
+    "qwen-2-72b": {
+        "baseModel": "qwen272bchat",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "qwen.jpeg",
+        "owned_by": "alibaba",
+        "desc": "\u7531 \u901a\u4e49\u5343\u95ee 2 72B \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 350
+    },
+    "qwen-2-72b-instruct": {
+        "baseModel": "qwen272binstructt",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "qwen.jpeg",
+        "owned_by": "alibaba",
+        "desc": "\u7531 \u901a\u4e49\u5343\u95ee 2 72B Instruct \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u4e86\u6307\u4ee4\u9075\u5faa\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9700\u8981\u7cbe\u786e\u6307\u5bfc\u7684\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 370
+    },
+    "snowflake-arctic-instruct": {
+        "baseModel": "snowflakearctict",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "snowflake",
+        "path": "snowflake.jpeg",
+        "desc": "\u7531 Snowflake Arctic Instruct \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u4e86\u6307\u4ee4\u9075\u5faa\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9700\u8981\u7cbe\u786e\u6307\u5bfc\u7684\u4efb\u52a1\uff0c\u5177\u6709 2,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 180
+    },
+    "sdxl": {
+        "baseModel": "stablediffusionxl",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "sd.jpeg",
+        "owned_by": "stabilityai",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1792x1024": "--aspect 7:4",
+            "1024x1792": "--aspect 4:7",
+            "1152x896": "--aspect 9:7",
+            "896x1152": "--aspect 7:9",
+            "1216x832": "--aspect 19:13",
+            "832x1216": "--aspect 13:19",
+            "1536x640": "--aspect 12:5",
+            "640x1536": "--aspect 5:12"
+        },
+        "text2image": true,
+        "desc": "\u7531 Stable Diffusion XL \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u9ad8\u8d28\u91cf\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
+        "points": 120
+    },
+    "sdxl-lightning": {
+        "baseModel": "falsdxllightning",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "bytedance",
+        "path": "sd.jpeg",
+        "desc": "\u7531\u5b57\u8282\u8df3\u52a8\u63d0\u4f9b\u7684SDXL Lightning \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u5feb\u901f\u56fe\u50cf\u751f\u6210\u3002",
+        "text2image": true,
+        "points": 25
+    },
+    "stable-diffusion-3": {
+        "baseModel": "stablediffusion3",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "sd.jpeg",
+        "owned_by": "stabilityai",
+        "desc": "\u7531 Stable Diffusion 3 \u63d0\u4f9b\u652f\u6301\uff0c\u6700\u65b0\u7248\u672c\u7684\u7a33\u5b9a\u6269\u6563\u6a21\u578b\uff0c\u9002\u7528\u4e8e\u9ad8\u8d28\u91cf\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\u3002",
+        "text2image": true,
+        "points": 1600
+    },
+    "stable-diffusion-3-turbo": {
+        "baseModel": "sd3turbo",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "sd.jpeg",
+        "owned_by": "stabilityai",
+        "desc": "\u7531 Stable Diffusion 3 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u6027\u80fd\uff0c\u9002\u7528\u4e8e\u9ad8\u8d28\u91cf\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\u3002",
+        "text2image": true,
+        "points": 1000
+    },
+    "stable-diffusion-3-2b": {
+        "baseModel": "stablediffusion32b",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "sd.jpeg",
+        "owned_by": "stabilityai",
+        "desc": "\u7531 Stable Diffusion 3 2B \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\u3002",
+        "text2image": true,
+        "points": 250
     }
 }
