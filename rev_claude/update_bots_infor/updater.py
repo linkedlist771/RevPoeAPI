@@ -2,7 +2,6 @@ import asyncio
 import traceback
 
 from loguru import logger
-from rev_claude.client.client_manager import ClientManager
 from rev_claude.configs import DATA_DIR
 from rev_claude.update_bots_infor.utils import get_available_bots, get_bot_information
 from rev_claude.utils.json_utils import save_json, load_json
@@ -59,6 +58,7 @@ class PoeBotsUpdater:
         pass
 
     async def async_init(self):
+        from rev_claude.client.client_manager import ClientManager
         await ClientManager().load_clients(reload=False)
 
     async def save_updated_models(self, bots_count: int, get_all_bots: bool):
