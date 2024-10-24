@@ -108,6 +108,7 @@ async def amian():
 
     logger.info(f"Loading bots information for the web.")
     await poe_bots_updater.async_init()
+    await poe_bots_updater.save_updated_models(bots_count, get_all_bots)
     await poe_bots_updater.save_models_information()
     #
     # logger.info(f"Updating the bots with both the local bots information and the web bots information.")
