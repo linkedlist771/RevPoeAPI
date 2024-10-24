@@ -232,18 +232,8 @@ async def chat(
 
     basic_clients = clients["basic_clients"]
     plus_clients = clients["plus_clients"]
-    done_data = build_sse_data(message="closed", id=conversation_id)
-
+    # done_data = build_sse_data(message="closed", id=conversation_id)
     client_type = "plus" if client_type == "plus" else "basic"
-    # if (not manager.is_plus_user(api_key)) and (client_type == "plus"):
-    #     return StreamingResponse(
-    #         build_sse_data(
-    #             message="您的登录秘钥不是Plus 用户，请升级您的套餐以访问此账户。"
-    #         )
-    #         + done_data,
-    #         media_type="text/event-stream",
-    #     )
-
     if client_type == "plus":
         claude_client = plus_clients[client_idx]
     else:
@@ -317,115 +307,6 @@ async def chat(
             call_back=call_back,
             api_key=api_key,
             file_paths=file_paths,
-        )
-        streaming_res = patched_generate_data(streaming_res, conversation_id, hrefs)
-        return StreamingResponse(
-            streaming_res,
-            media_type="text/event-stream",
-        )
-    else:
-        return StreamingResponse(
-            build_sse_data(message="不支持非SSE"),
-            media_type="text/event-stream",
-        )
-
-
-@router.post("/chat")
-async def chat(
-    request: Request,
-    claude_chat_request: ClaudeChatRequest,
-    clients=Depends(obtain_claude_client),
-    manager: APIKeyManager = Depends(get_api_key_manager),
-):
-    api_key = request.headers.get("Authorization")
-    has_reached_limit = manager.has_exceeded_limit(api_key)
-    if has_reached_limit:
-        is_deleted = not manager.is_api_key_valid(api_key)
-        if is_deleted:
-            return StreamingResponse(
-                build_sse_data(
-                    message="由于滥用API key，已经被删除，如有疑问，请联系管理员。"
-                ),
-                media_type="text/event-stream",
-            )
-        message = manager.generate_exceed_message(api_key)
-        logger.info(f"API {api_key} has reached the limit.")
-        return StreamingResponse(
-            build_sse_data(message=message), media_type="text/event-stream"
-        )
-    logger.info(f"Input chat request request: \n{claude_chat_request.model_dump()}")
-    basic_clients = clients["basic_clients"]
-    plus_clients = clients["plus_clients"]
-    client_idx = claude_chat_request.client_idx
-    model = claude_chat_request.model
-    conversation_id = claude_chat_request.conversation_id
-    client_type = claude_chat_request.client_type
-    client_type = "plus" if client_type == "plus" else "basic"
-    if (not manager.is_plus_user(api_key)) and (client_type == "plus"):
-        return StreamingResponse(
-            build_sse_data(
-                message="您的登录秘钥不是Plus 用户，请升级您的套餐以访问此账户。"
-            ),
-            media_type="text/event-stream",
-        )
-
-    if client_type == "plus":
-        claude_client = plus_clients[client_idx]
-    else:
-        claude_client = basic_clients[client_idx]
-    raw_message = claude_chat_request.message
-    if not conversation_id:
-        conversation_id = str(uuid4())
-
-    message = claude_chat_request.message
-    is_stream = claude_chat_request.stream
-
-    conversation_history_request = ConversationHistoryRequestInput(
-        conversation_type=client_type,
-        api_key=api_key,
-        client_idx=client_idx,
-        conversation_id=conversation_id,
-        model=model,
-    )
-    messages: list[Message] = []
-    messages.append(
-        Message(
-            content=raw_message,
-            role=RoleType.USER,
-        )
-    )
-    # 处理文件的部分
-    attachments = claude_chat_request.attachments
-    if attachments is None:
-        attachments = []
-    files = claude_chat_request.files
-    if files is None:
-        files = []
-    logger.debug(f"Need web search: {claude_chat_request.need_web_search}")
-    hrefs = []
-    if claude_chat_request.need_web_search:
-        from rev_claude.prompts_builder.duckduck_search_prompt import (
-            DuckDuckSearchPrompt,
-        )
-
-        message, hrefs = await DuckDuckSearchPrompt(
-            prompt=message,
-        ).render_prompt()
-        logger.info(f"Prompt After search: \n{message}")
-    call_back = partial(
-        push_assistant_message_callback, conversation_history_request, messages, hrefs
-    )
-    if is_stream:
-        streaming_res = claude_client.stream_message(
-            message,
-            conversation_id,
-            model,
-            client_type=client_type,
-            client_idx=client_idx,
-            attachments=attachments,
-            files=files,
-            call_back=call_back,
-            api_key=api_key,
         )
         streaming_res = patched_generate_data(streaming_res, conversation_id, hrefs)
         return StreamingResponse(

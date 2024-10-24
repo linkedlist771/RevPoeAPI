@@ -343,9 +343,7 @@ class Client:
         logger.debug(f"actual model name: \n{model_name}")
         try:
             async for chunk in poe_bot_client.send_message(
-                bot=model_name,
-                message=messages_str,
-                file_path=file_paths,
+                bot=model_name, message=messages_str, file_path=file_paths, timeout=20
             ):
                 text = chunk["response"]
                 if not text:

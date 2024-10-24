@@ -418,11 +418,13 @@ class AsyncPoeApi:
                     #         }
                     # )
                     asyncio.run_coroutine_threadsafe(
-                        self.message_queues[chat_id].put({
-                            "data": data,
-                            "subscription": subscriptionName,
-                        }),
-                        self.loop  # 需要在类中保存事件循环的引用
+                        self.message_queues[chat_id].put(
+                            {
+                                "data": data,
+                                "subscription": subscriptionName,
+                            }
+                        ),
+                        self.loop,  # 需要在类中保存事件循环的引用
                     )
 
                     if subscriptionName == "messageAdded":
@@ -725,21 +727,21 @@ class AsyncPoeApi:
                 f"Bot {handle} not found. Make sure the bot exists before creating new chat."
             )
         botData = response_json["data"]["bot"]
-        data = {
-            "handle": botData["handle"],
-            "model": botData["model"],
-            "supportsFileUpload": botData["supportsFileUpload"],
-            "messageTimeoutSecs": botData["messageTimeoutSecs"],
-            "displayMessagePointPrice": botData["messagePointLimit"][
-                "displayMessagePointPrice"
-            ],
-            "numRemainingMessages": botData["messagePointLimit"][
-                "numRemainingMessages"
-            ],
-            "viewerIsCreator": botData["viewerIsCreator"],
-            "id": botData["id"],
-        }
-        return data
+        # data = {
+        #     "handle": botData["handle"],
+        #     "model": botData["model"],
+        #     "supportsFileUpload": botData["supportsFileUpload"],
+        #     "messageTimeoutSecs": botData["messageTimeoutSecs"],
+        #     "displayMessagePointPrice": botData["messagePointLimit"][
+        #         "displayMessagePointPrice"
+        #     ],
+        #     "numRemainingMessages": botData["messagePointLimit"][
+        #         "numRemainingMessages"
+        #     ],
+        #     "viewerIsCreator": botData["viewerIsCreator"],
+        #     "id": botData["id"],
+        # }
+        return botData
 
     async def retry_message(
         self, chatCode: str, suggest_replies: bool = False, timeout: int = 5
@@ -859,12 +861,16 @@ class AsyncPoeApi:
             #     except Exception as e:
             #         raise e
             try:
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
+                ws_data = await asyncio.wait_for(
+                    self.message_queues[chatId].get(), timeout=timeout
+                )
             except asyncio.TimeoutError:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
-                        logger.warning(f"Retrying request {3 - self.retry_attempts}/3 times...")
+                        logger.warning(
+                            f"Retrying request {3 - self.retry_attempts}/3 times..."
+                        )
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
@@ -892,7 +898,7 @@ class AsyncPoeApi:
                 response["suggestedReplies"] = suggestedReplies
 
                 if response["state"] == "error_user_message_too_long":
-                    response["response"] = "Message too long. Please try again!"
+                    response["response"] = "上下文太长超过限制， 请清空上下文。"
                     yield response
                     break
 
@@ -1189,12 +1195,16 @@ class AsyncPoeApi:
             #     except Exception as e:
             #         raise e
             try:
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
+                ws_data = await asyncio.wait_for(
+                    self.message_queues[chatId].get(), timeout=timeout
+                )
             except asyncio.TimeoutError:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
-                        logger.warning(f"Retrying request {3 - self.retry_attempts}/3 times...")
+                        logger.warning(
+                            f"Retrying request {3 - self.retry_attempts}/3 times..."
+                        )
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
@@ -1222,7 +1232,7 @@ class AsyncPoeApi:
                 response["suggestedReplies"] = suggestedReplies
 
                 if response["state"] == "error_user_message_too_long":
-                    response["response"] = "Message too long. Please try again!"
+                    response["response"] = "上下文太长超过限制， 请清空上下文。"
                     yield response
                     break
 

@@ -11,7 +11,6 @@
         "path": "assistant.svg",
         "desc": "这个机器人可以生成逼真的图库照片、风格照片或动物照片。",
         "text2image": true,
-
         "points": 120
     },
     "assistant": {
