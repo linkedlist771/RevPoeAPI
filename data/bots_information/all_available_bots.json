@@ -41,6 +41,48 @@
             "__typename": "Bot"
         }
     },
+    "GPT-4o": {
+        "bot": {
+            "id": "Qm90OjMwMTU=",
+            "botId": 3015,
+            "handle": "GPT-4o",
+            "deletionState": "not_deleted",
+            "displayName": "GPT-4o",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3015-200-ivodfqemfvztmvgafhdouijhknthkvmp.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": false,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "GPT-4o",
+            "limitedAccessType": "no_limit",
+            "nickname": "gpt4_o",
+            "isSystemBot": true,
+            "__typename": "Bot"
+        }
+    },
     "GPT-3.5-Turbo-Raw": {
         "bot": {
             "id": "Qm90OjMwMTI=",
@@ -163,48 +205,6 @@
             "baseModelDisplayName": "GPT-4-Classic",
             "limitedAccessType": "subscriber_access",
             "nickname": "gpt4_classic",
-            "isSystemBot": true,
-            "__typename": "Bot"
-        }
-    },
-    "GPT-4o": {
-        "bot": {
-            "id": "Qm90OjMwMTU=",
-            "botId": 3015,
-            "handle": "GPT-4o",
-            "deletionState": "not_deleted",
-            "displayName": "GPT-4o",
-            "isLimitedAccess": false,
-            "shouldHideLimitedAccessTag": false,
-            "image": {
-                "__typename": "UrlBotImage",
-                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3015-200-ivodfqemfvztmvgafhdouijhknthkvmp.jpeg"
-            },
-            "__isNode": "Bot",
-            "canUserAccessBot": true,
-            "isApiBot": false,
-            "isDown": false,
-            "uploadFileSizeLimit": 350000000,
-            "allowsImageAttachments": true,
-            "supportsFileUpload": true,
-            "messageLimit": {
-                "shouldShowRemainingMessageCount": false,
-                "numMessagesRemaining": null,
-                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
-                "canSend": false,
-                "shouldShowSubscriptionRationale": false,
-                "dailyLimit": null
-            },
-            "messageUsageLimit": {
-                "balanceTooltipText": null,
-                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
-                "canSendMessage": true,
-                "shouldPromptSubscription": false,
-                "shouldShowLimitInfoBanner": false
-            },
-            "baseModelDisplayName": "GPT-4o",
-            "limitedAccessType": "no_limit",
-            "nickname": "gpt4_o",
             "isSystemBot": true,
             "__typename": "Bot"
         }
@@ -2597,6 +2597,48 @@
             "__typename": "Bot"
         }
     },
+    "StableDiffusion3.5-L": {
+        "bot": {
+            "id": "Qm90OjUxNDIyNDY=",
+            "botId": 5142246,
+            "handle": "StableDiffusion3.5-L",
+            "deletionState": "not_deleted",
+            "displayName": "StableDiffusion3.5-L",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5142246-200-vtsjthjjkbctjmqubwfbckzlywzttuat.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 350000000,
+            "allowsImageAttachments": true,
+            "supportsFileUpload": true,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "StableDiffusion3.5-L",
+            "limitedAccessType": "subscriber_access",
+            "nickname": "stablediffusion35l",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
     "Ideogram": {
         "bot": {
             "id": "Qm90OjM5MzM4OTc=",
@@ -4651,6 +4693,90 @@
             "baseModelDisplayName": "Hermes-3-70B",
             "limitedAccessType": "no_limit",
             "nickname": "hermes370b",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "flux-1-schnell-fw": {
+        "bot": {
+            "id": "Qm90OjUxNDI3Mjk=",
+            "botId": 5142729,
+            "handle": "flux-1-schnell-fw",
+            "deletionState": "not_deleted",
+            "displayName": "flux-1-schnell-fw",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5142729-200-ifqetbuwlgppckzmuznrvtarjlgfdqfb.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "flux-1-schnell-fw",
+            "limitedAccessType": "no_limit",
+            "nickname": "flux1schnellfw",
+            "isSystemBot": false,
+            "__typename": "Bot"
+        }
+    },
+    "flux-1-dev-fw": {
+        "bot": {
+            "id": "Qm90OjUxNDI2NDM=",
+            "botId": 5142643,
+            "handle": "flux-1-dev-fw",
+            "deletionState": "not_deleted",
+            "displayName": "flux-1-dev-fw",
+            "isLimitedAccess": false,
+            "shouldHideLimitedAccessTag": false,
+            "image": {
+                "__typename": "UrlBotImage",
+                "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5142643-200-pdbqnkxgoacynzmlpamqtwyhmpiqadzf.jpeg"
+            },
+            "__isNode": "Bot",
+            "canUserAccessBot": true,
+            "isApiBot": true,
+            "isDown": false,
+            "uploadFileSizeLimit": 0,
+            "allowsImageAttachments": false,
+            "supportsFileUpload": false,
+            "messageLimit": {
+                "shouldShowRemainingMessageCount": false,
+                "numMessagesRemaining": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSend": false,
+                "shouldShowSubscriptionRationale": false,
+                "dailyLimit": null
+            },
+            "messageUsageLimit": {
+                "balanceTooltipText": null,
+                "id": "TWVzc2FnZUxpbWl0Om5vX2xpbWl0X2lk",
+                "canSendMessage": true,
+                "shouldPromptSubscription": false,
+                "shouldShowLimitInfoBanner": false
+            },
+            "baseModelDisplayName": "flux-1-dev-fw",
+            "limitedAccessType": "no_limit",
+            "nickname": "flux1devfw",
             "isSystemBot": false,
             "__typename": "Bot"
         }
