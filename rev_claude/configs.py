@@ -2,7 +2,6 @@ from httpx import Timeout
 from pathlib import Path
 import os
 
-from rev_claude.update_bots_infor.updater import ALL_AVAILABLE_BOTS_FILE, ALL_AVAILABLE_BOTS_INFORMATION_FILES
 
 API_KEY_REFRESH_INTERVAL_HOURS = (
     99999999999  # 一天刷新一次, 用不刷新， 次数只能或者延期的时候获取。
