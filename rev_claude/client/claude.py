@@ -24,7 +24,7 @@ from rev_claude.REMINDING_MESSAGE import (
 )
 from rev_claude.configs import (
     STREAM_CONNECTION_TIME_OUT,
-    STREAM_TIMEOUT,
+    # STREAM_TIMEOUT,
     PROXIES,
     USE_PROXY,
     CLAUDE_OFFICIAL_EXPIRE_TIME,

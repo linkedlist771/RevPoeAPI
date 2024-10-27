@@ -9,6 +9,7 @@ ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 LOG_DIR = ROOT / "logs"
 POE_BOT_INFO = DATA_DIR / "models.json"
+POE_BOT_INFO_ZH = DATA_DIR / "models_zh.json"
 API_KEY_REFRESH_INTERVAL = API_KEY_REFRESH_INTERVAL_HOURS * 60 * 60
 # TODO: 这里增加使用次数次数改成对应增加对应的使用积分， 但是意思是一样的。
 BASIC_KEY_MAX_USAGE = 30e4  # 普通用户一个月30万积分
@@ -24,12 +25,12 @@ CLAUDE_CLIENT_LIMIT_CHECKS_INTERVAL_MINUTES = 10
 NEW_CONVERSATION_RETRY = 5
 
 # 设置连接超时为你的 STREAM_CONNECTION_TIME_OUT，其他超时设置为无限
-STREAM_TIMEOUT = Timeout(
-    connect=STREAM_CONNECTION_TIME_OUT,  # 例如设为 10 秒
-    read=STREAM_READ_TIME_OUT,  # 例如设为 5 秒
-    write=None,
-    pool=STREAM_POOL_TIME_OUT,  # 例如设为 10 分钟
-)
+# STREAM_TIMEOUT = Timeout(
+#     connect=STREAM_CONNECTION_TIME_OUT,  # 例如设为 10 秒
+#     read=STREAM_READ_TIME_OUT,  # 例如设为 5 秒
+#     write=None,
+#     pool=STREAM_POOL_TIME_OUT,  # 例如设为 10 分钟
+# )
 
 USE_PROXY = False
 USE_MERMAID_AND_SVG = True
