@@ -27,7 +27,7 @@ NEW_CONVERSATION_RETRY = 5
 # 默认的tokenizer的词表
 
 DEFAULT_TOKENIZER = "cl100k_base"
-USE_TOKEN_SHORTEN = True
+USE_TOKEN_SHORTEN = False
 
 
 # 设置连接超时为你的 STREAM_CONNECTION_TIME_OUT，其他超时设置为无限
