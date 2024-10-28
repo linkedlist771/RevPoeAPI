@@ -21,8 +21,8 @@ def shorten_message_given_prompt_length(
         [f"{message['role']}: {message['content']}" for message in messages]
     )
     token_length = get_token_length(messages_str)
-    logger.debug(f"Token length: {token_length}")
-    logger.debug(f"Token limits: {token_limits}")
+    # logger.debug(f"Token length: {token_length}")
+    # logger.debug(f"Token limits: {token_limits}")
     if token_length <= token_limits:
         return messages
 
