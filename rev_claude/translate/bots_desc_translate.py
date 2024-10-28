@@ -14,23 +14,24 @@ class POEBotInfoTranslator:
         self.data = load_json(POE_BOT_INFO)
         self.max_retries = 3
         self.delay_seconds = 1
-        self.translator = GoogleTranslator(source='en', target='zh-CN')
+        self.translator = GoogleTranslator(source="en", target="zh-CN")
 
     def is_eng_str(self, _str: str) -> bool:
         if not _str:
             return False
         _str = _str.replace(" ", "")
         str_size = len(_str)
-        eng_char_pattern = re.compile(r'[a-zA-Z]')
+        eng_char_pattern = re.compile(r"[a-zA-Z]")
         eng_char_count = len(eng_char_pattern.findall(_str))
         return eng_char_count / str_size > 0.8
 
-    async def translate_helper(self, eng_str: str, model_name: str) -> tuple[str, str, str]:
+    async def translate_helper(
+        self, eng_str: str, model_name: str
+    ) -> tuple[str, str, str]:
         for attempt in range(self.max_retries):
             try:
                 translation = await asyncio.get_event_loop().run_in_executor(
-                    None,
-                    lambda: self.translator.translate(eng_str)
+                    None, lambda: self.translator.translate(eng_str)
                 )
 
                 if translation:
@@ -38,11 +39,15 @@ class POEBotInfoTranslator:
                 raise Exception("Translation failed - empty result")
 
             except Exception as e:
-                logger.warning(f"Translation attempt {attempt + 1} failed for {model_name}: {str(e)}")
+                logger.warning(
+                    f"Translation attempt {attempt + 1} failed for {model_name}: {str(e)}"
+                )
                 if attempt < self.max_retries - 1:
                     await asyncio.sleep(self.delay_seconds)
                 else:
-                    logger.error(f"Failed to translate after {self.max_retries} attempts: {eng_str}")
+                    logger.error(
+                        f"Failed to translate after {self.max_retries} attempts: {eng_str}"
+                    )
                     return model_name, eng_str, eng_str
 
 
@@ -57,6 +62,7 @@ async def main():
             translation_tasks.append(translator.translate_helper(desc, model_name))
 
     with tqdm(total=len(translation_tasks), desc="Translating") as pbar:
+
         async def update_progress(task):
             result = await task
             pbar.update(1)
@@ -66,7 +72,9 @@ async def main():
         results = await asyncio.gather(*progress_tasks)
 
     for model_name, orig_desc, trans_desc in results:
-        logger.info(f"Model: {model_name}, Desc: {orig_desc}, Translation: {trans_desc}")
+        logger.info(
+            f"Model: {model_name}, Desc: {orig_desc}, Translation: {trans_desc}"
+        )
         translated_data[model_name]["desc"] = trans_desc
 
     logger.debug(json.dumps(translated_data, indent=4))

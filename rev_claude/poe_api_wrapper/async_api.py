@@ -418,11 +418,13 @@ class AsyncPoeApi:
                     #         }
                     # )
                     asyncio.run_coroutine_threadsafe(
-                        self.message_queues[chat_id].put({
-                            "data": data,
-                            "subscription": subscriptionName,
-                        }),
-                        self.loop  # 需要在类中保存事件循环的引用
+                        self.message_queues[chat_id].put(
+                            {
+                                "data": data,
+                                "subscription": subscriptionName,
+                            }
+                        ),
+                        self.loop,  # 需要在类中保存事件循环的引用
                     )
 
                     if subscriptionName == "messageAdded":
@@ -859,12 +861,16 @@ class AsyncPoeApi:
             #     except Exception as e:
             #         raise e
             try:
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
+                ws_data = await asyncio.wait_for(
+                    self.message_queues[chatId].get(), timeout=timeout
+                )
             except asyncio.TimeoutError:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
-                        logger.warning(f"Retrying request {3 - self.retry_attempts}/3 times...")
+                        logger.warning(
+                            f"Retrying request {3 - self.retry_attempts}/3 times..."
+                        )
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
@@ -1189,12 +1195,16 @@ class AsyncPoeApi:
             #     except Exception as e:
             #         raise e
             try:
-                ws_data = await asyncio.wait_for(self.message_queues[chatId].get(), timeout=timeout)
+                ws_data = await asyncio.wait_for(
+                    self.message_queues[chatId].get(), timeout=timeout
+                )
             except asyncio.TimeoutError:
                 try:
                     if self.retry_attempts > 0:
                         self.retry_attempts -= 1
-                        logger.warning(f"Retrying request {3 - self.retry_attempts}/3 times...")
+                        logger.warning(
+                            f"Retrying request {3 - self.retry_attempts}/3 times..."
+                        )
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
