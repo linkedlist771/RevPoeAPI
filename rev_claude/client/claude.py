@@ -28,7 +28,8 @@ from rev_claude.configs import (
     PROXIES,
     USE_PROXY,
     CLAUDE_OFFICIAL_EXPIRE_TIME,
-    CLAUDE_OFFICIAL_REVERSE_BASE_URL, USE_TOKEN_SHORTEN,
+    CLAUDE_OFFICIAL_REVERSE_BASE_URL,
+    USE_TOKEN_SHORTEN,
 )
 
 from rev_claude.models import ClaudeModels
@@ -54,7 +55,10 @@ import uuid
 import random
 import os
 
-from rev_claude.utils.token_utils import get_token_length, shorten_message_given_prompt_length
+from rev_claude.utils.token_utils import (
+    get_token_length,
+    shorten_message_given_prompt_length,
+)
 
 
 def generate_trace_id():
@@ -332,16 +336,18 @@ class Client:
         messages = [{"role": "user", "content": prompt}]
         former_messages.extend(messages)
 
-
         if USE_TOKEN_SHORTEN:
-            tokens_limit = get_poe_bot_info()[model.lower()].get("tokens", 4e3) # default 4k tokens
-            former_messages = shorten_message_given_prompt_length(former_messages, tokens_limit)
+            tokens_limit = get_poe_bot_info()[model.lower()].get(
+                "tokens", 4e3
+            )  # default 4k tokens
+            former_messages = shorten_message_given_prompt_length(
+                former_messages, tokens_limit
+            )
 
         messages = former_messages
         messages_str = "\n".join(
             [f"{message['role']}: {message['content']}" for message in messages]
         )
-
 
         response_text = ""
         if get_poe_bot_info()[model.lower()].get("text2image", None):
