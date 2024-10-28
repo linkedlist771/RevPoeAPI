@@ -1,6 +1,6 @@
 from typing import List, Dict
 from loguru import logger
-# import tiktoken
+import tiktoken
 from functools import lru_cache
 from rev_claude.configs import DEFAULT_TOKENIZER
 
