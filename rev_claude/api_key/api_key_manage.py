@@ -162,8 +162,8 @@ class APIKeyManager:
         wait_time = max(0, API_KEY_REFRESH_INTERVAL - time_diff)  # 确保不显示负数
 
         current_time = datetime.now()
-        logger.debug(f"wait_time: {wait_time}")
-        logger.debug(f"current_time: {current_time}")
+        # logger.debug(f"wait_time: {wait_time}")
+        # logger.debug(f"current_time: {current_time}")
         next_usage_time = current_time + timedelta(seconds=wait_time)
 
         message = (
