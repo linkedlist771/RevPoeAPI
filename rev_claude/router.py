@@ -7,9 +7,7 @@ from rev_claude.status.clients_status_router import router as clients_status_rou
 from rev_claude.history.conversation_history_router import (
     router as conversation_history_router,
 )
-from rev_claude.artifacts_sharing.artifacts_sharing_router import (
-    router as artifacts_sharing_router,
-)
+from rev_claude.health.health_router import router as health_router
 from rev_claude.device_verification.device_verification_router import (
     router as device_verification_router,
 )
@@ -34,3 +32,4 @@ router.include_router(
     tags=["device_verification"],
 )
 router.include_router(poe_router, prefix="/poe", tags=["poe"])
+router.include_router(health_router, prefix="/health", tags=["health"])
