@@ -8,6 +8,10 @@ services:
     volumes:
       - .:/workspace
     restart: always
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/health', timeout=5)" ]
+      interval: 60s
+      timeout: 10s
     command: >
       sh -c "python /workspace/main.py --port 8000"
     depends_on:
@@ -16,6 +20,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+
 
   redis:
     image: redis:latest
