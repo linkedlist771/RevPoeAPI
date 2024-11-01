@@ -89,7 +89,6 @@ async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
     upload_dir = "uploaded_files"
     os.makedirs(upload_dir, exist_ok=True)
-
     # Generate a unique filename
     file_extension = os.path.splitext(file.filename)[1]
     unique_filename = f"{uuid.uuid4()}{file_extension}"

@@ -3,7 +3,7 @@ from pathlib import Path
 import os
 
 API_KEY_REFRESH_INTERVAL_HOURS = (
-    30*24  # 一天刷新一次, 用不刷新， 次数只能或者延期的时候获取。
+    30 * 24  # 一天刷新一次, 用不刷新， 次数只能或者延期的时候获取。
 )
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
