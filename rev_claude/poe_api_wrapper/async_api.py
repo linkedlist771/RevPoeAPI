@@ -744,7 +744,7 @@ class AsyncPoeApi:
         return data
 
     async def retry_message(
-        self, chatCode: str, suggest_replies: bool = False, timeout: int = 5
+        self, chatCode: str, suggest_replies: bool = False, timeout: int = 15
     ):
         self.retry_attempts = 3
         timer = 0
@@ -840,26 +840,6 @@ class AsyncPoeApi:
         suggestedReplies = []
 
         while True:
-            # try:
-            #     ws_data = self.message_queues[chatId].get(timeout=timeout)
-            # except KeyError:
-            #     await asyncio.sleep(1)
-            #     continue
-            # except queue.Empty:
-            #     try:
-            #         if self.retry_attempts > 0:
-            #             self.retry_attempts -= 1
-            #             logger.warning(
-            #                 f"Retrying request {3-self.retry_attempts}/3 times..."
-            #             )
-            #         else:
-            #             self.retry_attempts = 3
-            #             await self.delete_queues(chatId)
-            #             raise RuntimeError("Timed out waiting for response.")
-            #         await self.connect_ws()
-            #         continue
-            #     except Exception as e:
-            #         raise e
             try:
                 ws_data = await asyncio.wait_for(
                     self.message_queues[chatId].get(), timeout=timeout
@@ -951,7 +931,7 @@ class AsyncPoeApi:
         msgPrice: int = 20,
         file_path: list = [],
         suggest_replies: bool = False,
-        timeout: int = 5,
+        timeout: int = 15,
     ) -> AsyncIterator[dict]:
         self.retry_attempts = 3
         timer = 0
@@ -1174,26 +1154,6 @@ class AsyncPoeApi:
         suggestedReplies = []
 
         while True:
-            # try:
-            #     ws_data = self.message_queues[chatId].get(timeout=timeout)
-            # except KeyError:
-            #     await asyncio.sleep(1)
-            #     continue
-            # except queue.Empty:
-            #     try:
-            #         if self.retry_attempts > 0:
-            #             self.retry_attempts -= 1
-            #             logger.warning(
-            #                 f"Retrying request {3-self.retry_attempts}/3 times..."
-            #             )
-            #         else:
-            #             self.retry_attempts = 3
-            #             await self.delete_queues(chatId)
-            #             raise RuntimeError("Timed out waiting for response.")
-            #         await self.connect_ws()
-            #         continue
-            #     except Exception as e:
-            #         raise e
             try:
                 ws_data = await asyncio.wait_for(
                     self.message_queues[chatId].get(), timeout=timeout
