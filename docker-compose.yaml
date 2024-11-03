@@ -8,6 +8,8 @@ services:
     volumes:
       - .:/workspace
     restart: always
+    labels:
+      - "autoheal=true"
     healthcheck:
       test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/health', timeout=5)" ]
       interval: 60s
@@ -27,15 +29,20 @@ services:
     volumes:
       - ./redis_data:/data
     restart: always
+    labels:
+      - "autoheal=true"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 5
 
-  watchtower:
-    image: containrrr/watchtower
+  autoheal:
+    image: willfarrell/autoheal
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 --cleanup
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=autoheal
+      - AUTOHEAL_INTERVAL=5
+      - AUTOHEAL_START_PERIOD=30
