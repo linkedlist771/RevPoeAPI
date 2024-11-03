@@ -1,6 +1,25 @@
 version: '3'
 
 services:
+#  node-serve-front:
+#    image: llinkedlist/python-rev-front:v1
+#    ports:
+#      - "8000:8000"
+#    volumes:
+#      - .:/workspace
+#    restart: always
+#    healthcheck:
+#      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/health', timeout=5)" ]
+#      interval: 60s
+#      timeout: 10s
+#    command: >
+#      sh -c "python /workspace/main.py --port 8000"
+#    depends_on:
+#      redis:
+#        condition: service_healthy
+#    environment:
+#      - REDIS_HOST=redis
+#      - REDIS_PORT=6379
   node-serve-front:
     image: llinkedlist/python-rev-front:v1
     ports:
@@ -13,14 +32,20 @@ services:
       interval: 60s
       timeout: 10s
     command: >
-      sh -c "python /workspace/main.py --port 8000"
+      sh -c "while true; do
+        if ! python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/v1/health/health\", timeout=5)'; then
+          echo 'Health check failed, exiting...'
+          exit 1
+        fi
+        python /workspace/main.py --port 8000 || exit 1
+        sleep 5
+      done"
     depends_on:
       redis:
         condition: service_healthy
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-
 
   redis:
     image: redis:latest
