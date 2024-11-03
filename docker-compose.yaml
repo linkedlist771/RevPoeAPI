@@ -12,6 +12,7 @@ services:
       test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/health', timeout=5)" ]
       interval: 60s
       timeout: 10s
+      retries: 3
     command: >
       sh -c "python /workspace/main.py --port 8000"
     depends_on:
@@ -20,7 +21,6 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-
 
   redis:
     image: redis:latest
@@ -33,6 +33,9 @@ services:
       timeout: 5s
       retries: 5
 
-volumes:
-  redis_data:
-    driver: local
+  watchtower:
+    image: containrrr/watchtower
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 --cleanup
