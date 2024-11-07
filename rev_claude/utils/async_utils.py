@@ -1,7 +1,6 @@
 import asyncio
 from tqdm.asyncio import tqdm
 from loguru import logger
-from rev_claude.client.claude import Client
 import traceback
 from http.cookies import SimpleCookie
 from functools import wraps
@@ -72,10 +71,12 @@ async def _register_clients(
 ):
     retry_count = REGISTER_MAY_RETRY if not reload else REGISTER_MAY_RETRY_RELOAD
     from rev_claude.cookie.claude_cookie_manage import get_cookie_manager
+    from rev_claude.client.claude import Client
 
     cookie_manager = get_cookie_manager()
     while retry_count > 0:
         try:
+
             client = Client(cookie, cookie_key)
             client.__set_credentials__()
 
