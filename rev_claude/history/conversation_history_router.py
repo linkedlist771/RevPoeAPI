@@ -60,7 +60,7 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         #     input_data
         # )
         # get_all_client_conversations
-        histories = await conversation_history_manager.get_all_client_conversations(
+        histories = await conversation_history_manager.get_conversation_histories(
             input_data
         )
         return histories
