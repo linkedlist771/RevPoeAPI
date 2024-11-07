@@ -305,10 +305,7 @@ class Client:
             model=model,
         )
         # TODO: temporary change it into all conversation histories
-        # all_histories = await conversation_history_manager.get_conversation_histories(
-        #     conversation_history_request
-        # )
-        all_histories = await conversation_history_manager.get_all_client_conversations(
+        all_histories = await conversation_history_manager.get_conversation_histories(
             conversation_history_request
         )
         former_messages = []
