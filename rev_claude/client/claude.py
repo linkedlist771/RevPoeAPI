@@ -353,6 +353,7 @@ class Client:
             async for chunk in send_message_with_retry(
                 poe_bot_client, model_name, messages_str, file_paths
             ):
+                yield chunk
                 response_text += chunk
             # async for chunk in poe_bot_client.send_message(
             #     bot=model_name,
