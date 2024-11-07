@@ -4,12 +4,67 @@ from loguru import logger
 from rev_claude.client.claude import Client
 import traceback
 from http.cookies import SimpleCookie
+from functools import wraps
 
 
 REGISTER_MAY_RETRY = 1
 REGISTER_MAY_RETRY_RELOAD = 15  # in reload there are more retries
 
 REGISTER_WAIT = 3
+
+
+def remove_prefix(text, prefix):
+    if text.startswith(prefix):
+        return text[len(prefix) :].rstrip("\n")
+    return text
+
+
+def async_retry(retries=3, delay=1):
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            for attempt in range(retries):
+                try:
+                    async for chunk in func(*args, **kwargs):
+                        yield chunk
+                    return
+                except (RuntimeError, Exception) as e:
+                    if attempt == retries - 1:  # Last attempt
+                        logger.error(f"Failed after {retries} attempts: {str(e)}")
+                        if isinstance(e, RuntimeError):
+                            yield str(e)
+                        else:
+                            from traceback import format_exc
+
+                            logger.error(f"Error: {format_exc()}")
+                            yield str(e)
+                    else:
+                        logger.warning(f"Attempt {attempt + 1} failed, retrying...")
+                        await asyncio.sleep(delay)
+
+        return wrapper
+
+    return decorator
+
+
+@async_retry(retries=3, delay=1)
+async def send_message_with_retry(poe_bot_client, bot, message, file_path):
+    prefixes = []
+    # response_text = ""
+    async for chunk in poe_bot_client.send_message(
+        bot=bot,
+        message=message,
+        file_path=file_path,
+    ):
+        text = chunk["response"]
+        if not text:
+            continue
+        if text.rstrip("\n"):
+            prefixes.append(text.rstrip("\n"))
+        if len(prefixes) >= 2:
+            text = remove_prefix(text, prefixes[-2])
+        yield text
+        # response_text += text
 
 
 async def _register_clients(

@@ -42,6 +42,7 @@ from rev_claude.status_code.status_code_enum import (
     HTTP_481_IMAGE_UPLOAD_FAILED,
     HTTP_482_DOCUMENT_UPLOAD_FAILED,
 )
+from rev_claude.utils.async_utils import remove_prefix, send_message_with_retry
 from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
 from rev_claude.utils.httpx_utils import async_stream
@@ -74,15 +75,6 @@ def generate_trace_id():
     # 将三个部分组合成完整的 Sentry-Trace
     sentry_trace = f"{trace_id}-{span_id}-{sampled}"
     return sentry_trace
-
-
-def remove_prefix(text, prefix):
-    # logger.debug(f"text: \n{text}")
-    # logger.debug(f"prefix: \n{prefix}")
-    # logger.debug(text.startswith(prefix))
-    if text.startswith(prefix):
-        return text[len(prefix) :].rstrip("\n")
-    return text
 
 
 async def save_file(file: UploadFile) -> str:
@@ -351,27 +343,31 @@ class Client:
         response_text = ""
         if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
-        logger.info(f"formatted_messages: {messages_str}")
-        prefixes = []
+        logger.info(f"formatted_message" f"s: {messages_str}")
         poe_bot_client = await self.get_poe_bot_client()
         model_name = get_poe_bot_info()[model.lower()]["baseModel"]
+        # prefixes = []
 
         logger.debug(f"actual model name: \n{model_name}")
         try:
-            async for chunk in poe_bot_client.send_message(
-                bot=model_name,
-                message=messages_str,
-                file_path=file_paths,
+            async for chunk in send_message_with_retry(
+                poe_bot_client, model_name, messages_str, file_paths
             ):
-                text = chunk["response"]
-                if not text:
-                    continue
-                if text.rstrip("\n"):
-                    prefixes.append(text.rstrip("\n"))
-                if len(prefixes) >= 2:
-                    text = remove_prefix(text, prefixes[-2])
-                yield text
-                response_text += text
+                response_text += chunk
+            # async for chunk in poe_bot_client.send_message(
+            #     bot=model_name,
+            #     message=messages_str,
+            #     file_path=file_paths,
+            # ):
+            #     text = chunk["response"]
+            #     if not text:
+            #         continue
+            #     if text.rstrip("\n"):
+            #         prefixes.append(text.rstrip("\n"))
+            #     if len(prefixes) >= 2:
+            #         text = remove_prefix(text, prefixes[-2])
+            #     yield text
+            #     response_text += text
         except RuntimeError as runtime_error:
             logger.error(f"RuntimeError: {runtime_error}")
             yield str(runtime_error)
@@ -388,42 +384,3 @@ class Client:
                 await call_back[0](response_text)
                 await call_back[1]()
             logger.info(f"Response text:\n {response_text}")
-
-    # Deletes the conversation
-    def delete_conversation(self, conversation_id):
-        url = f"https://claude.ai/api/organizations/{self.organization_id}/chat_conversations/{conversation_id}"
-        payload = json.dumps(f"{conversation_id}")
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/124.0",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Content-Type": "application/json",
-            "Content-Length": "38",
-            "Referer": "https://claude.ai/chats",
-            "Origin": "https://claude.ai",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Connection": "keep-alive",
-            "Cookie": self.cookie,
-            "TE": "trailers",
-        }
-
-        response = requests.delete(
-            url, headers=headers, data=payload, impersonate="chrome110"
-        )
-
-        # Returns True if deleted or False if any error in deleting
-        if response.status_code == 204:
-            return True
-        else:
-            return False
-
-    # Resets all the conversations
-    def reset_all(self):
-        conversations = self.list_all_conversations()
-
-        for conversation in conversations:
-            conversation_id = conversation["uuid"]
-            delete_id = self.delete_conversation(conversation_id)
-
-        return True
