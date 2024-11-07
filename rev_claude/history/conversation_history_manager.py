@@ -142,6 +142,47 @@ class ConversationHistoryManager:
 
         return histories
 
+    async def get_all_client_conversations(
+            self, request: ConversationHistoryRequestInput
+    ) -> List[ConversationHistory]:
+        """Fetch and merge conversation histories from all clients for a given API key."""
+        redis_client = await self.get_aioredis()
+
+        # Get all keys matching the pattern conversation_history-{api_key}-*
+        pattern = f"conversation_history-{request.api_key}-*"
+        all_keys = await redis_client.keys(pattern)
+
+        all_histories = []
+
+        # Fetch histories from each matching key
+        for key in all_keys:
+            conversation_histories_data = await self.hgetall_async(key)
+
+            for conversation_id, history_data in conversation_histories_data.items():
+                history = ConversationHistory.model_validate_json(history_data)
+
+                # Handle missing timestamps
+                default_time = datetime(1970, 1, 1)
+                for message in history.messages:
+                    if message.timestamp is None:
+                        message.timestamp = default_time
+                        default_time = default_time.replace(
+                            microsecond=default_time.microsecond + 1
+                        )
+                all_histories.append(history)
+
+        # Sort all histories by the timestamp of their latest message
+        all_histories.sort(
+            key=lambda h: (
+                h.messages[-1].timestamp.replace(tzinfo=None)
+                if h.messages
+                else datetime.min
+            ),
+            reverse=True,
+        )
+
+        return all_histories
+
     async def delete_all_conversations(self, request: ConversationHistoryRequestInput):
         conversation_history_key = self.get_conversation_history_key(request)
         # self.redis.delete(conversation_history_key)
