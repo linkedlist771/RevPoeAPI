@@ -76,6 +76,10 @@ async def main():
             f"Model: {model_name}, Desc: {orig_desc}, Translation: {trans_desc}"
         )
         translated_data[model_name]["desc"] = trans_desc
+        if "sd" in model_name or "stable" in model_name:
+            translated_data[model_name]["text2image"] = True
+            translated_data[model_name]["owned_by"] = "stabilityai"
+
 
     logger.debug(json.dumps(translated_data, indent=4))
     save_json(POE_BOT_INFO_ZH, translated_data)
