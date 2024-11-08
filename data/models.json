@@ -1,112 +1,4 @@
-                  {
-    "gpt-4o": {
-        "baseModel": "gpt4_o",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "gpt4o.jpeg",
-        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u5728\u5b9a\u91cf\u95ee\u9898\uff08\u6570\u5b66\u548c\u7269\u7406\uff09\u3001\u521b\u610f\u5199\u4f5c\u4ee5\u53ca\u8bb8\u591a\u5176\u4ed6\u6311\u6218\u6027\u4efb\u52a1\u4e2d\u6bd4 GPT-3.5 \u66f4\u5f3a\u3002\u7531 GPT-4o \u63d0\u4f9b\u652f\u6301\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u7f29\u77ed\uff0c\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u66f4\u957f\u7684\u4e0a\u4e0b\u6587\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 GPT-4o-128k\u3002",
-        "points": 300
-    },
-    "gpt-3.5-turbo-raw": {
-        "baseModel": "gpt-3.5-turbo-raw",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot is powered by OpenAI.",
-        "path": "gpt-3.5-turbo-raw.png",
-        "desc": "Powered by gpt-3.5-turbo without a system prompt.",
-        "text2image": false,
-        "points": 20
-    },
-    "ms-powerpoints": {
-        "baseModel": "ms-powerpoints",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
-        "path": "ms-powerpoints.png",
-        "desc": "High Quality MS PowerPoint Presentation with Tips ",
-        "text2image": false,
-        "points": 20
-    },
-    "gpt-4-classic": {
-        "baseModel": "gpt-4-classic",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot is powered by OpenAI.",
-        "path": "gpt-4-classic.png",
-        "desc": "OpenAI's GPT-4 model. Powered by gpt-4-0613 (non-Turbo) for text input and gpt-4o for image input.",
-        "text2image": false,
-        "points": 2250
-    },
-    "gemini-1.5-flash-search": {
-        "baseModel": "gemini_pro_search",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "\u7531 Gemini 1.5 Flash Search \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u641c\u7d22\u548c\u68c0\u7d22\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 25
-    },
-    "gpt-4-turbo": {
-        "baseModel": "beaver",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4.jpeg",
-        "owned_by": "openai",
-        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u66f4\u9ad8\u7684\u6027\u80fd\u548c\u66f4\u5927\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff084000 \u4e2a tokens\uff09\u3002",
-        "points": 500
-    },
-    "photo_createe": {
-        "baseModel": "photocreatee",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "poe",
-        "path": "assistant.svg",
-        "desc": "\u8fd9\u4e2a\u673a\u5668\u4eba\u53ef\u4ee5\u751f\u6210\u903c\u771f\u7684\u56fe\u5e93\u7167\u7247\u3001\u98ce\u683c\u7167\u7247\u6216\u52a8\u7269\u7167\u7247\u3002",
-        "text2image": true,
-        "points": 120
-    },
-    "o1-mini": {
-        "baseModel": "gpt_o1_mini_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "o1.jpeg",
-        "desc": "\u8fd9\u4e2aOpenAI\u6a21\u578b\u662fo1\u7684\u66f4\u5feb\u3001\u66f4\u4fbf\u5b9c\u7684\u7248\u672c\uff0c\u7279\u522b\u64c5\u957f\u7f16\u7801\u3001\u6570\u5b66\u548c\u79d1\u5b66\u5e94\u7528\uff0c\u9002\u7528\u4e8e\u4e0d\u9700\u8981\u5e7f\u6cdb\u901a\u7528\u77e5\u8bc6\u7684\u573a\u666f\u3002\u5b83\u652f\u6301128k tokens\u7684\u4e0a\u4e0b\u6587\u3002",
-        "points": 1800
-    },
+{
     "assistant": {
         "baseModel": "capybara",
         "tokens": 2000,
@@ -120,19 +12,18 @@
         "desc": "\u901a\u7528\u52a9\u624b\u673a\u5668\u4eba\u3002\u5bf9\u4e8e\u9700\u8981\u6700\u65b0\u4fe1\u606f\u7684\u67e5\u8be2\uff0c\u5b83\u53ef\u4ee5\u4ece\u7f51\u7edc\u8bbf\u95ee\u5b9e\u65f6\u6570\u636e\u4ee5\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u7b54\u6848\u3002",
         "points": 20
     },
-    "llama-3.1-405b-t": {
-        "baseModel": "llama-3.1-405b-t",
-        "tokens": 2000,
+    "gpt-4o": {
+        "baseModel": "gpt4_o",
+        "tokens": 4000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": true,
+        "premium_model": false,
         "object": "model",
-        "owned_by": "togetherai.",
-        "path": "llama-3.1-405b-t.png",
-        "desc": "Llama 3.1 405B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
-        "text2image": false,
-        "points": 335
+        "owned_by": "openai",
+        "path": "gpt4o.jpeg",
+        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u5728\u5b9a\u91cf\u95ee\u9898\uff08\u6570\u5b66\u548c\u7269\u7406\uff09\u3001\u521b\u610f\u5199\u4f5c\u4ee5\u53ca\u8bb8\u591a\u5176\u4ed6\u6311\u6218\u6027\u4efb\u52a1\u4e2d\u6bd4 GPT-3.5 \u66f4\u5f3a\u3002\u7531 GPT-4o \u63d0\u4f9b\u652f\u6301\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u7f29\u77ed\uff0c\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u66f4\u957f\u7684\u4e0a\u4e0b\u6587\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 GPT-4o-128k\u3002",
+        "points": 300
     },
     "qwen-72b-t": {
         "baseModel": "qwen-72b-t",
@@ -147,6 +38,19 @@
         "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 72B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
         "text2image": false,
         "points": 125
+    },
+    "gpt-4o-mini": {
+        "baseModel": "gpt4_o_mini",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u7684\u540c\u65f6\uff0c\u4ecd\u7136\u5177\u5907\u5f3a\u5927\u7684\u529f\u80fd\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\u3002",
+        "points": 15
     },
     "flux-pro": {
         "baseModel": "fluxpro",
@@ -168,36 +72,8 @@
         "desc": "\u6700\u5148\u8fdb\u7684\u56fe\u50cf\u751f\u6210\uff0c\u5177\u5907\u9876\u7ea7\u7684\u63d0\u793a\u8ddf\u968f\u3001\u89c6\u89c9\u8d28\u91cf\u3001\u56fe\u50cf\u7ec6\u8282\u548c\u8f93\u51fa\u591a\u6837\u6027\u3002\u8fd9\u662f\u6700\u5f3a\u5927\u7684 FLUX.1 \u7248\u672c\u3002\u4f7f\u7528\u201c\u2013aspect\u201d\u6765\u9009\u62e9\u5bbd\u9ad8\u6bd4\uff08\u4f8b\u5982 \u2013aspect 1:1\uff09\u3002",
         "points": 1250
     },
-    "stablediffusionxl": {
-        "baseModel": "stablediffusionxl",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot is powered by Poe and third party model providers.",
-        "path": "stablediffusionxl.png",
-        "desc": "Generates high quality images based on the user's most recent prompt. \n\nAllows users to specify elements to avoid in the image using the \"--no\" parameter at the end of the prompt. Select an aspect ratio with \"--aspect\". (e.g. \"Tall trees, daylight --no rain --aspect 7:4\"). Valid aspect ratios are 1:1, 7:4, 4:7, 9:7, 7:9, 19:13, 13:19, 12:5, & 5:12. \n\nPowered by Stable Diffusion XL.",
-        "text2image": false,
-        "points": 120
-    },
-    "sd3-turbo": {
-        "baseModel": "sd3-turbo",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fireworksai.",
-        "path": "sd3-turbo.png",
-        "desc": "Distilled, few-step version of Stable Diffusion 3, which understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
-        "text2image": true,
-        "points": 1000
-    },
-    "flux-pro-1.1": {
-        "baseModel": "flux-pro-1.1",
+    "stablediffusion3.5-l": {
+        "baseModel": "stablediffusion3.5-l",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
@@ -205,306 +81,10 @@
         "premium_model": true,
         "object": "model",
         "owned_by": "fal.",
-        "path": "flux-pro-1.1.png",
-        "desc": "State-of-the-art image generation with top-of-the-line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX 1.1, use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "path": "stablediffusion3.5-l.png",
+        "desc": "Stability.ai's StableDiffusion3.5 Large, hosted by @fal, is the Stable Diffusion family's most powerful image generation model both in terms of image quality and prompt adherence. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
         "text2image": false,
-        "points": 1000
-    },
-    "web-search": {
-        "baseModel": "websearch",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "poe",
-        "path": "websearch.jpeg",
-        "desc": "\u652f\u6301\u7f51\u7edc\u7684\u52a9\u624b\u673a\u5668\u4eba\uff0c\u901a\u8fc7\u641c\u7d22\u4e92\u8054\u7f51\u6765\u4e30\u5bcc\u5176\u56de\u7b54\u3002\u7279\u522b\u64c5\u957f\u5904\u7406\u5173\u4e8e\u6700\u65b0\u4fe1\u606f\u6216\u5177\u4f53\u4e8b\u5b9e\u7684\u67e5\u8be2\u3002\u7531 GPT 4o Mini \u9a71\u52a8\u3002",
-        "points": 15
-    },
-    "gpt-4-turbo-128k": {
-        "baseModel": "vizcacha",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4.jpeg",
-        "owned_by": "openai",
-        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u3002",
-        "points": 2500
-    },
-    "playground-v2.5": {
-        "baseModel": "playgroundv25",
-        "tokens": 80,
-        "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "playgroundai",
-        "path": "playgroundv25.jpeg",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1254x836": "--aspect 3:2",
-            "836x1254": "--aspect 2:3",
-            "1182x886": "--aspect 4:3",
-            "886x1182": "--aspect 3:4",
-            "1161x903": "--aspect 9:7",
-            "903x1161": "--aspect 7:9",
-            "1536x640": "--aspect 12:5",
-            "640x1536": "--aspect 5:12",
-            "1365x768": "--aspect 16:9",
-            "768x1365": "--aspect 9:16",
-            "1295x809": "--aspect 16:10",
-            "809x1295": "--aspect 10:16"
-        },
-        "text2image": true,
-        "desc": "\u7531 Playground v2.5 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
-        "points": 40
-    },
-    "llama-3-70b-t": {
-        "baseModel": "llama-3-70b-t",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "togetherai.",
-        "path": "llama-3-70b-t.png",
-        "desc": "Llama 3 70B Instruct from Meta.\n\nThe points price is subject to change.",
-        "text2image": false,
-        "points": 75
-    },
-    "gpt-4o-128k": {
-        "baseModel": "gpt4_o_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u4e4b\u4e00\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\u3002\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\u548c\u8d85\u957f\u6587\u672c\u5904\u7406\u3002",
-        "points": 650
-    },
-    "gpt-4o-mini-128k": {
-        "baseModel": "gpt4_o_mini_128k",
-        "tokens": 128000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u5728\u4fdd\u6301\u6027\u80fd\u7684\u540c\u65f6\u4f18\u5316\u4e86\u901f\u5ea6\u548c\u6210\u672c\u3002",
-        "points": 75
-    },
-    "gemini-1.5-pro": {
-        "baseModel": "gemini_1_5_pro",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 175
-    },
-    "gpt-4o-mini": {
-        "baseModel": "gpt4_o_mini",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gpt4o.jpeg",
-        "owned_by": "openai",
-        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u7684\u540c\u65f6\uff0c\u4ecd\u7136\u5177\u5907\u5f3a\u5927\u7684\u529f\u80fd\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\u3002",
-        "points": 15
-    },
-    "gpt-3.5-turbo-16k": {
-        "baseModel": "agouti",
-        "tokens": 16000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gpt3_5.jpeg",
-        "desc": "\u7531 GPT-3.5 Turbo Instruct-16K \u9a71\u52a8\u3002",
-        "owned_by": "openai",
-        "points": 55
-    },
-    "mistral-medium": {
-        "baseModel": "mistral_medium",
-        "tokens": 32000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "mistral.jpeg",
-        "owned_by": "mistralai",
-        "desc": "\u7531 Mistral Medium \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 32,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8f83\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
-        "points": 800
-    },
-    "fal-sdxl-lightning": {
-        "baseModel": "fal-sdxl-lightning",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
-        "path": "fal-sdxl-lightning.png",
-        "desc": "Fastest ever image generation, and see the quality scaling up!",
-        "text2image": true,
-        "points": 25
-    },
-    "stablediffusion3": {
-        "baseModel": "stablediffusion3",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fireworksai.",
-        "path": "stablediffusion3.png",
-        "desc": "Understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
-        "text2image": true,
-        "points": 1600
-    },
-    "claude-2": {
-        "baseModel": "claude_2_short",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 620
-    },
-    "stablediffusion3-2b": {
-        "baseModel": "stablediffusion3-2b",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "stablediffusion3-2b.png",
-        "desc": "Stable Diffusion v3 Medium - by fal.ai",
-        "text2image": true,
-        "points": 250
-    },
-    "claude-instant": {
-        "baseModel": "a2",
-        "tokens": 9000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "path": "claude2.png",
-        "object": "model",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u5feb\u901f\u54cd\u5e94\u548c\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 9,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 50
-    },
-    "code-llama-34b": {
-        "baseModel": "code_llama_34b_instruct",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "llama.jpeg",
-        "owned_by": "meta",
-        "desc": "\u7531 Code Llama 34B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u5907\u66f4\u5f3a\u7684\u4ee3\u7801\u751f\u6210\u548c\u7406\u89e3\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9ad8\u7ea7\u7f16\u7a0b\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 20
-    },
-    "gpt-3.5-turbo": {
-        "baseModel": "gpt3_5",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "gpt3_5.jpeg",
-        "desc": "\u7531 GPT-3.5 Turbo \u9a71\u52a8\u3002",
-        "points": 20
-    },
-    "gemini-1.5-flash": {
-        "baseModel": "gemini_1_5_flash",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "gemini.jpeg",
-        "owned_by": "google",
-        "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 5
-    },
-    "l-j-l.chat": {
-        "baseModel": "l-j-l.chat",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
-        "path": "l-j-l.chat.png",
-        "desc": "\u6587\u5b57\u8f6c\u8bed\u97f3\u5305",
-        "text2image": false,
-        "points": 30
-    },
-    "claude-3-haiku": {
-        "baseModel": "claude_3_haiku",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude 3 Haiku \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 30
-    },
-    "physicshp": {
-        "baseModel": "physicshp",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
-        "path": "physicshp.png",
-        "desc": "Quiz on phy topics",
-        "text2image": false,
-        "points": 20
+        "points": 1625
     },
     "gemini-1.5-flash-128k": {
         "baseModel": "gemini_1_5_flash_128k",
@@ -519,32 +99,73 @@
         "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 128,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
         "points": 300
     },
-    "claude-3-opus": {
-        "baseModel": "claude_2_1_cedar",
+    "gemini-1.5-pro": {
+        "baseModel": "gemini_1_5_pro",
         "tokens": 4000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude 3 Opus \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 2000
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 175
     },
-    "qwen-1.5-110b-t": {
-        "baseModel": "qwen-1.5-110b-t",
+    "llama-3.1-405b-base": {
+        "baseModel": "llama-3.1-405b-base",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "owned_by": "togetherai.",
-        "path": "qwen-1.5-110b-t.png",
-        "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 110B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
+        "owned_by": "hyperbolic.",
+        "path": "llama-3.1-405b-base.png",
+        "desc": "SOTA base completion model that enables seamless interactions.",
         "text2image": false,
-        "points": 375
+        "points": 1030
+    },
+    "web-search": {
+        "baseModel": "websearch",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "poe",
+        "path": "websearch.jpeg",
+        "desc": "\u652f\u6301\u7f51\u7edc\u7684\u52a9\u624b\u673a\u5668\u4eba\uff0c\u901a\u8fc7\u641c\u7d22\u4e92\u8054\u7f51\u6765\u4e30\u5bcc\u5176\u56de\u7b54\u3002\u7279\u522b\u64c5\u957f\u5904\u7406\u5173\u4e8e\u6700\u65b0\u4fe1\u606f\u6216\u5177\u4f53\u4e8b\u5b9e\u7684\u67e5\u8be2\u3002\u7531 GPT 4o Mini \u9a71\u52a8\u3002",
+        "points": 15
+    },
+    "hailuo-ai": {
+        "baseModel": "hailuo-ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "hailuo-ai.png",
+        "desc": "Best-in-class text and image to video model by MiniMax.",
+        "text2image": false,
+        "points": 12500
+    },
+    "gpt-3.5-turbo-raw": {
+        "baseModel": "gpt-3.5-turbo-raw",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by OpenAI.",
+        "path": "gpt-3.5-turbo-raw.png",
+        "desc": "Powered by gpt-3.5-turbo without a system prompt.",
+        "text2image": false,
+        "points": 20
     },
     "claude-3-opus-200k": {
         "baseModel": "claude_3_opus_200k",
@@ -559,62 +180,45 @@
         "desc": "\u7531 Claude 3 Opus \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 200,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
         "points": 12000
     },
-    "claude-3-sonnet": {
-        "baseModel": "claude_2_1_bamboo",
-        "tokens": 4000,
+    "gpt-4o-128k": {
+        "baseModel": "gpt4_o_128k",
+        "tokens": 128000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
-        "path": "claude.jpeg",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude 3 Sonnet \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 360
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u4e4b\u4e00\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\u3002\u9002\u7528\u4e8e\u590d\u6742\u4efb\u52a1\u548c\u8d85\u957f\u6587\u672c\u5904\u7406\u3002",
+        "points": 650
     },
-    "grok-2-beta": {
-        "baseModel": "grok-2-beta",
+    "grok-beta": {
+        "baseModel": "grok-beta",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "owned_by": "This bot uses Gemini-1.5-Pro, a model that is powered by Google.",
-        "path": "grok-2-beta.png",
-        "desc": "Designed to be witty, rebellious, and unfiltered, Grok answers questions with a playful yet edgy tone, inspired by The Hitchhiker's Guide to the Galaxy.\nIt can switch between a humorous 'fun mode' and a more straightforward 'regular mode,' offering advanced reasoning, coding capabilities, real-time information processing, and image generation with the FLUX.1 engine.",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "grok-beta.png",
+        "desc": "Grok-beta is an early preview of xAI's most intelligent language model. It features state-of-the-art capabilities in coding, reasoning, and answering questions. It excels at handling complex and multi-step tasks. Grok-beta does not have access to real-time information from X or the internet as part of its integration with Poe. For longer context messages, please try Grok-beta-128k. The compute points value is subject to change.",
         "text2image": false,
-        "points": 200
+        "points": 570
     },
-    "playground-v3": {
-        "baseModel": "playgroundv25",
-        "tokens": 80,
+    "o1-mini": {
+        "baseModel": "gpt_o1_mini_128k",
+        "tokens": 128000,
         "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
+            "/v1/chat/completions"
         ],
         "premium_model": false,
         "object": "model",
-        "owned_by": "playgroundv3",
-        "path": "playgroundv25.jpeg",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1254x836": "--aspect 3:2",
-            "836x1254": "--aspect 2:3",
-            "1182x886": "--aspect 4:3",
-            "886x1182": "--aspect 3:4",
-            "1161x903": "--aspect 9:7",
-            "903x1161": "--aspect 7:9",
-            "1536x640": "--aspect 12:5",
-            "640x1536": "--aspect 5:12",
-            "1365x768": "--aspect 16:9",
-            "768x1365": "--aspect 9:16",
-            "1295x809": "--aspect 16:10",
-            "809x1295": "--aspect 10:16"
-        },
-        "text2image": true,
-        "desc": "\u7531 Playground v3 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
-        "points": 40
+        "owned_by": "openai",
+        "path": "o1.jpeg",
+        "desc": "\u8fd9\u4e2aOpenAI\u6a21\u578b\u662fo1\u7684\u66f4\u5feb\u3001\u66f4\u4fbf\u5b9c\u7684\u7248\u672c\uff0c\u7279\u522b\u64c5\u957f\u7f16\u7801\u3001\u6570\u5b66\u548c\u79d1\u5b66\u5e94\u7528\uff0c\u9002\u7528\u4e8e\u4e0d\u9700\u8981\u5e7f\u6cdb\u901a\u7528\u77e5\u8bc6\u7684\u573a\u666f\u3002\u5b83\u652f\u6301128k tokens\u7684\u4e0a\u4e0b\u6587\u3002",
+        "points": 1800
     },
     "llama-3.1-405b": {
         "baseModel": "llama-3.1-405b",
@@ -630,108 +234,31 @@
         "text2image": false,
         "points": 350
     },
-    "flux-schnell": {
-        "baseModel": "flux-schnell",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "flux-schnell.png",
-        "desc": "Turbo speed image generation with strengths in prompt following, visual quality, image detail and output diversity. This is the fastest version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
-        "text2image": false,
-        "points": 75
-    },
-    "flux-dev": {
-        "baseModel": "flux-dev",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "flux-dev.png",
-        "desc": "High-performance image generation with top of the line prompt following, visual quality, image detail and output diversity. This is a more efficient version of FLUX-pro, balancing quality and speed. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
-        "text2image": false,
-        "points": 625
-    },
-    "dall-e-3": {
-        "baseModel": "dalle3",
-        "tokens": 80,
-        "endpoints": [
-            "/v1/images/generations",
-            "/v1/images/edits"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "openai",
-        "sizes": {
-            "1024x1024": "--aspect 1:1",
-            "1792x1024": "--aspect 7:4",
-            "1024x1792": "--aspect 4:7"
-        },
-        "path": "dalle3.jpeg",
-        "text2image": true,
-        "desc": "\u7531 DALL\u00b7E 3 \u63d0\u4f9b\u652f\u6301\uff0cOpenAI \u7684\u6700\u65b0\u56fe\u50cf\u751f\u6210\u6a21\u578b\uff0c\u80fd\u591f\u751f\u6210\u9ad8\u8d28\u91cf\u548c\u590d\u6742\u7684\u56fe\u50cf\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
-        "points": 1500
-    },
-    "flux-ultra": {
-        "baseModel": "flux-ultra",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot uses FLUX-schnell, a model that is powered by Poe and third party model providers.",
-        "path": "flux-ultra.png",
-        "desc": "Unparalleled Image Quality\n\nFLUX-ULTRA produces images with:\n\n- Hyperrealistic details that blur the line between digital art and photography\n- Cinematic quality rivaling Hollywood productions\n- Intricate, insanely detailed compositions that reward close inspection\n- Beautiful color grading that enhances mood and atmosphere\n\n Professional-Grade Output\n\nEvery image generated by FLUX-ULTRA simulates the quality of high-end photography equipment:\n\n- Emulates the crisp clarity of 25mm lens shots\n- Artful manipulation of depth of field for striking visual focus\n- Precise simulated camera settings: 1/1000 shutter speed, F/22 aperture\n- Perfected white balance for true-to-life color reproduction",
-        "text2image": false,
-        "points": 209
-    },
-    "remove-background": {
-        "baseModel": "remove-background",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "remove-background.png",
-        "desc": "Remove background from your images",
-        "text2image": false,
-        "points": 25
-    },
-    "claude-instant-100k": {
-        "baseModel": "a2_100k",
-        "tokens": 100000,
+    "mistral-medium": {
+        "baseModel": "mistral_medium",
+        "tokens": 32000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": false,
         "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
-        "points": 75
+        "path": "mistral.jpeg",
+        "owned_by": "mistralai",
+        "desc": "\u7531 Mistral Medium \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 32,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8f83\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 800
     },
-    "hailuo-ai": {
-        "baseModel": "hailuo-ai",
-        "tokens": 2000,
+    "gemini-1.5-flash": {
+        "baseModel": "gemini_1_5_flash",
+        "tokens": 4000,
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": true,
+        "premium_model": false,
         "object": "model",
-        "owned_by": "fal.",
-        "path": "hailuo-ai.png",
-        "desc": "Best-in-class text and image to video model by MiniMax.",
-        "text2image": false,
-        "points": 12500
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Flash \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 5
     },
     "llama-3.1-70b": {
         "baseModel": "llama-3.1-70b",
@@ -788,6 +315,50 @@
         "text2image": false,
         "points": 1000
     },
+    "flux-pro-1.1": {
+        "baseModel": "flux-pro-1.1",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "flux-pro-1.1.png",
+        "desc": "State-of-the-art image generation with top-of-the-line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX 1.1, use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 1000
+    },
+    "playground-v3": {
+        "baseModel": "playgroundv25",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "playgroundv3",
+        "path": "playgroundv25.jpeg",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1254x836": "--aspect 3:2",
+            "836x1254": "--aspect 2:3",
+            "1182x886": "--aspect 4:3",
+            "886x1182": "--aspect 3:4",
+            "1161x903": "--aspect 9:7",
+            "903x1161": "--aspect 7:9",
+            "1536x640": "--aspect 12:5",
+            "640x1536": "--aspect 5:12",
+            "1365x768": "--aspect 16:9",
+            "768x1365": "--aspect 9:16",
+            "1295x809": "--aspect 16:10",
+            "809x1295": "--aspect 10:16"
+        },
+        "text2image": true,
+        "desc": "\u7531 Playground v3 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
+        "points": 40
+    },
     "imagen3-fast": {
         "baseModel": "imagen3-fast",
         "tokens": 2000,
@@ -828,8 +399,28 @@
         "desc": "\u7531 Ideogram \u63d0\u4f9b\u652f\u6301\uff0c\u4e13\u6ce8\u4e8e\u751f\u6210\u6587\u5b57\u548c\u7b26\u53f7\u56fe\u50cf\uff0c\u9002\u7528\u4e8e\u521b\u610f\u8bbe\u8ba1\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
         "points": 1900
     },
-    "stablediffusion3.5-l": {
-        "baseModel": "stablediffusion3.5-l",
+    "dall-e-3": {
+        "baseModel": "dalle3",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "openai",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1792x1024": "--aspect 7:4",
+            "1024x1792": "--aspect 4:7"
+        },
+        "path": "dalle3.jpeg",
+        "text2image": true,
+        "desc": "\u7531 DALL\u00b7E 3 \u63d0\u4f9b\u652f\u6301\uff0cOpenAI \u7684\u6700\u65b0\u56fe\u50cf\u751f\u6210\u6a21\u578b\uff0c\u80fd\u591f\u751f\u6210\u9ad8\u8d28\u91cf\u548c\u590d\u6742\u7684\u56fe\u50cf\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
+        "points": 1500
+    },
+    "flux-schnell": {
+        "baseModel": "flux-schnell",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
@@ -837,10 +428,52 @@
         "premium_model": true,
         "object": "model",
         "owned_by": "fal.",
-        "path": "stablediffusion3.5-l.png",
-        "desc": "Stability.ai's StableDiffusion3.5 Large, hosted by @fal, is the Stable Diffusion family's most powerful image generation model both in terms of image quality and prompt adherence. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
-        "text2image": true,
-        "points": 1625
+        "path": "flux-schnell.png",
+        "desc": "Turbo speed image generation with strengths in prompt following, visual quality, image detail and output diversity. This is the fastest version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 75
+    },
+    "flux-dev": {
+        "baseModel": "flux-dev",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "flux-dev.png",
+        "desc": "High-performance image generation with top of the line prompt following, visual quality, image detail and output diversity. This is a more efficient version of FLUX-pro, balancing quality and speed. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 625
+    },
+    "stablediffusionxl": {
+        "baseModel": "stablediffusionxl",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "stablediffusionxl.png",
+        "desc": "Generates high quality images based on the user's most recent prompt. \n\nAllows users to specify elements to avoid in the image using the \"--no\" parameter at the end of the prompt. Select an aspect ratio with \"--aspect\". (e.g. \"Tall trees, daylight --no rain --aspect 7:4\"). Valid aspect ratios are 1:1, 7:4, 4:7, 9:7, 7:9, 19:13, 13:19, 12:5, & 5:12. \n\nPowered by Stable Diffusion XL.",
+        "text2image": false,
+        "points": 120
+    },
+    "llama-3.1-405b-t": {
+        "baseModel": "llama-3.1-405b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3.1-405b-t.png",
+        "desc": "Llama 3.1 405B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 335
     },
     "ideogram": {
         "baseModel": "ideogram",
@@ -881,6 +514,36 @@
         "desc": "Enhances the quality and detail of an image while upscaling resolution by 4x with the Playground AI model.",
         "text2image": false,
         "points": 375
+    },
+    "playground-v2.5": {
+        "baseModel": "playgroundv25",
+        "tokens": 80,
+        "endpoints": [
+            "/v1/images/generations",
+            "/v1/images/edits"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "playgroundai",
+        "path": "playgroundv25.jpeg",
+        "sizes": {
+            "1024x1024": "--aspect 1:1",
+            "1254x836": "--aspect 3:2",
+            "836x1254": "--aspect 2:3",
+            "1182x886": "--aspect 4:3",
+            "886x1182": "--aspect 3:4",
+            "1161x903": "--aspect 9:7",
+            "903x1161": "--aspect 7:9",
+            "1536x640": "--aspect 12:5",
+            "640x1536": "--aspect 5:12",
+            "1365x768": "--aspect 16:9",
+            "768x1365": "--aspect 9:16",
+            "1295x809": "--aspect 16:10",
+            "809x1295": "--aspect 10:16"
+        },
+        "text2image": true,
+        "desc": "\u7531 Playground v2.5 \u63d0\u4f9b\u652f\u6301\uff0c\u9002\u7528\u4e8e\u56fe\u50cf\u751f\u6210\u548c\u7f16\u8f91\uff0c\u63d0\u4f9b\u591a\u79cd\u5c3a\u5bf8\u9009\u9879\u3002",
+        "points": 40
     },
     "pika": {
         "baseModel": "pika",
@@ -994,6 +657,45 @@
         "text2image": false,
         "points": 90
     },
+    "claude-3-sonnet": {
+        "baseModel": "claude_2_1_bamboo",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Sonnet \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 360
+    },
+    "claude-3-haiku": {
+        "baseModel": "claude_3_haiku",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Haiku \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\uff0c\u9002\u7528\u4e8e\u4e00\u822c\u7528\u9014\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 30
+    },
+    "claude-3-opus": {
+        "baseModel": "claude_2_1_cedar",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude.jpeg",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude 3 Opus \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 2000
+    },
     "gemini-1.5-pro-128k": {
         "baseModel": "gemini_1_5_pro_128k",
         "tokens": 128000,
@@ -1033,6 +735,32 @@
         "desc": "\u7531 Gemini 1.5 Pro \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 2,000,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u6d77\u91cf\u6570\u636e\u4efb\u52a1\u3002",
         "points": 35000
     },
+    "gpt-4o-mini-128k": {
+        "baseModel": "gpt4_o_mini_128k",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gpt4o.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4o Mini \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u5728\u4fdd\u6301\u6027\u80fd\u7684\u540c\u65f6\u4f18\u5316\u4e86\u901f\u5ea6\u548c\u6210\u672c\u3002",
+        "points": 75
+    },
+    "gpt-4-turbo": {
+        "baseModel": "beaver",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gpt4.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u66f4\u9ad8\u7684\u6027\u80fd\u548c\u66f4\u5927\u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\uff084000 \u4e2a tokens\uff09\u3002",
+        "points": 500
+    },
     "gemini-1.5-pro-search": {
         "baseModel": "gemini_1_5_pro_search",
         "tokens": 4000,
@@ -1060,6 +788,61 @@
         "text2image": false,
         "points": 20
     },
+    "gemini-1.5-flash-search": {
+        "baseModel": "gemini_pro_search",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gemini.jpeg",
+        "owned_by": "google",
+        "desc": "\u7531 Gemini 1.5 Flash Search \u63d0\u4f9b\u652f\u6301\uff0c\u4f18\u5316\u641c\u7d22\u548c\u68c0\u7d22\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 25
+    },
+    "stablediffusion3": {
+        "baseModel": "stablediffusion3",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "stablediffusion3.png",
+        "desc": "Understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
+        "text2image": false,
+        "points": 1600
+    },
+    "sd3-turbo": {
+        "baseModel": "sd3-turbo",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "sd3-turbo.png",
+        "desc": "Distilled, few-step version of Stable Diffusion 3, which understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
+        "text2image": false,
+        "points": 1000
+    },
+    "stablediffusion3-2b": {
+        "baseModel": "stablediffusion3-2b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "stablediffusion3-2b.png",
+        "desc": "Stable Diffusion v3 Medium - by fal.ai",
+        "text2image": false,
+        "points": 250
+    },
     "sd3-medium": {
         "baseModel": "sd3-medium",
         "tokens": 2000,
@@ -1071,8 +854,22 @@
         "owned_by": "fireworksai.",
         "path": "sd3-medium.png",
         "desc": "2-billion parameter version of Stable Diffusion 3, which understands complex prompts, supports multiple languages, and has improved spelling over SDXL to generate high-quality images. It is especially good at typography and prompt accuracy.\n\nStability AI has partnered with Fireworks AI, the fastest and most reliable API platform in the market, to deliver Stable Diffusion 3 and Stable Diffusion 3 Turbo.",
-        "text2image": true,
+        "text2image": false,
         "points": 870
+    },
+    "llama-3-70b-t": {
+        "baseModel": "llama-3-70b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "llama-3-70b-t.png",
+        "desc": "Llama 3 70B Instruct from Meta.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 75
     },
     "llama-3-70b-inst-fw": {
         "baseModel": "llama-3-70b-inst-fw",
@@ -1186,6 +983,45 @@
         "text2image": false,
         "points": 1130
     },
+    "gpt-3.5-turbo": {
+        "baseModel": "gpt3_5",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "gpt3_5.jpeg",
+        "desc": "\u7531 GPT-3.5 Turbo \u9a71\u52a8\u3002",
+        "points": 20
+    },
+    "gpt-3.5-turbo-16k": {
+        "baseModel": "agouti",
+        "tokens": 16000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "gpt3_5.jpeg",
+        "desc": "\u7531 GPT-3.5 Turbo Instruct-16K \u9a71\u52a8\u3002",
+        "owned_by": "openai",
+        "points": 55
+    },
+    "gpt-4-turbo-128k": {
+        "baseModel": "vizcacha",
+        "tokens": 128000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "gpt4.jpeg",
+        "owned_by": "openai",
+        "desc": "\u7531 GPT-4 Turbo \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff08128,000 \u4e2a tokens\uff09\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u3002",
+        "points": 2500
+    },
     "claude-3-sonnet-200k": {
         "baseModel": "claude_3_sonnet_200k",
         "tokens": 200000,
@@ -1226,6 +1062,20 @@
         "text2image": false,
         "points": 20
     },
+    "qwen-1.5-110b-t": {
+        "baseModel": "qwen-1.5-110b-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "qwen-1.5-110b-t.png",
+        "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 110B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
+        "text2image": false,
+        "points": 375
+    },
     "qwen2-72b-instruct-t": {
         "baseModel": "qwen2-72b-instruct-t",
         "tokens": 2000,
@@ -1240,6 +1090,19 @@
         "text2image": false,
         "points": 190
     },
+    "claude-2": {
+        "baseModel": "claude_2_short",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "path": "claude2.png",
+        "owned_by": "anthropic",
+        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 620
+    },
     "claude-2-100k": {
         "baseModel": "a2_2",
         "tokens": 100000,
@@ -1252,6 +1115,20 @@
         "owned_by": "anthropic",
         "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
         "points": 1400
+    },
+    "gpt-4-classic": {
+        "baseModel": "gpt-4-classic",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by OpenAI.",
+        "path": "gpt-4-classic.png",
+        "desc": "OpenAI's GPT-4 model. Powered by gpt-4-0613 (non-Turbo) for text input and gpt-4o for image input.",
+        "text2image": false,
+        "points": 2250
     },
     "gpt-4-classic-0314": {
         "baseModel": "gpt-4-classic-0314",
@@ -1309,6 +1186,19 @@
         "text2image": false,
         "points": 15
     },
+    "code-llama-34b": {
+        "baseModel": "code_llama_34b_instruct",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "llama.jpeg",
+        "owned_by": "meta",
+        "desc": "\u7531 Code Llama 34B \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u5907\u66f4\u5f3a\u7684\u4ee3\u7801\u751f\u6210\u548c\u7406\u89e3\u80fd\u529b\uff0c\u9002\u7528\u4e8e\u9ad8\u7ea7\u7f16\u7a0b\u4efb\u52a1\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 20
+    },
     "solar-pro-preview": {
         "baseModel": "solar-pro-preview",
         "tokens": 2000,
@@ -1317,7 +1207,7 @@
         ],
         "premium_model": true,
         "object": "model",
-        "owned_by": "This bot is powered by TranslationUnit(text='an open source model hosted by Poe', params={}).",
+        "owned_by": "This bot is powered by an open source model hosted by Poe.",
         "path": "solar-pro-preview.png",
         "desc": "A sneak peek into Solar Pro, Upstage's state-of-the-art model designed to deliver exceptional performance on a single GPU.",
         "text2image": false,
@@ -1349,6 +1239,20 @@
         "desc": "Anthropic's Claude 2.1 has performance improvements over Claude 2 and an increased context size of 200k tokens.",
         "text2image": false,
         "points": 3000
+    },
+    "remove-background": {
+        "baseModel": "remove-background",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "remove-background.png",
+        "desc": "Remove background from your images",
+        "text2image": false,
+        "points": 25
     },
     "mistral-7b-v0.3-t": {
         "baseModel": "mistral-7b-v0.3-t",
@@ -1405,20 +1309,6 @@
         "desc": "Tako is a bot that transforms your questions about stocks, sports, economics or politics into interactive, shareable knowledge cards from trusted sources. Tako's knowledge graph is built exclusively from authoritative, real-time data providers, and is embeddable in your apps, research and storytelling. You can adjust the specificity threshold by typing `--specificity 30` (or a value between 0 - 100) at the end of your query/question; the default is 60.",
         "text2image": false,
         "points": 1000
-    },
-    "llama-3.1-405b-base": {
-        "baseModel": "llama-3.1-405b-base",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "hyperbolic.",
-        "path": "llama-3.1-405b-base.png",
-        "desc": "SOTA base completion model that enables seamless interactions.",
-        "text2image": false,
-        "points": 1030
     },
     "llama-3-70b-fp16": {
         "baseModel": "llama-3-70b-fp16",
@@ -1496,13 +1386,13 @@
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
         "owned_by": "fireworksai.",
         "path": "flux-1-schnell-fw.png",
-        "desc": "FLUX.1 [schnell] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions. Bot powered by fireworks.ai.\n\nKey Features\n1. Cutting-edge output quality and competitive prompt following, matching the performance of closed source alternatives.\n2. Trained using latent adversarial diffusion distillation, FLUX.1 [schnell] can generate high-quality images in only 1 to 4 steps.\n3. Released under the apache-2.0 licence, the model can be used for personal, scientific, and commercial purposes.",
+        "desc": "FLUX.1 [schnell] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions.\n\nKey Features\n1. Cutting-edge output quality and competitive prompt following, matching the performance of closed source alternatives.\n2. Trained using latent adversarial diffusion distillation, FLUX.1 [schnell] can generate high-quality images in only 1 to 4 steps.\n3. Released under the apache-2.0 licence, the model can be used for personal, scientific, and commercial purposes.",
         "text2image": false,
-        "points": 0
+        "points": 35
     },
     "flux-1-dev-fw": {
         "baseModel": "flux-1-dev-fw",
@@ -1510,13 +1400,153 @@
         "endpoints": [
             "/v1/chat/completions"
         ],
-        "premium_model": false,
+        "premium_model": true,
         "object": "model",
         "owned_by": "fireworksai.",
         "path": "flux-1-dev-fw.png",
-        "desc": "FLUX.1 [dev] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions. Bot powered by fireworks.ai\n\nKey Features\n1. Cutting-edge output quality, second only to our state-of-the-art model FLUX.1 [pro].\n2. Competitive prompt following, matching the performance of closed source alternatives .\n3. Trained using guidance distillation, making FLUX.1 [dev] more efficient.\n4. Open weights to drive new scientific research, and empower artists to develop innovative workflows.\n5. Generated outputs can be used for personal, scientific, and commercial purposes as described in the FLUX.1 [dev] Non-Commercial License.",
+        "desc": "FLUX.1 [dev] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions.\n\nKey Features\n1. Cutting-edge output quality, second only to our state-of-the-art model FLUX.1 [pro].\n2. Competitive prompt following, matching the performance of closed source alternatives.\n3. Trained using guidance distillation, making FLUX.1 [dev] more efficient.\n4. Open weights to drive new scientific research, and empower artists to develop innovative workflows.\n5. Generated outputs can be used for personal, scientific, and commercial purposes as described in the FLUX.1 [dev] Non-Commercial License.",
         "text2image": false,
-        "points": 0
+        "points": 375
+    },
+    "mochi-preview": {
+        "baseModel": "mochi-preview",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "mochi-preview.png",
+        "desc": "Open state-of-the-art video generation model with high-fidelity motion and strong prompt adherence. Only text-to-video is supported at the moment.",
+        "text2image": false,
+        "points": 10000
+    },
+    "stablediffusion3.5-t": {
+        "baseModel": "stablediffusion3.5-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "stablediffusion3.5-t.png",
+        "desc": "Faster version of Stable Diffusion 3 Large, hosted by @fal. Excels for fast image generation. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 250
+    },
+    "runway": {
+        "baseModel": "runway",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "runway.png",
+        "desc": "Runway's Gen-3 Alpha Turbo model creates best-in-class, controllable, and high-fidelity video generations based on your prompts. Both text inputs and image inputs are supported, but we recommend using image inputs for best results. Use --aspect-ratio (16:9, 9:16, landscape, portrait) for landscape/portrait videos.",
+        "text2image": false,
+        "points": 10000
+    },
+    "sd3.5-large-turbo": {
+        "baseModel": "sd3.5-large-turbo",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "sd3.5-large-turbo.png",
+        "desc": "Stable Diffusion 3.5 Large Turbo is a Multimodal Diffusion Transformer (MMDiT) text-to-image model with Adversarial Diffusion Distillation (ADD) that features improved performance in image quality, typography, complex prompt understanding, and resource-efficiency, with a focus on fewer inference steps. Powered By Stability AI and hosted by fireworks.ai",
+        "text2image": false,
+        "points": 1000
+    },
+    "sd3.5-medium": {
+        "baseModel": "sd3.5-medium",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "sd3.5-medium.png",
+        "desc": "Stable Diffusion 3.5 Medium is a Multimodal Diffusion Transformer (MMDiT) text-to-image model with Adversarial Diffusion Distillation (ADD) that features improved performance in image quality, typography, complex prompt understanding, and resource-efficiency, with a focus on fewer inference steps. Powered By Stability AI and hosted by fireworks.ai",
+        "text2image": false,
+        "points": 875
+    },
+    "sd3.5-large": {
+        "baseModel": "sd3.5-large",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "sd3.5-large.png",
+        "desc": "Stable Diffusion 3.5 Large is a Multimodal Diffusion Transformer (MMDiT) text-to-image model that features improved performance in image quality, typography, complex prompt understanding, and resource-efficiency. Powered By Stability AI, hosted by fireworks.ai.",
+        "text2image": false,
+        "points": 1625
+    },
+    "recraft-v3": {
+        "baseModel": "recraft-v3",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "recraft-v3.png",
+        "desc": "Recraft V3, state of the art image generation. Use --style for styles, and --aspect for aspect ratio configuration. Available styles: realistic_image, digital_illustration, vector_illustration, realistic_image/b_and_w, realistic_image/hard_flash, realistic_image/hdr, realistic_image/natural_light, realistic_image/studio_portrait, realistic_image/enterprise, realistic_image/motion_blur, digital_illustration/pixel_art, digital_illustration/hand_drawn, digital_illustration/grain, digital_illustration/infantile_sketch, digital_illustration/2d_art_poster, digital_illustration/handmade_3d, digital_illustration/hand_drawn_outline, digital_illustration/engraving_color, digital_illustration/2d_art_poster_2, vector_illustration/engraving, vector_illustration/line_art, vector_illustration/line_circuit, vector_illustration/linocut",
+        "text2image": false,
+        "points": 2000
+    },
+    "dream-machine": {
+        "baseModel": "dream-machine",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "dream-machine.png",
+        "desc": "Luma AI's Dream Machine is an AI model that makes high-quality, realistic videos fast from text and images. Iterate at the speed of thought, create action-packed shots, and dream worlds with consistent characters on Poe today!\n\nTo specify the aspect ratio of your video add --aspect_ratio (1:1, 16:9, 9:16, 4:3, 3:4, 21:9, 9:21). To loop your video add --loop True.",
+        "text2image": false,
+        "points": 16000
+    },
+    "grok-beta-128k": {
+        "baseModel": "grok-beta-128k",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "grok-beta-128k.png",
+        "desc": "Grok-beta is an early preview of xAI's most intelligent language model. It features state-of-the-art capabilities in coding, reasoning, and answering questions. It excels at handling complex and multi-step tasks. Grok-beta does not have access to real-time information from X or the internet as part of its integration with Poe. The compute points value is subject to change.",
+        "text2image": false,
+        "points": 2725
+    },
+    "photo_createe": {
+        "baseModel": "photocreatee",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "poe",
+        "path": "assistant.svg",
+        "desc": "\u8fd9\u4e2a\u673a\u5668\u4eba\u53ef\u4ee5\u751f\u6210\u903c\u771f\u7684\u56fe\u5e93\u7167\u7247\u3001\u98ce\u683c\u7167\u7247\u6216\u52a8\u7269\u7167\u7247\u3002",
+        "text2image": true,
+        "points": 120
     },
     "gpt-4": {
         "baseModel": "gpt4_classic",
@@ -1530,6 +1560,32 @@
         "path": "gpt4.jpeg",
         "owned_by": "openai",
         "points": 2250
+    },
+    "claude-instant": {
+        "baseModel": "a2",
+        "tokens": 9000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "path": "claude2.png",
+        "object": "model",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u5feb\u901f\u54cd\u5e94\u548c\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 9,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "points": 50
+    },
+    "claude-instant-100k": {
+        "baseModel": "a2_100k",
+        "tokens": 100000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "path": "claude2.png",
+        "owned_by": "anthropic",
+        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "points": 75
     },
     "claude-3.5-sonnet": {
         "baseModel": "claude-3.5-sonnet",
