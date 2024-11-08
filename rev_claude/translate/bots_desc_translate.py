@@ -79,6 +79,9 @@ async def main():
         if "sd" in model_name or "stable" in model_name:
             translated_data[model_name]["text2image"] = True
             translated_data[model_name]["owned_by"] = "stabilityai"
+        if "fal." in translated_data[model_name]["owned_by"]:
+            translated_data[model_name]["text2image"] = True
+
 
 
     logger.debug(json.dumps(translated_data, indent=4))
