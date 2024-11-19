@@ -177,7 +177,7 @@ class PoeBotsUpdater:
 
 # Update the main function
 async def amain():
-    bots_count = 500
+    bots_count = 1000
     get_all_bots = True
     poe_bots_updater = PoeBotsUpdater()
 
