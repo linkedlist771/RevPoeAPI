@@ -1,6 +1,6 @@
 import asyncio
 from functools import partial
-from typing import Optional, List, Union
+from typing import Optional, List, Union, Any
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, Request
@@ -31,9 +31,11 @@ from rev_claude.schemas import (
 from loguru import logger
 
 from rev_claude.models import ClaudeModels
+from rev_claude.status.clients_status_manager import ClientsStatus
 from rev_claude.status_code.status_code_enum import HTTP_480_API_KEY_INVALID
 from rev_claude.utils.poe_bots_utils import get_poe_bot_info
 from rev_claude.utils.sse_utils import build_sse_data
+from utility import get_client_status
 
 
 # This in only for claude router, I do not use the
@@ -190,6 +192,55 @@ async def obtain_reverse_official_login_router(
     )
 
 
+async def select_client_by_usage(client_type: str, client_idx: int, basic_clients: dict, plus_clients: dict,
+                                 status_list: List[ClientsStatus]) -> Any:
+    # 分别获取plus和basic的status
+    plus_status = [s for s in status_list if s.type == "plus"]
+    basic_status = [s for s in status_list if (s.type == "normal" or s.type == "basic")]
+                    # basic类型在status中标记为normal
+
+    if client_type == "plus":
+        if not plus_status:
+            raise ValueError("No available plus clients")
+
+        # 获取plus clients的usage值
+        usages = [s.usage for s in plus_status]
+        total_usage = sum(usages)
+
+        # 如果总usage为0，使用均匀分布
+        if total_usage == 0:
+            probabilities = [1 / len(usages)] * len(usages)
+        else:
+            # 计算概率 - usage越大，概率越高
+            probabilities = [usage / total_usage for usage in usages]
+
+        # 对plus clients进行采样
+        selected_idx = np.random.choice(len(plus_status), p=probabilities)
+        selected_status = plus_status[selected_idx]
+        return plus_clients[selected_status.idx]
+
+    else:  # basic类型
+        if not basic_status:
+            raise ValueError("No available basic clients")
+
+        # 获取basic clients的usage值
+        usages = [s.usage for s in basic_status]
+        total_usage = sum(usages)
+
+        # 如果总usage为0，使用均匀分布
+        if total_usage == 0:
+            probabilities = [1 / len(usages)] * len(usages)
+        else:
+            # 计算概率 - usage越大，概率越高
+            probabilities = [usage / total_usage for usage in usages]
+
+        # 对basic clients进行采样
+        selected_idx = np.random.choice(len(basic_status), p=probabilities)
+        selected_status = basic_status[selected_idx]
+        return basic_clients[selected_status.idx]
+
+
+
 @router.post("/form_chat")
 async def chat(
     request: Request,
@@ -227,10 +278,12 @@ async def chat(
 
     client_type = "plus" if client_type == "plus" else "basic"
 
-    if client_type == "plus":
-        claude_client = plus_clients[client_idx]
-    else:
-        claude_client = basic_clients[client_idx]
+    # if client_type == "plus":
+    #     claude_client = plus_clients[client_idx]
+    # else:
+    #     claude_client = basic_clients[client_idx]
+    status_list = await get_client_status(basic_clients, plus_clients)
+    claude_client = await select_client_by_usage(client_type, client_idx, basic_clients, plus_clients, status_list)
 
     raw_message = message
     if not conversation_id:
