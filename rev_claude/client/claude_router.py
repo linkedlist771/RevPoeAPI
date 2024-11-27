@@ -36,7 +36,7 @@ from rev_claude.status_code.status_code_enum import HTTP_480_API_KEY_INVALID
 from rev_claude.utils.poe_bots_utils import get_poe_bot_info
 from rev_claude.utils.sse_utils import build_sse_data
 from utility import get_client_status
-
+import numpy as np
 
 # This in only for claude router, I do not use the
 
