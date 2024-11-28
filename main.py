@@ -21,24 +21,26 @@ app = register_middleware(app)
 
 
 @app.get("/api/v1/clients_status")
-async def _get_client_status():
-    basic_clients, plus_clients = ClientManager().get_clients()
-    all_status = await get_client_status(basic_clients, plus_clients)
+async def _get_client_status(show_details: bool = True):
+    if show_details:
+        basic_clients, plus_clients = ClientManager().get_clients()
+        all_status = await get_client_status(basic_clients, plus_clients)
+        # Group by type and aggregate usage
+        grouped_status = {}
+        for status in all_status:
+            client_type = status.type
+            if client_type not in grouped_status:
+                grouped_status[client_type] = status.model_dump()
+                grouped_status[client_type]['usage'] = status.usage
+            else:
+                grouped_status[client_type]['usage'] += status.usage
 
-    # Group by type and aggregate usage
-    grouped_status = {}
-    for status in all_status:
-        client_type = status.type
-        if client_type not in grouped_status:
-            grouped_status[client_type] = status.model_dump()
-            grouped_status[client_type]['usage'] = status.usage
-        else:
-            grouped_status[client_type]['usage'] += status.usage
-
-    # Convert back to list format with one entry per type
-    result = [ClientsStatus(**status) for status in grouped_status.values()]
-    return result
-
+        # Convert back to list format with one entry per type
+        result = [ClientsStatus(**status) for status in grouped_status.values()]
+        return result
+    else:
+        basic_clients, plus_clients = ClientManager().get_clients()
+        return await get_client_status(basic_clients, plus_clients)
 
 
 def start_server(port=args.port, host=args.host):
