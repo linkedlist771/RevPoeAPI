@@ -195,58 +195,6 @@
         "desc": "由 GPT-4o Mini 提供支持，具有超大上下文窗口（128,000 个 tokens），在保持性能的同时优化了速度和成本。",
         "points": 75
     },
-    "claude-instant": {
-        "baseModel": "a2",
-        "tokens": 9000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "path": "claude2.png",
-        "object": "model",
-        "owned_by": "anthropic",
-        "desc": "由 Claude Instant 提供支持，擅长快速响应和一般任务，具有 9,000 个 tokens 的上下文窗口。",
-        "points": 50
-    },
-    "claude-instant-100k": {
-        "baseModel": "a2_100k",
-        "tokens": 100000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "由 Claude Instant 提供支持，具有 100,000 个 tokens 的超大上下文窗口，适用于处理长文本和复杂任务。",
-        "points": 75
-    },
-    "claude-2": {
-        "baseModel": "claude_2_short",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic 的高级模型 Claude 2，擅长复杂任务如编码、写作和分析，具有 4,000 个 tokens 的上下文窗口。",
-        "points": 620
-    },
-    "claude-2-100k": {
-        "baseModel": "a2_2",
-        "tokens": 100000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic 的高级模型 Claude 2，具有 100,000 个 tokens 的超大上下文窗口，适用于处理超长文本和复杂任务。",
-        "points": 1400
-    },
     "claude-3-opus": {
         "baseModel": "claude_2_1_cedar",
         "tokens": 4000,
