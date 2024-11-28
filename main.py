@@ -21,8 +21,8 @@ app = register_middleware(app)
 
 
 @app.get("/api/v1/clients_status")
-async def _get_client_status(show_details: bool = True):
-    if show_details:
+async def _get_client_status(show_details: bool = False):
+    if not show_details:
         basic_clients, plus_clients = ClientManager().get_clients()
         all_status = await get_client_status(basic_clients, plus_clients)
         # Group by type and aggregate usage

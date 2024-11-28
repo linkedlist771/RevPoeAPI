@@ -166,10 +166,11 @@ class APIKeyManager:
         # logger.debug(f"current_time: {current_time}")
         next_usage_time = current_time + timedelta(seconds=wait_time)
 
-        message = (
-            f"您的账户是{key_type}类型，额度: {usage_limit}积分/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
-            f"您可以在 {next_usage_time.strftime('%H:%M:%S')} 后再次使用。"
-        )
+        # message = (
+        #     f"您的账户是{key_type}类型，额度: {usage_limit}积分/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
+        #     f"您可以在 {next_usage_time.strftime('%H:%M:%S')} 后再次使用。"
+        # )
+        message = f"您的账户是{key_type}类型，您的{ {usage_limit}}分额度已经使用完毕，请重新充值或续费"
         return message
 
     # 这里设置还是用普通的字符串算了。
