@@ -39,7 +39,7 @@ async def get_all_explored_bots(
             logger.error(f"Error processing bot {bot}: {str(e)}")
             return None
         finally:
-            await asyncio.sleep(0.1)
+            await asyncio.sleep(0.3)
 
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
         try:
@@ -55,7 +55,7 @@ async def get_all_explored_bots(
             logger.error(f"Error processing category {category}: {str(e)}")
             return None
         finally:
-            await asyncio.sleep(0.3)
+            await asyncio.sleep(3)
 
     # 处理所有categories
     category_results = await tqdm.gather(
