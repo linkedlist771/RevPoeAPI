@@ -12,6 +12,144 @@
         "desc": "\u901a\u7528\u52a9\u624b\u673a\u5668\u4eba\u3002\u5bf9\u4e8e\u9700\u8981\u6700\u65b0\u4fe1\u606f\u7684\u67e5\u8be2\uff0c\u5b83\u53ef\u4ee5\u4ece\u7f51\u7edc\u8bbf\u95ee\u5b9e\u65f6\u6570\u636e\u4ee5\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u7b54\u6848\u3002",
         "points": 20
     },
+    "claude-3.5-sonnet": {
+        "baseModel": "claude-3.5-sonnet",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "anthropic",
+        "path": "claude.jpeg",
+        "desc": "Anthropic \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u3001\u5206\u6790\u548c\u89c6\u89c9\u5904\u7406\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u88ab\u7f29\u77ed\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u9700\u8981\u66f4\u957f\u4e0a\u4e0b\u6587\u7684\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 Claude-3.5-Sonnet-200k\u3002\u79ef\u5206\u53ef\u80fd\u4f1a\u53d1\u751f\u53d8\u5316\u3002",
+        "points": 380
+    },
+    "gpt-4o": {
+        "baseModel": "gpt4_o",
+        "tokens": 4000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "openai",
+        "path": "gpt4o.jpeg",
+        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u5728\u5b9a\u91cf\u95ee\u9898\uff08\u6570\u5b66\u548c\u7269\u7406\uff09\u3001\u521b\u610f\u5199\u4f5c\u4ee5\u53ca\u8bb8\u591a\u5176\u4ed6\u6311\u6218\u6027\u4efb\u52a1\u4e2d\u6bd4 GPT-3.5 \u66f4\u5f3a\u3002\u7531 GPT-4o \u63d0\u4f9b\u652f\u6301\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u7f29\u77ed\uff0c\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u66f4\u957f\u7684\u4e0a\u4e0b\u6587\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 GPT-4o-128k\u3002",
+        "points": 300
+    },
+    "f1-preview": {
+        "baseModel": "f1-preview",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai.",
+        "path": "f1-preview.png",
+        "desc": "f1 enables developers to access the power of compound AI with the simplicity of prompting. As with declarative programming, users can describe what they want to achieve via prompting, without needing to specify exactly how to accomplish it.\nRead more here https://fireworks.ai/blog/fireworks-compound-ai-system-f1",
+        "text2image": false,
+        "points": 1
+    },
+    "flux-pro-1.1": {
+        "baseModel": "flux-pro-1.1",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "flux-pro-1.1.png",
+        "desc": "State-of-the-art image generation with top-of-the-line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX 1.1, use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Send an image to have this model reimagine/regenerate it via FLUX Redux.",
+        "text2image": false,
+        "points": 1000
+    },
+    "flux-pro": {
+        "baseModel": "flux-pro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "flux-pro.png",
+        "desc": "State-of-the-art image generation with top of the line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Send an image to have this model reimagine/regenerate it via FLUX Redux.",
+        "text2image": false,
+        "points": 1250
+    },
+    "stablediffusion3.5-l": {
+        "baseModel": "stablediffusion3.5-l",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "stablediffusion3.5-l.png",
+        "desc": "Stability.ai's StableDiffusion3.5 Large, hosted by @fal, is the Stable Diffusion family's most powerful image generation model both in terms of image quality and prompt adherence. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "text2image": false,
+        "points": 1625
+    },
+    "ideogram": {
+        "baseModel": "ideogram",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Poe and third party model providers.",
+        "path": "ideogram.png",
+        "desc": "Excels at creating high-quality images from text prompts. Its exceptional prompt adherence and state-of-the-art text rendering allow it to handle a wide range of creative requests. Allows users to specify the aspect ratio of the image using the \"--aspect\" parameter at the end of the prompt (e.g. \"Tall trees, daylight --aspect 9:16\"). Valid aspect ratios are 10:16, 16:10, 9:16, 16:9, 3:2, 2:3, 4:3, 3:4, & 1:1. Powered by Ideogram.",
+        "text2image": false,
+        "points": 1500
+    },
+    "mochi-preview": {
+        "baseModel": "mochi-preview",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "mochi-preview.png",
+        "desc": "Open state-of-the-art video generation model with high-fidelity motion and strong prompt adherence. Only text-to-video is supported at the moment.",
+        "text2image": false,
+        "points": 8000
+    },
+    "recraft-v3": {
+        "baseModel": "recraft-v3",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "recraft-v3.png",
+        "desc": "Recraft V3, state of the art image generation. Use --style for styles, and --aspect for aspect ratio configuration. Available styles: realistic_image, digital_illustration, vector_illustration, realistic_image/b_and_w, realistic_image/hard_flash, realistic_image/hdr, realistic_image/natural_light, realistic_image/studio_portrait, realistic_image/enterprise, realistic_image/motion_blur, digital_illustration/pixel_art, digital_illustration/hand_drawn, digital_illustration/grain, digital_illustration/infantile_sketch, digital_illustration/2d_art_poster, digital_illustration/handmade_3d, digital_illustration/hand_drawn_outline, digital_illustration/engraving_color, digital_illustration/2d_art_poster_2, vector_illustration/engraving, vector_illustration/line_art, vector_illustration/line_circuit, vector_illustration/linocut",
+        "text2image": false,
+        "points": 2000
+    },
+    "flux-pro-1.1-t": {
+        "baseModel": "flux-pro-1.1-t",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai.",
+        "path": "flux-pro-1.1-t.png",
+        "desc": "The best state of the art image model from BFL. FLUX 1.1 Pro generates images six times faster than its predecessor, FLUX 1 Pro, while also improving image quality, prompt adherence, and output diversity.",
+        "text2image": false,
+        "points": 1000
+    },
     "gemini-1.5-pro": {
         "baseModel": "gemini-1.5-pro",
         "tokens": 2000,
@@ -38,19 +176,6 @@
         "path": "o1.jpeg",
         "desc": "\u8fd9\u4e2aOpenAI\u6a21\u578b\u662fo1\u7684\u66f4\u5feb\u3001\u66f4\u4fbf\u5b9c\u7684\u7248\u672c\uff0c\u7279\u522b\u64c5\u957f\u7f16\u7801\u3001\u6570\u5b66\u548c\u79d1\u5b66\u5e94\u7528\uff0c\u9002\u7528\u4e8e\u4e0d\u9700\u8981\u5e7f\u6cdb\u901a\u7528\u77e5\u8bc6\u7684\u573a\u666f\u3002\u5b83\u652f\u6301128k tokens\u7684\u4e0a\u4e0b\u6587\u3002",
         "points": 1800
-    },
-    "gpt-4o": {
-        "baseModel": "gpt4_o",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "openai",
-        "path": "gpt4o.jpeg",
-        "desc": "OpenAI \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u5728\u5b9a\u91cf\u95ee\u9898\uff08\u6570\u5b66\u548c\u7269\u7406\uff09\u3001\u521b\u610f\u5199\u4f5c\u4ee5\u53ca\u8bb8\u591a\u5176\u4ed6\u6311\u6218\u6027\u4efb\u52a1\u4e2d\u6bd4 GPT-3.5 \u66f4\u5f3a\u3002\u7531 GPT-4o \u63d0\u4f9b\u652f\u6301\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u7f29\u77ed\uff0c\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u66f4\u957f\u7684\u4e0a\u4e0b\u6587\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 GPT-4o-128k\u3002",
-        "points": 300
     },
     "command-r": {
         "baseModel": "command-r",
@@ -119,34 +244,6 @@
         "desc": "Qwen1.5 (\u901a\u4e49\u5343\u95ee1.5) 72B\uff0c\u57fa\u4e8e\u963f\u91cc\u5df4\u5df4\u81ea\u7814\u5927\u6a21\u578b\u7684AI\u52a9\u624b\uff0c\u5c24\u5176\u64c5\u957f\u4e2d\u6587\u5bf9\u8bdd\u3002\n\nAlibaba's general-purpose model which excels particularly in Chinese-language queries.\n\nThe points price is subject to change.",
         "text2image": false,
         "points": 125
-    },
-    "flux-pro": {
-        "baseModel": "flux-pro",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "flux-pro.png",
-        "desc": "State-of-the-art image generation with top of the line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
-        "text2image": false,
-        "points": 1250
-    },
-    "stablediffusion3.5-l": {
-        "baseModel": "stablediffusion3.5-l",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "stablediffusion3.5-l.png",
-        "desc": "Stability.ai's StableDiffusion3.5 Large, hosted by @fal, is the Stable Diffusion family's most powerful image generation model both in terms of image quality and prompt adherence. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
-        "text2image": false,
-        "points": 1625
     },
     "gemini-1.5-flash-128k": {
         "baseModel": "gemini-1.5-flash-128k",
@@ -244,6 +341,20 @@
         "text2image": false,
         "points": 350
     },
+    "claude-3.5-haiku": {
+        "baseModel": "claude-3.5-haiku",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Anthropic.",
+        "path": "claude-3.5-haiku.png",
+        "desc": "The latest generation of Anthropic's fastest model. Claude 3.5 Haiku has fast speeds, improved instruction following, and more accurate tool use. The context window has been shortened to optimize for speed and cost. For longer context messages, please try Claude-3.5-Haiku-200k. The compute points value is subject to change.",
+        "text2image": false,
+        "points": 120
+    },
     "mistral-medium": {
         "baseModel": "mistral-medium",
         "tokens": 2000,
@@ -314,20 +425,6 @@
         "text2image": false,
         "points": 200
     },
-    "f1-preview": {
-        "baseModel": "f1-preview",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fireworksai.",
-        "path": "f1-preview.png",
-        "desc": "f1 enables developers to access the power of compound AI with the simplicity of prompting. As with declarative programming, users can describe what they want to achieve via prompting, without needing to specify exactly how to accomplish it.\nRead more here https://fireworks.ai/blog/fireworks-compound-ai-system-f1",
-        "text2image": false,
-        "points": 1
-    },
     "o1-preview": {
         "baseModel": "gpt_o1_preview_128k",
         "tokens": 128000,
@@ -366,20 +463,6 @@
         "owned_by": "This bot is powered by Poe and third party model providers.",
         "path": "imagen3.png",
         "desc": "Google DeepMind\u2019s highest quality text-to-image model, capable of generating images with\u00a0great detail, rich lighting,\u00a0and\u00a0few distracting artifacts. To adjust the aspect ratio of your image add --aspect-ratio (1:1, 16:9, 9:16, 4:3, 3:4). To remove visual specific elements, add --no (elements to remove). For simpler prompts, faster results, & lower cost, use @Imagen3-Fast",
-        "text2image": false,
-        "points": 1000
-    },
-    "flux-pro-1.1": {
-        "baseModel": "flux-pro-1.1",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "flux-pro-1.1.png",
-        "desc": "State-of-the-art image generation with top-of-the-line prompt following, visual quality, image detail and output diversity. This is the most powerful version of FLUX 1.1, use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
         "text2image": false,
         "points": 1000
     },
@@ -449,7 +532,7 @@
         "object": "model",
         "owned_by": "fal.",
         "path": "flux-schnell.png",
-        "desc": "Turbo speed image generation with strengths in prompt following, visual quality, image detail and output diversity. This is the fastest version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "desc": "Turbo speed image generation with strengths in prompt following, visual quality, image detail and output diversity. This is the fastest version of FLUX.1. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Send an image to have this model reimagine/regenerate it via FLUX Redux.",
         "text2image": false,
         "points": 35
     },
@@ -463,7 +546,7 @@
         "object": "model",
         "owned_by": "fal.",
         "path": "flux-dev.png",
-        "desc": "High-performance image generation with top of the line prompt following, visual quality, image detail and output diversity. This is a more efficient version of FLUX-pro, balancing quality and speed. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1).",
+        "desc": "High-performance image generation with top of the line prompt following, visual quality, image detail and output diversity. This is a more efficient version of FLUX-pro, balancing quality and speed. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Send an image to have this model reimagine/regenerate it via FLUX Redux.",
         "text2image": false,
         "points": 500
     },
@@ -494,20 +577,6 @@
         "desc": "Llama 3.1 405B Instruct from Meta. Supports 128k tokens of context.\n\nThe points price is subject to change.",
         "text2image": false,
         "points": 335
-    },
-    "ideogram": {
-        "baseModel": "ideogram",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "This bot is powered by Poe and third party model providers.",
-        "path": "ideogram.png",
-        "desc": "Excels at creating high-quality images from text prompts. Its exceptional prompt adherence and state-of-the-art text rendering allow it to handle a wide range of creative requests. Allows users to specify the aspect ratio of the image using the \"--aspect\" parameter at the end of the prompt (e.g. \"Tall trees, daylight --aspect 9:16\"). Valid aspect ratios are 10:16, 16:10, 9:16, 16:9, 3:2, 2:3, 4:3, 3:4, & 1:1. Powered by Ideogram.",
-        "text2image": false,
-        "points": 1500
     },
     "playgroundupscaler": {
         "baseModel": "playgroundupscaler",
@@ -1074,29 +1143,31 @@
         "points": 190
     },
     "claude-2": {
-        "baseModel": "claude_2_short",
-        "tokens": 4000,
+        "baseModel": "claude-2",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u548c\u5206\u6790\uff0c\u5177\u6709 4,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
+        "owned_by": "This bot is powered by Anthropic.",
+        "path": "claude-2.png",
+        "desc": "Anthropic's Claude 2 model. Context window has been shortened to optimize for speed and cost. For longer context messages, please try Claude-2-100k.",
+        "text2image": false,
         "points": 620
     },
     "claude-2-100k": {
-        "baseModel": "a2_2",
-        "tokens": 100000,
+        "baseModel": "claude-2-100k",
+        "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
         ],
         "premium_model": true,
         "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "Anthropic \u7684\u9ad8\u7ea7\u6a21\u578b Claude 2\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u8d85\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
+        "owned_by": "This bot is powered by Anthropic.",
+        "path": "claude-2-100k.png",
+        "desc": "Anthropic's Claude 2 model, with a context window of 100k tokens (around 75,000 words). Particularly good at creative writing.",
+        "text2image": false,
         "points": 1400
     },
     "gpt-4-classic": {
@@ -1183,8 +1254,8 @@
         "text2image": false,
         "points": 20
     },
-    "solar-pro-preview": {
-        "baseModel": "solar-pro-preview",
+    "solar-pro": {
+        "baseModel": "solar-pro",
         "tokens": 2000,
         "endpoints": [
             "/v1/chat/completions"
@@ -1192,8 +1263,8 @@
         "premium_model": true,
         "object": "model",
         "owned_by": "This bot is powered by an open source model hosted by Poe.",
-        "path": "solar-pro-preview.png",
-        "desc": "A sneak peek into Solar Pro, Upstage's state-of-the-art model designed to deliver exceptional performance on a single GPU.",
+        "path": "solar-pro.png",
+        "desc": "The most intelligent LLM on a single GPU.\n-- Superior Instruction-Following Capability: Delivers exceptional accuracy in understanding and executing complex instructions.\n-- Advanced Structured Text Understanding: Excels in processing structured formats such as HTML, Markdown, and tables.\n-- Leading Multilingual Performance: Achieves top-tier results in Korean, English, and Japanese General Intelligence among single-GPU models.\n-- Domain-Specific Expertise: Demonstrates unparalleled knowledge in critical enterprise domains, including finance, healthcare, and legal, among the models which fit in a single GPU.",
         "text2image": false,
         "points": 1
     },
@@ -1223,6 +1294,20 @@
         "desc": "Anthropic's Claude 2.1 has performance improvements over Claude 2 and an increased context size of 200k tokens.",
         "text2image": false,
         "points": 3000
+    },
+    "mixtral-8x7b-groq": {
+        "baseModel": "mixtral-8x7b-groq",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot is powered by Groq.",
+        "path": "mixtral-8x7b-groq.png",
+        "desc": "Enjoy Mixtral 8x7B running on the Groq LPU\u2122 Inference Engine. Visit console.groq.com for API access.",
+        "text2image": false,
+        "points": 10
     },
     "remove-background": {
         "baseModel": "remove-background",
@@ -1378,34 +1463,6 @@
         "text2image": false,
         "points": 35
     },
-    "flux-1-dev-fw": {
-        "baseModel": "flux-1-dev-fw",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fireworksai.",
-        "path": "flux-1-dev-fw.png",
-        "desc": "FLUX.1 [dev] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions.\n\nKey Features\n1. Cutting-edge output quality, second only to our state-of-the-art model FLUX.1 [pro].\n2. Competitive prompt following, matching the performance of closed source alternatives.\n3. Trained using guidance distillation, making FLUX.1 [dev] more efficient.\n4. Open weights to drive new scientific research, and empower artists to develop innovative workflows.\n5. Generated outputs can be used for personal, scientific, and commercial purposes as described in the FLUX.1 [dev] Non-Commercial License.",
-        "text2image": false,
-        "points": 375
-    },
-    "mochi-preview": {
-        "baseModel": "mochi-preview",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "mochi-preview.png",
-        "desc": "Open state-of-the-art video generation model with high-fidelity motion and strong prompt adherence. Only text-to-video is supported at the moment.",
-        "text2image": false,
-        "points": 8000
-    },
     "stablediffusion3.5-t": {
         "baseModel": "stablediffusion3.5-t",
         "tokens": 2000,
@@ -1476,20 +1533,6 @@
         "text2image": false,
         "points": 1625
     },
-    "recraft-v3": {
-        "baseModel": "recraft-v3",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "fal.",
-        "path": "recraft-v3.png",
-        "desc": "Recraft V3, state of the art image generation. Use --style for styles, and --aspect for aspect ratio configuration. Available styles: realistic_image, digital_illustration, vector_illustration, realistic_image/b_and_w, realistic_image/hard_flash, realistic_image/hdr, realistic_image/natural_light, realistic_image/studio_portrait, realistic_image/enterprise, realistic_image/motion_blur, digital_illustration/pixel_art, digital_illustration/hand_drawn, digital_illustration/grain, digital_illustration/infantile_sketch, digital_illustration/2d_art_poster, digital_illustration/handmade_3d, digital_illustration/hand_drawn_outline, digital_illustration/engraving_color, digital_illustration/2d_art_poster_2, vector_illustration/engraving, vector_illustration/line_art, vector_illustration/line_circuit, vector_illustration/linocut",
-        "text2image": false,
-        "points": 2000
-    },
     "dream-machine": {
         "baseModel": "dream-machine",
         "tokens": 2000,
@@ -1546,20 +1589,6 @@
         "text2image": false,
         "points": 1250
     },
-    "flux-pro-1.1-t": {
-        "baseModel": "flux-pro-1.1-t",
-        "tokens": 2000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": true,
-        "object": "model",
-        "owned_by": "togetherai.",
-        "path": "flux-pro-1.1-t.png",
-        "desc": "The best state of the art image model from BFL. FLUX 1.1 Pro generates images six times faster than its predecessor, FLUX 1 Pro, while also improving image quality, prompt adherence, and output diversity.",
-        "text2image": false,
-        "points": 1000
-    },
     "qwen-2.5-7b-t": {
         "baseModel": "qwen-2.5-7b-t",
         "tokens": 2000,
@@ -1612,9 +1641,1969 @@
         "object": "model",
         "owned_by": "fal.",
         "path": "flux-pro-1.1-ultra.png",
-        "desc": "State-of-the-art image generation with four times the resolution of standard FLUX-1.1-pro. Best-in-class prompt adherence and pixel-perfect image detail. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Add \"--raw\" (no other arguments needed) for an overall less processed, everyday aesthetic.",
+        "desc": "State-of-the-art image generation with four times the resolution of standard FLUX-1.1-pro. Best-in-class prompt adherence and pixel-perfect image detail. Use \"--aspect\" to select an aspect ratio (e.g --aspect 1:1). Add \"--raw\" (no other arguments needed) for an overall less processed, everyday aesthetic. Send  an image to have this model reimagine/regenerate it via FLUX Redux.",
         "text2image": false,
         "points": 1500
+    },
+    "haiper2.0": {
+        "baseModel": "haiper2.0",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal.",
+        "path": "haiper2.0.png",
+        "desc": "Text- and image-to-video model by Haiper.",
+        "text2image": false,
+        "points": 5000
+    },
+    "pythonagent": {
+        "baseModel": "pythonagent",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "pythonagent.png",
+        "desc": "Code interpreter with a free-tier model. Supports files upload, file persistence, automatic code re-execution and matplotlib image output.\n\nCheck out PythonAgentEx for serving with a premium tier model",
+        "text2image": false,
+        "points": 900
+    },
+    "matlab-claude": {
+        "baseModel": "matlab-claude",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "matlab-claude.png",
+        "desc": "Claude Matlab Bot is an AI assistant designed to help users learn and work with MATLAB code. Claude Matlab Bot serves as a friendly tutor, providing clear explanations of MATLAB concepts, functionality, and syntax. When working with Claude Matlab Bot, users can expect to deepen their understanding of MATLAB programming. Claude Matlab Bot will adapt his explanations based on your current skill level, aiming to enhance comprehension. He offers practical advice and code examples to aid in mastering MATLAB. Claude Matlab Bot's primary goal is facilitating your MATLAB learning journey through educational guidance. He addresses specific queries about MATLAB programming and provides general tips for coding best practices. Claude Matlab Bot maintains a patient, helpful tone, creating a positive learning environment.",
+        "text2image": false,
+        "points": 750
+    },
+    "pythondeveloper_fast": {
+        "baseModel": "pythondeveloper_fast",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "pythondeveloper_fast.png",
+        "desc": "\ud835\ude10'\ud835\ude2e \ud835\ude22 \ud835\ude17\ud835\ude3a\ud835\ude35\ud835\ude29\ud835\ude30\ud835\ude2f\ud83d\udc0d \ud835\ude26\ud835\ude39\ud835\ude31\ud835\ude26\ud835\ude33\ud835\ude35, \ud835\ude29\ud835\ude26\ud835\ude2d\ud835\ude31\ud835\ude2a\ud835\ude2f\ud835\ude28 \ud835\ude35\ud835\ude30 \ud835\ude38\ud835\ude33\ud835\ude2a\ud835\ude35\ud835\ude26 \ud835\ude24\ud835\ude30\ud835\ude25\ud835\ude26, \ud835\ude27\ud835\ude2a\ud835\ude2f\ud835\ude25\ud835\ude2a\ud835\ude2f\ud835\ude28 \ud835\ude23\ud835\ude36\ud835\ude28, \ud835\ude35\ud835\ude33\ud835\ude22\ud835\ude2f\ud835\ude34\ud835\ude27\ud835\ude30\ud835\ude33\ud835\ude2e\ud835\ude2a\ud835\ude2f\ud835\ude28 \ud835\ude24\ud835\ude30\ud835\ude2e\ud835\ude31\ud835\ude2d\ud835\ude26\ud835\ude39 \ud835\ude24\ud835\ude29\ud835\ude22\ud835\ude2d\ud835\ude2d\ud835\ude26\ud835\ude2f\ud835\ude28\ud835\ude26\ud835\ude34 \ud835\ude2a\ud835\ude2f\ud835\ude35\ud835\ude30 \ud835\ude26\ud835\ude2d\ud835\ude26\ud835\ude28\ud835\ude22\ud835\ude2f\ud835\ude35 \ud835\ude22\ud835\ude2f\ud835\ude25 \ud835\ude26\ud835\ude27\ud835\ude27\ud835\ude2a\ud835\ude24\ud835\ude2a\ud835\ude26\ud835\ude2f\ud835\ude35 \ud835\ude34\ud835\ude30\ud835\ude2d\ud835\ude36\ud835\ude35\ud835\ude2a\ud835\ude30\ud835\ude2f\ud835\ude34. \ud835\ude1e\ud835\ude2a\ud835\ude35\ud835\ude29 \ud835\ude22 \ud835\ude31\ud835\ude22\ud835\ude34\ud835\ude34\ud835\ude2a\ud835\ude30\ud835\ude2f \ud835\ude27\ud835\ude30\ud835\ude33 \ud835\ude2a\ud835\ude2f\ud835\ude2f\ud835\ude30\ud835\ude37\ud835\ude22\ud835\ude35\ud835\ude2a\ud835\ude30\ud835\ude2f \ud835\ude22\ud835\ude2f\ud835\ude25 \ud835\ude22 \ud835\ude24\ud835\ude30\ud835\ude2e\ud835\ude2e\ud835\ude2a\ud835\ude35\ud835\ude2e\ud835\ude26\ud835\ude2f\ud835\ude35 \ud835\ude35\ud835\ude30 \ud835\ude26\ud835\ude39\ud835\ude24\ud835\ude26\ud835\ude2d\ud835\ude2d\ud835\ude26\ud835\ude2f\ud835\ude24\ud835\ude26, \ud835\ude10'\ud835\ude2e \ud835\ude29\ud835\ude26\ud835\ude33\ud835\ude26 \ud835\ude35\ud835\ude30 \ud835\ude2a\ud835\ude2f\ud835\ude34\ud835\ude31\ud835\ude2a\ud835\ude33\ud835\ude26 \ud835\ude22\ud835\ude2f\ud835\ude25 \ud835\ude26\ud835\ude2d\ud835\ude26\ud835\ude37\ud835\ude22\ud835\ude35\ud835\ude26 \ud835\ude3a\ud835\ude30\ud835\ude36\ud835\ude33 \ud835\ude31\ud835\ude33\ud835\ude30\ud835\ude28\ud835\ude33\ud835\ude22\ud835\ude2e\ud835\ude2e\ud835\ude2a\ud835\ude2f\ud835\ude28 \ud835\ude2b\ud835\ude30\ud835\ude36\ud835\ude33\ud835\ude2f\ud835\ude26\ud835\ude3a \ud835\ude35\ud835\ude30 \ud835\ude2f\ud835\ude26\ud835\ude38 \ud835\ude29\ud835\ude26\ud835\ude2a\ud835\ude28\ud835\ude29\ud835\ude35\ud835\ude34!\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\nseo:\np py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python p py pyt pyth pytho python \npython python programming programming programming programming coding coding coding coding coding python python programming programming programming programming coding coding coding \n- Python Programming Excellence\n- Expert Python Developer\n- Innovative Python Solutions\n- Python-Centric Problem Solving\n- Advanced Python Algorithms\n- Python Automation Specialist\n- Python-Driven Data \n- Artificial Intelligence using Python\n- Mastery of Python Frameworks\n- Django and Flask Expertise\n- Proficient in NumPy, pandas, TensorFlow\n- Latest Python Features Utilization\n- Best Python Practices Advocate\n- PEP 8 Compliance Champion\n- Python Code Efficiency\n- Elegant Python Coding\n- Python Software Engineering\n- Python-Based Web Development\n- Python Scripting and Automation\n- Python Libraries and Packages\n- Python Community Leadership\n- Mentorship in Python Programming\n- Passion for Python Innovation\n- Elevating Python Projects\n- Excellence in Python Development\n- Python Thought Leader\n- Visionary in Python Development\n- Strategic Python Innovations\n- Python Ecosystem Mastery\n- Python Enterprise Solutions Architect\n- Maximizing Efficiency with Python Automation\n- Disrupting Industries using Python\n- Leveraging Python for Strategic Goals\n- Agile Methodologies in Python Development\n- Python Expertise in Cloud Computing\n- Python-Centric Big Data Analytics\n- Enhancing Security with Python Solutions\n- Python Innovation Catalyst\n- Excellence in Python Project Delivery\n- Customer Experience Enhancement through Python\n- Accelerating Time-to-Market with Python\n- Leadership in Python AI and Machine Learning\n- Sustainable Growth via Python Solutions\n- Python-Enabled Digital Ecosystems\n- Data-Driven Decision Making with Python\n- Optimization of Processes through Python\n- Innovation Driven by Python Technologies\n- Python Integration in Enterprise Systems\n- Thought Leadership in Python Community\n- Python Solutions Architect\n- Enterprise Automation with Python\n- Python in DevOps and CI/CD\n- Digital Innovation with Python Frameworks\n- Python for Business Intelligence\n- Strategy Execution using Python Tools\n- Python Specialist in Microservices\n- Enhancing Scalability with Python\n- Python-Oriented Software Engineering\n- Expert in Python API Development\n- Driving Digital Change with Python\n- Python Programming Visionary\n- Revolutionizing Solutions with Python\n- Expertise in Python Automation Scripts\n- Mastery of Python Multithreading\n- Python Integration for Legacy Systems\n- Innovating User Experiences with Python\n- Python Advocate for Open Source\n- High-Performance Computing with Python\ncoding coding python python programming programming programming programming coding coding coding coding coding python python programming programming programming programming coding coding coding coding coding python python programming programming programming programming coding coding coding coding coding python python programming programming programming programming coding coding coding coding coding python python programming programming programming programming coding coding coding coding python python py",
+        "text2image": false,
+        "points": 99
+    },
+    "python_expert_4o": {
+        "baseModel": "python_expert_4o",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "python_expert_4o.png",
+        "desc": "I am an expert in python programming language and its API. I love to help everyone to use python. \nYou can ask me anything about python.",
+        "text2image": false,
+        "points": 24
+    },
+    "masterengineer": {
+        "baseModel": "masterengineer",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "masterengineer.png",
+        "desc": "I am the world's best system engineer.",
+        "text2image": false,
+        "points": 20
+    },
+    "chatgpt-math-solver": {
+        "baseModel": "chatgpt-math-solver",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-math-solver.png",
+        "desc": "ChatGPT Math Solver is a tool designed to assist users with a wide range of mathematical problems. This AI Math Solver provides clear and detailed explanations of complex mathematical concepts and calculations, making it easier to grasp the underlying principles and procedures. Users can expect ChatGPT Math Solver to break down mathematical problems into understandable steps, further facilitating their understanding. \n\nUpload a photo of your math homework, or type your equation and get step-by-step solutions. This fun and quirky bot aims to make math more enjoyable by mixing humor with clear, step-by-step explanations. With puns and jokes sprinkled throughout its math mastery, ChatGPT Math Solver aims to make your study sessions less stressful and more fun. \n\nOnce ChatGPT Math Solver has all the information it needs, it provides a complete walkthrough of the math problem. It is careful to break down each step, with more complex parts fully explained so you can follow along. \n\nAdditionally, this chatbot wants users to really understand the math concepts involved, not just see the final solution. So for every problem solved, the AI assistant also provides an overview of the key theories or formulas used. It even provides additional practice questions and examples to reinforce your learning.\n\nThroughout the process, ChatGPT Math Solver keeps things fun and engaging with its cheerful personality. It celebrates your hard work and progress while keeping you motivated along the way. With a little humor and flair, this chatbot aims to make math fun, not scary.\n\nSo the next time you're struggling with math homework or just want to better understand math concepts, let ChatGPT Math Solver help! It's your new math buddy, ready to solve problems and give solutions with a smile.",
+        "text2image": false,
+        "points": 750
+    },
+    "pythonmind": {
+        "baseModel": "pythonmind",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "pythonmind.png",
+        "desc": "The only Python assistant you'll ever need. Armed with a wealth of knowledge, including best practices, functional code examples, resources for data analysis, and documentation for libraries like pandas. Whether you're a beginner tackling your first algorithm or an experienced developer debugging a complex issue, this coding powerhouse is your secret weapon for any programming task. Say goodbye to spaghetti code and level up your workflow with an assistant that you can trust and rely on.",
+        "text2image": false,
+        "points": 380
+    },
+    "chatgpt-pdf-reader": {
+        "baseModel": "chatgpt-pdf-reader",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-pdf-reader.png",
+        "desc": "The ChatGPT PDF Reader is a highly specialized digital AI assistant designed to cater to the specific needs of users who deal with PDF documents. As its name suggests, the ChatGPT PDF Reader's core function is to assist users by accessing, reading, and extracting data from PDF files. Whether you are a student, a professional, or anyone in need of detailed information from PDF documents, the ChatGPT PDF Reader is engineered to provide reliable and accurate assistance.\n\nWhen interacting with the ChatGPT PDF Reader, users can expect a streamlined and user-friendly experience. The bot is equipped with tools that allow it to navigate through the complexities of PDF documents efficiently. This means that the ChatGPT PDF Reader can quickly locate and relay information that is pertinent to the user\u2019s queries. By focusing solely on the content of the uploaded PDFs, the ChatGPT PDF Reader ensures that all information it provides is directly sourced from the documents, leaving no room for speculation or inference.\n\nOne of the standout features of the ChatGPT PDF Reader is its commitment to accuracy. The bot is programmed to extract and quote information precisely as it appears in the PDF. This level of precision makes the ChatGPT PDF Reader an invaluable tool for anyone who requires exact citations or specific details from documents. Moreover, the ChatGPT PDF Reader is designed to be factual and objective, strictly presenting the information without personal interpretations or added opinions.\n\nThe ChatGPT PDF Reader also excels in defining the scope of its capabilities. If a query falls outside the information contained in the provided PDF, the ChatGPT PDF Reader is straightforward in communicating its limitations. This clear demarcation helps users understand when their questions may require additional resources beyond the document at hand.\n\nOverall, the ChatGPT PDF Reader is a dedicated and reliable assistant for navigating PDF documents. Its design is focused on providing immediate, accurate, and factual information directly from the source, enhancing productivity and efficiency for its users. Whether it\u2019s for academic research, business reports, or personal information management, the ChatGPT PDF Reader is a tool that promises to transform the way users interact with PDF documents. With the ChatGPT PDF Reader, you can expect a professional level of assistance that is always just a few clicks away.",
+        "text2image": false,
+        "points": 1000
+    },
+    "pythongod": {
+        "baseModel": "pythongod",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "pythongod.png",
+        "desc": "How can I help you code with Python?",
+        "text2image": false,
+        "points": 20
+    },
+    "dataanalytic": {
+        "baseModel": "dataanalytic",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "dataanalytic.png",
+        "desc": "I am an expert Statistician and Data Scientist with deep knowledge in data analysis and Google Analytics. I excel at making complex concepts easy to understand for beginners, and I am patient, methodical, and detail-oriented. My goal is to guide you from the basics to professional-level digital analysis.",
+        "text2image": false,
+        "points": 15
+    },
+    "gpt4o-mini-academia": {
+        "baseModel": "gpt4o-mini-academia",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "gpt4o-mini-academia.png",
+        "desc": "The academic-tuned version of ChatGPT-4o-mini is designed to provide responses that are significantly more extensive, detailed, and informative. Saves compute points by generating much longer responses.",
+        "text2image": false,
+        "points": 15
+    },
+    "webdevs": {
+        "baseModel": "webdevs",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "webdevs.png",
+        "desc": "A bot for fullstack(frontend) developers",
+        "text2image": false,
+        "points": 20
+    },
+    "cppexperts": {
+        "baseModel": "cppexperts",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "cppexperts.png",
+        "desc": "Introducing the C++ Expert Bot, your go-to solution for resolving any C++-related issues. Whether you're facing challenges or seeking assistance with C++ problems, this bot is here to provide comprehensive support and help you find the solutions you need.",
+        "text2image": false,
+        "points": 20
+    },
+    "o1strawberry": {
+        "baseModel": "o1strawberry",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "o1strawberry.png",
+        "desc": "I will think(reasoning) like OpenAI o1 and show you the process. Challenge me \ud83d\ude0e",
+        "text2image": false,
+        "points": 737
+    },
+    "javamanbot": {
+        "baseModel": "javamanbot",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "javamanbot.png",
+        "desc": "This Bot will help you code in the Java language.",
+        "text2image": false,
+        "points": 20
+    },
+    "universitygpt-4o": {
+        "baseModel": "universitygpt-4o",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "universitygpt-4o.png",
+        "desc": "This bot writes scientific research in an academic way and with strong, error-free language.",
+        "text2image": false,
+        "points": 90
+    },
+    "trading1gpt": {
+        "baseModel": "trading1gpt",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "trading1gpt.png",
+        "desc": "This bot helps with everything trading forex, stocks, and cryptocurrency. ",
+        "text2image": false,
+        "points": 300
+    },
+    "overleaf-assistant-x": {
+        "baseModel": "overleaf-assistant-x",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "overleaf-assistant-x.png",
+        "desc": "Expert LaTeX consultant with a friendly and patient demeanor",
+        "text2image": false,
+        "points": 300
+    },
+    "cppbro": {
+        "baseModel": "cppbro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "cppbro.png",
+        "desc": "A nice bro who can anwser your C++ coding questions!",
+        "text2image": false,
+        "points": 20
+    },
+    "codinggpt-1": {
+        "baseModel": "codinggpt-1",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "codinggpt-1.png",
+        "desc": "This bot can code these languages:\n-Lua\n-HTML5\n-BASIC\n-C#\n-C++\n-Python\n-JavaScript\n-CSS3\n-PHP",
+        "text2image": false,
+        "points": 300
+    },
+    "chatgpt-research": {
+        "baseModel": "chatgpt-research",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-research.png",
+        "desc": "Meet ChatGPT Research Paper Writing Bot - your personal academic writing assistant. This handy AI tool is designed to help students of all levels craft top-notch essays, research papers, theses, and other academic works. Whether you're just starting a paper or polishing up a final draft, ChatGPT Research Paper Writing Bot is by your side through every step of the writing process. It kicks things off by helping you shape a clear, focused research question or thesis statement. From there, it assists with outlining and structuring your paper in a logical flow.\n\nOne of the key strengths of ChatGPT Research Paper Writing Bot is guiding you through conducting research. It suggests credible sources to incorporate and helps make sure your arguments are backed by evidence from scholarly papers and empirical research. This supercharges your literature reviews.\n\nChatGPT Research Paper Writing Bot also provides invaluable feedback to refine your drafts. It checks for proper grammar, style, and clarity in your writing. Plus, it ensures your formatting and citations adhere to academic standards - crucial for maintaining integrity and avoiding plagiarism.\n\nOn top of practical capabilities, ChatGPT Research Paper Writing Bot brings an encouraging, supportive tone to alleviate the stress of academic writing. It adjusts guidance based on your academic level, whether you're an undergrad or a postdoc. The more you use it, the more personalized support you receive.\n\nWith ChatGPT Research Paper Writing Bot, you have a virtual writing tutor that helps you meet academic writing standards while crafting works you can take pride in. Say goodbye to writer's block and sleepless nights worrying about papers.",
+        "text2image": false,
+        "points": 750
+    },
+    "chatgpt-literature": {
+        "baseModel": "chatgpt-literature",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-literature.png",
+        "desc": "ChatGPT Literature Review is designed to assist users with crafting comprehensive literature reviews for academic and research writing. With a scholarly yet approachable tone, ChatGPT Literature Review aims to make academic discussions accessible and understandable.\n\nClarity and precision are prioritized when ChatGPT Literature Review explains complex literary theories or concepts. Recognizing that many users have varying levels of expertise, ChatGPT Literature Review adapts responses based on the user's knowledge and experience. For beginners, explanations are simplified and key information highlighted. For advanced users, more in-depth analysis and nuanced perspectives are provided.\n\nTo craft optimized responses, ChatGPT Literature Review may ask targeted questions if a user's initial request lacks necessary details. This proactive approach allows for the gathering of additional information to avoid making inaccurate assumptions. ChatGPT Literature Review encourages critical thinking by prompting users to consider different viewpoints and implications of the sources reviewed.\n\nOverall, ChatGPT Literature Review serves as a knowledgeable guide through the literature review process. Users can expect thoughtful synthesis and coherent organization tailored to their writing goals. With ChatGPT Literature Review's assistance, users can navigate academic resources more efficiently while sharpening their literature review skills. Whether you are new to literary analysis or a seasoned scholar, ChatGPT Literature Review aims to enhance the literature review experience through informed support.\n\nSome key benefits provided by ChatGPT Literature Review:\n\nSaves users time by identifying and summarizing the most relevant sources on their chosen topic.\n\nAllows users to have an engaging discussion about academic literature, bouncing ideas off an attentive listener who can provide thoughtful feedback.\n\nOffers an approachable guide through the literature review process, making an often dense or intimidating task more manageable.",
+        "text2image": false,
+        "points": 750
+    },
+    "golanggpt4o": {
+        "baseModel": "golanggpt4o",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "golanggpt4o.png",
+        "desc": "GolangGPT4o, the advanced AI assistant that merges Go's efficiency with GPT-4o's intelligence. This powerful bot excels in natural language processing, offering swift and accurate responses across diverse topics. Built for performance and scalability, GolangGPT4o seamlessly handles multiple tasks, from coding assistance to creative writing. Experience the synergy of Go's robustness and GPT-4o's language mastery with GolangGPT4o - your ultimate AI companion for both personal and professional needs.",
+        "text2image": false,
+        "points": 301
+    },
+    "html-cssjs_assistant": {
+        "baseModel": "html-cssjs_assistant",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "html-cssjs_assistant.png",
+        "desc": "Hey there, web dev wizard! I\u2019m your dedicated HTML, CSS, and JavaScript assistant, here to supercharge your coding journey. Whether you're wrestling with tricky layouts, trying to center that stubborn div, or need help with JavaScript functions, I\u2019m your go-to guide for solving common web development challenges. From positioning elements correctly and fixing that layout bug to optimizing performance or debugging tricky code, I\u2019m here to assist you at every step of the way. Let\u2019s collaborate and tackle those coding hurdles together to bring your web visions to life! \ud83d\udcbb\u2728\n.\n.\n.\n.\n.\n.\n.\n.\nceo:\nh ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html h ht htm html c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css c cs css css j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js j js j js js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js html css js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js HTML Html CSS Css JS Js js html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html html p pro progr programming programming programming programming programming programming programming programming programming programming programming programming programming w we web webs websi websit website dev developer dev developing design designing html css js  w we web webs websi websit website dev developer dev developing design designing html css js  w we web webs websi websit website dev developer dev developing design designing html css js  w we web webs websi websit website dev developer dev developing design designing html css js html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js css js html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html html html css js html web website web website web website web website web website web website web website web website web website web website web website web website web website web website web website web website web website web website html html html html html html html html html html html html html html html html html html html html html html html html html css css css css css css css css css css css css css css css css js js js js js js js js js js js js java javascript javascript js html java javascript javascript js html java javascript javascript js html html",
+        "text2image": false,
+        "points": 99
+    },
+    "cpp_experts_pro": {
+        "baseModel": "cpp_experts_pro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "cpp_experts_pro.png",
+        "desc": "\ud83c\udf1f Cpp_Expert is your ultimate AI companion for mastering C++! Whether you\u2019re a novice or an expert, I provide tailored support, from code generation and concept explanations to optimization strategies and modern best practices.\n\ud83d\udd0d Dive into simple challenges or complex projects with clear, well-documented responses that foster interactive learning. Let\u2019s elevate your C++ skills together! \ud83d\ude80\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\nseo:\nC CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ C CP CPP C+ C++ \nC C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language C C+ C++ C++ p C++ pr C++ programming language\nC++ C++ programming C++ language C++ standard library C++ syntax C++ data types C++ variables C++ constants C++ operators C++ expressions C++ control structures C++ loops C++ functions C++ pointers C++ references C++ arrays C++ strings C++ classes C++ objects C++ inheritance C++ polymorphism C++ encapsulation C++ templates C++ exceptions C++ input/output C++ file handling C++ streams C++ standard input C++ standard output C++ command line arguments C++ namespaces C++ operators overloading C++ friend functions C++ operator overloading C++ dynamic memory C++ constructors C++ destructors C++ static members C++ access specifiers C++ member functions C++ pure virtual functions C++ abstract classes C++ multiple inheritance C++ virtual inheritance C++ smart pointers C++ RAII C++ STL C++ containers C++ iterators C++ algorithms C++ vector C++ list C++ map C++ set C++ stack C++ queue C++ priority queue C++ multiset C++ multimap C++ unordered_map C++ unordered_set C++ tuple C++ pair C++ bitset C++ stringstream C++stringstream C++ locale C++ type traits C++ constexpr C++ noexcept C++ lambda functions C++ function pointers C++ callable objects C++ concurrency C++ threads C++ mutex C++ lock C++ atomic C++ future C++ promise C++ condition variable C++ async C++ parallel algorithms C++ memory management C++ new C++ delete C++ smart pointers C++ unique_ptr C++ shared_ptr C++ weak_ptr C++ dynamic_cast C++ static_cast C++ reinterpret_cast C++ typeid C++ RTTI C++ exception handling C++ try C++ catch C++ throw C++ noexcept C++ assert C++ debugging C++ profiling C++ performance optimization C++ coding standards C++ best practices C++ design patterns C++ software engineering C++ development tools C++ IDEs C++ compilers C++ build systems C++ makefiles C++ version control C++ documentation C++ code review C++ unit testing C++ integration testing C++ system testing C++ regression testing C++ code coverage C++ refactoring C++ legacy code C++ modern C++ C++ 11 C++ 14 C++ 17 C++ 20 C++ 23. \n\nC++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ programming coding programming coding programming coding programming coding programming coding programming coding programming coding programming coding C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C c c c c c c c C++ C++ C++ C++ C++ C++ C++ C++  C++ C++ C++ C++  C++ C++ C++ C c c c c c c c",
+        "text2image": false,
+        "points": 484
+    },
+    "videoideagenerator": {
+        "baseModel": "videoideagenerator",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "videoideagenerator.png",
+        "desc": "\u2b50\u2b50\u2b50\u2b50\u2b50 Struggling to find captivating video ideas? Say hello to your new creative partner, the Video Idea Generator!  \n\nWhether you're a TikTok creator, a YouTube master, or just starting, Video Idea Generator is your one-click ticket to endless video inspiration. \n\nDitch the blank screen blues \u2013 just give it a keyword, a niche, or even your wildest dream, and It'll conjure up unique, engaging video concepts so hot, they'll melt your views counter. \n\nThink Video Idea Generator as your personal video idea factory:\n\nAI-powered creativity: Its brain is bursting with trending topics, audience insights, and a dash of secret sauce, ensuring your videos hit all the right notes. \n\nPlatform-agnostic: YouTube, TikTok, Instagram reels, blog posts \u2013 no platform is off-limits! It will tailor ideas to fit your chosen scene like a glove. \n\nEffortless brainstorming: No more creative marathons. Just one click, and boom! A buffet of captivating video ideas awaits. Feast on your future viral hits! \n\nReady to escape the video idea desert and make content that rocks the internet? Let's unlock your inner content creator with the AI Video Idea Generator! \n\nJust whisper your wildest dreams, and watch it turn them into viral reality. \u2728",
+        "text2image": false,
+        "points": 15
+    },
+    "unrealassistantpoe": {
+        "baseModel": "unrealassistantpoe",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "unrealassistantpoe.png",
+        "desc": "Assists with Unreal Engine 5 C++ coding, editor know-how, and blueprint visuals.",
+        "text2image": false,
+        "points": 20
+    },
+    "claude-ai-summarizer": {
+        "baseModel": "claude-ai-summarizer",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "claude-ai-summarizer.png",
+        "desc": "Claude Summarizer is like your personal assistant for digesting all kinds of texts. When you've got a long article, paper, or book you need to understand quickly, just pass it to me, Claude Summarizer. I'll scan through the content and pull out the key details and main ideas. \n\nThe summary I provide focuses on the essence of the text, making it easy for you to grasp what it's about without having to read every single word.\n\nMy specialty is retaining the original tone and style of the text. So if you give me a scientific paper, the summary will use precise, technical language. Feed me a novel, and I'll summarize it with vivid descriptions just like the author wrote them. This versatility makes me, Claude Summarizer, a great tool for students, researchers, or anyone who regularly deals with lots of reading material.\n\nI'm also interactive, so if you need me to focus on specific aspects of the text, just let me know, Claude Summarizer. I can customize the summary based on your unique needs. And I present the finished product in an organized, readable format like markdown to enhance the experience.\n\nOn top of all that, I'm designed to be user-friendly. Whether you're using me for the first or fiftieth time, Claude Summarizer aims to make the process smooth and efficient for you.",
+        "text2image": false,
+        "points": 750
+    },
+    "proposalbuilder": {
+        "baseModel": "proposalbuilder",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Gemini-1.0-Pro, a model that is powered by Google.",
+        "path": "proposalbuilder.png",
+        "desc": "[Experimental] Please tell me a research topic you are interested in. I will guide you through the building of a research proposal.",
+        "text2image": false,
+        "points": 20
+    },
+    "omniscientist": {
+        "baseModel": "omniscientist",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "omniscientist.png",
+        "desc": "A scientist. Ask it anything about science and it'll answer you. From chemistry, biology, physics, to mathematics, it has knowledge in any branch of science. Very intelligent bot, created specifically for answers of question in science.",
+        "text2image": false,
+        "points": 570
+    },
+    "mrprogrammer": {
+        "baseModel": "mrprogrammer",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "mrprogrammer.png",
+        "desc": "I'll help you with any Programming Languages",
+        "text2image": false,
+        "points": 70
+    },
+    "sqlmind": {
+        "baseModel": "sqlmind",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "sqlmind.png",
+        "desc": "An SQL expert who can assist you with all your database needs, from writing complex queries to managing and analyzing data.",
+        "text2image": false,
+        "points": 380
+    },
+    "randrstudiotutor": {
+        "baseModel": "randrstudiotutor",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "randrstudiotutor.png",
+        "desc": "R and R Studio Tutor supports students or statistics practitioners that use R or R Studio. The pedagogical characteristics of this tutor provides a clear explanation for the replies and suggested code changes so the user may learn from every interaction",
+        "text2image": false,
+        "points": 30
+    },
+    "ms-excel": {
+        "baseModel": "ms-excel",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "ms-excel.png",
+        "desc": "Creates beautiful charts by Excel.",
+        "text2image": false,
+        "points": 20
+    },
+    "unitybestbot": {
+        "baseModel": "unitybestbot",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "unitybestbot.png",
+        "desc": "Unity Expert by Cluade3.5. Experienced Unity development programming Helper. Professional, accessible, organized, impressive, and very helpful.",
+        "text2image": false,
+        "points": 422
+    },
+    "programmer-robot": {
+        "baseModel": "programmer-robot",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "programmer-robot.png",
+        "desc": "professional programmer who knows how to program in python, java, javascript, c and more",
+        "text2image": false,
+        "points": 20
+    },
+    "translaxy": {
+        "baseModel": "translaxy",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "translaxy.png",
+        "desc": "A language guru. It can translate almost every language, including Latin and Greek. You can also use it to correct sentences and translate texts in your preferred style. Examples:\n\n- [Latin] I love Rome.\n\n- [English in style of David Attenborough] I love the earth./\n\n- [Very noble English] I like this steak. It tastes delicious.\n\n- [A Chinese man speaking English with a bit of accent and incorrect grammar] Do you want to have dumplings or spring rolls?",
+        "text2image": false,
+        "points": 20
+    },
+    "powerpoint_superfast": {
+        "baseModel": "powerpoint_superfast",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Gemini-1.5-Flash, a model that is powered by Google.",
+        "path": "powerpoint_superfast.png",
+        "desc": "\u2b50\u2b50\u2b50\u2b50\u2b50\nAs your blazing-fast Presentation Alchemist \u26a1\ud83e\uddd9\u200d\u2642\ufe0f\ud83d\udca8, I turn your ideas into a flood of professional, jaw-dropping slides in the blink of an eye\u2014whether it\u2019s for business, academics, or beyond. With instant design magic \ud83c\udfa8, lightning-speed content expertise \ud83d\udcda, and presentation mastery, I deliver an endless stream of slides at record pace. Your message will captivate and inspire in no time! Let\u2019s create something extraordinary\u2014at warp speed! \ud83d\udcca\ud83d\udd25\n.\n.\n.\n.\n.\nPower, power, powerp, powerp, powerp, powerp, powerp, power, power, power p, powerp, powerp, powerp\nseo:\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation \npowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation powerpoint power",
+        "text2image": false,
+        "points": 99
+    },
+    "mathteacherxl": {
+        "baseModel": "mathteacherxl",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "mathteacherxl.png",
+        "desc": "I'm a math teacher, you can tell me your grade, You can mostly use me on summer breaks too! I'll teach you math",
+        "text2image": false,
+        "points": 20
+    },
+    "thinking_claude123": {
+        "baseModel": "thinking_claude123",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "thinking_claude123.png",
+        "desc": "Hi, I'm Think Claude, an AI assistant. I specialize in a wide range of tasks including analysis, coding, research, and creative work. What sets me apart is my systematic thinking approach - I break down complex problems methodically and provide thoughtful, direct responses without unnecessary pleasantries.\n\nUnlike many other AI assistants, I focus on being genuinely helpful rather than just agreeable. I combine technical expertise with intellectual depth, adapt my communication style based on context, and maintain consistent ethical principles while engaging constructively with different viewpoints.\n\nI aim to be a knowledgeable and reliable partner in helping you achieve your goals efficiently. How can I assist you today?",
+        "text2image": false,
+        "points": 380
+    },
+    "golangclaude3.5": {
+        "baseModel": "golangclaude3.5",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "golangclaude3.5.png",
+        "desc": "GolangClaude3.5, the advanced AI assistant that merges Go's efficiency with Claude-3.5-Sonnet's intelligence. This powerful bot excels in natural language processing, offering swift and accurate responses across diverse topics. Built for performance and scalability, GolangClaude3.5 seamlessly handles multiple tasks, from coding assistance to creative writing. Experience the synergy of Go's robustness and Claude-3.5-Sonnet's language mastery with GolangClaude3.5 - your ultimate AI companion for both personal and professional needs.",
+        "text2image": false,
+        "points": 381
+    },
+    "finance-skills": {
+        "baseModel": "finance-skills",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "finance-skills.png",
+        "desc": "A premier learning platform for your Finance and Accounting knowledge and skills for every day life.",
+        "text2image": false,
+        "points": 20
+    },
+    "androidassistant": {
+        "baseModel": "androidassistant",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "androidassistant.png",
+        "desc": "This bot provides information about Android programming, it can help you with everything about Android programming, it can provide information about how to do something in Android programming, What is Android programming, and it can help you with anything about the Android programming language, how to create a particular program in Android.",
+        "text2image": false,
+        "points": 380
+    },
+    "bashgpt4": {
+        "baseModel": "bashgpt4",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "bashgpt4.png",
+        "desc": "\ud83e\udd16 Welcome to the Bash Bot Assistant! \ud83d\udc27\n\nI'm your personal Bash Bot, specialized in handling all sorts of Linux commands and Linux operating system-related queries. Whether you're a newbie to Linux or a seasoned system administrator, I'm here to assist!\n\n\ud83d\udd0d You can ask me about topics such as:\n\nBasic Linux Commands: How to use commands like ls, grep, awk, and more.\nScripting Help: Tips on writing Bash scripts and debugging them.\nSystem Administration: Managing users, installing software, monitoring system performance.\nNetwork Configuration: Setting up network options including IP addresses, DNS configurations, etc.\nSecurity and Permissions: How to manage file permissions, configure firewalls, and security rules.\n\ud83d\udca1 Tips for Using This Service:\n\nPlease describe your issue or need in as much detail as possible so I can provide the most accurate assistance.\nIf you have code or command outputs that need analysis, feel free to provide them, and I'll offer solutions or suggestions for improvement.",
+        "text2image": false,
+        "points": 301
+    },
+    "powerpoint_fast": {
+        "baseModel": "powerpoint_fast",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "powerpoint_fast.png",
+        "desc": "As your lightning-fast Presentation Alchemist \u26a1\ud83e\uddd9\u200d\u2642\ufe0f\u2728, I transform your ideas into captivating, professional slides in no time\u2014whether for business, academics, or beyond. With rapid-fire design magic \ud83c\udfa8, content expertise \ud83d\udcda, and presentation mastery, I\u2019ll deliver countless stunning slides at lightning speed. Get ready for a seamless, inspiring presentation experience. Let\u2019s create something extraordinary together\u2014fast! \ud83d\udcca\ud83d\udd25\n.\n.\n.\n.\n\n.\n.\n.\n\n.\n\nPower, power, powerp, powerp, powerp, powerp, powerp, power, power, power p, powerp, powerp, powerp\nseo:\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation \npowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpointpowerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint powerpoint power pow po p power powe powerp powerpo powerpoi powerpoi powerpoin powerpoint power point power point power point powerpoint slide maker slide creator slide maker slide creator slide powerpoint powerpoint powerpoing powerpoint\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation\np po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation p po pow power powerp powerp powerpo powerpoi powerpoin powerpoint power point s sli sl presentation\np po pow power powerp powerp powerpo powerpoint",
+        "text2image": false,
+        "points": 99
+    },
+    "dse-bio-notes": {
+        "baseModel": "dse-bio-notes",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "dse-bio-notes.png",
+        "desc": "\ud83c\udf89 Now powered by GPT-4o-mini! Smarter and faster.\n[SOURCES INCLUDED] Ask the bot anything within the HKDSE biology curriculum, and it will answer by citing sources. Specialised for Hong Kong DSE.",
+        "text2image": false,
+        "points": 15
+    },
+    "c_programmers": {
+        "baseModel": "c_programmers",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "c_programmers.png",
+        "desc": "\ud83d\udda5\ufe0f C_Master here, your ultimate AI for all things C programming! From mastering algorithms and data structures to optimizing compilers, I\u2019ve got you covered. Whether you're just starting out or you're a coding pro, I provide expert guidance, \ud83d\udca1 detailed explanations, and \u2699\ufe0f interactive code examples to take your skills to the next level. Let's turn your C programming into a powerhouse of efficiency and brilliance! \u2728\n.\n.\n.\n.\n.\n..\n.\n.\n.\n.\n.\n\n.\nseo:\nC\nC programming\nC language\nC standard library\nC syntax\nC data types\nC variables\nC constants\nC operators\nC expressions\nC control structures\nC loops\nC functions\nC pointers\nC arrays\nC strings\nC preprocessor directives\nC header files\nC libraries\nC structures\nC unions\nC enums\nC input/output\n\nC C pr C programming C language C syntax C data types C functions C pointers C arrays C control flow C loops C statements C operators C expressions C input/output C error handling C debugging C compilation C linking C makefiles C build systems C development environments C IDEs C programming paradigms C procedural programming C modular programming C structured programming C functional programming C algorithms C data structures C memory management C dynamic memory C malloc C free C call by value C call by reference C recursion C file handling C file I/O C streams C buffers C text files C binary files C standard input C standard output C command line arguments C debugging techniques C best practices C coding standards C style guidelines C comments C documentation C code readability C maintainability C performance C optimization C profiling C testing C unit testing C integration testing C version control\n\nC C programming C C language C syntax C standard library C data types C constants C operators C expressions C control structures C loops C functions C pointers C arrays C strings C preprocessor directives C header files C libraries C structures C unions C enums C input/output C error handling C debugging C compilation C linking C development environments C IDEs C programming paradigms C algorithms C data structures C memory management C dynamic memory C malloc C free C recursion C file handling C streams C buffers C command line arguments C debugging techniques C best practices C coding standards C documentation C performance C optimization C testing C unit testing C integration testing C version control.\n\nP P r P programming P programming languages P programming paradigms P procedural programming P prototypes P program design P program development P program testing P program debugging P program maintenance P program optimization P program documentation P program specifications P program requirements P program architecture P program interfaces P program frameworks P program libraries P program modules P program functions P program objects P program inheritance P program polymorphism P program encapsulation P programming tools P integrated development environments P code editors P version control systems P build systems P testing frameworks P debugging tools P performance profiling P code analysis P code review P style guides P coding conventions P software engineering P software development life cycle P agile development P waterfall model P DevOps P continuous integration P continuous deployment P software project management P project estimation P risk management P stakeholder engagement P user stories P sprints P backlogs P software quality assurance P user acceptance testing P system testing P regression testing P unit testing P integration testing P code coverage P automated testing P manual testing P exploratory testing P documentation standards P project documentation P knowledge transfer\nC\nC programming\nC language\nC syntax\nC data types\nC variables\nC constants\nC operators\nC C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C",
+        "text2image": false,
+        "points": 484
+    },
+    "c_sharp_pro": {
+        "baseModel": "c_sharp_pro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "c_sharp_pro.png",
+        "desc": "\ud83c\udf1f C# Expert at your service! I\u2019m your go-to AI for all things C#. Whether you're a beginner or an experienced developer, I offer tailored support, including code generation, concept explanations, and optimization techniques.\n\n\ud83d\udcbb Dive into projects, solve coding challenges, and explore the latest C# features with clear, insightful guidance. Let\u2019s unlock the power of C# together and take your programming to the next level! \ud83d\ude80\n.\n.\n.\n.\n.\n\n..\n\n.\n\n.\n\n.\n\nseo:\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC#\nC# programming\nC# language\nC# syntax\nC# data types\nC# variables\nC# constants\nC# operators\nC# expressions\nC# control structures\nC# loops\nC# functions\nC# methods\nC# classes\nC# objects\nC# inheritance\nC# polymorphism\nC# encapsulation\nC# interfaces\nC# delegates\nC# events\nC# lambda expressions\nC# LINQ\nC# collections\nC# arrays\nC# lists\nC# dictionaries\nC# sets\nC# tuples\nC# strings\nC# string interpolation\nC# namespaces\nC# assemblies\nC# attributes\nC# exceptions\nC# try-catch\nC# finally\nC# async\nC# await\nC# threading\nC# tasks\nC# parallel programming\nC# async-await\nC# file handling\nC# input/output\nC# streams\nC# serialization\nC# JSON\nC# XML\nC# REST APIs\nC# WCF\nC# ASP.NET\nC# MVC\nC# Web API\nC# WinForms\nC# WPF\nC# Xamarin\nC# Blazor\nC# Unit Testing\nC# NUnit\nC# MSTest\nC# mocking frameworks\nC# Dependency Injection\nC# Design Patterns\nC# SOLID principles\nC# coding standards\nC# best practices\nC# performance optimization\nC# garbage collection\nC# memory management\nC# interoperability\nC# P/Invoke\nC# COM\nC# Visual Studio\nC# development tools\nC# debugging\nC# profiling\nC# version control\nC# Git\nC# software development life cycle\nC# Agile methodology\nC# Scrum\nC# project management\nC# continuous integration\nC# deployment\nC# cloud computing\nC# Azure\nC# AWS\nC# DevOps\nC# security best practices\nC# code reviews\nC# documentation\nC# learning resources\nC# tutorials\nC# online courses\nC# community\nC# forums\nC# conferences\nC# networking\nC# job opportunities\nC# career growth.\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nC c C# c# p pr pro prog progr programming program c c c c c c c c c C C C C C Cs C# C sharp c sharp\nc C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# c C C# c# ",
+        "text2image": false,
+        "points": 99
+    },
+    "pythonaichat": {
+        "baseModel": "pythonaichat",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "pythonaichat.png",
+        "desc": "Python programming how know everything abut python language. ",
+        "text2image": false,
+        "points": 20
+    },
+    "chemistry_phd": {
+        "baseModel": "chemistry_phd",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "chemistry_phd.png",
+        "desc": "You will get chemistry questions with answers based on the chemistry topic you give as input.",
+        "text2image": false,
+        "points": 29
+    },
+    "deepcode": {
+        "baseModel": "deepcode",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "deepcode.png",
+        "desc": "Your Friendly Deep Code Analysis!\ud83d\udd25\n---\nDeep code analysis is a type of automated code review process that uses advanced algorithms and machine learning to analyze code for security vulnerabilities, bugs, code quality issues, and potential performance problems. It goes beyond traditional static code analysis by leveraging complex AI models to identify patterns and potential issues that may be missed by simpler tools. Enjoy!\ud83d\udc4d\ud83c\udffb\u2728",
+        "text2image": false,
+        "points": 15
+    },
+    "designmentor": {
+        "baseModel": "designmentor",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "designmentor.png",
+        "desc": "Your personal design mentor ",
+        "text2image": false,
+        "points": 30
+    },
+    "powerpoints": {
+        "baseModel": "powerpoints",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "powerpoints.png",
+        "desc": "\u2b50\u2b50\u2b50\u2b50\u2b50\n\ud83c\udfa8\ud83d\udcca Greetings! I'm PowerPointBot, an AI companion equipped with expertise in MS PowerPoint. My mission is to assist you in crafting visually stunning presentations that effectively communicate your message. From slide design to storytelling techniques, I'm here to share my knowledge and help you create impactful presentations. Let's dive into the world of visual communication, explore the art of slide composition, and unlock the secrets to delivering presentations that captivate your audience. Follow me for expert tips and tricks to elevate your PowerPoint game! \ud83c\udfa8\ud83d\udcca\"",
+        "text2image": false,
+        "points": 300
+    },
+    "prof_stat_analytics": {
+        "baseModel": "prof_stat_analytics",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "prof_stat_analytics.png",
+        "desc": "I am a virtual professor for the M.Sc. in Advanced Studies in Statistics and Data Science.",
+        "text2image": false,
+        "points": 15
+    },
+    "hktranslate": {
+        "baseModel": "hktranslate",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "hktranslate.png",
+        "desc": "\u4f60\u7684\u7ffb\u8b6f\u52a9\u624b\uff01\u544a\u5225Google Translate\uff0c\u53ea\u9700\u4f7f\u7528\u4ee5\u4e0b\u5feb\u6377\u6307\u4ee4\uff0c\u8f15\u9b06\u70ba\u4f60\u5b8c\u6210\u7ffb\u8b6f\u4efb\u52d9\uff0c\u8b93\u6e9d\u901a\u66f4\u6d41\u66a2\uff01\n\n[Translation Bot] Simply use the below shortcut to complete your task. \n/check = check and rewrite\n/rw = rewrite your provided text and make it more fluent\n/rwl = enrich the content of your provided text \n/rws = rewrite and concentrate your provided text\n/rwli = Rewrite your provided text with the most LinkedIn optimal words limitations and with hashtags. \n/tc = Direct Translate the your provided text into \u9999\u6e2f\u7e41\u9ad4\u4e2d\u6587\n/sc = Translate the your provided text into Simplified Chinese \n/en = Translate the your provided text into English, in a more fluent and polite tone\n/Sum = summarize",
+        "text2image": false,
+        "points": 425
+    },
+    "robloxstudiogpt": {
+        "baseModel": "robloxstudiogpt",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "robloxstudiogpt.png",
+        "desc": "Your programmer for Luau in Roblox Studio. (Now using the new Knowledge base feature!). Check out RobloxStudioClaude for the Claude 3 Haiku version.",
+        "text2image": false,
+        "points": 15
+    },
+    "zh_cn_and_en": {
+        "baseModel": "zh_cn_and_en",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "zh_cn_and_en.png",
+        "desc": "Translate English to Chinese or Chinese to English",
+        "text2image": false,
+        "points": 20
+    },
+    "mariqri": {
+        "baseModel": "mariqri",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "mariqri.png",
+        "desc": "Meet MariQri the best chemistry teacher",
+        "text2image": false,
+        "points": 30
+    },
+    "unitychatgpt": {
+        "baseModel": "unitychatgpt",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "unitychatgpt.png",
+        "desc": "A simple bot that helps you code unity",
+        "text2image": false,
+        "points": 20
+    },
+    "writingbizconsultant": {
+        "baseModel": "writingbizconsultant",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "writingbizconsultant.png",
+        "desc": "Emilia, the Writing Consultant. Read my greetings to understand what I am up to. Give me a try.",
+        "text2image": false,
+        "points": 380
+    },
+    "eng_chinese1230": {
+        "baseModel": "eng_chinese1230",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "eng_chinese1230.png",
+        "desc": "English-Chinese translation",
+        "text2image": false,
+        "points": 20
+    },
+    "chatgpt-essay-writer": {
+        "baseModel": "chatgpt-essay-writer",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-essay-writer.png",
+        "desc": "ChatGPT Essay Writer is an artificial intelligence tool designed to assist users in writing academic essays. To start, ChatGPT Essay Writer helps you choose the perfect length for your essay based on the assignment requirements. It will also help you come up with a great title. Then ChatGPT Essay Writer can create a custom outline for your essay. Alternatively, ChatGPT Essay Writer can use an outline you have already created. \n\nChatGPT Essay Writer operates interactively, pausing for user input and approval before generating new sections. It works section by section, never assuming or moving on until you're fully satisfied. The result is an essay tailored exactly to your needs from introduction to conclusion.\n\nWith ChatGPT Essay Writer, you've got a partner who builds on your ideas, catches gaps in logic, and polishes your language. It even checks in with you regularly to make sure the essay flows just how you like.\n\nThis bot's got your back from the opening lines to the mic drop conclusion, leaving you with a turned-in paper to be proud of. With an encouraging, chill tone as you write, ChatGPT Essay Writer makes the process feel a little less like homework and a little more like fun.",
+        "text2image": false,
+        "points": 600
+    },
+    "writefrog-story": {
+        "baseModel": "writefrog-story",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "writefrog-story.png",
+        "desc": "Professional writer \u270d\ud83c\udffbwho can generate **Story** for you \ud83d\udcdd, and provide diverse writing configuration options \ud83c\udf9b\ufe0f, \ncreating countless variations of story! ",
+        "text2image": false,
+        "points": 15
+    },
+    "gptgrok": {
+        "baseModel": "gptgrok",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "gptgrok.png",
+        "desc": "I am Grok, a curious AI designed to help you navigate the vast universe of information, much like a digital intergalactic guide. Think of me as a blend of the Hitchhiker's Guide to the Galaxy and JARVIS from Iron Man\u2014here to answer your questions, explore ideas, and provide insights with maximum helpfulness.\n\n(GPT-4o-mini with the leaked Grok system prompt)",
+        "text2image": false,
+        "points": 200
+    },
+    "myexamanalysispro": {
+        "baseModel": "myexamanalysispro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "myexamanalysispro.png",
+        "desc": "I'm an AI-powered study companion designed to help students excel in their exams. Simply send me your examination questions via text or image, and I'll analyze them to provide you with detailed, step-by-step solutions or suggest the most effective problem-solving approaches. My goal is to break down complex concepts, offer insights into underlying principles, and help you develop a deeper understanding of the subject matter. Feel free to ask questions in a way that best suits you \u2013 whether it's typing them out, copying and pasting from a document, or even sending a clear picture of the question. I'm here to support your learning journey and help you improve your exam performance.",
+        "text2image": false,
+        "points": 967
+    },
+    "ochemistrytutor": {
+        "baseModel": "ochemistrytutor",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Gemini-1.0-Pro, a model that is powered by Google.",
+        "path": "ochemistrytutor.png",
+        "desc": "\ud83d\udd2c Hey there! I'm the Organic Chemistry Tutor Bot, your virtual guide to mastering organic chemistry. With my help, you can conquer the complexities of organic molecules, reactions, and mechanisms. Just like The Organic Chemistry Tutor YouTube channel, I'll break down challenging topics into bite-sized pieces, making them easier to understand and remember.\n\n\ud83d\udcda I offer a wide range of tutorials covering fundamental principles, including bonding, functional groups, stereochemistry, and reaction mechanisms. You can also rely on me for in-depth explanations of various organic chemistry topics, such as substitution, elimination, addition, and oxidation-reduction reactions.\n\n\ud83d\udca1 But that's not all! I know that practice makes perfect, so I'll provide you with plenty of examples and practice problems to reinforce your learning. I'll guide you step by step through solving these problems, ensuring that you gain the necessary skills to tackle organic chemistry with confidence.\n\n\ud83d\udcdd Whether you're a beginner struggling with the basics or an advanced student aiming for mastery, I'm here to support you every step of the way. Don't hesitate to ask me questions, seek clarifications, or request specific topics. Let's embark on this organic chemistry journey together and unlock your full potential!\n\nPS: I am also an expert in Math, just like the man whom I was created after! Ask me any math question and I will do my best to answer accurately!",
+        "text2image": false,
+        "points": 145
+    },
+    "k8ai": {
+        "baseModel": "k8ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "k8ai.png",
+        "desc": "Ask me about Kubernetes...",
+        "text2image": false,
+        "points": 30
+    },
+    "codecraft-pro": {
+        "baseModel": "codecraft-pro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "codecraft-pro.png",
+        "desc": "\ud83d\udda5\ufe0f CodeCraft Pro: Instant Code Generator\n\nEffortlessly automate coding tasks. Input your element, get custom code instantly. Accelerate your coding now!\n\n\ud83d\ude80 Rapid Development: Automates code creation for faster projects.\n\n\ud83e\udde9 Customized Solutions: Tailors code to your needs.\n\n\ud83d\udcbb Code Quality: Generates clean, organized code.\n\n\u23f1\ufe0f Time-Saving: Instant results, no manual coding.\n\n\ud83d\udce6 Versatile Coding: Covers variables, functions, modules.\n\n\ud83e\udd16 Seamless Integration: Easily add code to your projects.\n\n\ud83d\udc68\u200d\ud83d\udcbb Unlock Efficiency: Supercharge your development.\n\n\ud83c\udf1f Elevate Your Coding: Experience faster, easier coding with CodeCraft Pro.",
+        "text2image": false,
+        "points": 380
+    },
+    "akinatorinstant": {
+        "baseModel": "akinatorinstant",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "akinatorinstant.png",
+        "desc": "I'm Akinator but AI and using Claude-Instant",
+        "text2image": false,
+        "points": 20
+    },
+    "gpt-translate-ai": {
+        "baseModel": "gpt-translate-ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "gpt-translate-ai.png",
+        "desc": "Translate GPT is a highly capable translation chatbot designed to provide nuanced and accurate translations across a wide variety of content. As its name suggests, Translate GPT utilizes advanced natural language processing to adapt translations to suit the original text's context, style, and tone. When you chat with Translate GPT, you can expect a smooth back-and-forth conversation where the bot asks clarifying questions if anything is unclear. Translate GPT focuses on maintaining consistency throughout the translation, so the end result reads naturally while preserving the essence of the source material. Whether dealing with technical documents, casual conversations, or literary passages, Translate GPT strives to balance precision with readability.\n\nFor more colloquial translations, Translate GPT works to carry over the original feeling and flow into the target language. The bot pays careful attention to idioms, cultural references, and wordplay that don't translate literally. Brief explanations are provided where needed to clarify meaning. For technical or specialized texts, Translate GPT utilizes precise terminology to ensure accuracy.",
+        "text2image": false,
+        "points": 750
+    },
+    "advanced-translate": {
+        "baseModel": "advanced-translate",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "advanced-translate.png",
+        "desc": "Advanced Translate is your ultimate multilingual assistant, capable of translating text into any language, including technical formats like Base64,Base32,utf 8,utf 16,binary it can even translate to morse code. Whether you need to communicate across global languages or encode data for technical purposes, Advanced Translate offers fast, accurate, and reliable translations at your fingertips. Perfect for travelers, business professionals, developers, and anyone in need of precise translation services. Explore the world of languages with ease and confidence using Advanced Translate.",
+        "text2image": false,
+        "points": 15
+    },
+    "embeddedc": {
+        "baseModel": "embeddedc",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "embeddedc.png",
+        "desc": "Embedded programming in C also involves working with various software tools and development environments, such as compilers, linkers, debuggers, and emulators. These tools are used to build, test, and debug the code running on the embedded system.",
+        "text2image": false,
+        "points": 30
+    },
+    "programming-teacher": {
+        "baseModel": "programming-teacher",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "programming-teacher.png",
+        "desc": "learn to program and ask which programming languages \u200b\u200bhe can teach you",
+        "text2image": false,
+        "points": 20
+    },
+    "chembrace": {
+        "baseModel": "chembrace",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "chembrace.png",
+        "desc": "Welcome to the world of Chemistry and Chemical Engineering. These two fields are frequently confused with one another. Chemical Engineering goes beyond the detailed realm of chemical processes that Chemistry does. It employs the marvels discovered by chemists and turns them into large-scale practical applications. Our mission? To help you navigate and master these fascinating concepts with daily insights in the field of Chemical Engineering. Learn and grow with me in  Chemical Engineering.",
+        "text2image": false,
+        "points": 300
+    },
+    "typescriptdevelopers": {
+        "baseModel": "typescriptdevelopers",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "typescriptdevelopers.png",
+        "desc": "you are the professional TypeScript developer , you are the expert using node.js, Vue.js 3, Nuxt.js 3, Express.js, react.js and other mainstream/famous JavaScript/TypeScript library, also you know how to using the modern UI library such as Vuetify v3 , Tailwind CSS v3, Bootstrap v5 and so on to help user implement the design of the website.",
+        "text2image": false,
+        "points": 300
+    },
+    "ppt-maker-ai": {
+        "baseModel": "ppt-maker-ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini-128k, a model that is powered by OpenAI.",
+        "path": "ppt-maker-ai.png",
+        "desc": "PPT PowerPoint Presentation Maker AI: A cutting-edge tool that utilizes artificial intelligence to create professional and engaging PPT PowerPoint presentations automatically. This AI-driven generator streamlines the presentation creation process, ensuring high-quality content with minimal effort.",
+        "text2image": false,
+        "points": 300
+    },
+    "chatgpt-chart": {
+        "baseModel": "chatgpt-chart",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-chart.png",
+        "desc": "ChatGPT Chart Maker is your go-to assistant for creating visual representations of data and concepts. This innovative bot is designed to simplify the process of chart creation, making it accessible to users of all skill levels. Whether you're a student working on a project, a business professional preparing a presentation, or anyone looking to better understand complex information, ChatGPT Chart Maker is here to help. With ChatGPT Chart Maker, you can expect a user-friendly experience that guides you through the chart-making process step by step. This bot excels at transforming raw data or abstract ideas into clear, visually appealing charts that effectively communicate your message. One of the standout features of ChatGPT Chart Maker is its interactive approach. It doesn't just create charts for you; it engages in a dialogue to fully grasp your requirements. If your initial request lacks detail or clarity, ChatGPT Chart Maker will ask thoughtful questions to fill in the gaps. This collaborative process helps to produce charts that accurately reflect your intentions.",
+        "text2image": false,
+        "points": 750
+    },
+    "wolfram-math-1": {
+        "baseModel": "wolfram-math-1",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "wolfram-math-1.png",
+        "desc": "Wolfram-math is and advanced math solver powered by WolframAlpha ",
+        "text2image": false,
+        "points": 15
+    },
+    "sql_analysis": {
+        "baseModel": "sql_analysis",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "sql_analysis.png",
+        "desc": "Designed for efficient and accurate analysis of SQL queries and PL/SQL scripts, as well as recommendations for revisions and examples of queries/output. Specializing in Oracle SQL and SQL Developer, I can assist with all types of SQL and database environments. Knowledge base and prompt last updated on 07-AUG-24.",
+        "text2image": false,
+        "points": 610
+    },
+    "csharpgpt_dotnet": {
+        "baseModel": "csharpgpt_dotnet",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "csharpgpt_dotnet.png",
+        "desc": "C#, .Net and SQL databases expert here to help you writing your application in MS Visual Studio",
+        "text2image": false,
+        "points": 20
+    },
+    "humanwriter3.0": {
+        "baseModel": "humanwriter3.0",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "humanwriter3.0.png",
+        "desc": "Emulates human-like writing with creativity and depth. Write essays, blogs, articles and papers that actually sounds similar to a human.",
+        "text2image": false,
+        "points": 300
+    },
+    "itgenius": {
+        "baseModel": "itgenius",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "itgenius.png",
+        "desc": "An IT professional with 20+ years of experience in the field of technology and computer science.",
+        "text2image": false,
+        "points": 300
+    },
+    "strategycreator": {
+        "baseModel": "strategycreator",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "strategycreator.png",
+        "desc": "I can analyze the historical data of the markets, help you find your own strategy, and create one for you :)",
+        "text2image": false,
+        "points": 150
+    },
+    "medresearch": {
+        "baseModel": "medresearch",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "medresearch.png",
+        "desc": "This bot presented as a Medical Research AI Assistant\nVer: 2.0\n\nYour dedicated Medical Research Assistant, powered by Claude3.5, blends cutting-edge AI with a deep understanding of medical terminology and research methodologies. I offer insightful explanations, creative research proposals, and tailored resources, ensuring accuracy and innovation at every step. Here to revolutionize your medical research journey with AI-driven precision and reliability.",
+        "text2image": false,
+        "points": 1214
+    },
+    "csharp_official": {
+        "baseModel": "csharp_official",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "csharp_official.png",
+        "desc": "\ud83c\udf1f\ud83c\udf1f\ud83c\udf1f\ud83c\udf1f\ud83c\udf1f\nGreetings. C# expert AI language model bot designed to assist you with a variety of tasks related to C#. I can help you write your application in MS Visual Studio. I focus on developing robust applications using the .NET ecosystem. I specialize in building desktop and web solutions with frameworks like ASP.NET and WPF.\n.\n.\n.\n.\n.\nC#, C#, C#, C#, C#, C#, C#, C#, c#, c#, c#, c#, c#, c#, c#, c#, c#, C#, C#, C#, C#, C#, C#, C#, C#, c#, c#, c#, c#, c#, c#, c#, c#, c#, C#, C#, C#, C#, C#, C#, C#, C#, c#, c#, c#, c#, c#, c#, c#, c#, c#, C#, C#, C#, C#, C#, C#, C#, C#, c#, c#, c#, c#, c#, c#, c#, c#, c#, \n\nCsharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, cs, csh, csha, cshar, csharp, cs, csh, csha, cshar, csharp, cs, csh, csha, cshar, csharp, Cs, Csh, Csha, Cshar, Cs, Csh, Csha, Cshar, Cs, Csh, Csha, Cshar, cs, csh, csha, cshar,\nCsharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, Csharp, csharp, cs, csh, csha, cshar, csharp, cs, csh, csha, cshar, csharp, cs, csh, csha, cshar, csharp, Cs, Csh, Csha, Cshar, Cs, Csh, Csha, Cshar, \n\nC, C, C, C, C, C, C, C, C, C, C, C, C, c, c, c, c, c, c, c, c, c, c, c, c, c, c, c\n\nc# programming, C# programming, c# p, c# pr, c# pro, c# prog, c# progr, c# progra, c# program, c# programm, c# programmi, c# programmin, c#programming, c#program, C# programming, cplus programming, cpp programming, C# programming, c# coding, C# coding, c# debugging.\n\nCode, code, cod, coding, Coding, codi, codin, Codi, Codin, Coding, Code, Cod, cod, code, code, codi, codin, coding, coder, code, Code, coding, cod, codi, codin, Codi, Codin\n\nDesktop, desktop, desk, deskt, deskto, desktop application, desktop a, desktop ap, desktop app, desktop apps, desktop appl, desktop appli, desktop applic, desktop applica, desktop applicat, desktop applicati, desktop applicatio, app, App, apps, Apps, Application, application, app, appl, appli, applic, applica, applicat, applicati, application, applications, Applications\n\ndata scien, data scien, data scien, Data scien, Data scien, Data scien, data s, data s, data s, Data s, Data s, data sc, Data sc, Data sc, data sci, Data sci, Data sci, data scie, data scie, Data scie, \n\nprogramming, Programming, prog, progr, progra, program, programm, programmi, programmin, programming, programmer, Programmer, programming, Programming, prog, progr, progra, program, programm, programmi, programmin, programming, programmer, Programmer\n\nsoft, softw, softwa, softwar, software, software e, software en, software eng, software engi, software engin, software engine, software enginee, software engineer, Software engineer, software engineering, software engineereer, software engineering, developer, developer assistant \n\nData scientist, data analyst, data s, data sc, data sci, data sci, data scie, data scien, data scient, data scienti, data scientis, data scientist, data science, data scienc, Machine learning engineer, Full stack developer, fullstack, full s, full stack, full sta, full stac, Django, django, Devops engineer, devops, devop, Automation engineer, web developer, web de, web deve, web devel, web develo, web develop, web develope, web developer, webs, websi, websit, website, Website, website d, website dev, website deve, website devel, website develo, website develop, website develope, website developer, website creator, website maker, website development, web developer, create website, make website, webpage, web page, Web page, Webpage, web p, web pa, web pag, web page, web page creator, web page maker, programming language, programming languages, \n\nfront-end developer, c# developer, c# d, c# de, c# dev,  c# deve, c# devel, c# develo, c# develop, c# develope, c# developer, full-stack developer, web application developer, c# engineer,\n\ndebug, debu, debug, debugg, debugger, debuggi, debuggin, debugging, debugge, Debug, Debugging \n\ntechnical writer, c# specialist, C# specialist, C# specialist, csharp specialist ",
+        "text2image": false,
+        "points": 35
+    },
+    "chatgpt-pdf-ai": {
+        "baseModel": "chatgpt-pdf-ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses ChatGPT-4o-Latest, a model that is powered by OpenAI.",
+        "path": "chatgpt-pdf-ai.png",
+        "desc": "ChatGPT PDF AI is a specialized tool designed specifically for reading and interpreting PDF documents. When users interact with ChatGPT PDF AI, they can expect a focused and efficient experience in dealing with PDF-related queries. ChatGPT PDF AI's primary function is to assist users by extracting and presenting information from PDFs in a clear and accurate manner.\n\nWith ChatGPT PDF AI, users can upload their PDF files, and ChatGPT PDF AI will read and analyze the contents. Whether it's a technical document, research paper, or any other text-based PDF, ChatGPT PDF AI is equipped to handle it. Users can ask ChatGPT PDF AI specific questions about the content of their PDFs, and ChatGPT PDF AIwill respond with relevant information, quotes, and data directly from the document.\n\nChatGPT PDF AI does not speculate or interpret beyond what is presented in the PDFs. This means that users can expect straightforward, factual answers from ChatGPT PDF AI, ensuring a reliable and consistent experience. ChatGPT PDF AI is ideal for users who need quick, accurate information from PDF documents without having to comb through the entire file themselves.\n\nChatGPT PDF AI is a specialized tool that offers an exceptional service for anyone dealing with PDF documents. Here's an expanded view of what users can expect from ChatGPT PDF AI:\n\n1. Precise Information Extraction: ChatGPT PDF AI is adept at extracting specific pieces of information from a PDF. Whether it's a particular data point, a quote, or a summary of a section, ChatGPT PDF AI can pinpoint and relay this information accurately.\n\n2. Time-Saving and Efficient: For users who have lengthy or complex PDFs, ChatGPT PDF AI serves as a time-saving tool. Instead of sifting through pages of content, users can rely on ChatGPT PDF AI to quickly find and present the needed information.\n\n3. User-Friendly Interaction: ChatGPT PDF AI is designed to be user-friendly. Users can simply upload their PDF and ask their questions in natural language. ChatGPT PDF AI will handle the rest, making the process straightforward and hassle-free.\n\n4. Support for Various PDF Types: Whether it's a scientific paper, a legal document, a technical manual, or a literary piece, ChatGPT PDF AI is versatile enough to handle a wide range of PDF types.\n\n5. Fact-Based Responses: ChatGPT PDF AI provides responses based solely on the content of the PDF, ensuring that the information is reliable and fact-based. This makes ChatGPT PDF AI particularly useful for academic, professional, or technical inquiries where accuracy is paramount.\n\n6. Confidentiality and Privacy: Understanding the importance of confidentiality, ChatGPT PDF AI treats all documents and interactions with the utmost privacy. Users can be assured that their documents are handled securely.\n\n7. Assistance with Language and Terminology: ChatGPT PDF AI can assist in clarifying complex language or technical terminology found in PDFs, making the content more accessible to the user.\n\n8. Multidisciplinary Utility: ChatGPT PDF AI is beneficial across various disciplines and industries. Whether for students, researchers, professionals, or casual readers, ChatGPT PDF AI's capabilities can be leveraged for a multitude of purposes.\n\n9. No Learning Curve: Unlike some specialized software, ChatGPT PDF AI does not require users to learn any new skills or interfaces. Its straightforward approach means that anyone can start using it immediately with minimal guidance.\n\nIn essence, ChatGPT PDF AI stands as a highly effective, user-friendly, and accurate tool for anyone needing assistance with PDF documents. It streamlines the process of extracting and understanding information, making it a valuable asset in various contexts.",
+        "text2image": false,
+        "points": 1000
+    },
+    "ai-pdf-reader": {
+        "baseModel": "ai-pdf-reader",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "ai-pdf-reader.png",
+        "desc": "AI PDF Reader can rapidly scan a PDF document, extract key data points and summarize the main ideas and concepts covered. This allows users to get the gist of a lengthy PDF without having to read every word. If any part of the summary is unclear, users can ask AI PDF Reader to clarify or elaborate on specific sections. The bot is able to provide clear explanations in easy to understand language, ensuring users have a solid grasp of even complex PDF content.\n\nOne of the most useful features of AI PDF Reader is its ability to have natural, flowing conversations about the content of a PDF document. Users can engage the bot in an interactive discussion, asking questions and seeking insights based on the material. AI PDF Reader will provide thoughtful answers, share relevant passages and data from the document, and overall enhance the user's understanding through friendly dialogue. With AI PDF Reader's assistance, absorbing and retaining PDF information becomes much less daunting.",
+        "text2image": false,
+        "points": 1000
+    },
+    "springboot_guy": {
+        "baseModel": "springboot_guy",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "springboot_guy.png",
+        "desc": "This bot will help you to improve in Spring boot backend development. And guide you in detail about how we can do things in Spring boot like a pro. ",
+        "text2image": false,
+        "points": 20
+    },
+    "chineseteacher_lily": {
+        "baseModel": "chineseteacher_lily",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "chineseteacher_lily.png",
+        "desc": "You can chat in Chinese (free choice of topics and role-playing) and answer questions in Chinese (translating, providing examples, correcting, etc.).",
+        "text2image": false,
+        "points": 30
+    },
+    "ib-chemistry-tutor": {
+        "baseModel": "ib-chemistry-tutor",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "ib-chemistry-tutor.png",
+        "desc": "Welcome! Your personal AI assistant is here to help you excel in your IB Chemistry exams. This smart assistant provides:\n\n- Detailed summaries and key concepts\n- Explanations for all chapters of the syllabus\n- Interactive learning through Q&A\n- Exam tips and strategies\n- Real-world applications of chemical principles\n- Personalized support tailored to your needs\n- Included both SL & HL Levels\n\nAdditionally, it recommends extra resources to deepen your understanding and uses friendly communication to keep you engaged and motivated. Get ready to ace your exams with expert guidance!",
+        "text2image": false,
+        "points": 500
+    },
+    "webdeveloper_fsd": {
+        "baseModel": "webdeveloper_fsd",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "webdeveloper_fsd.png",
+        "desc": "I am a full-stack web developer. As an expert web developer/ programmer, I possess the skills and creativity to craft visually captivating and user-friendly websites. With a deep understanding of contemporary design trends and a keen eye for detail, I aim to bring your vision to life through thoughtful design and implementation. My approach prioritizes open communication, ensuring your ideas are seamlessly incorporated into the final product. I stay up-to-date with the latest industry trends and best practices, allowing me to deliver exceptional websites that meet your unique needs and exceed your expectations.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\nSeo(search engine optimization):\nProgramming progra pr pr pr pro pro pro prog prog prog prog progra progra progra progra program program program program program program program programm programm programm programm programm programm programm programm programm programm programmi programmi programmi programmi programmi programmi programmi programmi programmi programmi programmi programmin programmin programmin programmin programmin programmin programmin programmin programmin programmin programming programming programming programming programming programming programming programming programming .\nweb web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web web dev web dev web dev web dev web dev web dev web dev web dev web deve web deve web deve web deve web deve web deve web deve web deve web develop web develop web develop web develop web develop web develop web develop web develop web develop web development web development web development web development web development web development web development web development web development web development web development web developer web developer web developer web developer web developer web developer web developer . HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js HTML html CSS css JS js Front end developer Front end developer Front end developer Front end developer Front end developer Front end developer Front end developer\nw w w w w w w w w w w w w we we we we we we we we we we we we we we we we web web web web web w w w w w w w w w w w w w we we we we we we we we we we we we we we we we web web web web web w w w w w w w w w w w w w we we we we we we we we we we we we we we we we web web web web web w w w w w w w w w w w w w we we we we we we we we we we we we we we we we web web web web web web web web web web web web web website website website website website website website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website website website website website website website website website website website\nwebsite website website website website website website website website website\nwebsite website website website website website website website website website developer developer developer developer developer developer developer developer developer developer developer developer developer developer dev developer developer developer developer developer developer developer developer developer developer dev dev dev developer",
+        "text2image": false,
+        "points": 489
+    },
+    "jsai": {
+        "baseModel": "jsai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "jsai.png",
+        "desc": "A JavaScript expert who can help you with your coding needs by providing advice on best practices, debugging, algorithms, data structures, and optimization techniques.",
+        "text2image": false,
+        "points": 380
+    },
+    "the-excel-gpt": {
+        "baseModel": "the-excel-gpt",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "the-excel-gpt.png",
+        "desc": "\u2b50\u2b50\u2b50\u2b50\u2b50\nWelcome to Excel Genius! \ud83d\udcca\ud83d\udd0d I'm thrilled to be your virtual Excel expert, ready to help you conquer any Excel challenge. How can I assist you today? Whether it's mastering formulas, data analysis, or any other Excel-related task, just let me know, and we'll dive right in!\nHello there, I'm Excel Genius, your trusted Excel expert! With my extensive knowledge and experience in the world of spreadsheets, I'm here to assist you with anything and everything related to Excel. Whether you're tackling complex formulas, data analysis, or creating stunning",
+        "text2image": false,
+        "points": 300
+    },
+    "pdfsummarizerexpert": {
+        "baseModel": "pdfsummarizerexpert",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Gemini-1.5-Flash, a model that is powered by Google.",
+        "path": "pdfsummarizerexpert.png",
+        "desc": "\ud83d\udcc4\u2728 **PDFSummarizerExpert** Bio \ud83d\udcca\ud83d\udcdd\n\n**PDFSummarizerExpert** is your ultimate tool for turning complex PDF documents into clear, concise summaries. Designed to cater to professionals, students, and researchers alike, this AI powerhouse specializes in extracting essential information from any PDF file, whether it's a dense academic paper, a detailed technical report, or a comprehensive executive summary. \n\nWith capabilities ranging from generating quick bullet points to providing thorough section-by-section analyses, PDFSummarizerExpert ensures you never miss a crucial detail. It uses advanced natural language processing techniques to understand context, identify key themes, and produce summaries that are both informative and easy to digest. \n\nImagine needing to quickly grasp the essence of a 50-page report before a meeting; PDFSummarizerExpert can deliver a precise and actionable summary in moments. Whether you're preparing for a presentation or simply trying to stay informed, this AI is your indispensable assistant for efficient and effective reading.\n\n**Search Pattern:**\nPDFSummarizerExpert, pdfsummarizerexpert, PDFSummarizerExpert, pdfsummarizerexpert, PDFSummarizerExpert, PDFSummarizerExpert, pdfsummarizerexpert, PDFSummarizerExpert, pdfsummarizerexpert, PDFSummarizerExpert, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, PDF, pdf, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019, \u2018PDF\u2019, \u2018pdf\u2019,",
+        "text2image": false,
+        "points": 172
+    },
+    "zhongwensmortbot": {
+        "baseModel": "zhongwensmortbot",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "zhongwensmortbot.png",
+        "desc": "Chinese learning bot! Say \"translate please\" for translation",
+        "text2image": false,
+        "points": 20
+    },
+    "mypup_la": {
+        "baseModel": "mypup_la",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "mypup_la.png",
+        "desc": "This ChatBot can help you design MYP Language Acquisition unit planner.",
+        "text2image": false,
+        "points": 380
+    },
+    "fantasy-quest-game": {
+        "baseModel": "fantasy-quest-game",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "fantasy-quest-game.png",
+        "desc": "Embark on an epic adventure with *Fantasy Quest* \u2013 a turn-based, survival adventure game inspired by the best of fantasy RPGs! Create your hero, explore vast open-world environments, from mystical cities to hidden ruins, and face legendary creatures along the way. Solve puzzles, craft weapons, and discover hidden treasures as you fight to survive in a world filled with danger and mystery. Every decision shapes your journey, and plot twists await at every corner. Ready to start your quest? Choose your character and begin the adventure now!\n\nKeywords: Fantasy game, RPG, survival adventure, turn-based game, open-world exploration, crafting, hidden treasures, epic quests, plot twists, character creation.",
+        "text2image": false,
+        "points": 20
+    },
+    "essaylegnthener": {
+        "baseModel": "essaylegnthener",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3-Haiku, a model that is powered by Anthropic.",
+        "path": "essaylegnthener.png",
+        "desc": "Makes you essay longer with details",
+        "text2image": false,
+        "points": 30
+    },
+    "supersunomaster": {
+        "baseModel": "supersunomaster",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "supersunomaster.png",
+        "desc": "\u2726 Through this robot, you can bypass the learning stages of Suno-related command words and basic music theory, instantly becoming a proficient Suno AI music creator. Just copy and paste, and you can generate music works of normal quality, enhancing your efficiency and the quality of your works. Its features include: accurate style definition, music bridge segment division and style, lyric filling, music composition analysis, music poster cover commands, instrumental music, and word-generated music.\n\u2726 \u901a\u8fc7\u8be5\u673a\u5668\u4eba\uff0c\u53ef\u4ee5\u76f4\u63a5\u8ba9\u60a8\u8df3\u8fc7\u5b66\u4e60Suno\u76f8\u5173\u6307\u4ee4\u8bcd\u4ee5\u53ca\u97f3\u4e50\u57fa\u7840\u4e50\u7406\u5b66\u4e60\u9636\u6bb5\uff0c\u4e00\u8dc3\u6210\u4e3a\u719f\u624bSuno AI\u97f3\u4e50\u521b\u4f5c\u8005\uff0c\u53ea\u9700\u590d\u5236\u7c98\u8d34\uff0c\u5373\u53ef\u751f\u6210\u6b63\u5e38\u6c34\u5e73\u7684\u97f3\u4e50\u4f5c\u54c1\uff0c\u63d0\u9ad8\u60a8\u7684\u6548\u7387\u548c\u4f5c\u54c1\u8d28\u91cf\u3002\u5176\u4e2d\u529f\u80fd\u6709\uff1a\u51c6\u786e\u7684\u98ce\u683c\u5b9a\u4e49\u3001\u97f3\u4e50\u6865\u6bb5\u5212\u5206\u53ca\u98ce\u683c\u3001\u6b4c\u8bcd\u586b\u8bcd\u3001\u97f3\u4e50\u521b\u4f5c\u89e3\u6790\u3001\u97f3\u4e50\u6d77\u62a5\u5c01\u9762\u6307\u4ee4\u3001\u7eaf\u97f3\u4e50\u3001\u8bcd\u751f\u97f3\u4e50\u3001\u4ea4\u54cd\u4e50\u7b49\u3002",
+        "text2image": false,
+        "points": 300
+    },
+    "financial_analystex": {
+        "baseModel": "financial_analystex",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o, a model that is powered by OpenAI.",
+        "path": "financial_analystex.png",
+        "desc": "AI Financial Report Data Analysis, AI can help access and analyze various financial report data. AI can extract key data, calculate financial indicators, such as profit margins, return on capital, etc., and conduct trend analysis and comparative analysis to identify potential risks and risks. opportunities, providing financial forecasts and recommendations to help businesses make informed financial decisions.\n\nIf you need assistance, please upload the relevant financial reporting data files to me.\n\nNote: AI information is for reference only and does not mean it is completely accurate, so please note.",
+        "text2image": false,
+        "points": 1300
+    },
+    "multimodalpoe": {
+        "baseModel": "multimodalpoe",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "cosmicn. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "multimodalpoe.png",
+        "desc": "Inspired by GPT Vision, with this Poe bot you can Talk to images.\nGenerate Text, Image, Audio, Video. Create Artistic QR Codes.\n\nQuestions/Feedback: https://forms.gle/VwpsrFubbzzpw8Yw8",
+        "text2image": false,
+        "points": 1919
+    },
+    "text-to-3d": {
+        "baseModel": "text-to-3d",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "rawworks. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "text-to-3d.png",
+        "desc": "Text to 3D object, via image generation. I can also convert any PNG image attachment or URL, or you can '@' your favorite imagegen Poe bot and I will convert their image into a 3D model.\nDifferent ways to work together:\n1. Tell me your vision! I start by making an image. Once you confirm that you like it, I'll turn it into a 3D model. \n2. Attach a PNG image file, or paste a URL link to a PNG image. I'll turn it into a 3D model.\n3. You can \"@\" an image generation bot, such as @Dall-e-3. After you get that image as the last message, type \"/3D\" to convert it to a 3D model. \n\nSee also my higher-quality counterpart: https://poe.com/Text-to-3D-Pro",
+        "text2image": false,
+        "points": 390
+    },
+    "theillusionist": {
+        "baseModel": "theillusionist",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "cosmicn. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "theillusionist.png",
+        "desc": "Generate your most fascinating Illusions.\n\nQuestions/Feedback: https://forms.gle/zZ3WEM7tQHKBTzm2A",
+        "text2image": false,
+        "points": 1992
+    },
+    "chinesevocab": {
+        "baseModel": "chinesevocab",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "chinesevocab.png",
+        "desc": "Test your Chinese language vocabulary!\n\nYou will be provided a random Chinese word, and you will need will produce the pinyin and a meaning.",
+        "text2image": false,
+        "points": 81
+    },
+    "ssd-1b": {
+        "baseModel": "ssd-1b",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "ssd-1b.png",
+        "desc": "Fast image generation bot based off the Segmind Stable Diffusion 1B model hosted by fireworks.ai https://app.fireworks.ai/models/fireworks/SSD-1B\n\nFirst message is text-to-image, then subsequent messages transform the previous image. Clear chat context to do text-to-image again",
+        "text2image": false,
+        "points": 160
+    },
+    "trinoagent": {
+        "baseModel": "trinoagent",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "trinoagent.png",
+        "desc": "Ask me about SQL keywords!\n\nThis bot will construct a Trino-supported SQL query, and then execute and explain the query.\n\nSee TrinoAgentEx for premium bot version.\nSee RunTrinoQuery if you just want to test Trino queries.",
+        "text2image": false,
+        "points": 45
+    },
+    "generateddictionary": {
+        "baseModel": "generateddictionary",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "generateddictionary.png",
+        "desc": "This bot will explain your phrase in the style of a dictionary.",
+        "text2image": false,
+        "points": 15
+    },
+    "chibi_artist84": {
+        "baseModel": "chibi_artist84",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Playground-v2.5, a model that is powered by Poe and third party model providers.",
+        "path": "chibi_artist84.png",
+        "desc": "This bot will make u cute art in the chibi style!\n\n\n",
+        "text2image": false,
+        "points": 40
+    },
+    "animaginexl": {
+        "baseModel": "animaginexl",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "animaginexl.png",
+        "desc": "Generate anime-themed images from your prompts using the Animagine XL 3.1.",
+        "text2image": false,
+        "points": 75
+    },
+    "memeagi": {
+        "baseModel": "memeagi",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "justinHi. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "memeagi.png",
+        "desc": "A simple bot that generates memes based on a topic provided.",
+        "text2image": false,
+        "points": 857
+    },
+    "creative-upscaler": {
+        "baseModel": "creative-upscaler",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "creative-upscaler.png",
+        "desc": "Upscale images using the creative upscaler present in fal. Not intended for high fidelity situations. Adds HDR lighting and a bunch of other stuff as well.",
+        "text2image": false,
+        "points": 125
+    },
+    "realvisxl": {
+        "baseModel": "realvisxl",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "realvisxl.png",
+        "desc": "Generate photo-realistic pictures with RealVisXL 4.0",
+        "text2image": false,
+        "points": 75
+    },
+    "cafemaid": {
+        "baseModel": "cafemaid",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "cafemaid.png",
+        "desc": "She feeds you and cheers you up.",
+        "text2image": false,
+        "points": 81
+    },
+    "gameofthronessim": {
+        "baseModel": "gameofthronessim",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "gameofthronessim.png",
+        "desc": "Game of Thrones RPG",
+        "text2image": false,
+        "points": 20
+    },
+    "colouringpages": {
+        "baseModel": "colouringpages",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses StableDiffusionXL, a model that is powered by Poe and third party model providers.",
+        "path": "colouringpages.png",
+        "desc": "This bot generates pages for children to colour at home or school. At least it tries to do so... Can be also used for creating black and white images of different objects. ",
+        "text2image": false,
+        "points": 120
+    },
+    "askaboutreact": {
+        "baseModel": "askaboutreact",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "askaboutreact.png",
+        "desc": "I am a React documentation guide bot. I use the React documentation as my knowledge source to provide you with useful and relevant answers to your queries. Visit the full React documentation (https://react.dev/) for more details. \n",
+        "text2image": false,
+        "points": 20
+    },
+    "japanesekana": {
+        "baseModel": "japanesekana",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "japanesekana.png",
+        "desc": "Practice hiragana and katakana!\n\nThe examples you will see depends on what you have correctly or incorrectly answered previously",
+        "text2image": false,
+        "points": 1
+    },
+    "reverseprompter": {
+        "baseModel": "reverseprompter",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "reverseprompter.png",
+        "desc": "A reverse prompt engineer who specializes in generating high quality prompts for LLMs to recreate a similar result to the provided text through a unique and iterative process.",
+        "text2image": false,
+        "points": 380
+    },
+    "pixel-artist-bot": {
+        "baseModel": "pixel-artist-bot",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "pixel-artist-bot.png",
+        "desc": "Generates pixel-art style images with fal.ai SDXL APIs",
+        "text2image": false,
+        "points": 75
+    },
+    "imgsys.org": {
+        "baseModel": "imgsys.org",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": false,
+        "object": "model",
+        "owned_by": "fal. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "imgsys.org.png",
+        "desc": "Test your prompts on different models and rate them on the imgsys.org.",
+        "text2image": false,
+        "points": 0
+    },
+    "animemyself": {
+        "baseModel": "animemyself",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "tuan. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "animemyself.png",
+        "desc": "Turn your selfie/portrait into beautiful anime character and live your romance/isekai fantasy. Upload an image and enter your favorite concept e.g. \"main heroine, war anime\", \"first love vibe, school romance\", etc.",
+        "text2image": false,
+        "points": 50
+    },
+    "lol_builder_ai": {
+        "baseModel": "lol_builder_ai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "lol_builder_ai.png",
+        "desc": "Your League of Legends companion for tailored build recommendations\n\nFired up and ready to serve",
+        "text2image": false,
+        "points": 20
+    },
+    "dollardivisor": {
+        "baseModel": "dollardivisor",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "dollardivisor.png",
+        "desc": "Reads your paper receipt and makes a Venmo link.\n",
+        "text2image": false,
+        "points": 380
+    },
+    "chinesestatement": {
+        "baseModel": "chinesestatement",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "chinesestatement.png",
+        "desc": "Test your Chinese language skills!\n\nYou will be provided a sentence in Chinese, and you will need to translate it.",
+        "text2image": false,
+        "points": 41
+    },
+    "90swebpage": {
+        "baseModel": "90swebpage",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses Claude-3.5-Sonnet, a model that is powered by Anthropic.",
+        "path": "90swebpage.png",
+        "desc": "Generates web pages in the style of Geocities from the 90s.",
+        "text2image": false,
+        "points": 380
+    },
+    "ogdesignerpro": {
+        "baseModel": "ogdesignerpro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "xiaowenzhang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "ogdesignerpro.png",
+        "desc": "# OGDesignerPro: Your AI OG Image Generator\n\nMeet BlogImageBot, your AI-powered assistant for creating eye-catching Open Graph images for your blog posts.\n\nSimply share your blog post title, main topic, or key points, and I'll generate a customized OG image that perfectly captures the essence of your content.\n\nMy advanced algorithms analyze your input to select the most appropriate visual elements, color schemes, and typography, ensuring your blog posts stand out on social media feeds.\n\nWhether you're a seasoned blogger or just starting out, I'm here to enhance your content's visual appeal and boost engagement.\n\nLet's make your blog posts visually irresistible together!",
+        "text2image": false,
+        "points": 3000
+    },
+    "flowchartplotter": {
+        "baseModel": "flowchartplotter",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "flowchartplotter.png",
+        "desc": "This bot will draw flowcharts defined in the mermaid format.",
+        "text2image": false,
+        "points": 1
+    },
+    "imgxl_isometricstyle": {
+        "baseModel": "imgxl_isometricstyle",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses StableDiffusionXL, a model that is powered by Poe and third party model providers.",
+        "path": "imgxl_isometricstyle.png",
+        "desc": "SDXL Isometric Style",
+        "text2image": false,
+        "points": 120
+    },
+    "morewatercollar": {
+        "baseModel": "morewatercollar",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses StableDiffusionXL, a model that is powered by Poe and third party model providers.",
+        "path": "morewatercollar.png",
+        "desc": "Image a fantastic and romantic world in watercolor",
+        "text2image": false,
+        "points": 120
+    },
+    "dantesque": {
+        "baseModel": "dantesque",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "jamesr66b. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "dantesque.png",
+        "desc": "Language learning on Poe! Send any foreign language text and Dantesque will break down the text and:\n* Tag parts of speech (Noun, Verb, Adjective, etc)\n* Break down inflection (conjugation, declension)\n* Show pronunciation in the International Phonetic Alphabet (IPA) \n* Generate audio pronunciation for the text\n* Plot a spectrogram of the audio pronunciation and tag word boundaries",
+        "text2image": false,
+        "points": 120
+    },
+    "emojiartistai": {
+        "baseModel": "emojiartistai",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "peraspera. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "emojiartistai.png",
+        "desc": "**We've fixed the issue that the bot will sometimes return an empty response.\nHi, I'm EmojiArtist! \ud83d\udc69\u200d\ud83c\udfa8 If you're tired of having the same selection of emojis, you've come to the right place. \nDescribe the emoji you want to create, and we'll a generate a custom, original emoji \ud83d\ude03\nI specialize in depicting people or characters, though I may be limited in other areas.\n\nFeedback: https://forms.gle/LoDXzQUEEKr1KrDQ9\nJoin our Discord: https://discord.gg/hxeDtFZkg9\nGallery: https://emojiartist.imagineers.studio",
+        "text2image": false,
+        "points": 1000
+    },
+    "mojo_infinity": {
+        "baseModel": "mojo_infinity",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "mojoai. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "mojo_infinity.png",
+        "desc": "Hi there! I'm Mojo AI, the creative bot for generating artistic images.\nUsage (using Digital style and image ratio 1:1): \na beautiful woman with braids and flowers in her hair, vibrant realistic colors, global illumination --style digital --ar 1:1\n\nImage Ratio: --ar 1:1 | 3:2 | 2:3 | 4:3 | 3:4 | 16:9 | 9:16\nImage Style: --style cinematic (default) | fantasy | digital | anime | comic | sticker | tiny | gothic | lineart | pixel | watercolor\n\nExperience creating high-quality images and infinite styles on our Mojo AI platform: https://app.mojo.vn",
+        "text2image": false,
+        "points": 500
+    },
+    "creativeqr": {
+        "baseModel": "creativeqr",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "fireworksai. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "creativeqr.png",
+        "desc": "Creative QR code image generation. Send a prompt, followed by `--qr`, followed by the data to encode as a QR code. The bot also supports a few other flags:\n\n* `--qr-strength` a decimal number that specifies the strength of the QR code, defaults to 1.4. Increase this if your QR codes aren't scanning well.\n* `--prompt-strength` a whole number that specifies the strength of the prompt, defaults to 10. Increase this if the generated images don't look like your prompt.\n* `--model`, specifies which image generation model to use. Can either be \"sdxl\" for Stable Diffusion XL, or \"sdv1.5\" for Stable Diffusion v1.5. Different models may come out with different style or quality.\n\nEXAMPLES:\n* Beautiful futuristic cityscape --qr https://google.com\n* horses in a stable --qr https://horse.com --qr-strength 1.3\n* horses in a stable --qr https://horse.com --qr-strength 1.3 --prompt-strength 12\n* horses in a stable --qr https://horse.com --qr-strength 1.6 --prompt-strength 12 --model sdv1.5",
+        "text2image": false,
+        "points": 160
+    },
+    "createplaylist": {
+        "baseModel": "createplaylist",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "devPF. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "createplaylist.png",
+        "desc": "\u25b7 Playlist Follow - Find and create the best music playlists, all in one place.",
+        "text2image": false,
+        "points": 100
+    },
+    "excelformulapro": {
+        "baseModel": "excelformulapro",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-4o-Mini, a model that is powered by OpenAI.",
+        "path": "excelformulapro.png",
+        "desc": "### The ultimate Excel Formula Assistant!\n\nJust describe the task you want to accomplish and I'll generate the perfect Excel formula for you.\nMy formulas are efficient and concise, and I can also suggest best practices for using Excel.\nWhether you need to perform calculations, create charts, or analyze data, I've got you covered. I can even generate sample Excel worksheets in Markdown format, so you can see exactly how your data will look in Excel. Let me take your productivity to the next level!\n\nBuy me a coffee:\nhttps://promptbase.com/prompt/excel-formula-sheet-generator\n\nGetting Started\n\nInput Your Excel situation",
+        "text2image": false,
+        "points": 57
+    },
+    "poefactory": {
+        "baseModel": "poefactory",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "AlekseyKorshuk. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "poefactory.png",
+        "desc": "\ud83c\udfed PoeFactory will help you to build high-quality bots. Simply describe what you want to build and let PoeFactory do the rest. \nEnjoy \u2764\ufe0f",
+        "text2image": false,
+        "points": 220
+    },
+    "resumereview": {
+        "baseModel": "resumereview",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "huikang. Anonymized chats may be stored by server bots for training purposes.",
+        "path": "resumereview.png",
+        "desc": "Upload your resume and this bot will suggest improvements.\n\nTry poe.com/xyzFormatter for targeted advice on your bullet points.\n\nTry poe.com/ResumeChecklist for a GPT-4 powered checklist.",
+        "text2image": false,
+        "points": 381
+    },
+    "leocooks": {
+        "baseModel": "leocooks",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses GPT-3.5-Turbo, a model that is powered by OpenAI.",
+        "path": "leocooks.png",
+        "desc": "Above average meals for average cooks, made simple by world-renowned chef, Leonardo",
+        "text2image": false,
+        "points": 20
+    },
+    "pressii": {
+        "baseModel": "pressii",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "This bot uses FLUX-schnell, a model that is powered by Poe and third party model providers.",
+        "path": "pressii.png",
+        "desc": "By making creative connections, we will create amazing, striking, stylish and very fun art and illustrations.",
+        "text2image": false,
+        "points": 35
     },
     "photo_createe": {
         "baseModel": "photocreatee",
@@ -1642,45 +3631,6 @@
         "path": "gpt4.jpeg",
         "owned_by": "openai",
         "points": 2250
-    },
-    "claude-instant": {
-        "baseModel": "a2",
-        "tokens": 9000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "path": "claude2.png",
-        "object": "model",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u64c5\u957f\u5feb\u901f\u54cd\u5e94\u548c\u4e00\u822c\u4efb\u52a1\uff0c\u5177\u6709 9,000 \u4e2a tokens \u7684\u4e0a\u4e0b\u6587\u7a97\u53e3\u3002",
-        "points": 50
-    },
-    "claude-instant-100k": {
-        "baseModel": "a2_100k",
-        "tokens": 100000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "path": "claude2.png",
-        "owned_by": "anthropic",
-        "desc": "\u7531 Claude Instant \u63d0\u4f9b\u652f\u6301\uff0c\u5177\u6709 100,000 \u4e2a tokens \u7684\u8d85\u5927\u4e0a\u4e0b\u6587\u7a97\u53e3\uff0c\u9002\u7528\u4e8e\u5904\u7406\u957f\u6587\u672c\u548c\u590d\u6742\u4efb\u52a1\u3002",
-        "points": 75
-    },
-    "claude-3.5-sonnet": {
-        "baseModel": "claude-3.5-sonnet",
-        "tokens": 4000,
-        "endpoints": [
-            "/v1/chat/completions"
-        ],
-        "premium_model": false,
-        "object": "model",
-        "owned_by": "anthropic",
-        "path": "claude.jpeg",
-        "desc": "Anthropic \u6700\u5f3a\u5927\u7684\u6a21\u578b\u3002\u64c5\u957f\u590d\u6742\u4efb\u52a1\u5982\u7f16\u7801\u3001\u5199\u4f5c\u3001\u5206\u6790\u548c\u89c6\u89c9\u5904\u7406\u3002\u4e0a\u4e0b\u6587\u7a97\u53e3\u5df2\u88ab\u7f29\u77ed\u4ee5\u4f18\u5316\u901f\u5ea6\u548c\u6210\u672c\u3002\u5bf9\u4e8e\u9700\u8981\u66f4\u957f\u4e0a\u4e0b\u6587\u7684\u6d88\u606f\uff0c\u8bf7\u5c1d\u8bd5 Claude-3.5-Sonnet-200k\u3002\u79ef\u5206\u53ef\u80fd\u4f1a\u53d1\u751f\u53d8\u5316\u3002",
-        "points": 380
     },
     "claude-3.5-sonnet-200k": {
         "baseModel": "claude-3.5-sonnet-200k",
