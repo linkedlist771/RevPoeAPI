@@ -148,10 +148,11 @@ class PoeBotsUpdater:
 
         filtered_bots = {}
         web_updated_bot_information = get_all_available_poe_info()
-        web_updated_bot_information = remove_null_val_from_dict(web_updated_bot_information)
         if explored_bots:
             explored_bots = load_json(EXPLORED_BOTS_INFORMATION_BOTS_FILE)
             web_updated_bot_information.update(explored_bots)
+        web_updated_bot_information = remove_null_val_from_dict(web_updated_bot_information)
+
         web_updated_bot_information = {
             k: make_dict_handle_lower(v) for k, v in web_updated_bot_information.items()
         }
