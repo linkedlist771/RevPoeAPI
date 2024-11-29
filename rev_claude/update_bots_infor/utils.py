@@ -6,11 +6,10 @@ from tqdm.asyncio import tqdm
 from typing import Dict, Any, Optional
 
 
-async def get_first_plus_client() -> AsyncPoeApi:
+async def get_first_plus_client(idx: int=0) -> AsyncPoeApi:
     basic_clients, plus_clients = ClientManager().get_clients()
-    # logger.debug(f"basic_clients: \n{basic_clients}")
-    # logger.debug(f"plus_clients: \n{plus_clients}")
-    client = list(plus_clients.values())[0]
+
+    client = list(plus_clients.values())[idx]
     return await client.get_poe_bot_client()
 
 async def get_available_bots(
@@ -26,7 +25,7 @@ async def get_available_bots(
 async def get_all_explored_bots(
         count: int = 25,
         get_all: bool = False,) -> Dict[str, Any]:
-    poe_client: AsyncPoeApi = await get_first_plus_client()
+    poe_client: AsyncPoeApi = await get_first_plus_client(idx=1)
 
     all_categories = await poe_client.get_available_categories()
     logger.debug(f"all_categories: \n{all_categories}")
