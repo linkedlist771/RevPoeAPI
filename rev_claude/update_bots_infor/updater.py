@@ -117,15 +117,20 @@ class PoeBotsUpdater:
             logger.error(traceback.format_exc())
         return False
 
-    async def download_necessary_avatars(self):
+    async def download_necessary_avatars(self, explored_bots: bool=False):
         """Download avatars for filtered bots"""
         web_updated_bot_information = get_all_available_poe_info()
+        if explored_bots:
+            logger.debug(f"before load explored bots size: {len(web_updated_bot_information)}")
+            explored_bots = load_json(EXPLORED_BOTS_INFORMATION_BOTS_FILE)
+            web_updated_bot_information.update(explored_bots)
+            logger.debug(f"after load explored bots size: {len(web_updated_bot_information)}")
         web_updated_bot_information = remove_null_val_from_dict(web_updated_bot_information)
         web_updated_bot_information = {
             k: make_dict_handle_lower(v) for k, v in web_updated_bot_information.items()
         }
 
-        for bot_name, bot_info in tqdm(web_updated_bot_information.items()):
+        for bot_name, bot_info in tqdm(web_updated_bot_information.items(), desc="Downloading avatars"):
             try:
                 handle = bot_info["handle"]
                 avatar_url = bot_info["picture"]["url"]
@@ -207,7 +212,7 @@ async def amain():
     # Extract filtered bots and download avatars
     logger.info("Filtering bots and downloading avatars")
     filtered_bots = await poe_bots_updater.extract_filtered_bots(True)
-    await poe_bots_updater.download_necessary_avatars()
+    await poe_bots_updater.download_necessary_avatars(True)
 
     logger.info("Bot information update completed")
     return filtered_bots
