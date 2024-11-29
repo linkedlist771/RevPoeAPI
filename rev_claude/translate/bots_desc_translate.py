@@ -75,7 +75,7 @@ async def main():
         logger.info(
             f"Model: {model_name}, Desc: {orig_desc}, Translation: {trans_desc}"
         )
-        translated_data[model_name]["desc"] = trans_desc
+        translated_data[model_name]["desc"] = trans_desc[:300]
         if "sd" in model_name or "stable" in model_name:
             translated_data[model_name]["text2image"] = True
             translated_data[model_name]["owned_by"] = "stabilityai"
