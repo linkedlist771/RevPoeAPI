@@ -28,7 +28,7 @@ async def get_available_bots(
             nickname = bot_info['nickname']
             return bot, {
                 'bot': {
-                    'nickname': nickname,
+                    'nickname': bot,
                 }
             }
         except Exception as e:
