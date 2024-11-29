@@ -18,8 +18,12 @@ async def get_available_bots(
     poe_client: AsyncPoeApi = await get_first_plus_client()
     all_bots = await poe_client.get_available_bots(count=count, get_all=get_all)
     # logger.debug()
+    all_categories = await poe_client.get_available_categories()
+    logger.debug(all_categories)
+    raise NotImplementedError("This function is not implemented yet.")
     explore_bots = await poe_client.explore(count=count, explore_all=get_all)
     logger.debug(explore_bots)
+    # 'Llama-3.2-90B-FW-131k', 'Tako',
     all_bots.update(explore_bots)
     return all_bots
 
