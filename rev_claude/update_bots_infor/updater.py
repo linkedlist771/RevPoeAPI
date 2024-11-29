@@ -149,8 +149,10 @@ class PoeBotsUpdater:
         filtered_bots = {}
         web_updated_bot_information = get_all_available_poe_info()
         if explored_bots:
+            logger.debug(f"before load explored bots size: {len(web_updated_bot_information)}")
             explored_bots = load_json(EXPLORED_BOTS_INFORMATION_BOTS_FILE)
             web_updated_bot_information.update(explored_bots)
+            logger.debug(f"after load explored bots size: {len(web_updated_bot_information)}")
         web_updated_bot_information = remove_null_val_from_dict(web_updated_bot_information)
 
         web_updated_bot_information = {
