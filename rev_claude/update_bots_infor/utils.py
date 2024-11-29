@@ -13,9 +13,6 @@ async def get_first_plus_client() -> AsyncPoeApi:
     client = list(plus_clients.values())[0]
     return await client.get_poe_bot_client()
 
-
-
-
 async def get_available_bots(
     count: int = 25,
     get_all: bool = False,
@@ -38,15 +35,19 @@ async def get_available_bots(
             logger.error(f"Error processing bot {bot}: {str(e)}")
             return None
 
-    async def process_category(category: str) -> Dict[str, Any]:
-        bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
-        # 处理每个category下的所有bot
-        bot_results = await tqdm.gather(
-            *[process_bot(bot) for bot in bots],
-            desc=f"Processing bots in {category}"
-        )
-        # 过滤掉None结果
-        return dict(result for result in bot_results if result is not None)
+    async def process_category(category: str) -> Optional[Dict[str, Any]]:
+        try:
+            bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
+            # 处理每个category下的所有bot
+            bot_results = await tqdm.gather(
+                *[process_bot(bot) for bot in bots],
+                desc=f"Processing bots in {category}"
+            )
+            # 过滤掉None结果
+            return dict(result for result in bot_results if result is not None)
+        except Exception as e:
+            logger.error(f"Error processing category {category}: {str(e)}")
+            return None
 
     # 处理所有categories
     category_results = await tqdm.gather(
@@ -54,10 +55,11 @@ async def get_available_bots(
         desc="Processing categories"
     )
 
-    # 合并所有结果
+    # 合并所有结果,过滤掉None
     explored_bots = {}
     for category_result in category_results:
-        explored_bots.update(category_result)
+        if category_result is not None:
+            explored_bots.update(category_result)
 
     all_bots.update(explored_bots)
     return all_bots
