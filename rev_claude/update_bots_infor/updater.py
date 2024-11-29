@@ -5,7 +5,7 @@ from typing import Dict, Any
 import aiohttp
 from loguru import logger
 from rev_claude.configs import DATA_DIR
-from rev_claude.update_bots_infor.utils import get_available_bots, get_bot_information
+from rev_claude.update_bots_infor.utils import get_available_bots, get_bot_information, get_all_explored_bots
 from rev_claude.utils.dict_utils import (
     remove_null_val_from_dict,
     make_dict_handle_lower,
@@ -49,6 +49,8 @@ class BotInformation(BaseModel):
 BOTS_INFORMATION_DIR = DATA_DIR / "bots_information"  # this information
 BOTS_AVATARS_DIR = DATA_DIR / "bots_avatars"  # this information
 ALL_AVAILABLE_BOTS_FILE = BOTS_INFORMATION_DIR / "all_available_bots.json"
+EXPLORED_BOTS_INFORMATION_BOTS_FILE = BOTS_INFORMATION_DIR / "explored_bots_information.json"
+
 ALL_AVAILABLE_BOTS_INFORMATION_FILES = (
     BOTS_INFORMATION_DIR / "all_available_bots_information.json"
 )
@@ -69,13 +71,19 @@ class PoeBotsUpdater:
 
         await ClientManager().load_clients(reload=False)
 
-    async def save_updated_models(self, bots_count: int, get_all_bots: bool):
+    async def save_updated_models(self, bots_count: int, get_all_bots: bool, get_explored_bots: bool = False):
         all_bots_information = await get_available_bots(
             count=bots_count, get_all=get_all_bots
         )
         bots_size = len(all_bots_information)
         save_json(ALL_AVAILABLE_BOTS_FILE, all_bots_information)
-        logger.debug(f"bots length:\n{bots_size}")
+        logger.debug(f"default bots length:\n{bots_size}")
+
+        explored_bots = await get_all_explored_bots(count=bots_count, get_all=get_explored_bots)
+        bots_size = len(explored_bots)
+        save_json(EXPLORED_BOTS_INFORMATION_BOTS_FILE, explored_bots)
+        logger.debug(f"explored bots length:\n{bots_size}")
+
 
     async def save_models_information(self):
         # first load the model in to the json.
@@ -185,7 +193,7 @@ async def amain():
 
     # Initialize and save basic model information
     await poe_bots_updater.async_init()
-    await poe_bots_updater.save_updated_models(bots_count, get_all_bots)
+    await poe_bots_updater.save_updated_models(bots_count, get_all_bots, True)
     await poe_bots_updater.save_models_information()
 
     # Extract filtered bots and download avatars
