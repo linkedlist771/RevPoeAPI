@@ -1,7 +1,9 @@
 from rev_claude.client.client_manager import ClientManager
 from rev_claude.poe_api_wrapper import AsyncPoeApi
 from loguru import logger
-
+import asyncio
+from tqdm.asyncio import tqdm
+from typing import Dict, Any
 
 async def get_first_plus_client() -> AsyncPoeApi:
     basic_clients, plus_clients = ClientManager().get_clients()
@@ -11,30 +13,49 @@ async def get_first_plus_client() -> AsyncPoeApi:
     return await client.get_poe_bot_client()
 
 
+
+
 async def get_available_bots(
     count: int = 25,
     get_all: bool = False,
-):
+) -> Dict[str, Any]:
     poe_client: AsyncPoeApi = await get_first_plus_client()
     all_bots = await poe_client.get_available_bots(count=count, get_all=get_all)
-    # logger.debug()
     all_categories = await poe_client.get_available_categories()
-    logger.debug(all_categories)
-    for category in all_categories:
+    logger.debug(f"all_categories: \n{all_categories}")
+
+    async def process_bot(bot: str) -> tuple[str, dict]:
+        bot_info = await poe_client.get_botInfo(handle=bot)
+        nickname = bot_info['nickname']
+        return bot, {
+            'bot': {
+                'nickname': nickname,
+            }
+        }
+
+    async def process_category(category: str) -> Dict[str, Any]:
         bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
-        # all_bots.update(bots)
-        for bot in bots:
-            bot_info = await poe_client.get_botInfo(handle=bot)
-            logger.debug(bot_info)
-            exit()
-        logger.debug(bots)
-        exit()
-    raise NotImplementedError("This function is not implemented yet.")
-    explore_bots = await poe_client.explore(count=count, explore_all=get_all)
-    logger.debug(explore_bots)
-    # 'Llama-3.2-90B-FW-131k', 'Tako',
-    all_bots.update(explore_bots)
+        # 处理每个category下的所有bot
+        bot_results = await tqdm.gather(
+            *[process_bot(bot) for bot in bots],
+            desc=f"Processing bots in {category}"
+        )
+        return dict(bot_results)
+
+    # 处理所有categories
+    category_results = await tqdm.gather(
+        *[process_category(category) for category in all_categories],
+        desc="Processing categories"
+    )
+
+    # 合并所有结果
+    explored_bots = {}
+    for category_result in category_results:
+        explored_bots.update(category_result)
+
+    all_bots.update(explored_bots)
     return all_bots
+
 
 
 # handle 就是实际POE调用使用的模型的名字。
