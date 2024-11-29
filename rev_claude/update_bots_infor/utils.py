@@ -20,6 +20,11 @@ async def get_available_bots(
     # logger.debug()
     all_categories = await poe_client.get_available_categories()
     logger.debug(all_categories)
+    for category in all_categories:
+        bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
+        # all_bots.update(bots)
+        logger.debug(bots)
+        exit()
     raise NotImplementedError("This function is not implemented yet.")
     explore_bots = await poe_client.explore(count=count, explore_all=get_all)
     logger.debug(explore_bots)
