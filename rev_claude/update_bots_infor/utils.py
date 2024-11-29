@@ -17,8 +17,9 @@ async def get_available_bots(
 ):
     poe_client: AsyncPoeApi = await get_first_plus_client()
     all_bots = await poe_client.get_available_bots(count=count, get_all=get_all)
-
+    # logger.debug()
     explore_bots = await poe_client.explore(count=count, explore_all=get_all)
+    logger.debug(explore_bots)
     all_bots.update(explore_bots)
     return all_bots
 
