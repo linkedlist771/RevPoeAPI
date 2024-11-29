@@ -142,11 +142,16 @@ class PoeBotsUpdater:
                 logger.error(f"Error processing avatar for {bot_name}: {e}")
                 logger.error(traceback.format_exc())
 
-    async def extract_filtered_bots(self) -> Dict[str, Any]:
+    async def extract_filtered_bots(self, explored_bots: bool=False) -> Dict[str, Any]:
         """Filter and process bots based on criteria"""
+
+
         filtered_bots = {}
         web_updated_bot_information = get_all_available_poe_info()
         web_updated_bot_information = remove_null_val_from_dict(web_updated_bot_information)
+        if explored_bots:
+            explored_bots = load_json(EXPLORED_BOTS_INFORMATION_BOTS_FILE)
+            web_updated_bot_information.update(explored_bots)
         web_updated_bot_information = {
             k: make_dict_handle_lower(v) for k, v in web_updated_bot_information.items()
         }
@@ -198,7 +203,7 @@ async def amain():
 
     # Extract filtered bots and download avatars
     logger.info("Filtering bots and downloading avatars")
-    filtered_bots = await poe_bots_updater.extract_filtered_bots()
+    filtered_bots = await poe_bots_updater.extract_filtered_bots(True)
     await poe_bots_updater.download_necessary_avatars()
 
     logger.info("Bot information update completed")
