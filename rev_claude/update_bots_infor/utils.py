@@ -19,7 +19,7 @@ async def get_available_bots(
     all_bots = await poe_client.get_available_bots(count=count, get_all=get_all)
 
     explore_bots = await poe_client.explore(count=count, explore_all=get_all)
-    all_bots.extend(explore_bots)
+    all_bots.update(explore_bots)
     return all_bots
 
 
