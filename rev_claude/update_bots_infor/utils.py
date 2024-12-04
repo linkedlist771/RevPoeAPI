@@ -36,7 +36,7 @@ async def get_all_explored_bots(
     logger.debug(f"all_categories: \n{all_categories}")
 
     @retry(
-        stop=stop_after_attempt(3),  # 最多重试3次
+        stop=stop_after_attempt(10),  # 最多重试3次
         wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
         retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
         reraise=True  # 最后一次重试失败时抛出原始异常
