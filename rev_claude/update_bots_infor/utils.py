@@ -47,31 +47,24 @@ async def get_all_explored_bots(
         return nickname, bot_info
 
     @retry(
-        stop=stop_after_attempt(2),  # 最多重试3次
+        stop=stop_after_attempt(3),  # 最多重试3次
         wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
         retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
         reraise=True  # 最后一次重试失败时抛出原始异常
     )
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
-        try:
-            bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
-            results = {}
+        bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
+        results = {}
 
-            # Serial processing of bots
-            for bot in tqdm(bots, desc=f"Processing bots in {category}"):
-                try:
-                    result = await process_bot(bot)
-                    if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
-                        results.update({bot.handle: result})  # Use bot handle as key
-                except Exception as e:
-                    logger.error(f"Error processing bot {bot.handle}: {str(e)}")
-                    continue
+        # Serial processing of bots
+        for bot in tqdm(bots, desc=f"Processing bots in {category}"):
+            result = await process_bot(bot)
+            if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
+                results.update({bot.handle: result})  # Use bot handle as key
 
-            return results
 
-        except Exception as e:
-            logger.error(f"Error processing category {category}: {str(e)}")
-            return None
+        return results
+
 
     # 处理所有categories
     category_results = await tqdm.gather(
