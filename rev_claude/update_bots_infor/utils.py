@@ -53,19 +53,23 @@ async def get_all_explored_bots(
         reraise=True  # 最后一次重试失败时抛出原始异常
     )
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
-        bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
         results = {}
 
-        # Serial processing of bots
-        for bot in tqdm(bots, desc=f"Processing bots in {category}"):
-            try:
-                result = await process_bot(bot)
-                if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
-                    results.update({bot.handle: result})  # Use bot handle as key
-            except:
-                await asyncio.sleep(2)
+        try:
+            bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
 
-        return results
+            # Serial processing of bots
+            for bot in tqdm(bots, desc=f"Processing bots in {category}"):
+                try:
+                    result = await process_bot(bot)
+                    if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
+                        results.update({bot.handle: result})  # Use bot handle as key
+                except:
+                    await asyncio.sleep(2)
+    
+            return results
+        except:
+            return results
 
 
     # 处理所有categories
