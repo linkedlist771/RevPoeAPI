@@ -47,20 +47,17 @@ async def get_all_explored_bots(
         return nickname, bot_info
 
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
-        try:
             bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
-            # 处理每个category下的所有bot
-            bot_results = await tqdm.gather(
-                *[process_bot(bot) for bot in bots],
-                desc=f"Processing bots in {category}"
-            )
-            # 过滤掉None结果
-            return dict(result for result in bot_results if result is not None)
-        except Exception as e:
-            logger.error(f"Error processing category {category}: {str(e)}")
-            return None
-        finally:
-            await asyncio.sleep(10)
+            results = {}
+
+            # Serial processing of bots
+            for bot in tqdm(bots, desc=f"Processing bots in {category}"):
+                result = await process_bot(bot)
+                if result is not None:
+                    results.update(result)
+                await asyncio.sleep(10)
+
+            return results
 
     # 处理所有categories
     category_results = await tqdm.gather(
