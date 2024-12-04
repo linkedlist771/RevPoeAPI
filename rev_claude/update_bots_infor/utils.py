@@ -58,10 +58,12 @@ async def get_all_explored_bots(
 
         # Serial processing of bots
         for bot in tqdm(bots, desc=f"Processing bots in {category}"):
-            result = await process_bot(bot)
-            if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
-                results.update({bot.handle: result})  # Use bot handle as key
-
+            try:
+                result = await process_bot(bot)
+                if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
+                    results.update({bot.handle: result})  # Use bot handle as key
+            except:
+                await asyncio.sleep(2)
 
         return results
 
