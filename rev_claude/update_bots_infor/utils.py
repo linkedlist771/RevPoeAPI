@@ -42,15 +42,9 @@ async def get_all_explored_bots(
         reraise=True  # 最后一次重试失败时抛出原始异常
     )
     async def process_bot(bot: str) -> Optional[tuple[str, dict]]:
-        try:
-            bot_info = await poe_client.get_botInfo(handle=bot)
-            nickname = bot_info['nickname']
-            return nickname, bot_info
-        except Exception as e:
-            logger.error(f"Error processing bot {bot}: {str(e)}")
-            return None
-        finally:
-            await asyncio.sleep(3)
+        bot_info = await poe_client.get_botInfo(handle=bot)
+        nickname = bot_info['nickname']
+        return nickname, bot_info
 
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
         try:
