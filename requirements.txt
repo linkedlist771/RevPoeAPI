@@ -13,3 +13,4 @@ duckduckgo_search
 tqdm
 redis[hiredis]
 poe_api_wrapper
+tenacity

@@ -4,6 +4,11 @@ from loguru import logger
 import asyncio
 from tqdm.asyncio import tqdm
 from typing import Dict, Any, Optional
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+import asyncio
+from typing import Dict, Any, Optional
+from tqdm.asyncio import tqdm
+
 
 
 async def get_first_plus_client(idx: int=0) -> AsyncPoeApi:
@@ -30,6 +35,12 @@ async def get_all_explored_bots(
     all_categories = await poe_client.get_available_categories()
     logger.debug(f"all_categories: \n{all_categories}")
 
+    @retry(
+        stop=stop_after_attempt(3),  # 最多重试3次
+        wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
+        retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
+        reraise=True  # 最后一次重试失败时抛出原始异常
+    )
     async def process_bot(bot: str) -> Optional[tuple[str, dict]]:
         try:
             bot_info = await poe_client.get_botInfo(handle=bot)
