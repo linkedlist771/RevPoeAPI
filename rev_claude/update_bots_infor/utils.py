@@ -36,10 +36,10 @@ async def get_all_explored_bots(
     logger.debug(f"all_categories: \n{all_categories}")
 
     @retry(
-        stop=stop_after_attempt(10),  # 最多重试3次
-        wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
-        retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
-        reraise=True  # 最后一次重试失败时抛出原始异常
+        stop=stop_after_attempt(10),
+        wait=wait_exponential(multiplier=1, min=4, max=10),
+        retry=retry_if_exception_type((Exception)),
+        reraise=True
     )
     async def process_bot(bot: str) -> Optional[tuple[str, dict]]:
         bot_info = await poe_client.get_botInfo(handle=bot)
@@ -47,10 +47,10 @@ async def get_all_explored_bots(
         return nickname, bot_info
 
     @retry(
-        stop=stop_after_attempt(3),  # 最多重试3次
-        wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
-        retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
-        reraise=True  # 最后一次重试失败时抛出原始异常
+        stop=stop_after_attempt(3),
+        wait=wait_exponential(multiplier=1, min=4, max=10),
+        retry=retry_if_exception_type((Exception)),
+        reraise=True
     )
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
         results = {}
@@ -58,33 +58,33 @@ async def get_all_explored_bots(
         try:
             bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
 
-            # Serial processing of bots
             for bot in tqdm(bots, desc=f"Processing bots in {category}"):
                 try:
-                    result = await process_bot(bot)
-                    if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
-                        results.update({bot.handle: result})  # Use bot handle as key
-                except:
+                    nickname, bot_info = await process_bot(bot)
+                    if bot_info is not None:
+                        results[bot] = bot_info  # 使用bot作为key
+                except Exception as e:
+                    logger.error(f"Error processing bot {bot}: {e}")
                     await asyncio.sleep(2)
-    
+
             return results
-        except:
+        except Exception as e:
+            logger.error(f"Error processing category {category}: {e}")
             return results
 
-
-    # 处理所有categories
-    category_results = await tqdm.gather(
+    # 使用asyncio.gather而不是tqdm.gather
+    category_results = await asyncio.gather(
         *[process_category(category) for category in all_categories],
-        desc="Processing categories"
+        return_exceptions=True
     )
 
-    # 合并所有结果,过滤掉None
     explored_bots = {}
     for category_result in category_results:
-        if category_result is not None:
+        if isinstance(category_result, dict):  # 确保结果是字典
             explored_bots.update(category_result)
 
     return explored_bots
+
 # handle 就是实际POE调用使用的模型的名字。
 
 
