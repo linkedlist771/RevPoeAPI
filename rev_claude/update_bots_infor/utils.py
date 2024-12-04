@@ -46,6 +46,12 @@ async def get_all_explored_bots(
         nickname = bot_info['nickname']
         return nickname, bot_info
 
+    @retry(
+        stop=stop_after_attempt(2),  # 最多重试3次
+        wait=wait_exponential(multiplier=1, min=4, max=10),  # 指数退避，等待时间在4-10秒之间
+        retry=retry_if_exception_type((Exception)),  # 发生任何异常时重试
+        reraise=True  # 最后一次重试失败时抛出原始异常
+    )
     async def process_category(category: str) -> Optional[Dict[str, Any]]:
         try:
             bots = await poe_client.explore(categoryName=category, count=count, explore_all=get_all)
@@ -57,7 +63,6 @@ async def get_all_explored_bots(
                     result = await process_bot(bot)
                     if result is not None and isinstance(result, dict):  # Ensure result is a dictionary
                         results.update({bot.handle: result})  # Use bot handle as key
-                    await asyncio.sleep(10)
                 except Exception as e:
                     logger.error(f"Error processing bot {bot.handle}: {str(e)}")
                     continue
