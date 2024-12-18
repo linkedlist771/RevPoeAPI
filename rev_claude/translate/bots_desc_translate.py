@@ -82,8 +82,6 @@ async def main():
         if "fal." in translated_data[model_name]["owned_by"]:
             translated_data[model_name]["text2image"] = True
 
-
-
     logger.debug(json.dumps(translated_data, indent=4))
     save_json(POE_BOT_INFO_ZH, translated_data)
 

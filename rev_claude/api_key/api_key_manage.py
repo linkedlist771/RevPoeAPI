@@ -344,7 +344,6 @@ class APIKeyManager:
             new_expiration_days = new_expiration_seconds / (24 * 60 * 60)
             return f"API密钥 {api_key} 已过期，已重新生成并延长过期时间 {additional_days} 天。新的过期时间还剩 {new_expiration_days:.2f} 天。"
 
-
         # 将天数转换为秒数
         additional_seconds = additional_days * 24 * 60 * 60
 

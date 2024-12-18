@@ -143,7 +143,7 @@ class ConversationHistoryManager:
         return histories
 
     async def get_all_client_conversations(
-            self, request: ConversationHistoryRequestInput
+        self, request: ConversationHistoryRequestInput
     ) -> List[ConversationHistory]:
         """Fetch and merge conversation histories from all clients for a given API key."""
         redis_client = await self.get_aioredis()

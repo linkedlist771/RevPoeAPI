@@ -192,12 +192,17 @@ async def obtain_reverse_official_login_router(
     )
 
 
-async def select_client_by_usage(client_type: str, client_idx: int, basic_clients: dict, plus_clients: dict,
-                                 status_list: List[ClientsStatus]) -> Any:
+async def select_client_by_usage(
+    client_type: str,
+    client_idx: int,
+    basic_clients: dict,
+    plus_clients: dict,
+    status_list: List[ClientsStatus],
+) -> Any:
     # 分别获取plus和basic的status
     plus_status = [s for s in status_list if s.type == "plus"]
     basic_status = [s for s in status_list if (s.type == "normal" or s.type == "basic")]
-                    # basic类型在status中标记为normal
+    # basic类型在status中标记为normal
 
     if client_type == "plus":
         if not plus_status:
@@ -238,7 +243,6 @@ async def select_client_by_usage(client_type: str, client_idx: int, basic_client
         selected_idx = np.random.choice(len(basic_status), p=probabilities)
         selected_status = basic_status[selected_idx]
         return basic_clients[selected_status.idx]
-
 
 
 @router.post("/form_chat")
@@ -283,7 +287,9 @@ async def chat(
     # else:
     #     claude_client = basic_clients[client_idx]
     status_list = await get_client_status(basic_clients, plus_clients)
-    claude_client = await select_client_by_usage(client_type, client_idx, basic_clients, plus_clients, status_list)
+    claude_client = await select_client_by_usage(
+        client_type, client_idx, basic_clients, plus_clients, status_list
+    )
 
     raw_message = message
     if not conversation_id:

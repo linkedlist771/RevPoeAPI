@@ -97,7 +97,6 @@ async def save_file(file: UploadFile) -> str:
     return file_path
 
 
-
 ua = UserAgent()
 filtered_browsers = list(
     filter(

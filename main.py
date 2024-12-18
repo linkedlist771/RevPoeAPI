@@ -31,9 +31,9 @@ async def _get_client_status(show_details: bool = False):
             client_type = status.type
             if client_type not in grouped_status:
                 grouped_status[client_type] = status.model_dump()
-                grouped_status[client_type]['usage'] = status.usage
+                grouped_status[client_type]["usage"] = status.usage
             else:
-                grouped_status[client_type]['usage'] += status.usage
+                grouped_status[client_type]["usage"] += status.usage
 
         # Convert back to list format with one entry per type
         result = [ClientsStatus(**status) for status in grouped_status.values()]
