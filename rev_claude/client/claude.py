@@ -4,7 +4,9 @@
 import json, os, uuid
 import re
 import shutil
+from datetime import datetime
 from http.cookies import SimpleCookie
+from pathlib import Path
 from typing import Union, List, Any
 import numpy as np
 
@@ -29,7 +31,7 @@ from rev_claude.configs import (
     USE_PROXY,
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
-    USE_TOKEN_SHORTEN,
+    USE_TOKEN_SHORTEN, ROOT,
 )
 
 from rev_claude.models import ClaudeModels
@@ -79,12 +81,14 @@ def generate_trace_id():
 
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
-    upload_dir = "uploaded_files"
+
+    upload_dir = ROOT / "uploaded_files"
     os.makedirs(upload_dir, exist_ok=True)
     # Generate a unique filename
-    file_extension = os.path.splitext(file.filename)[1]
-    unique_filename = f"{uuid.uuid4()}{file_extension}"
-    file_path = os.path.join(upload_dir, unique_filename)
+    file_extension = Path(file.filename).suffix
+    current_time = datetime.now().strftime("%Y_%m_%d_%H_%M_")
+    unique_filename = f"{current_time}{uuid.uuid4()}{file_extension}"
+    file_path = upload_dir / unique_filename
 
     try:
         # Save the file using shutil
@@ -347,8 +351,6 @@ class Client:
         logger.info(f"formatted_message" f"s: {messages_str}")
         poe_bot_client = await self.get_poe_bot_client()
         model_name = get_poe_bot_info()[model.lower()]["baseModel"]
-        # prefixes = []
-
         logger.debug(f"actual model name: \n{model_name}")
         try:
             async for chunk in send_message_with_retry(
@@ -356,20 +358,6 @@ class Client:
             ):
                 yield chunk
                 response_text += chunk
-            # async for chunk in poe_bot_client.send_message(
-            #     bot=model_name,
-            #     message=messages_str,
-            #     file_path=file_paths,
-            # ):
-            #     text = chunk["response"]
-            #     if not text:
-            #         continue
-            #     if text.rstrip("\n"):
-            #         prefixes.append(text.rstrip("\n"))
-            #     if len(prefixes) >= 2:
-            #         text = remove_prefix(text, prefixes[-2])
-            #     yield text
-            #     response_text += text
         except RuntimeError as runtime_error:
             logger.error(f"RuntimeError: {runtime_error}")
             yield str(runtime_error)
