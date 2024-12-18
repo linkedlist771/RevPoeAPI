@@ -487,7 +487,7 @@ class AsyncPoeApi:
             for each in response["data"]["exploreBotsConnection"]["edges"]
             if each["node"]["deletionState"] == "not_deleted"
         ]
-        cursor = response["data"]["viewer"]["exploreBotsConnection"]["pageInfo"][
+        cursor = response["data"]["exploreBotsConnection"]["pageInfo"][
             "endCursor"
         ]
         if len(bots) >= count and not get_all:
@@ -501,12 +501,12 @@ class AsyncPoeApi:
             )
             new_bots = [
                 each["node"]
-                for each in response["data"]["viewer"]["exploreBotsConnection"][
+                for each in response["data"]["exploreBotsConnection"][
                     "edges"
                 ]
                 if each["node"]["deletionState"] == "not_deleted"
             ]
-            cursor = response["data"]["viewer"]["exploreBotsConnection"]["pageInfo"][
+            cursor = response["data"]["exploreBotsConnection"]["pageInfo"][
                 "endCursor"
             ]
             bots += new_bots
