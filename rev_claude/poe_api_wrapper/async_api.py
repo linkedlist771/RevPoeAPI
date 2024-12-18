@@ -484,7 +484,7 @@ class AsyncPoeApi:
         )
         bots = [
             each["node"]
-            for each in response["data"]["viewer"]["exploreBotsConnection"]["edges"]
+            for each in response["data"]["exploreBotsConnection"]["edges"]
             if each["node"]["deletionState"] == "not_deleted"
         ]
         cursor = response["data"]["viewer"]["exploreBotsConnection"]["pageInfo"][
