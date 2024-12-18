@@ -496,17 +496,17 @@ class AsyncPoeApi:
         while len(bots) < count or get_all:
             response = await self.send_request(
                 "gql_POST",
-                "AvailableBotsSelectorModalPaginationQuery",
+                "ExploreBotsListPaginationQuery",
                 {"cursor": cursor},
             )
             new_bots = [
                 each["node"]
-                for each in response["data"]["viewer"]["availableBotsConnection"][
+                for each in response["data"]["viewer"]["exploreBotsConnection"][
                     "edges"
                 ]
                 if each["node"]["deletionState"] == "not_deleted"
             ]
-            cursor = response["data"]["viewer"]["availableBotsConnection"]["pageInfo"][
+            cursor = response["data"]["viewer"]["exploreBotsConnection"]["pageInfo"][
                 "endCursor"
             ]
             bots += new_bots
