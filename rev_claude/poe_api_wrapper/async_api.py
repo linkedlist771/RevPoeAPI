@@ -480,14 +480,14 @@ class AsyncPoeApi:
                 "Please provide at least one of the following parameters: get_all=<bool>, count=<int>"
             )
         response = await self.send_request(
-            "gql_POST", "AvailableBotsSelectorModalPaginationQuery", {}
+            "gql_POST", "ExploreBotsListPaginationQuery", {}
         )
         bots = [
             each["node"]
-            for each in response["data"]["viewer"]["availableBotsConnection"]["edges"]
+            for each in response["data"]["viewer"]["exploreBotsConnection"]["edges"]
             if each["node"]["deletionState"] == "not_deleted"
         ]
-        cursor = response["data"]["viewer"]["availableBotsConnection"]["pageInfo"][
+        cursor = response["data"]["viewer"]["exploreBotsConnection"]["pageInfo"][
             "endCursor"
         ]
         if len(bots) >= count and not get_all:
@@ -1981,7 +1981,7 @@ class AsyncPoeApi:
                     "BotInfoCardActionBar_poeRemoveBotFromUserList_Mutation",
                     {
                         "connections": [
-                            "client:Vmlld2VyOjA=:__HomeBotSelector_viewer_availableBotsConnection_connection"
+                            "client:Vmlld2VyOjA=:__HomeBotSelector_viewer_exploreBotsConnection_connection"
                         ],
                         "botId": botId,
                     },
