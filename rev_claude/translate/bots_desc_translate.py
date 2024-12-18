@@ -81,6 +81,8 @@ async def main():
             translated_data[model_name]["owned_by"] = "stabilityai"
         if "fal." in translated_data[model_name]["owned_by"]:
             translated_data[model_name]["text2image"] = True
+        translated_data[model_name]["owned_by"] = translated_data[model_name]["owned_by"].replace("This bot is powered by ", "").strip(".")
+
 
     logger.debug(json.dumps(translated_data, indent=4))
     save_json(POE_BOT_INFO_ZH, translated_data)
