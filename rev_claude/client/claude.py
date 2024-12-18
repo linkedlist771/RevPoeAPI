@@ -81,9 +81,9 @@ def generate_trace_id():
 
 async def save_file(file: UploadFile) -> str:
     # Create a directory to store uploaded files if it doesn't exist
-
     upload_dir = ROOT / "uploaded_files"
     os.makedirs(upload_dir, exist_ok=True)
+
     # Generate a unique filename
     file_extension = Path(file.filename).suffix
     current_time = datetime.now().strftime("%Y_%m_%d_%H_%M_")
@@ -98,7 +98,7 @@ async def save_file(file: UploadFile) -> str:
         logger.error(f"Error saving file {file.filename}: {str(e)}")
         raise
 
-    return file_path
+    return str(file_path)  # Convert PosixPath to string
 
 
 ua = UserAgent()
