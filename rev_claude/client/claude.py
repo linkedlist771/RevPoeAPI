@@ -31,7 +31,8 @@ from rev_claude.configs import (
     USE_PROXY,
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
-    USE_TOKEN_SHORTEN, ROOT,
+    USE_TOKEN_SHORTEN,
+    ROOT,
 )
 
 from rev_claude.models import ClaudeModels

@@ -194,7 +194,9 @@ class AsyncPoeApi:
             ):
                 err_msg: str = json_data["errors"][0]["message"]
                 if err_msg == "Server Error":
-                    raise RuntimeError(f"Server Error. Raw response data: {json_data}")
+                    # raise RuntimeError(f"Server Error. Raw response data: {json_data}")
+                    raise RuntimeError(f"服务器错误。原始响应数据: {json_data}")
+
                 else:
                     logger.error(response.status_code)
                     logger.error(response.text)
@@ -255,9 +257,11 @@ class AsyncPoeApi:
             "gql_POST", "SubscriptionsMutation", SubscriptionsMutation
         )
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"Failed to subscribe by sending SubscriptionsMutation. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"Failed to subscribe by sending SubscriptionsMutation. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"订阅失败。原始响应数据: {response_json}")
+                
 
     def ws_run_thread(self):
         if self.ws and not self.ws.sock:
@@ -288,9 +292,10 @@ class AsyncPoeApi:
             self.ws_refresh -= 1
             if self.ws_refresh == 0:
                 self.ws_refresh = 3
-                raise RuntimeError(
-                    "Rate limit exceeded for sending requests to poe.com. Please try again later."
-                )
+                # raise RuntimeError(
+                #     "Rate limit exceeded for sending requests to poe.com. Please try again later."
+                # )
+                raise RuntimeError("发送请求到poe.com的频率限制已达到。请稍后再试。")
             try:
                 await self.get_channel_settings()
                 break
@@ -331,7 +336,8 @@ class AsyncPoeApi:
                 self.ws_connected = False
                 self.ws_error = True
                 self.ws.close()
-                raise RuntimeError("Timed out waiting for websocket to connect.")
+                # raise RuntimeError("Timed out waiting for websocket to connect.")
+                raise RuntimeError("等待websocket连接超时。")
 
     def disconnect_ws(self):
         self.ws_connecting = False
@@ -465,9 +471,10 @@ class AsyncPoeApi:
     async def get_settings(self):
         response_json = await self.send_request("gql_POST", "SettingsPageQuery", {})
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"Failed to get settings. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"Failed to get settings. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"获取设置失败。原始响应数据: {response_json}")
         return {
             "subscription": response_json["data"]["viewer"]["subscription"],
             "messagePointInfo": response_json["data"]["viewer"]["messagePointInfo"],
@@ -755,7 +762,8 @@ class AsyncPoeApi:
             await asyncio.sleep(0.01)
             timer += 0.01
             if timer > timeout:
-                raise RuntimeError("Timed out waiting for other messages to send.")
+                # raise RuntimeError("Timed out waiting for other messages to send.")
+                raise RuntimeError("等待其他消息发送超时。")
 
         prompt_md5 = hashlib.md5((chatCode + generate_nonce()).encode()).hexdigest()
         self.active_messages[prompt_md5] = None
@@ -768,9 +776,10 @@ class AsyncPoeApi:
         response_json = await self.send_request("gql_POST", "ChatPageQuery", variables)
 
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"An unknown error occurred. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"An unknown error occurred. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"未知错误。原始响应数据: {response_json}")
 
         edges = response_json["data"]["chatOfCode"]["messagesConnection"]["edges"]
         edges.reverse()
@@ -783,34 +792,38 @@ class AsyncPoeApi:
         last_message = edges[0]["node"]
 
         if last_message["author"] == "human":
-            raise RuntimeError(
-                f"Last message is not from bot. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"Last message is not from bot. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"最后一条消息不是来自机器人。原始响应数据: {response_json}")
 
         bot = bot_map(last_message["author"])
 
         status = last_message["state"]
         if status == "error_user_message_too_long":
-            raise RuntimeError(
-                f"Last message is too long. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"Last message is too long. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"最后一条消息太长。原始响应数据: {response_json}")
         while status != "complete":
             await asyncio.sleep(0.5)
             response_json = await self.send_request(
                 "gql_POST", "ChatPageQuery", variables
             )
             if response_json["data"] == None and response_json["errors"]:
-                raise RuntimeError(
-                    f"An unknown error occurred. Raw response data: {response_json}"
-                )
+                # raise RuntimeError(
+                #     f"An unknown error occurred. Raw response data: {response_json}"
+                # )
+                raise RuntimeError(f"未知错误。原始响应数据: {response_json}")
             edges = response_json["data"]["chatOfCode"]["messagesConnection"]["edges"]
             edges.reverse()
             last_message = edges[0]["node"]
             status = last_message["state"]
             if status == "error_user_message_too_long":
-                raise RuntimeError(
-                    f"Last message is too long. Raw response data: {response_json}"
-                )
+                # raise RuntimeError(
+                #     f"Last message is too long. Raw response data: {response_json}"
+                # )
+                raise RuntimeError(f"最后一条消息太长。原始响应数据: {response_json}")
 
         bot_message_id = last_message["messageId"]
         await self.delete_pending_messages(prompt_md5)
@@ -854,7 +867,8 @@ class AsyncPoeApi:
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
-                        raise RuntimeError("Timed out waiting for response.")
+                        # raise RuntimeError("Timed out waiting for response.")
+                        raise RuntimeError("等待响应超时。")
                     await self.connect_ws()
                     continue
                 except Exception as e:
@@ -942,7 +956,8 @@ class AsyncPoeApi:
             await asyncio.sleep(0.01)
             timer += 0.01
             if timer > timeout:
-                raise RuntimeError("Timed out waiting for other messages to send.")
+                # raise RuntimeError("Timed out waiting for other messages to send.")
+                raise RuntimeError("等待其他消息发送超时。")
 
         prompt_md5 = hashlib.md5((message + generate_nonce()).encode()).hexdigest()
         self.active_messages[prompt_md5] = None
@@ -961,9 +976,10 @@ class AsyncPoeApi:
             apiPath = "gql_upload_POST"
             file_form, file_size = generate_file(file_path, self.proxies)
             if file_size > 350000000:
-                raise RuntimeError(
-                    "File size too large. Please try again with a smaller file."
-                )
+                # raise RuntimeError(
+                #     "File size too large. Please try again with a smaller file."
+                # )
+                raise RuntimeError("文件太大。请尝试使用更小的文件。")
             for i in range(len(file_form)):
                 attachments.append(f"file{i}")
 
@@ -1010,15 +1026,18 @@ class AsyncPoeApi:
                         logger.warning(
                             "This file type is not supported. Please try again with a different file."
                         )
-                        raise RuntimeError(
-                            f"This file type is not supported. Please try again with a different file."
-                        )
+                        # raise RuntimeError(
+                        #     f"This file type is not supported. Please try again with a different file."
+                        # )
+                        raise RuntimeError("此文件类型不受支持。请尝试使用不同的文件。")
                     elif status == "reached_limit":
-                        raise RuntimeError(f"Daily limit reached for {bot}.")
+                        # raise RuntimeError(f"Daily limit reached for {bot}.")
+                        raise RuntimeError(f"每日限制已达到 {bot}。")
                     elif status == "too_many_tokens":
-                        raise RuntimeError(
-                            f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
-                        )
+                        # raise RuntimeError(
+                        #     f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
+                        # )
+                        raise RuntimeError(f"{message_data['data']['messageEdgeCreate']['statusMessage']}")
                     elif status in ("rate_limit_exceeded", "concurrent_messages"):
                         await self.delete_pending_messages(prompt_md5)
                         await asyncio.sleep(random.randint(4, 6))
@@ -1101,9 +1120,10 @@ class AsyncPoeApi:
                 )
 
                 if message_data["data"] == None and message_data["errors"]:
-                    raise RuntimeError(
-                        f"An unknown error occurred. Raw response data: {message_data}"
-                    )
+                    # raise RuntimeError(
+                    #     f"An unknown error occurred. Raw response data: {message_data}"
+                    # )
+                    raise RuntimeError(f"未知错误。原始响应数据: {message_data}")
                 else:
                     status = message_data["data"]["messageEdgeCreate"]["status"]
                     if status == "success" and file_path != []:
@@ -1113,15 +1133,18 @@ class AsyncPoeApi:
                         logger.warning(
                             "This file type is not supported. Please try again with a different file."
                         )
-                        raise RuntimeError(
-                            f"This file type is not supported. Please try again with a different file."
-                        )
+                        # raise RuntimeError(
+                        #     f"This file type is not supported. Please try again with a different file."
+                        # )
+                        raise RuntimeError("此文件类型不受支持。请尝试使用不同的文件。")
                     elif status == "reached_limit":
-                        raise RuntimeError(f"Daily limit reached for {bot}.")
+                        # raise RuntimeError(f"Daily limit reached for {bot}.")
+                        raise RuntimeError(f"每日限制已达到 {bot}。")
                     elif status == "too_many_tokens":
-                        raise RuntimeError(
-                            f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
-                        )
+                        # raise RuntimeError(
+                        #     f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
+                        # )
+                        raise RuntimeError(f"{message_data['data']['messageEdgeCreate']['statusMessage']}")
                     elif status in ("rate_limit_exceeded", "concurrent_messages"):
                         await self.delete_pending_messages(prompt_md5)
                         await asyncio.sleep(random.randint(4, 6))
@@ -1168,7 +1191,8 @@ class AsyncPoeApi:
                     else:
                         self.retry_attempts = 3
                         await self.delete_queues(chatId)
-                        raise RuntimeError("Timed out waiting for response.")
+                        # raise RuntimeError("Timed out waiting for response.")
+                        raise RuntimeError("等待响应超时。")
                     await self.connect_ws()
                     continue
                 except Exception as e:
@@ -1269,9 +1293,10 @@ class AsyncPoeApi:
         variables = {"chatCode": chatCode}
         response_json = await self.send_request("gql_POST", "ChatPageQuery", variables)
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"An unknown error occurred. Raw response data: {response_json}"
-            )
+            # raise RuntimeError(
+            #     f"An unknown error occurred. Raw response data: {response_json}"
+            # )
+            raise RuntimeError(f"未知错误。原始响应数据: {response_json}")
         edges = response_json["data"]["chatOfCode"]["messagesConnection"]["edges"]
 
         if del_all == True:
@@ -1323,7 +1348,7 @@ class AsyncPoeApi:
             chatdata = temp["data"][bot]
         except:
             raise RuntimeError(
-                f"No chat found for {bot}. Make sure the bot has a chat history before deleting."
+                f"没有找到 {bot} 的聊天记录。请确保在删除之前，该机器人有聊天记录。"
             )
         if chatId != None and not isinstance(chatId, list):
             if bot in self.current_thread:
@@ -1392,7 +1417,7 @@ class AsyncPoeApi:
             getchatdata = await self.get_threadData(bot, chatCode, chatId)
         except:
             raise RuntimeError(
-                f"Thread not found. Make sure the thread exists before getting messages."
+                f"线程未找到。请确保在获取消息之前，该线程存在。"
             )
         chatCode = getchatdata["chatCode"]
         id = getchatdata["id"]
@@ -1451,7 +1476,7 @@ class AsyncPoeApi:
         )
         if response_json["data"] == None and response_json["errors"]:
             raise RuntimeError(
-                f"User {user} not found. Make sure the user exists before getting bots."
+                f"用户 {user} 未找到。请确保用户存在后再获取机器人。"
             )
         userData = response_json["data"]["user"]
         logger.info(f"Found {userData['createdBotCount']} bots of {user}")
@@ -1475,7 +1500,7 @@ class AsyncPoeApi:
     ):
         response = await self.get_botInfo(botName)
         if response["viewerIsCreator"] == False:
-            raise RuntimeError(f"You are not the creator of {botName}.")
+            raise RuntimeError(f"你不是 {botName} 的创建者。")
         id = response["id"]
         sources_ids = {}
         new_variables = {"after": "5", "first": count, "id": id}
@@ -1553,7 +1578,7 @@ class AsyncPoeApi:
                     )
                     if response["data"]["knowledgeSourceCreate"]["status"] != "success":
                         raise RuntimeError(
-                            f"Failed to upload text '{text['title']}'. \nRaw response data: {response}"
+                            f"上传文本 '{text['title']}' 失败。\n原始响应数据: {response}"
                         )
                     title = response["data"]["knowledgeSourceCreate"]["source"]["title"]
                     sourceid = response["data"]["knowledgeSourceCreate"]["source"][
@@ -1570,7 +1595,7 @@ class AsyncPoeApi:
                 file_form, file_size = generate_file([path], self.proxies)
                 if file_size > 350000000:
                     raise RuntimeError(
-                        "File size too large. Please try again with a smaller file."
+                        "文件太大。请尝试使用更小的文件。"
                     )
                 response = await self.send_request(
                     "gql_upload_POST",
@@ -1581,7 +1606,7 @@ class AsyncPoeApi:
                 )
                 if response["data"]["knowledgeSourceCreate"]["status"] != "success":
                     raise RuntimeError(
-                        f"Failed to upload file '{path}'. \nRaw response data: {response}"
+                        f"上传文件 '{path}' 失败。\n原始响应数据: {response}"
                     )
                 title = response["data"]["knowledgeSourceCreate"]["source"]["title"]
                 sourceid = response["data"]["knowledgeSourceCreate"]["source"][
@@ -1609,9 +1634,9 @@ class AsyncPoeApi:
         )
         if response["data"]["knowledgeSourceEdit"]["status"] != "success":
             raise RuntimeError(
-                f"Failed to edit knowledge source {knowledgeSourceId}. \nRaw response data: {response}"
+                f"编辑知识源 {knowledgeSourceId} 失败。\n原始响应数据: {response}"
             )
-        logger.info(f"Knowledge source {knowledgeSourceId} edited successfully")
+        logger.info(f"知识源 {knowledgeSourceId} 编辑成功")
 
     async def get_citations(self, messageId: int):
         variables = {"messageId": messageId}
@@ -1631,7 +1656,7 @@ class AsyncPoeApi:
         )
         if response["data"] == None and response["errors"]:
             raise RuntimeError(
-                f"An unknown error occurred. Raw response data: {response}"
+                f"未知错误。原始响应数据: {response}"
             )
         models_data = response["data"]["viewer"]["botsAllowedForUserCreation"]
         models = {
@@ -1963,7 +1988,7 @@ class AsyncPoeApi:
         )
         if response_json["data"] == None and response_json["errors"]:
             raise RuntimeError(
-                f"An unknown error occurred. Raw response data: {response_json}"
+                f"未知错误。原始响应数据: {response_json}"
             )
         else:
             for category in response_json["data"]["exploreBotsCategoryObjects"]:
