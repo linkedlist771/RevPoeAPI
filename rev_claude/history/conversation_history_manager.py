@@ -21,6 +21,7 @@ class Message(BaseModel):
     timestamp: Optional[datetime] = Field(
         default_factory=lambda: datetime.utcnow() - timedelta(days=7)
     )
+    message_attachment_file_paths: Optional[List[str]] = None
 
 
 class ConversationHistory(BaseModel):

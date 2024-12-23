@@ -32,7 +32,7 @@ from rev_claude.configs import (
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
     USE_TOKEN_SHORTEN,
-    ROOT,
+    ROOT, MAX_ATTACHMENTS,
 )
 
 from rev_claude.models import ClaudeModels
@@ -319,6 +319,10 @@ class Client:
                 former_messages = history.messages
                 break
         #
+        former_file_paths = []
+        for message in former_messages:
+            if message.message_attachment_file_paths:
+                former_file_paths.extend(message.message_attachment_file_paths)
         if former_messages:
             former_messages = [
                 {"role": message.role.value, "content": message.content}
@@ -330,6 +334,8 @@ class Client:
         if file_paths is None:
             file_paths = []
             # formatted_messages: list, bot_name: str
+        former_file_paths.extend(file_paths)
+        file_paths = former_file_paths[-MAX_ATTACHMENTS:]
         messages = [{"role": "user", "content": prompt}]
         former_messages.extend(messages)
 

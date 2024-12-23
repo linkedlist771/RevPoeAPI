@@ -1,5 +1,6 @@
 import asyncio
 from functools import partial
+from pathlib import Path
 from typing import Optional, List, Union, Any
 from uuid import uuid4
 
@@ -256,12 +257,7 @@ async def chat(
         model=model,
     )
     messages: list[Message] = []
-    messages.append(
-        Message(
-            content=raw_message,
-            role=RoleType.USER,
-        )
-    )
+
 
     attachments = []
     if not files:
@@ -277,6 +273,14 @@ async def chat(
                 file_paths.append(file_path)
             except Exception as e:
                 logger.error(f"Error saving file {file.filename}: {str(e)}")
+    messages.append(
+        Message(
+            content=raw_message,
+            role=RoleType.USER,
+            # attachments=[Path(path).name for path in file_paths]
+            message_attachment_file_paths=file_paths,
+        )
+    )
     logger.debug(f"files: {files}")
     hrefs = []
     if need_web_search:
