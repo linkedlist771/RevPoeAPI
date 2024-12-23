@@ -32,7 +32,9 @@ from rev_claude.configs import (
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
     USE_TOKEN_SHORTEN,
-    ROOT, MAX_ATTACHMENTS,
+    ROOT,
+    MAX_ATTACHMENTS,
+    UPLOAD_DIR,
 )
 
 from rev_claude.models import ClaudeModels
@@ -81,8 +83,8 @@ def generate_trace_id():
 
 
 async def save_file(file: UploadFile) -> str:
+    upload_dir = UPLOAD_DIR
     # Create a directory to store uploaded files if it doesn't exist
-    upload_dir = ROOT / "uploaded_files"
     os.makedirs(upload_dir, exist_ok=True)
 
     # Generate a unique filename

@@ -261,7 +261,6 @@ class AsyncPoeApi:
             #     f"Failed to subscribe by sending SubscriptionsMutation. Raw response data: {response_json}"
             # )
             raise RuntimeError(f"订阅失败。原始响应数据: {response_json}")
-                
 
     def ws_run_thread(self):
         if self.ws and not self.ws.sock:
@@ -795,7 +794,9 @@ class AsyncPoeApi:
             # raise RuntimeError(
             #     f"Last message is not from bot. Raw response data: {response_json}"
             # )
-            raise RuntimeError(f"最后一条消息不是来自机器人。原始响应数据: {response_json}")
+            raise RuntimeError(
+                f"最后一条消息不是来自机器人。原始响应数据: {response_json}"
+            )
 
         bot = bot_map(last_message["author"])
 
@@ -1037,7 +1038,9 @@ class AsyncPoeApi:
                         # raise RuntimeError(
                         #     f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
                         # )
-                        raise RuntimeError(f"{message_data['data']['messageEdgeCreate']['statusMessage']}")
+                        raise RuntimeError(
+                            f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
+                        )
                     elif status in ("rate_limit_exceeded", "concurrent_messages"):
                         await self.delete_pending_messages(prompt_md5)
                         await asyncio.sleep(random.randint(4, 6))
@@ -1144,7 +1147,9 @@ class AsyncPoeApi:
                         # raise RuntimeError(
                         #     f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
                         # )
-                        raise RuntimeError(f"{message_data['data']['messageEdgeCreate']['statusMessage']}")
+                        raise RuntimeError(
+                            f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
+                        )
                     elif status in ("rate_limit_exceeded", "concurrent_messages"):
                         await self.delete_pending_messages(prompt_md5)
                         await asyncio.sleep(random.randint(4, 6))
@@ -1416,9 +1421,7 @@ class AsyncPoeApi:
         try:
             getchatdata = await self.get_threadData(bot, chatCode, chatId)
         except:
-            raise RuntimeError(
-                f"线程未找到。请确保在获取消息之前，该线程存在。"
-            )
+            raise RuntimeError(f"线程未找到。请确保在获取消息之前，该线程存在。")
         chatCode = getchatdata["chatCode"]
         id = getchatdata["id"]
         messages = []
@@ -1475,9 +1478,7 @@ class AsyncPoeApi:
             "gql_POST", "HandleProfilePageQuery", variables
         )
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"用户 {user} 未找到。请确保用户存在后再获取机器人。"
-            )
+            raise RuntimeError(f"用户 {user} 未找到。请确保用户存在后再获取机器人。")
         userData = response_json["data"]["user"]
         logger.info(f"Found {userData['createdBotCount']} bots of {user}")
         botsData = userData["createdBots"]
@@ -1594,9 +1595,7 @@ class AsyncPoeApi:
             for path in file_path:
                 file_form, file_size = generate_file([path], self.proxies)
                 if file_size > 350000000:
-                    raise RuntimeError(
-                        "文件太大。请尝试使用更小的文件。"
-                    )
+                    raise RuntimeError("文件太大。请尝试使用更小的文件。")
                 response = await self.send_request(
                     "gql_upload_POST",
                     "Knowledge_CreateKnowledgeSourceMutation",
@@ -1655,9 +1654,7 @@ class AsyncPoeApi:
             "gql_POST", "CreateBotIndexPageQuery", {"messageId": None}
         )
         if response["data"] == None and response["errors"]:
-            raise RuntimeError(
-                f"未知错误。原始响应数据: {response}"
-            )
+            raise RuntimeError(f"未知错误。原始响应数据: {response}")
         models_data = response["data"]["viewer"]["botsAllowedForUserCreation"]
         models = {
             "text": [
@@ -1987,9 +1984,7 @@ class AsyncPoeApi:
             "gql_POST", "ExploreBotsIndexPageQuery", {"categoryName": "defaultCategory"}
         )
         if response_json["data"] == None and response_json["errors"]:
-            raise RuntimeError(
-                f"未知错误。原始响应数据: {response_json}"
-            )
+            raise RuntimeError(f"未知错误。原始响应数据: {response_json}")
         else:
             for category in response_json["data"]["exploreBotsCategoryObjects"]:
                 categories.append(category["categoryName"])

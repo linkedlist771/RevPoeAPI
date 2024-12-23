@@ -258,7 +258,6 @@ async def chat(
     )
     messages: list[Message] = []
 
-
     attachments = []
     if not files:
         files = []

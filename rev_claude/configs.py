@@ -13,6 +13,8 @@ DATA_DIR = ROOT / "data"
 LOG_DIR = ROOT / "logs"
 POE_BOT_INFO = DATA_DIR / "models.json"
 POE_BOT_INFO_ZH = DATA_DIR / "models_zh.json"
+UPLOAD_DIR = ROOT / "uploaded_files"
+
 API_KEY_REFRESH_INTERVAL = API_KEY_REFRESH_INTERVAL_HOURS * 60 * 60
 # TODO: 这里增加使用次数次数改成对应增加对应的使用积分， 但是意思是一样的。
 BASIC_KEY_MAX_USAGE = 30e4  # 普通用户一个月30万积分
