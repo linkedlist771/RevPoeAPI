@@ -353,7 +353,7 @@ class AsyncPoeApi:
         self.ws_connecting = False
         self.ws_connected = False
         if self.ws_error:
-            logger.warning("Connection to remote host was lost. Reconnecting...")
+            # logger.warning("Connection to remote host was lost. Reconnecting...")
             self.ws_error = False
             self.refresh_ws()
 
