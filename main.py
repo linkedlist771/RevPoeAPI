@@ -10,7 +10,6 @@ from rev_claude.middlewares.register_middlewares import register_middleware
 from rev_claude.router import router
 from rev_claude.status.clients_status_manager import ClientsStatus
 from utility import get_client_status
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--host", default="0.0.0.0", help="host")
 parser.add_argument("--port", default=6238, help="port")
