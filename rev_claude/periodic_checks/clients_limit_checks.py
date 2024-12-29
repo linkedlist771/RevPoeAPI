@@ -27,11 +27,11 @@ async def __check_reverse_official_usage_limits():
         }
         for status in status_list
     ]
-    logger.info(f"Found {len(clients)} active clients to check")
+    # logger.info(f"Found {len(clients)} active clients to check")
 
     async def check_client(client):
         try:
-            logger.debug(f"Testing client {client['type']} {client['idx']}")
+            # logger.debug(f"Testing client {client['type']} {client['idx']}")
             await client["client"].renew_poe_bot_client()
             usage = await client["client"].get_remaining_credits()
             clients_status_manager = ClientsStatusManager()
@@ -42,7 +42,7 @@ async def __check_reverse_official_usage_limits():
             return f"Client {client['type']} {client['idx']}: {usage}"
         except Exception as e:
             error_msg = f"Error testing client {client['type']} {client['idx']}: {e}"
-            logger.error(error_msg)
+            # logger.error(error_msg)
             return error_msg
 
     async def process_batch(batch):
@@ -52,23 +52,23 @@ async def __check_reverse_official_usage_limits():
     batch_size = 3  # 每批处理的客户端数量
     for i in range(0, len(clients), batch_size):
         batch = clients[i : i + batch_size]
-        logger.info(
-            f"Processing batch {i // batch_size + 1} of {len(clients) // batch_size + 1}"
-        )
+        # logger.info(
+        #     f"Processing batch {i // batch_size + 1} of {len(clients) // batch_size + 1}"
+        # )
         batch_results = await process_batch(batch)
         results.extend(batch_results)
         if i + batch_size < len(clients):
             logger.info("Waiting between batches...")
             await asyncio.sleep(1)  # 批次之间的间隔
 
-    logger.info("Completed check_reverse_official_usage_limits")
+    # logger.info("Completed check_reverse_official_usage_limits")
 
     # Print all results at the end
-    logger.info("\nResults of client checks:")
+    # logger.info("\nResults of client checks:")
     time_elapsed = time.perf_counter() - start_time
-    logger.debug(f"Time elapsed: {time_elapsed:.2f} seconds")
-    for result in results:
-        logger.info(result)
+    # logger.debug(f"Time elapsed: {time_elapsed:.2f} seconds")
+    # for result in results:
+    #     logger.info(result)
 
 
 async def check_reverse_official_usage_limits():

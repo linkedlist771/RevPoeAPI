@@ -56,7 +56,14 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         # 尝试创建 ConversationHistoryRequestInput 实例
         input_data = ConversationHistoryRequestInput(**raw_data)
         # 如果验证通过，继续处理请求
-        histories = await conversation_history_manager.get_conversation_histories(
+        # histories = await conversation_history_manager.get_conversation_histories(
+        #     input_data
+        # )
+        # get_all_client_conversations
+        # histories = await conversation_history_manager.get_conversation_histories(
+        #     input_data
+        # )
+        histories = await conversation_history_manager.get_all_client_conversations(
             input_data
         )
         return histories

@@ -18,7 +18,7 @@ def get_request_device_id_hash(request: Request):
     user_agent = request.headers.get("User-Agent", "")
     ip_address = request.client.host
     device_info = f"{user_agent}:{ip_address}".encode("utf-8")
-    logger.debug(f"Device info: {device_info}")
+    # logger.debug(f"Device info: {device_info}")
     device_id = hashlib.sha256(device_info).hexdigest()
     return device_id
 
@@ -49,8 +49,8 @@ async def get_device_status(
     device_id_from_redis = await device_manager.get_device_id(api_key)
     current_device_id = get_request_device_id_hash(request)
 
-    logger.debug(f"Current device ID: {current_device_id}")
-    logger.debug(f"Device ID from Redis: {device_id_from_redis}")
+    # logger.debug(f"Current device ID: {current_device_id}")
+    # logger.debug(f"Device ID from Redis: {device_id_from_redis}")
 
     if device_id_from_redis is None:
         # No device ID stored; user needs to update their device info
@@ -108,7 +108,7 @@ async def update_device_info(
         )
     current_device_id = get_request_device_id_hash(request)
     await device_manager.set_device_id(api_key, current_device_id)
-    logger.debug(f"Updated device ID for API key {api_key}: {current_device_id}")
+    # logger.debug(f"Updated device ID for API key {api_key}: {current_device_id}")
 
     return JSONResponse(
         content={

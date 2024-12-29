@@ -247,7 +247,7 @@ class ClientsStatusManager:
         async def retrieve_client_status(idx, client, client_type, models):
             await self.create_if_not_exist(client_type, idx, models)
             usage = await self.get_usage(client_type, idx)
-            logger.debug(f"usage for redis: \n{usage}")
+            # logger.debug(f"usage for redis: \n{usage}")
             if usage == 0:
                 actual_usage = await client.get_remaining_credits()
                 await self.set_usage(client_type, idx, actual_usage)

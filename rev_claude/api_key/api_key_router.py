@@ -52,11 +52,11 @@ async def validate_key(
 
 @router.post("/increment_usage/{api_key}")
 async def increment_usage(
-    api_key: str, manager: APIKeyManager = Depends(get_api_key_manager)
+    api_key: str, usage: int, manager: APIKeyManager = Depends(get_api_key_manager)
 ):
     """Increment the usage count of an API key."""
     try:
-        usage = manager.increment_usage(api_key)
+        usage = manager.increment_usage(api_key, usage)
         return {"api_key": api_key, "usage_count": usage}
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))

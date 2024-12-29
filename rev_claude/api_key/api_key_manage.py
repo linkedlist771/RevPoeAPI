@@ -4,6 +4,8 @@ from datetime import datetime, timedelta
 import redis
 import uuid
 from enum import Enum
+
+from PIL.TiffTags import lookup
 from loguru import logger
 
 # from rev_claude.utility import get_current_time
@@ -61,7 +63,7 @@ class APIKeyManager:
                 api_key_type = api_key_type.decode("utf-8")
             self.redis.setex(api_key, expiration_seconds, "active")
             self.redis.setex(f"{api_key}:usage", expiration_seconds, 0)
-            self.redis.setex(f"{api_key}:type", expiration_seconds, api_key_type)
+            # self.redis.setex(f"{api_key}:type", expiration_seconds, api_key_type)
             return f"API key {api_key} has been activated."
         elif ttl == -2:
             return "APIKEY已经过期"
@@ -160,12 +162,15 @@ class APIKeyManager:
         wait_time = max(0, API_KEY_REFRESH_INTERVAL - time_diff)  # 确保不显示负数
 
         current_time = datetime.now()
+        # logger.debug(f"wait_time: {wait_time}")
+        # logger.debug(f"current_time: {current_time}")
         next_usage_time = current_time + timedelta(seconds=wait_time)
 
-        message = (
-            f"您的账户是{key_type}类型，额度: {usage_limit}积分/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
-            f"您可以在 {next_usage_time.strftime('%H:%M:%S')} 后再次使用。"
-        )
+        # message = (
+        #     f"您的账户是{key_type}类型，额度: {usage_limit}积分/{API_KEY_REFRESH_INTERVAL_HOURS}小时。"
+        #     f"您可以在 {next_usage_time.strftime('%H:%M:%S')} 后再次使用。"
+        # )
+        message = f"您的账户是{key_type}类型，您的{ {usage_limit}}分额度已经使用完毕，请重新充值或续费"
         return message
 
     # 这里设置还是用普通的字符串算了。
@@ -230,11 +235,11 @@ class APIKeyManager:
         """获取与API密钥相关联的所有键。"""
         return [
             api_key,
-            f"{api_key}:usage",
-            f"{api_key}:type",
-            f"{api_key}:expiration",
-            f"{api_key}:current_usage",
-            f"{api_key}:last_usage_time",
+            # f"{api_key}:usage",
+            # f"{api_key}:type",
+            # f"{api_key}:expiration",
+            # f"{api_key}:current_usage",
+            # f"{api_key}:last_usage_time",
         ]
 
     def delete_api_key(self, api_key):
@@ -313,7 +318,31 @@ class APIKeyManager:
     def extend_api_key_expiration(self, api_key, additional_days):
         """延长API密钥的过期时间。"""
         if not self.is_api_key_valid(api_key):
-            return f"API密钥 {api_key} 无效或已过期。"
+            # 这里修改一下逻辑，如果这个API KEY已经过期，那么就重新生成相关的所有已过期的内容。
+            # 检查是否存在关联的数据以便恢复
+            api_key_type = self.redis.get(f"{api_key}:type")
+            expiration_seconds = self.redis.get(f"{api_key}:expiration")
+            #       self.redis.setex(api_key, expiration_seconds, "active")
+            #             self.redis.setex(f"{api_key}:usage", expiration_seconds, 0)
+            #             self.redis.setex(f"{api_key}:type", expiration_seconds, api_key_type)
+            # 将天数转换为秒数并计算新的过期时间
+            api_key_type = api_key_type if api_key_type else "plus"
+            additional_seconds = additional_days * 24 * 60 * 60
+            new_expiration_seconds = int(expiration_seconds) + additional_seconds
+
+            # 重新生成API密钥和关联数据
+            self.redis.setex(api_key, new_expiration_seconds, "active")
+            # self.redis.setex(f"{api_key}:usage", new_expiration_seconds, 0)
+            # self.redis.setex(f"{api_key}:type", new_expiration_seconds, api_key_type)
+
+            # 更新关联键的过期时间
+            pipeline = self.redis.pipeline()
+            for key in self.get_associated_keys(api_key):
+                pipeline.expire(key, new_expiration_seconds)
+            pipeline.execute()
+
+            new_expiration_days = new_expiration_seconds / (24 * 60 * 60)
+            return f"API密钥 {api_key} 已过期，已重新生成并延长过期时间 {additional_days} 天。新的过期时间还剩 {new_expiration_days:.2f} 天。"
 
         # 将天数转换为秒数
         additional_seconds = additional_days * 24 * 60 * 60

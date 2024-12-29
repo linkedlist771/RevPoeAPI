@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-import redis
 from redis.asyncio import Redis
 from enum import Enum
 from typing import List, Optional, Any
@@ -22,6 +21,7 @@ class Message(BaseModel):
     timestamp: Optional[datetime] = Field(
         default_factory=lambda: datetime.utcnow() - timedelta(days=7)
     )
+    message_attachment_file_paths: Optional[List[str]] = None
 
 
 class ConversationHistory(BaseModel):
@@ -46,10 +46,6 @@ class ConversationHistoryManager:
         self.host = host
         self.port = port
         self.db = db
-        # self.redis = redis.StrictRedis(
-        #     host=host, port=port, db=db, decode_responses=True
-        # )
-
         self.aioredis = None
 
     async def get_aioredis(self):
@@ -83,42 +79,13 @@ class ConversationHistoryManager:
             return f"conversation_history-{request.api_key}-{request.client_idx}-basic"
         return f"conversation_history-{request.api_key}-{request.client_idx}-{request.conversation_type.value}"
 
-    # def push_message(
-    #     self, request: ConversationHistoryRequestInput, messages: list[Message]
-    # ):
-    #     conversation_history_key = self.get_conversation_history_key(request)
-    #     conversation_history_data = self.redis.hget(
-    #         conversation_history_key, request.conversation_id
-    #     )
-    #
-    #     if conversation_history_data:
-    #         conversation_history = ConversationHistory.model_validate_json(
-    #             conversation_history_data
-    #         )
-    #         conversation_history.messages.extend(messages)
-    #     else:
-    #         conversation_history = ConversationHistory(
-    #             conversation_id=request.conversation_id,
-    #             messages=messages,
-    #             model=request.model,
-    #         )
-    #
-    #     self.redis.hset(
-    #         conversation_history_key,
-    #         request.conversation_id,
-    #         conversation_history.model_dump_json(),
-    #     )
     async def push_message(
         self, request: ConversationHistoryRequestInput, messages: list[Message]
     ):
         conversation_history_key = self.get_conversation_history_key(request)
-        # conversation_history_data = self.redis.hget(
-        #     conversation_history_key, request.conversation_id
-        # )
         conversation_history_data = await self.hget_async(
             conversation_history_key, request.conversation_id
         )
-
         if conversation_history_data:
             conversation_history = ConversationHistory.model_validate_json(
                 conversation_history_data
@@ -139,34 +106,16 @@ class ConversationHistoryManager:
                 model=request.model,
             )
 
-        # self.redis.hset(
-        #     conversation_history_key,
-        #     request.conversation_id,
-        #     conversation_history.model_dump_json(),
-        # )
         await self.hset_async(
             conversation_history_key,
             request.conversation_id,
             conversation_history.model_dump_json(),
         )
 
-    # def get_conversation_histories(
-    #     self, request: ConversationHistoryRequestInput
-    # ) -> List[ConversationHistory]:
-    #     conversation_history_key = self.get_conversation_history_key(request)
-    #     conversation_histories_data = self.redis.hgetall(conversation_history_key)
-    #     histories = []
-    #
-    #     for conversation_id, history_data in conversation_histories_data.items():
-    #         history = ConversationHistory.model_validate_json(history_data)
-    #         histories.append(history)
-    #
-    #     return histories
     async def get_conversation_histories(
         self, request: ConversationHistoryRequestInput
     ) -> List[ConversationHistory]:
         conversation_history_key = self.get_conversation_history_key(request)
-        # conversation_histories_data = self.redis.hgetall(conversation_history_key)
         conversation_histories_data = await self.hgetall_async(conversation_history_key)
         histories = []
 
@@ -193,6 +142,47 @@ class ConversationHistoryManager:
         )
 
         return histories
+
+    async def get_all_client_conversations(
+        self, request: ConversationHistoryRequestInput
+    ) -> List[ConversationHistory]:
+        """Fetch and merge conversation histories from all clients for a given API key."""
+        redis_client = await self.get_aioredis()
+
+        # Get all keys matching the pattern conversation_history-{api_key}-*
+        pattern = f"conversation_history-{request.api_key}-*"
+        all_keys = await redis_client.keys(pattern)
+
+        all_histories = []
+
+        # Fetch histories from each matching key
+        for key in all_keys:
+            conversation_histories_data = await self.hgetall_async(key)
+
+            for conversation_id, history_data in conversation_histories_data.items():
+                history = ConversationHistory.model_validate_json(history_data)
+
+                # Handle missing timestamps
+                default_time = datetime(1970, 1, 1)
+                for message in history.messages:
+                    if message.timestamp is None:
+                        message.timestamp = default_time
+                        default_time = default_time.replace(
+                            microsecond=default_time.microsecond + 1
+                        )
+                all_histories.append(history)
+
+        # Sort all histories by the timestamp of their latest message
+        all_histories.sort(
+            key=lambda h: (
+                h.messages[-1].timestamp.replace(tzinfo=None)
+                if h.messages
+                else datetime.min
+            ),
+            reverse=True,
+        )
+
+        return all_histories
 
     async def delete_all_conversations(self, request: ConversationHistoryRequestInput):
         conversation_history_key = self.get_conversation_history_key(request)
