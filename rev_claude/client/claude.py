@@ -43,7 +43,6 @@ from rev_claude.status_code.status_code_enum import (
 )
 from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
-from rev_claude.utils.httpx_utils import async_stream
 from rev_claude.utils.poe_bots_utils import get_poe_bot_info
 from rev_claude.utils.sse_utils import build_sse_data
 
