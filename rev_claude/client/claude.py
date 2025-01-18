@@ -353,7 +353,6 @@ class Client:
         messages_str = "\n".join(
             [f"{message['role']}: {message['content']}" for message in messages]
         )
-        messages_str = messages_str + "\nassistant: "
 
         response_text = ""
         if get_poe_bot_info()[model.lower()].get("text2image", None):
