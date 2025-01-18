@@ -353,13 +353,11 @@ class Client:
         messages_str = "\n".join(
             [f"{message['role']}: {message['content']}" for message in messages]
         )
-        messages_str = messages_str + "\nassistant: "
 
         response_text = ""
-        logger.info(f"formatted_message: \n{messages_str}")
-
         if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
+        logger.info(f"formatted_message: \n{messages_str}")
         poe_bot_client = await self.get_poe_bot_client()
         model_name = get_poe_bot_info()[model.lower()]["baseModel"]
         logger.debug(f"actual model name: \n{model_name}")
