@@ -62,12 +62,9 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         )
         # 计算总记录数和总页数
         total_records = len(histories)
-        total_pages = (total_records + page_size - 1) // page_size
-
         # 计算当前页的起始和结束索引
         start_index = (page - 1) * page_size
         end_index = min(start_index + page_size, total_records)
-
         # 获取当前页的对话历史
         paginated_histories = histories[start_index:end_index]
         return paginated_histories
