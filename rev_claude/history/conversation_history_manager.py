@@ -35,6 +35,8 @@ class ConversationHistoryRequestInput(BaseModel):
     conversation_type: CookieKeyType
     api_key: str
     conversation_id: Optional[str] = None
+    page: int = Field(default=1, ge=1, description="Page number, starting from 1")
+    page_size: int = Field(default=20, ge=1, le=100, description="Number of items per page")
     model: Any = None
 
 
