@@ -25,6 +25,7 @@ async def _async_resp_generator(original_generator, model: str):
     i = 0
     response_text = ""
     async for data in original_generator:
+        data: str = data.lstrip("<think>\n")
         chunk = {
                 "id": i,
                 "object": "chat.completion.chunk",
