@@ -4,9 +4,11 @@
 import json, os, uuid
 import re
 import shutil
+from datetime import datetime
 from http.cookies import SimpleCookie
-from typing import Union, List
-
+from pathlib import Path
+from typing import Union, List, Any
+import numpy as np
 
 # from curl_cffi import requests
 import httpx
@@ -24,16 +26,20 @@ from rev_claude.REMINDING_MESSAGE import (
 )
 from rev_claude.configs import (
     STREAM_CONNECTION_TIME_OUT,
-    STREAM_TIMEOUT,
+    # STREAM_TIMEOUT,
     PROXIES,
     USE_PROXY,
     CLAUDE_OFFICIAL_EXPIRE_TIME,
     CLAUDE_OFFICIAL_REVERSE_BASE_URL,
+    USE_TOKEN_SHORTEN,
+    ROOT,
+    MAX_ATTACHMENTS,
+    UPLOAD_DIR,
 )
 
 from rev_claude.models import ClaudeModels
 from rev_claude.poe_api_wrapper import AsyncPoeApi
-from rev_claude.status.clients_status_manager import ClientsStatusManager
+from rev_claude.status.clients_status_manager import ClientsStatusManager, ClientsStatus
 from fastapi import UploadFile, status, HTTPException
 from fastapi.responses import JSONResponse
 import itertools
@@ -41,6 +47,7 @@ from rev_claude.status_code.status_code_enum import (
     HTTP_481_IMAGE_UPLOAD_FAILED,
     HTTP_482_DOCUMENT_UPLOAD_FAILED,
 )
+from rev_claude.utils.async_utils import remove_prefix, send_message_with_retry
 from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
 from rev_claude.utils.httpx_utils import async_stream
@@ -53,6 +60,11 @@ from fake_useragent import UserAgent
 import uuid
 import random
 import os
+
+from rev_claude.utils.token_utils import (
+    get_token_length,
+    shorten_message_given_prompt_length,
+)
 
 
 def generate_trace_id():
@@ -70,24 +82,16 @@ def generate_trace_id():
     return sentry_trace
 
 
-def remove_prefix(text, prefix):
-    # logger.debug(f"text: \n{text}")
-    # logger.debug(f"prefix: \n{prefix}")
-    # logger.debug(text.startswith(prefix))
-    if text.startswith(prefix):
-        return text[len(prefix) :].rstrip("\n")
-    return text
-
-
 async def save_file(file: UploadFile) -> str:
+    upload_dir = UPLOAD_DIR
     # Create a directory to store uploaded files if it doesn't exist
-    upload_dir = "uploaded_files"
     os.makedirs(upload_dir, exist_ok=True)
 
     # Generate a unique filename
-    file_extension = os.path.splitext(file.filename)[1]
-    unique_filename = f"{uuid.uuid4()}{file_extension}"
-    file_path = os.path.join(upload_dir, unique_filename)
+    file_extension = Path(file.filename).suffix
+    current_time = datetime.now().strftime("%Y_%m_%d_%H_%M_")
+    unique_filename = f"{current_time}{uuid.uuid4()}{file_extension}"
+    file_path = upload_dir / unique_filename
 
     try:
         # Save the file using shutil
@@ -97,7 +101,7 @@ async def save_file(file: UploadFile) -> str:
         logger.error(f"Error saving file {file.filename}: {str(e)}")
         raise
 
-    return file_path
+    return str(file_path)  # Convert PosixPath to string
 
 
 ua = UserAgent()
@@ -307,7 +311,8 @@ class Client:
             conversation_id=conversation_id,
             model=model,
         )
-        all_histories = await conversation_history_manager.get_conversation_histories(
+        # TODO: temporary change it into all conversation histories
+        all_histories = await conversation_history_manager.get_all_client_conversations(
             conversation_history_request
         )
         former_messages = []
@@ -316,6 +321,10 @@ class Client:
                 former_messages = history.messages
                 break
         #
+        former_file_paths = []
+        for message in former_messages:
+            if message.message_attachment_file_paths:
+                former_file_paths.extend(message.message_attachment_file_paths)
         if former_messages:
             former_messages = [
                 {"role": message.role.value, "content": message.content}
@@ -327,33 +336,37 @@ class Client:
         if file_paths is None:
             file_paths = []
             # formatted_messages: list, bot_name: str
+        former_file_paths.extend(file_paths)
+        file_paths = former_file_paths[-MAX_ATTACHMENTS:]
         messages = [{"role": "user", "content": prompt}]
         former_messages.extend(messages)
+
+        if USE_TOKEN_SHORTEN:
+            tokens_limit = get_poe_bot_info()[model.lower()].get(
+                "tokens", 4e3
+            )  # default 4k tokens
+            former_messages = shorten_message_given_prompt_length(
+                former_messages, tokens_limit
+            )
+
         messages = former_messages
         messages_str = "\n".join(
             [f"{message['role']}: {message['content']}" for message in messages]
         )
+
         response_text = ""
         if get_poe_bot_info()[model.lower()].get("text2image", None):
             messages_str = prompt
-        logger.info(f"formatted_messages: {messages_str}")
-        prefixes = []
+        logger.info(f"formatted_message: \n{messages_str}")
         poe_bot_client = await self.get_poe_bot_client()
         model_name = get_poe_bot_info()[model.lower()]["baseModel"]
         logger.debug(f"actual model name: \n{model_name}")
         try:
-            async for chunk in poe_bot_client.send_message(
-                bot=model_name, message=messages_str, file_path=file_paths, timeout=20
+            async for chunk in send_message_with_retry(
+                poe_bot_client, model_name, messages_str, file_paths
             ):
-                text = chunk["response"]
-                if not text:
-                    continue
-                if text.rstrip("\n"):
-                    prefixes.append(text.rstrip("\n"))
-                if len(prefixes) >= 2:
-                    text = remove_prefix(text, prefixes[-2])
-                yield text
-                response_text += text
+                yield chunk
+                response_text += chunk
         except RuntimeError as runtime_error:
             logger.error(f"RuntimeError: {runtime_error}")
             yield str(runtime_error)
@@ -370,42 +383,3 @@ class Client:
                 await call_back[0](response_text)
                 await call_back[1]()
             logger.info(f"Response text:\n {response_text}")
-
-    # Deletes the conversation
-    def delete_conversation(self, conversation_id):
-        url = f"https://claude.ai/api/organizations/{self.organization_id}/chat_conversations/{conversation_id}"
-        payload = json.dumps(f"{conversation_id}")
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/124.0",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Content-Type": "application/json",
-            "Content-Length": "38",
-            "Referer": "https://claude.ai/chats",
-            "Origin": "https://claude.ai",
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-origin",
-            "Connection": "keep-alive",
-            "Cookie": self.cookie,
-            "TE": "trailers",
-        }
-
-        response = requests.delete(
-            url, headers=headers, data=payload, impersonate="chrome110"
-        )
-
-        # Returns True if deleted or False if any error in deleting
-        if response.status_code == 204:
-            return True
-        else:
-            return False
-
-    # Resets all the conversations
-    def reset_all(self):
-        conversations = self.list_all_conversations()
-
-        for conversation in conversations:
-            conversation_id = conversation["uuid"]
-            delete_id = self.delete_conversation(conversation_id)
-
-        return True

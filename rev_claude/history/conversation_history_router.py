@@ -55,18 +55,20 @@ async def get_conversation_histories(request: Request) -> List[ConversationHisto
         raw_data = await request.json()
         # 尝试创建 ConversationHistoryRequestInput 实例
         input_data = ConversationHistoryRequestInput(**raw_data)
-        # 如果验证通过，继续处理请求
-        # histories = await conversation_history_manager.get_conversation_histories(
-        #     input_data
-        # )
-        # get_all_client_conversations
-        # histories = await conversation_history_manager.get_conversation_histories(
-        #     input_data
-        # )
+        page = input_data.page
+        page_size = input_data.page_size
         histories = await conversation_history_manager.get_all_client_conversations(
             input_data
         )
-        return histories
+        # 计算总记录数和总页数
+        total_records = len(histories)
+        # 计算当前页的起始和结束索引
+        start_index = (page - 1) * page_size
+        end_index = min(start_index + page_size, total_records)
+        # 获取当前页的对话历史
+        paginated_histories = histories[start_index:end_index]
+        return paginated_histories
+        # return histories
 
     except ValidationError as ve:
         # 捕获 Pydantic 验证错误
