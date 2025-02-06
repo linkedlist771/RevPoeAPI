@@ -948,7 +948,7 @@ class AsyncPoeApi:
         suggest_replies: bool = False,
         timeout: int = 15,
     ) -> AsyncIterator[dict]:
-        self.retry_attempts = 3
+        self.retry_attempts = 1
         timer = 0
         while (
             None in self.active_messages.values()

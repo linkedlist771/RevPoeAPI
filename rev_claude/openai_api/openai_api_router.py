@@ -3,6 +3,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 import time
 import json
 import asyncio
+from loguru import logger
 import uuid
 from rev_claude.openai_api.schemas import ChatCompletionRequest, ChatMessage
 from rev_claude.client.claude_router import ClientManager
@@ -22,6 +23,7 @@ def obtain_claude_client():
 
 async def _async_resp_generator(original_generator, model: str):
     i = 0
+    response_text = ""
     async for data in original_generator:
         chunk = {
                 "id": i,
@@ -30,8 +32,11 @@ async def _async_resp_generator(original_generator, model: str):
                 "model": model,
                 "choices": [{"delta": {"content": f"{data} "}}],
         }
+        response_text += data
         yield f"data: {json.dumps(chunk)}\n\n"
         i += 1
+
+    logger.debug(f"*****Response text:\n{response_text}")
 
     yield "data: [DONE]\n\n"
 
