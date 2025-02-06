@@ -57,8 +57,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     claude_client = plus_clients[client_idx]
     client_type = "plus"
 
-    if not conversation_id:
-        conversation_id = str(uuid4())
+    conversation_id = str(uuid4())
 
     attachments = []
     if not files:
