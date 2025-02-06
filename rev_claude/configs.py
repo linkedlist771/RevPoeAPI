@@ -76,6 +76,8 @@ CLAUDE_OFFICIAL_USAGE_INCREASE = 15
 POE_BOT_BASE_URL = "https://api.poe.com/bot/"
 POE_BOT_TEMPERATURE = 0.95
 
+POE_OPENAI_LIKE_API_KEY = "sk-poe-api-dfascvu2"
+
 
 if __name__ == "__main__":
     from loguru import logger

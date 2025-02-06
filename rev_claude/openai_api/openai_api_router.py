@@ -7,9 +7,9 @@ import uuid
 from rev_claude.openai_api.schemas import ChatCompletionRequest, ChatMessage
 from rev_claude.client.claude_router import ClientManager
 from uuid import uuid4
-
+from rev_claude.configs import POE_OPENAI_LIKE_API_KEY
 # Add this constant at the top of the file after the imports
-VALID_API_KEY = "sk-test-123456789"
+VALID_API_KEY = POE_OPENAI_LIKE_API_KEY
 
 router = APIRouter()
 
