@@ -60,8 +60,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     conversation_id = str(uuid4())
 
     attachments = []
-    if not files:
-        files = []
+    files = []
     # This is a temporary solution to handle the case where the user uploads a file.
     file_paths = []
     messages = request.messages
