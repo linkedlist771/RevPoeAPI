@@ -60,8 +60,9 @@ async def send_message_with_retry(poe_bot_client, bot, message, file_path):
 
             # 检查是否是错误消息
             if text.startswith("[ERROR] "):
-                yield text  # 将错误消息 yield 出去
-                return  # 终止生成器
+                # yield text  # 将错误消息 yield 出去
+                raise RuntimeError(text)  # 抛出 RuntimeError
+                # return  # 终止生成器
 
             # 如果文本为空，跳过这个chunk
             if not text:
@@ -80,8 +81,9 @@ async def send_message_with_retry(poe_bot_client, bot, message, file_path):
 
     except Exception as e:
         # 捕获任何异常，将其转换为错误消息并 yield 出去
-        error_message = f"</think>[ERROR] An unexpected error occurred: {str(e)}"
-        yield error_message
+        # error_message = f"<think> </think>[ERROR] An unexpected error occurred: {str(e)}"
+        # yield error_message
+        raise RuntimeError(f"An unexpected error occurred: {str(e)}")
 
 
 async def _register_clients(
