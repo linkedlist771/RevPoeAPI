@@ -81,9 +81,9 @@ async def send_message_with_retry(poe_bot_client, bot, message, file_path):
 
     except Exception as e:
         # 捕获任何异常，将其转换为错误消息并 yield 出去
-        # error_message = f"<think> </think>[ERROR] An unexpected error occurred: {str(e)}"
-        # yield error_message
-        raise RuntimeError(f"An unexpected error occurred: {str(e)}")
+        error_message = f"<think> {str(e)}</think>[ERROR] An unexpected error occurred: {str(e)}"
+        yield error_message
+        # raise RuntimeError(f"An unexpected error occurred: {str(e)}")
 
 
 async def _register_clients(
