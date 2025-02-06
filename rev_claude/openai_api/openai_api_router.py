@@ -114,7 +114,7 @@ async def chat_completions(
             detail="Invalid Authorization header. Format should be 'Bearer YOUR_API_KEY'"
         )
 
-    resp_content = streaming_message(request, api_key=api_key)
+    resp_content = await streaming_message(request, api_key=api_key)
     if request.stream:
         return StreamingResponse(
             _async_resp_generator(resp_content , request), media_type="text/event-stream"
