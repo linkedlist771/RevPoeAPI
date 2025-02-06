@@ -65,7 +65,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     file_paths = []
     messages = request.messages
     prompt = "\n".join([
-        f"{message['role']}: {message['content']}" for message in messages
+        f"{message.role}: {message.content}" for message in messages
     ])
 
 
