@@ -21,8 +21,8 @@ def obtain_claude_client():
     }
 
 async def _async_resp_generator(original_generator, model: str):
-    # 然后，对原始生成器进行迭代，产生剩余的数据
-    async for i, data in enumerate(original_generator):
+    i = 0
+    async for data in original_generator:
         chunk = {
                 "id": i,
                 "object": "chat.completion.chunk",
@@ -31,9 +31,7 @@ async def _async_resp_generator(original_generator, model: str):
                 "choices": [{"delta": {"content": f"{data} "}}],
         }
         yield f"data: {json.dumps(chunk)}\n\n"
-        # await asyncio.sleep(0.01)
-        # yield build_sse_data(message=data, id=conversation_id)
-
+        i += 1
 
     yield "data: [DONE]\n\n"
 
