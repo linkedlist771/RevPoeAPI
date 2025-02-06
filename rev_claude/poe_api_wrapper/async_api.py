@@ -977,9 +977,6 @@ class AsyncPoeApi:
             apiPath = "gql_upload_POST"
             file_form, file_size = generate_file(file_path, self.proxies)
             if file_size > 350000000:
-                # raise RuntimeError(
-                #     "File size too large. Please try again with a smaller file."
-                # )
                 raise RuntimeError("文件太大。请尝试使用更小的文件。")
             for i in range(len(file_form)):
                 attachments.append(f"file{i}")
@@ -1027,17 +1024,10 @@ class AsyncPoeApi:
                         logger.warning(
                             "This file type is not supported. Please try again with a different file."
                         )
-                        # raise RuntimeError(
-                        #     f"This file type is not supported. Please try again with a different file."
-                        # )
                         raise RuntimeError("此文件类型不受支持。请尝试使用不同的文件。")
                     elif status == "reached_limit":
-                        # raise RuntimeError(f"Daily limit reached for {bot}.")
                         raise RuntimeError(f"每日限制已达到 {bot}。")
                     elif status == "too_many_tokens":
-                        # raise RuntimeError(
-                        #     f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
-                        # )
                         raise RuntimeError(
                             f"{message_data['data']['messageEdgeCreate']['statusMessage']}"
                         )
