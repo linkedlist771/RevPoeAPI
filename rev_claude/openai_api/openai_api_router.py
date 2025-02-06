@@ -84,10 +84,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
             file_paths=file_paths,
         )
 
-        return StreamingResponse(
-            streaming_res,
-            media_type="text/event-stream",
-        )
+        return streaming_res
     else:
         return "不支持非SSE"
 
