@@ -110,7 +110,7 @@ async def chat_completions(
     resp_content = await streaming_message(request, api_key=api_key)
     if request.stream:
         return StreamingResponse(
-            _async_resp_generator(resp_content , request), media_type="text/event-stream"
+            _async_resp_generator(resp_content, request.model), media_type="text/event-stream"
         )
 
     return {
