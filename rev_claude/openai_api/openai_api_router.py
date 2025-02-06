@@ -30,7 +30,7 @@ async def _async_resp_generator(original_generator, model: str):
                 "object": "chat.completion.chunk",
                 "created": time.time(),
                 "model": model,
-                "choices": [{"delta": {"content": f"{data} "}}],
+                "choices": [{"delta": {"content": f"{data}"}}],
         }
         response_text += data
         yield f"data: {json.dumps(chunk)}\n\n"
