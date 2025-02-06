@@ -13,7 +13,7 @@ from rev_claude.device_verification.device_verification_router import (
 )
 from rev_claude.poe_router.poe_router import router as poe_router
 from rev_claude.files.files_router import router as files_router
-
+from rev_claude.openai_api.openai_api_router import router as openai_api_router
 router = APIRouter(prefix="/api/v1")
 router.include_router(claude_router, prefix="/claude", tags=["claude"])
 router.include_router(api_key_router, prefix="/api_key", tags=["api_key"])
@@ -35,3 +35,4 @@ router.include_router(
 router.include_router(poe_router, prefix="/poe", tags=["poe"])
 router.include_router(health_router, prefix="/health", tags=["health"])
 router.include_router(files_router, prefix="/files", tags=["files"])
+router.include_router(openai_api_router, prefix="/openai", tags=["openai"])
