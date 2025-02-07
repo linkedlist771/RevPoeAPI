@@ -6,9 +6,11 @@ import asyncio
 from loguru import logger
 import uuid
 from rev_claude.openai_api.schemas import ChatCompletionRequest, ChatMessage
-from rev_claude.client.claude_router import ClientManager
+from rev_claude.client.claude_router import ClientManager, select_client_by_usage
 from uuid import uuid4
 from rev_claude.configs import POE_OPENAI_LIKE_API_KEY
+from utility import get_client_status
+
 # Add this constant at the top of the file after the imports
 VALID_API_KEY = POE_OPENAI_LIKE_API_KEY
 
@@ -57,9 +59,18 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
         raise HTTPException(status_code=401, detail="API key is required")
     
     # done_data = build_sse_data(message="closed", id=conversation_id)
-    client_idx = next(iter(plus_clients.keys()))
-    claude_client = plus_clients[client_idx]
+    basic_clients = clients["basic_clients"]
+    plus_clients = clients["plus_clients"]
     client_type = "plus"
+    client_idx = 0
+    status_list = await get_client_status(basic_clients, plus_clients)
+    claude_client = await select_client_by_usage(
+        client_type, client_idx, basic_clients, plus_clients, status_list
+    )
+
+
+    # client_idx = next(iter(plus_clients.keys()))
+    # claude_client = plus_clients[client_idx]
 
     conversation_id = str(uuid4())
 
