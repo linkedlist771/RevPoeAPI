@@ -182,6 +182,7 @@ async def select_client_by_usage(
         # 对plus clients进行采样
         selected_idx = np.random.choice(len(plus_status), p=probabilities)
         selected_status = plus_status[selected_idx]
+        logger.debug(f"usage based sampled client status:\n{selected_status}")
         return plus_clients[selected_status.idx]
 
     else:  # basic类型
