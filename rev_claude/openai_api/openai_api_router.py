@@ -28,17 +28,38 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     async for data in original_generator:
         data: str = data.removeprefix("<think>\n")
-        chunk = {
-                "id": i,
-                "object": "chat.completion.chunk",
-                "created": time.time(),
-                "model": model,
-                "choices": [{"delta": {"content": f"{data}"}}],
-        }
         logger.debug(data)
         response_text += data
-        yield f"data: {json.dumps(chunk)}\n\n"
-        i += 1
+        if "</think>" in data:
+            data_parts = data.split("</think>", 1)
+            data_parts = [
+                data_parts[0],
+                "<think>\n",
+                data_parts[1],
+            ]
+            for _data in data_parts:
+                chunk = {
+                    "id": i,
+                    "object": "chat.completion.chunk",
+                    "created": time.time(),
+                    "model": model,
+                    "choices": [{"delta": {"content": f"{_data}"}}],
+                }
+                yield f"data: {json.dumps(chunk)}\n\n"
+                i += 1
+
+        else:
+
+            chunk = {
+                    "id": i,
+                    "object": "chat.completion.chunk",
+                    "created": time.time(),
+                    "model": model,
+                    "choices": [{"delta": {"content": f"{data}"}}],
+            }
+
+            yield f"data: {json.dumps(chunk)}\n\n"
+            i += 1
 
     logger.debug(f"*****Response text:\n{response_text}")
 
