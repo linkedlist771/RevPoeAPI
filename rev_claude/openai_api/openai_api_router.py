@@ -34,12 +34,12 @@ async def _async_resp_generator(original_generator, model: str):
             if len(data_parts) == 2:
                 data_parts = [
                     data_parts[0],
-                    "<think>\n",
+                    "</think>\n",
                     data_parts[1],
                 ]
             elif len(data_parts) == 1:
                 data_parts = [
-                    "<think>\n",
+                    "</think>\n",
                 ]
             for _data in data_parts:
                 chunk = {
