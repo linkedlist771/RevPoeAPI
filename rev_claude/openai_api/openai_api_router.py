@@ -35,6 +35,7 @@ async def _async_resp_generator(original_generator, model: str):
                 "model": model,
                 "choices": [{"delta": {"content": f"{data}"}}],
         }
+        logger.debug(data)
         response_text += data
         yield f"data: {json.dumps(chunk)}\n\n"
         i += 1
