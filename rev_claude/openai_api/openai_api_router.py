@@ -28,15 +28,19 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     async for data in original_generator:
         data: str = data.removeprefix("<think>\n")
-        logger.debug(data)
         response_text += data
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
-            data_parts = [
-                data_parts[0],
-                "<think>\n",
-                data_parts[1],
-            ]
+            if len(data_parts) == 2:
+                data_parts = [
+                    data_parts[0],
+                    "<think>\n",
+                    data_parts[1],
+                ]
+            elif len(data_parts) == 1:
+                data_parts = [
+                    "<think>\n",
+                ]
             for _data in data_parts:
                 chunk = {
                     "id": i,
@@ -45,6 +49,8 @@ async def _async_resp_generator(original_generator, model: str):
                     "model": model,
                     "choices": [{"delta": {"content": f"{_data}"}}],
                 }
+                logger.debug(_data)
+
                 yield f"data: {json.dumps(chunk)}\n\n"
                 i += 1
 
@@ -57,6 +63,7 @@ async def _async_resp_generator(original_generator, model: str):
                     "model": model,
                     "choices": [{"delta": {"content": f"{data}"}}],
             }
+            logger.debug(data)
 
             yield f"data: {json.dumps(chunk)}\n\n"
             i += 1
