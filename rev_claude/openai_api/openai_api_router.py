@@ -28,7 +28,7 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     async for data in original_generator:
         data: str = data.removeprefix("<think>\n")
-        logger.debug(data)
+        # logger.debug(data)
         response_text += data
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
