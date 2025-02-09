@@ -108,8 +108,18 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     file_paths = []
     messages = request.messages
     prompt = "\n".join([
-        f"{message.role}: {message.content}" for message in messages
+        f"{message.role}: {message.content}" for message in messages[:-1]
     ])
+    last_message = messages[-1]
+
+    prompt += f"""\
+上面是之前的历史记录,对于下面的问题，不管多简单，多复杂，都需要详细思考后给出答案。下面是你的回复格式:
+<think>
+# put your thinking here
+</think>
+{last_message.role}: {last_message.content}"""
+
+
 
 
     call_back = None
