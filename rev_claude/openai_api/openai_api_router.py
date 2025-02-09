@@ -111,13 +111,15 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
         f"{message.role}: {message.content}" for message in messages[:-1]
     ])
     last_message = messages[-1]
-    force_think_template = """\
-上面是之前的历史记录,对于下面的问题，不管多简单，多复杂，都需要详细思考后给出答案。下面是你的回复格式:
-<think>
-# put your thinking here
-</think>"""
-    prompt = prompt.replace(force_think_template, "")
-    prompt += f"\n{force_think_template}\n"
+    request_model = request.model
+    if "r1" in request_model.lower() or "o3" in request_model.lower():
+        force_think_template = """\
+    上面是之前的历史记录,对于下面的问题，不管多简单，多复杂，都需要详细思考后给出答案。下面是你的回复格式:
+    <think>
+    # put your thinking here
+    </think>"""
+        prompt = prompt.replace(force_think_template, "")
+        prompt += f"\n{force_think_template}\n"
     prompt += f"""{last_message.role}: {last_message.content}"""
     call_back = None
     if request.stream:
