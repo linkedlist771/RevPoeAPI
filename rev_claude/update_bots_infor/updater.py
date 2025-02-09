@@ -1,5 +1,7 @@
 import asyncio
 import traceback
+import json
+from datetime import datetime
 from typing import Dict, Any
 
 import aiohttp
@@ -55,6 +57,7 @@ ALL_AVAILABLE_BOTS_INFORMATION_FILES = (
     BOTS_INFORMATION_DIR / "all_available_bots_information.json"
 )
 
+ERRORS_LOG_FILE = DATA_DIR / "errors.json"
 
 BOTS_INFORMATION_DIR.mkdir(exist_ok=True, parents=True)
 
@@ -96,9 +99,10 @@ class PoeBotsUpdater:
                 bot_info = await get_bot_information(handle)
                 bot_detailed_information[nickname] = bot_info
             except Exception as e:
-                logger.error(f"error in {bot_name}")
+                logger.error(f"error in {bot_name}:\n bot info:{bot_info}")
                 logger.error(e)
                 logger.error(traceback.format_exc())
+                save_error_to_json(bot_name, bot_info, e)
         save_json(ALL_AVAILABLE_BOTS_INFORMATION_FILES, bot_detailed_information)
 
     async def download_avatar(self, url: str, handle: str):
@@ -195,6 +199,29 @@ class PoeBotsUpdater:
         # Save filtered bots information
         save_json(BOTS_INFORMATION_DIR / "filtered_bots.json", filtered_bots)
         return filtered_bots
+
+def save_error_to_json(bot_name: str, bot_info: dict, error: Exception):
+    try:
+        error_data = {
+            "timestamp": datetime.now().isoformat(),
+            "bot_name": bot_name,
+            "bot_info": bot_info,
+            "error_message": str(error),
+            "traceback": traceback.format_exc()
+        }
+        
+        existing_errors = []
+        if ERRORS_LOG_FILE.exists():
+            with open(ERRORS_LOG_FILE, 'r', encoding='utf-8') as f:
+                existing_errors = json.load(f)
+        
+        existing_errors.append(error_data)
+        
+        with open(ERRORS_LOG_FILE, 'w', encoding='utf-8') as f:
+            json.dump(existing_errors, f, ensure_ascii=False, indent=2)
+            
+    except Exception as e:
+        logger.error(f"Failed to save error to JSON: {e}")
 
 # Update the main function
 async def amain():
