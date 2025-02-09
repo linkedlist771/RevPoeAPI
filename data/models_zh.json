@@ -301,6 +301,20 @@
         "text2image": false,
         "points": 300
     },
+      "r1-llama-70b-search": {
+        "baseModel": "r1llama70bsearch",
+        "tokens": 2000,
+        "endpoints": [
+            "/v1/chat/completions"
+        ],
+        "premium_model": true,
+        "object": "model",
+        "owned_by": "togetherai",
+        "path": "deepseek-r1.png",
+        "desc": "具有联网搜索能力的deepseek-r1",
+        "text2image": false,
+        "points": 15
+    },
     "deepseek-r1-fw": {
         "baseModel": "deepseek-r1-fw",
         "tokens": 2000,
