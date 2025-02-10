@@ -2,6 +2,7 @@ import argparse
 import fire
 import uvicorn
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from loguru import logger
 from rev_claude.client.client_manager import ClientManager
 from rev_claude.configs import LOG_DIR
@@ -10,13 +11,18 @@ from rev_claude.middlewares.register_middlewares import register_middleware
 from rev_claude.router import router
 from rev_claude.status.clients_status_manager import ClientsStatus
 from utility import get_client_status
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--host", default="0.0.0.0", help="host")
 parser.add_argument("--port", default=6238, help="port")
 args = parser.parse_args()
 logger.add(LOG_DIR / "log_file.log", rotation="1 week")  # 每周轮换一次文件
+
 app = FastAPI(lifespan=lifespan)
 app = register_middleware(app)
+
+# 添加静态文件支持
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/api/v1/clients_status")
