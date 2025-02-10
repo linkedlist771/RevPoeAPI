@@ -112,7 +112,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     ])
     last_message = messages[-1]
     request_model = request.model
-    if any(model in request_model.lower() for model in ('r1', 'o3')):
+    if any(model in request_model.lower() for model in ('r1')):
         force_think_template = """\
     上面是之前的历史记录,对于下面的问题，不管多简单，多复杂，都需要详细思考后给出答案。下面是你的回复格式:
     <think>
