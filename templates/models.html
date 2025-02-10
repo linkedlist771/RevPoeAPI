@@ -8,10 +8,19 @@
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-8">POE 模型列表</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">POE 模型列表</h1>
+            <div class="relative">
+                <input type="text" 
+                       id="searchInput" 
+                       placeholder="搜索模型..." 
+                       class="w-64 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+
+        <div id="modelGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for model_id, model in models.items() %}
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 model-card">
                 <div class="flex items-center mb-4">
                     {% if model.path %}
                     <img src="{{ model.path }}" alt="{{ model_id }}" class="w-8 h-8 mr-3">
@@ -30,6 +39,60 @@
             </div>
             {% endfor %}
         </div>
+
+        <!-- 分页控制 -->
+        <div class="mt-8 flex justify-center space-x-4">
+            {% if current_page > 1 %}
+            <a href="?page={{ current_page - 1 }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">上一页</a>
+            {% endif %}
+            
+            <span class="px-4 py-2">第 {{ current_page }} 页，共 {{ total_pages }} 页</span>
+            
+            {% if current_page < total_pages %}
+            <a href="?page={{ current_page + 1 }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">下一页</a>
+            {% endif %}
+        </div>
     </div>
+
+    <script>
+        let searchTimeout;
+        const searchInput = document.getElementById('searchInput');
+        const modelGrid = document.getElementById('modelGrid');
+
+        searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            const query = e.target.value;
+            
+            searchTimeout = setTimeout(async () => {
+                if (query.trim() === '') {
+                    window.location.href = '/models';
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(`/api/search-models?query=${encodeURIComponent(query)}`);
+                    const models = await response.json();
+                    
+                    modelGrid.innerHTML = Object.entries(models).map(([model_id, model]) => `
+                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 model-card">
+                            <div class="flex items-center mb-4">
+                                ${model.path ? `<img src="${model.path}" alt="${model_id}" class="w-8 h-8 mr-3">` : ''}
+                                <h2 class="text-xl font-semibold text-gray-700">${model_id}</h2>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-gray-600"><span class="font-medium">基础模型:</span> ${model.baseModel}</p>
+                                <p class="text-gray-600"><span class="font-medium">最大Token:</span> ${model.tokens}</p>
+                                <p class="text-gray-600"><span class="font-medium">积分消耗:</span> ${model.points}</p>
+                                <p class="text-gray-600"><span class="font-medium">描述:</span> ${model.desc}</p>
+                                ${model.premium_model ? '<span class="inline-block bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">高级模型</span>' : ''}
+                            </div>
+                        </div>
+                    `).join('');
+                } catch (error) {
+                    console.error('搜索出错:', error);
+                }
+            }, 300);
+        });
+    </script>
 </body>
 </html> 
