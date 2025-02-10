@@ -70,9 +70,9 @@
             const query = searchInput.value.trim();
             
             if (query === '') {
-                window.location.href = '/models';
+                window.location.href = '/api/v1/models/models';
             } else {
-                window.location.href = `/models?query=${encodeURIComponent(query)}`;
+                window.location.href = `/api/v1/models/models?query=${encodeURIComponent(query)}`;
             }
         }
     </script>
