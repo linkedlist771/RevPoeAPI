@@ -2,6 +2,7 @@ import argparse
 import fire
 import uvicorn
 from fastapi import FastAPI
+import os
 from fastapi.staticfiles import StaticFiles
 from loguru import logger
 from rev_claude.client.client_manager import ClientManager
@@ -21,6 +22,8 @@ logger.add(LOG_DIR / "log_file.log", rotation="1 week")  # 每周轮换一次文
 app = FastAPI(lifespan=lifespan)
 app = register_middleware(app)
 
+
+os.makedirs("static", exist_ok=True)
 # 添加静态文件支持
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
