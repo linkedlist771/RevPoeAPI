@@ -351,7 +351,9 @@ class Client:
         else:
             model_name = get_poe_bot_info()[model.lower()]["baseModel"]
         logger.debug(f"model_name: {model_name}")
-        logger.debug(get_poe_bot_info()[ get_reverse_names_map()[model_name] ])
+        logger.debug(f"reverse name:{get_reverse_names_map()[model_name]}")
+        reverse_name = get_reverse_names_map()[model_name]
+        logger.debug(get_poe_bot_info()[reverse_name])
         if USE_TOKEN_SHORTEN:
 
             tokens_limit = get_poe_bot_info()[ get_reverse_names_map()[model_name] ].get(
