@@ -334,6 +334,7 @@ class Client:
                 for message in former_messages
             ]
         logger.debug(f"former_messages: {former_messages}")
+        logger.debug(f"prompt: {prompt}")
         if len(prompt) <= 0:
             yield NO_EMPTY_PROMPT_MESSAGE
             return
