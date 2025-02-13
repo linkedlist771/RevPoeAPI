@@ -68,9 +68,9 @@ async def _async_resp_generator(original_generator, model: str):
             i += 1
 
     logger.debug(f"*****Response text:\n{response_text}")
-
-    yield "data: [DONE]\n\n"
-
+          # "data: [DONE]\n\n"
+    # yield "data: [DONE]\n\n"
+    yield  "data: [DONE]"
 
 
 async def streaming_message(request: ChatCompletionRequest, api_key: str = None):
