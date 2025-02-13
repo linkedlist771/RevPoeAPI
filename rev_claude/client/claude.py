@@ -359,6 +359,7 @@ class Client:
             former_messages = shorten_message_given_prompt_length(
                 former_messages, tokens_limit
             )
+        logger.debug(f"former_messages: {former_messages}")
 
         messages = former_messages
         messages_str = "\n".join(
