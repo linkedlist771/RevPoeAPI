@@ -35,6 +35,7 @@ def async_retry(retries=3, delay=1):
                             yield error_prefix + str(e)
                         else:
                             from traceback import format_exc
+
                             logger.error(f"Error: {format_exc()}")
                             yield error_prefix + str(e)
                     else:
@@ -52,9 +53,9 @@ async def send_message_with_retry(poe_bot_client, bot, message, file_path):
 
     try:
         async for chunk in poe_bot_client.send_message(
-                bot=bot,
-                message=message,
-                file_path=file_path,
+            bot=bot,
+            message=message,
+            file_path=file_path,
         ):
             text = chunk["response"]
 
@@ -81,7 +82,9 @@ async def send_message_with_retry(poe_bot_client, bot, message, file_path):
 
     except Exception as e:
         # 捕获任何异常，将其转换为错误消息并 yield 出去
-        error_message = f"<think> {str(e)}</think>[ERROR] An unexpected error occurred: {str(e)}"
+        error_message = (
+            f"<think> {str(e)}</think>[ERROR] An unexpected error occurred: {str(e)}"
+        )
         yield error_message
         # raise RuntimeError(f"An unexpected error occurred: {str(e)}")
 

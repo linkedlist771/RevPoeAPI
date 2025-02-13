@@ -16,6 +16,7 @@ VALID_API_KEY = POE_OPENAI_LIKE_API_KEY
 
 router = APIRouter()
 
+
 def obtain_claude_client():
     basic_clients, plus_clients = ClientManager().get_clients()
     return {
@@ -23,9 +24,11 @@ def obtain_claude_client():
         "plus_clients": plus_clients,
     }
 
+
 async def _async_resp_generator(original_generator, model: str):
     i = 0
     response_text = ""
+    first_chunk = True
     async for data in original_generator:
         data: str = data.removeprefix("<think>\n")
         # logger.debug(data)
@@ -48,8 +51,18 @@ async def _async_resp_generator(original_generator, model: str):
                     "object": "chat.completion.chunk",
                     "created": time.time(),
                     "model": model,
-                    "choices": [{"delta": {"content": f"{_data}"}}],
+                    "choices": [
+                        {
+                            "delta": {
+                                "content": f"{_data}",
+                                **(
+                                    {"role": "assistant"} if first_chunk else {}
+                                ),  # 只在第一个chunk添加role
+                            }
+                        }
+                    ],
                 }
+                first_chunk = False
 
                 yield f"data: {json.dumps(chunk)}\n\n"
                 i += 1
@@ -57,35 +70,44 @@ async def _async_resp_generator(original_generator, model: str):
         else:
 
             chunk = {
-                    "id": i,
-                    "object": "chat.completion.chunk",
-                    "created": time.time(),
-                    "model": model,
-                    "choices": [{"delta": {"content": f"{data}"}}],
+                "id": i,
+                "object": "chat.completion.chunk",
+                "created": time.time(),
+                "model": model,
+                "choices": [
+                    {
+                        "delta": {
+                            "content": f"{data}",
+                            **(
+                                {"role": "assistant"} if first_chunk else {}
+                            ),  # 只在第一个chunk添加role
+                        }
+                    }
+                ],
             }
+            first_chunk = False
 
             yield f"data: {json.dumps(chunk)}\n\n"
             i += 1
 
     logger.debug(f"*****Response text:\n{response_text}")
-
+    yield f"data: {json.dumps({'choices':[{'delta':{},'finish_reason':'stop'}]})}\n\n"
     yield "data: [DONE]\n\n"
-
 
 
 async def streaming_message(request: ChatCompletionRequest, api_key: str = None):
     # Add API key validation
     if api_key != VALID_API_KEY:
         raise HTTPException(status_code=401, detail="Invalid API key")
-        
+
     clients = obtain_claude_client()
     model = request.model
     plus_clients = clients["plus_clients"]
-    
+
     # Validate API key here if needed
     if not api_key:
         raise HTTPException(status_code=401, detail="API key is required")
-    
+
     # done_data = build_sse_data(message="closed", id=conversation_id)
     basic_clients = clients["basic_clients"]
     plus_clients = clients["plus_clients"]
@@ -95,7 +117,6 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     claude_client = await select_client_by_usage(
         client_type, client_idx, basic_clients, plus_clients, status_list
     )
-
 
     # client_idx = next(iter(plus_clients.keys()))
     # claude_client = plus_clients[client_idx]
@@ -107,12 +128,12 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     # This is a temporary solution to handle the case where the user uploads a file.
     file_paths = []
     messages = request.messages
-    prompt = "\n".join([
-        f"{message.role}: {message.content}" for message in messages[:-1]
-    ])
+    prompt = "\n".join(
+        [f"{message.role}: {message.content}" for message in messages[:-1]]
+    )
     last_message = messages[-1]
     request_model = request.model
-    if any(model in request_model.lower() for model in ('r1')):
+    if any(model in request_model.lower() for model in ("r1")):
         force_think_template = """\
     上面是之前的历史记录,对于下面的问题，不管多简单，多复杂，都需要详细思考后给出答案。下面是你的回复格式:
     <think>
@@ -143,8 +164,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
 
 @router.post("/v1/chat/completions")
 async def chat_completions(
-    request: ChatCompletionRequest,
-    authorization: str = Header(None)
+    request: ChatCompletionRequest, authorization: str = Header(None)
 ):
     if not request.messages:
         raise HTTPException(status_code=400, detail="No messages provided.")
@@ -152,19 +172,20 @@ async def chat_completions(
     # Extract API key from Authorization header
     api_key = None
     if authorization:
-        if authorization.startswith('Bearer'):
-            api_key = authorization.replace('Bearer', '').strip()
-    
+        if authorization.startswith("Bearer"):
+            api_key = authorization.replace("Bearer", "").strip()
+
     if not api_key:
         raise HTTPException(
             status_code=401,
-            detail="Invalid Authorization header. Format should be 'Bearer YOUR_API_KEY'"
+            detail="Invalid Authorization header. Format should be 'Bearer YOUR_API_KEY'",
         )
 
     resp_content = await streaming_message(request, api_key=api_key)
     if request.stream:
         return StreamingResponse(
-            _async_resp_generator(resp_content, request.model), media_type="text/event-stream"
+            _async_resp_generator(resp_content, request.model),
+            media_type="text/event-stream",
         )
 
     return {

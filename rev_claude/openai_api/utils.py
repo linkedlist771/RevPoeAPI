@@ -17,9 +17,9 @@ async def listen_for_disconnect(request: Request) -> None:
 def with_cancellation(handler_func):
     """Decorator that allows a route handler to be cancelled by client
     disconnections.
-    
+
     This does _not_ use request.is_disconnected, which does not work with
-    middleware. Instead this follows the pattern from 
+    middleware. Instead this follows the pattern from
     starlette.StreamingResponse, which simultaneously awaits on two tasks- one
     to wait for an http disconnect message, and the other to do the work that we
     want done. When the first task finishes, the other is cancelled.
@@ -47,8 +47,9 @@ def with_cancellation(handler_func):
         handler_task = asyncio.create_task(handler_func(*args, **kwargs))
         cancellation_task = asyncio.create_task(listen_for_disconnect(request))
 
-        done, pending = await asyncio.wait([handler_task, cancellation_task],
-                                           return_when=asyncio.FIRST_COMPLETED)
+        done, pending = await asyncio.wait(
+            [handler_task, cancellation_task], return_when=asyncio.FIRST_COMPLETED
+        )
         for task in pending:
             task.cancel()
 
