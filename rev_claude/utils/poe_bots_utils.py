@@ -13,6 +13,14 @@ def get_base_names():
         bot['baseModel'] for _, bot in get_poe_bot_info().items()
     ]
 
+@lru_cache
+def get_reverse_names_map():
+    names = get_base_names()
+    _names = list(get_poe_bot_info().keys())
+    return {
+        _name : name for name, _name in zip(names, _names)
+    }
+
 
 if __name__ == "__main__":
     print(get_poe_bot_info())
