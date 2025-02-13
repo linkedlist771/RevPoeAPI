@@ -130,6 +130,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     files = []
     # This is a temporary solution to handle the case where the user uploads a file.
     file_paths = []
+    logger.debug(f"Request params: {request.model_dump()}")
     messages = request.messages
     prompt = "\n".join(
         [f"{message.role}: {message.content}" for message in messages[:-1]]
