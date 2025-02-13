@@ -91,7 +91,10 @@ async def _async_resp_generator(original_generator, model: str):
             i += 1
 
     logger.debug(f"*****Response text:\n{response_text}")
-    yield f"data: {json.dumps({'choices':[{'delta':{},'finish_reason':'stop'}]})}\n\n"
+
+    yield f"data: {json.dumps({'choices':[{"index": 0, "delta": {}, 
+                                           "logprobs" : None, 
+                                           "finish_reason" : 'stop'}]})}\n\n"
     yield "data: [DONE]\n\n"
 
 
