@@ -30,6 +30,7 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     first_chunk = True
     async for data in original_generator:
+        logger.debug(f"*****Data:\n{data}")
         data: str = data.removeprefix("<think>\n")
         # logger.debug(data)
         response_text += data
@@ -146,6 +147,7 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
         prompt = prompt.replace(force_think_template, "")
         prompt += f"\n{force_think_template}\n"
     prompt += f"""{last_message.role}: {last_message.content}"""
+    logger.debug(f"Prompt: {prompt}")
     call_back = None
     if request.stream:
         streaming_res = claude_client.stream_message(
