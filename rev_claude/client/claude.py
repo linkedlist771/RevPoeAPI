@@ -312,12 +312,10 @@ class Client:
             conversation_id=conversation_id,
             model=model,
         )
-        logger.debug(f"conversation_history_request: {conversation_history_request}")
         # TODO: temporary change it into all conversation histories
         all_histories = await conversation_history_manager.get_all_client_conversations(
             conversation_history_request
         )
-        logger.debug(f"all_histories: {all_histories}")
         former_messages = []
         for history in all_histories:
             if history.conversation_id == conversation_id:
@@ -333,8 +331,7 @@ class Client:
                 {"role": message.role.value, "content": message.content}
                 for message in former_messages
             ]
-        logger.debug(f"former_messages: {former_messages}")
-        logger.debug(f"prompt: {prompt}")
+
         if len(prompt) <= 0:
             yield NO_EMPTY_PROMPT_MESSAGE
             return
@@ -345,15 +342,11 @@ class Client:
         file_paths = former_file_paths[-MAX_ATTACHMENTS:]
         messages = [{"role": "user", "content": prompt}]
         former_messages.extend(messages)
-        logger.debug(f"former_messages: {former_messages}")
         if model.lower() in get_base_names():
             model_name  = model.lower()
         else:
             model_name = get_poe_bot_info()[model.lower()]["baseModel"]
-        logger.debug(f"model_name: {model_name}")
-        logger.debug(f"reverse name:{get_reverse_names_map()[model_name]}")
-        reverse_name = get_reverse_names_map()[model_name]
-        logger.debug(get_poe_bot_info()[reverse_name])
+
         if USE_TOKEN_SHORTEN:
 
             tokens_limit = get_poe_bot_info()[ get_reverse_names_map()[model_name] ].get(
@@ -362,7 +355,6 @@ class Client:
             former_messages = shorten_message_given_prompt_length(
                 former_messages, tokens_limit
             )
-        logger.debug(f"former_messages: {former_messages}")
 
         messages = former_messages
         messages_str = "\n".join(
