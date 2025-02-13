@@ -51,7 +51,7 @@ from rev_claude.utils.async_utils import remove_prefix, send_message_with_retry
 from rev_claude.utils.cookie_utils import extract_cookie_value
 from rev_claude.utils.file_utils import DocumentConverter
 from rev_claude.utils.httpx_utils import async_stream
-from rev_claude.utils.poe_bots_utils import get_poe_bot_info
+from rev_claude.utils.poe_bots_utils import get_poe_bot_info, get_base_names
 from rev_claude.utils.sse_utils import build_sse_data
 
 
@@ -359,7 +359,10 @@ class Client:
             messages_str = prompt
         logger.info(f"formatted_message: \n{messages_str}")
         poe_bot_client = await self.get_poe_bot_client()
-        model_name = get_poe_bot_info()[model.lower()]["baseModel"]
+        if model.lower() in get_base_names():
+            model_name  = model.lower()
+        else:
+            model_name = get_poe_bot_info()[model.lower()]["baseModel"]
         logger.debug(f"actual model name: \n{model_name}")
         try:
             async for chunk in send_message_with_retry(
