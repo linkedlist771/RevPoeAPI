@@ -18,7 +18,7 @@ def get_reverse_names_map():
     names = get_base_names()
     _names = list(get_poe_bot_info().keys())
     return {
-        _name : name for name, _name in zip(names, _names)
+         name: _name for name, _name in zip(names, _names)
     }
 
 
