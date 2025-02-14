@@ -134,6 +134,8 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     file_paths = []
     # logger.debug(f"Request params: {request.model_dump()}")
     messages = request.messages
+    logger.debug(f"first message content type: {type(messages[0].content)}")
+    # messages, file_paths = extract_messages_and_images(messages)
     prompt = "\n".join(
         [f"{message.role}: {message.content}" for message in messages[:-1]]
     )
