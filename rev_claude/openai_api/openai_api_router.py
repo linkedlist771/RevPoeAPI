@@ -9,6 +9,7 @@ from rev_claude.openai_api.schemas import ChatCompletionRequest, ChatMessage
 from rev_claude.client.claude_router import ClientManager, select_client_by_usage
 from uuid import uuid4
 from rev_claude.configs import POE_OPENAI_LIKE_API_KEY
+from rev_claude.openai_api.utils import extract_messages_and_images
 from utility import get_client_status
 
 # Add this constant at the top of the file after the imports
@@ -131,11 +132,12 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
     attachments = []
     files = []
     # This is a temporary solution to handle the case where the user uploads a file.
-    file_paths = []
     # logger.debug(f"Request params: {request.model_dump()}")
     messages = request.messages
-    logger.debug(f"first message content type: {type(messages[0].content[0])}")
-    # messages, file_paths = extract_messages_and_images(messages)
+    # logger.debug(f"first message content type: {type(messages[0].content[0])}")
+    messages, file_paths = await  extract_messages_and_images(messages)
+    logger.debug(f"Messages: {messages}")
+    logger.debug(f"File paths: {file_paths}")
     prompt = "\n".join(
         [f"{message.role}: {message.content}" for message in messages[:-1]]
     )

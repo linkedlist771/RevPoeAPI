@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import base64
 import json, os, uuid
 import re
 import shutil
@@ -8,6 +8,8 @@ from datetime import datetime
 from http.cookies import SimpleCookie
 from pathlib import Path
 from typing import Union, List, Any
+
+import aiofiles
 import numpy as np
 
 # from curl_cffi import requests
@@ -103,6 +105,46 @@ async def save_file(file: UploadFile) -> str:
 
     return str(file_path)  # Convert PosixPath to string
 
+
+
+async def save_base64_image(base64_string):
+    """
+    异步将Base64编码的图片保存到指定目录并返回保存路径
+
+    :param base64_string: Base64编码的图片字符串
+    :param upload_dir: 用于保存上传文件的目录路径
+    :return: 保存的文件路径(字符串)
+    """
+    # 创建上传目录(如果不存在)
+    upload_dir = Path(UPLOAD_DIR)
+    os.makedirs(upload_dir, exist_ok=True)
+
+    # 从Base64字符串中提取文件扩展名
+    file_extension = ".png"  # 默认为PNG
+    if "data:image/" in base64_string:
+        file_extension = "." + base64_string.split(";")[0].split("/")[1]
+
+    # 生成唯一文件名
+    current_time = datetime.now().strftime("%Y_%m_%d_%H_%M_")
+    unique_filename = f"{current_time}{uuid.uuid4()}{file_extension}"
+    file_path = upload_dir / unique_filename
+
+    try:
+        # 移除Base64字符串中的头部信息(如果存在)
+        if ',' in base64_string:
+            base64_string = base64_string.split(',', 1)[1]
+
+        # 解码Base64字符串
+        image_data = base64.b64decode(base64_string)
+
+        # 异步保存文件
+        async with aiofiles.open(file_path, "wb") as buffer:
+            await buffer.write(image_data)
+    except Exception as e:
+        logger.error(f"Error saving Base64 image: {str(e)}")
+        raise
+
+    return str(file_path)  # 将PosixPath转换为字符串
 
 ua = UserAgent()
 filtered_browsers = list(

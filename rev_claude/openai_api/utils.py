@@ -5,25 +5,38 @@ import functools
 
 from fastapi import Request
 
+from rev_claude.client.claude import save_base64_image
 from rev_claude.openai_api.schemas import ChatMessage
 
 
-def extract_messages_and_images(messages: list[ChatMessage]):
-    message = messages[0]
-    if isinstance(message.content, str):
-        return messages, []
-    elif isinstance(message.content, list):
-        texts = []
-        base64_images = []
-        roles = []
-        for message in messages:
-            role = message.role
-            content = message.content
+async def extract_messages_and_images(messages: list[ChatMessage]):
+    texts = []
+    # base64_images = []
+    image_paths = []
+    roles = []
+    for message in messages:
+        role = message.role
+        content = message.content
+        roles.append(role)
+        if isinstance(content, str):
+            texts.append(content)
+        elif isinstance(content, list):
+            for item in content:
+                message_type = item["type"]
+                if message_type == "text":
+                    texts.append(item["text"])
+                elif message_type == "image_url":
+                    base64_image = item["image_url"]["url"]
+                    image_path = await save_base64_image(base64_image)
+                    image_paths.append(image_path)
+                else:
+                    raise ValueError("Invalid message content type")
+    messages = []
+    for text, role in zip(texts, roles):
+        messages.append(ChatMessage(role=role, content=text))
+    return messages, image_paths
 
-        # 提取出图片和text
 
-    else:
-        raise ValueError("Invalid message content type")
 
 
 async def listen_for_disconnect(request: Request) -> None:
