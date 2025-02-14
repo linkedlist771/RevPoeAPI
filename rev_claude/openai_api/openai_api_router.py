@@ -31,10 +31,6 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     first_chunk = True
     async for data in original_generator:
-        # logger.debug(f"*****Data:\n{data}")
-        # data: str = data.removeprefix("<think>\n")
-        # if "<think>" in
-        # logger.debug(data)
         response_text += data
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
@@ -93,8 +89,6 @@ async def _async_resp_generator(original_generator, model: str):
             yield f"data: {json.dumps(chunk)}\n\n"
             i += 1
 
-    # logger.debug(f"*****Response text:\n{response_text}")
-
     yield f"data: {json.dumps({'choices':[{"index": 0, "delta": {}, 
                                            "logprobs" : None, 
                                            "finish_reason" : 'stop'}]})}\n\n"
@@ -108,8 +102,6 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
 
     clients = obtain_claude_client()
     model = request.model
-    plus_clients = clients["plus_clients"]
-
     # Validate API key here if needed
     if not api_key:
         raise HTTPException(status_code=401, detail="API key is required")
@@ -131,13 +123,10 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
 
     attachments = []
     files = []
-    # This is a temporary solution to handle the case where the user uploads a file.
-    # logger.debug(f"Request params: {request.model_dump()}")
     messages = request.messages
-    # logger.debug(f"first message content type: {type(messages[0].content[0])}")
     messages, file_paths = await  extract_messages_and_images(messages)
-    logger.debug(f"Messages: {messages}")
-    logger.debug(f"File paths: {file_paths}")
+    # logger.debug(f"Messages: {messages}")
+    # logger.debug(f"File paths: {file_paths}")
     prompt = "\n".join(
         [f"{message.role}: {message.content}" for message in messages[:-1]]
     )
