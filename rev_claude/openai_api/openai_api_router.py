@@ -31,7 +31,8 @@ async def _async_resp_generator(original_generator, model: str):
     first_chunk = True
     async for data in original_generator:
         logger.debug(f"*****Data:\n{data}")
-        data: str = data.removeprefix("<think>\n")
+        # data: str = data.removeprefix("<think>\n")
+        # if "<think>" in
         # logger.debug(data)
         response_text += data
         if "</think>" in data:
