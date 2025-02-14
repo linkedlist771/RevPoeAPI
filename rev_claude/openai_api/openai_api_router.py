@@ -171,8 +171,15 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
 
 @router.post("/v1/chat/completions")
 async def chat_completions(
-    request: ChatCompletionRequest, authorization: str = Header(None)
+    request: Request, authorization: str = Header(None)
 ):
+    logger.debug(f"request body: {await request.body()}")
+    logger.debug(f"request params: {request.query_params}")
+    logger.debug(f"request headers: {request.headers}")
+    return StreamingResponse(
+        "data: {choices: [{index: 0, delta: {'content':'done'}, logprobs: None, finish_reason: 'stop'}]}\n\n",
+        media_type="text/event-stream",
+    )
     if not request.messages:
         raise HTTPException(status_code=400, detail="No messages provided.")
 
