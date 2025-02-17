@@ -31,6 +31,7 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     first_chunk = True
     async for data in original_generator:
+        logger.debug(f"Data: {data}")
         response_text += data
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
