@@ -34,10 +34,6 @@ async def _async_resp_generator(original_generator, model: str):
     first_chunk = True
     async for data in original_generator:
         response_text += data
-        logger.debug(f"data: {data}")
-        if "Thinking" in data:
-            data = "<think>"
-        data = data.replace(">\n\n", "</think>\n\n")
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
             if len(data_parts) == 2:
