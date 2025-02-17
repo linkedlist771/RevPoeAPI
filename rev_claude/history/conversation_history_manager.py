@@ -83,6 +83,17 @@ class ConversationHistoryManager:
             return f"conversation_history-{request.api_key}-{request.client_idx}-basic"
         return f"conversation_history-{request.api_key}-{request.client_idx}-{request.conversation_type.value}"
 
+    def get_conversation_title_key(self, api_key: str, conversation_id: str):
+        return f"conversation_title-{api_key}-{conversation_id}"
+
+    async def get_conversation_title(self, api_key: str, conversation_id: str):
+        key = self.get_conversation_title_key(api_key, conversation_id)
+        return await self.decoded_get(key)
+
+    async def set_conversation_title(self, api_key: str, conversation_id: str, title: str):
+        key = self.get_conversation_title_key(api_key, conversation_id)
+        await self.set_async(key, title)
+
     async def push_message(
         self, request: ConversationHistoryRequestInput, messages: list[Message]
     ):

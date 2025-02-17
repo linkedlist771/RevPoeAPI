@@ -37,6 +37,29 @@ async def extract_messages_and_images(messages: list[ChatMessage]):
     return messages, image_paths
 
 
+async def summarize_a_title(conversation_str: str, conversation_id, client_idx, api_key, client) -> str:
+    prompt = f"""\
+This a is a conversation:
+{conversation_str}
+
+Just give a short title(no more than 10 words) for it directly in language the conversation uses.
+Title:"""
+    response_text = ""
+    model = "assistant"
+    async for text in client.stream_message(
+        prompt,
+        conversation_id,
+        model,
+        client_type="plus",
+        client_idx=client_idx,
+        attachments=[],
+        files=[],
+        call_back=None,
+        api_key=api_key,
+        file_paths=[],
+    ):
+        response_text += text
+    return response_text
 
 
 async def listen_for_disconnect(request: Request) -> None:

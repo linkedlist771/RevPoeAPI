@@ -5,11 +5,13 @@ import json
 import asyncio
 from loguru import logger
 import uuid
+
+from rev_claude.history.conversation_history_manager import conversation_history_manager
 from rev_claude.openai_api.schemas import ChatCompletionRequest, ChatMessage
 from rev_claude.client.claude_router import ClientManager, select_client_by_usage
 from uuid import uuid4
 from rev_claude.configs import POE_OPENAI_LIKE_API_KEY
-from rev_claude.openai_api.utils import extract_messages_and_images
+from rev_claude.openai_api.utils import extract_messages_and_images, summarize_a_title
 from utility import get_client_status
 
 # Add this constant at the top of the file after the imports
@@ -31,7 +33,6 @@ async def _async_resp_generator(original_generator, model: str):
     response_text = ""
     first_chunk = True
     async for data in original_generator:
-        logger.debug(f"Data: {data}")
         response_text += data
         if "</think>" in data:
             data_parts = data.split("</think>", 1)
@@ -160,8 +161,21 @@ async def streaming_message(request: ChatCompletionRequest, api_key: str = None)
 
         return streaming_res
     else:
-        return "不支持非SSE"
 
+        title = await conversation_history_manager.get_conversation_title(
+            api_key=api_key, conversation_id=conversation_id
+        )
+        if title:
+            return title
+        else:
+            conversation_str = "\n".join(
+                [f"{message.role}: {message.content}" for message in messages]
+            )[:1000]
+            title = await summarize_a_title(conversation_str, conversation_id, client_idx, api_key, claude_client)
+            await conversation_history_manager.set_conversation_title(
+            api_key=api_key, conversation_id=conversation_id, title=title
+            )
+            return title
 
 @router.post("/v1/chat/completions")
 async def chat_completions(
